@@ -1,0 +1,3733 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<connections total="146">
+  <person>
+    <id>3YNlBdusZ5</id>
+    <first-name>Ali</first-name>
+    <last-name>Akbar</last-name>
+    <headline>Online Communications Consultant</headline>
+    <location>
+      <name>Savannah, Georgia Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Online Media</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/3YNlBdusZ5:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:lui9</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=21268493&amp;authToken=lui9&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/2/000/00a/09e/1b33625.jpg</picture-url>
+  </person>
+  <person>
+    <id>hA-Ko5PGo_</id>
+    <first-name>Ellen</first-name>
+    <last-name>Ambrose</last-name>
+    <headline>Board Member at Partnerships for Children</headline>
+    <location>
+      <name>Austin, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Internet</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/hA-Ko5PGo_:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:skDi</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=493829&amp;authToken=skDi&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>P7Tm3xryTs</id>
+    <first-name>Stefanie</first-name>
+    <last-name>Arnold</last-name>
+    <headline>Project Mgr at Hewlett Packard</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/P7Tm3xryTs:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:9JRJ</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=6564240&amp;authToken=9JRJ&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>9ORQNb2v4T</id>
+    <first-name>J.R.</first-name>
+    <last-name>Arredondo</last-name>
+    <headline>Product Management, Program Management, Strategy Development, New Business Creation</headline>
+    <location>
+      <name>Greater Seattle Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/9ORQNb2v4T:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:vzXS</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=239766&amp;authToken=vzXS&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/020/3af/25501b4.jpg</picture-url>
+  </person>
+  <person>
+    <id>u8FDh_TRkd</id>
+    <first-name>Samy</first-name>
+    <last-name>Azam</last-name>
+    <headline>Information Technology and Services Consultant and Professional</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/u8FDh_TRkd:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:rvfR</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=8882523&amp;authToken=rvfR&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>YhzJs6ylhf</id>
+    <first-name>Cyndi</first-name>
+    <last-name>Becker, PMP</last-name>
+    <headline>Project Manager</headline>
+    <location>
+      <name>Colorado Springs, Colorado Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/YhzJs6ylhf:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:rrFn</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=11225030&amp;authToken=rrFn&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>Hz_9mRaUxh</id>
+    <first-name>Vahid</first-name>
+    <last-name>Behzadi (vahid@cybercoders.com)</last-name>
+    <headline>Executive Recruiter at CyberCoders  - Recruiting Manager</headline>
+    <location>
+      <name>Dallas/Fort Worth Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Staffing and Recruiting</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/Hz_9mRaUxh:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:EPo9</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=19408512&amp;authToken=EPo9&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/01b/257/344372e.jpg</picture-url>
+  </person>
+  <person>
+    <id>-5o6E7ti32</id>
+    <first-name>Brian</first-name>
+    <last-name>Blankenship</last-name>
+    <headline>Interactive Creative Director at Balcom Agency</headline>
+    <location>
+      <name>Dallas/Fort Worth Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Marketing and Advertising</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/-5o6E7ti32:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:NZ8c</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=16571819&amp;authToken=NZ8c&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/034/2b6/05399dc.jpg</picture-url>
+  </person>
+  <person>
+    <id>zIVkLLOYia</id>
+    <first-name>Michael</first-name>
+    <last-name>Bleigh</last-name>
+    <headline>Creative Director for Intridea</headline>
+    <location>
+      <name>Greater Detroit Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Internet</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/zIVkLLOYia:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:BcLL</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=10801267&amp;authToken=BcLL&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/2/000/03b/1d6/1ae8bb6.jpg</picture-url>
+  </person>
+  <person>
+    <id>tmD3xRXFPP</id>
+    <first-name>William</first-name>
+    <last-name>Bruton</last-name>
+    <headline>Partner at IS&amp;T</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/tmD3xRXFPP:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:BrTe</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=6884683&amp;authToken=BrTe&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/026/3df/2bbcd7d.jpg</picture-url>
+  </person>
+  <person>
+    <id>1B_y3inTp6</id>
+    <first-name>Brian</first-name>
+    <last-name>Buhrow</last-name>
+    <headline>Market Development Representative at ReachForce</headline>
+    <location>
+      <name>Austin, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/1B_y3inTp6:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:3zLl</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=5172783&amp;authToken=3zLl&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/005/37f/3fe4f7f.jpg</picture-url>
+  </person>
+  <person>
+    <id>ajAfaq2OTv</id>
+    <first-name>Ben</first-name>
+    <last-name>Burkert</last-name>
+    <headline>Software Developer at Downtown Cartel, LLC</headline>
+    <location>
+      <name>Bryan/College Station, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/ajAfaq2OTv:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:qbf_</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=26734630&amp;authToken=qbf_&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>sGlxBA_wnX</id>
+    <first-name>Ethan</first-name>
+    <last-name>Burrow</last-name>
+    <headline>Rails Developer at MindBites.com</headline>
+    <location>
+      <name>Austin, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/sGlxBA_wnX:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:VG--</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=2316784&amp;authToken=VG--&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/01c/096/0ca647b.jpg</picture-url>
+  </person>
+  <person>
+    <id>5TP_csdF4I</id>
+    <first-name>Todd</first-name>
+    <last-name>Bush</last-name>
+    <headline>Management Consultant and Technology Generalist</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Management Consulting</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/5TP_csdF4I:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:vcPl</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=318542&amp;authToken=vcPl&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>fH7scoqTay</id>
+    <first-name>Curt</first-name>
+    <last-name>Carland</last-name>
+    <headline>Information Technology and Services Professional</headline>
+    <location>
+      <name>Greater Denver Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/fH7scoqTay:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:2JqN</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=34440027&amp;authToken=2JqN&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>XbDCiqvmLJ</id>
+    <first-name>Marcio</first-name>
+    <last-name>Castilho</last-name>
+    <headline>Co-Founder at uquery.com</headline>
+    <location>
+      <name>Tampa/St. Petersburg, Florida Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/XbDCiqvmLJ:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:CfC_</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=6419563&amp;authToken=CfC_&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/02c/324/01a2e8f.jpg</picture-url>
+  </person>
+  <person>
+    <id>QrcWDx7Dm7</id>
+    <first-name>Mona</first-name>
+    <last-name>Chudgar</last-name>
+    <headline>Project Manager at HP</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/QrcWDx7Dm7:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:HcYX</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3746062&amp;authToken=HcYX&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>D-vsUIutmH</id>
+    <first-name>Damon</first-name>
+    <last-name>Clinkscales</last-name>
+    <headline>Founder at Kismet Ventures, LLC</headline>
+    <location>
+      <name>Austin, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/D-vsUIutmH:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:TnI7</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=142551&amp;authToken=TnI7&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/022/2ac/10ac896.jpg</picture-url>
+  </person>
+  <person>
+    <id>zXdzCX0nRW</id>
+    <first-name>Patrick</first-name>
+    <last-name>Cox</last-name>
+    <headline>Business Analyst at Adea Solutions and Internet Consultant</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Internet</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/zXdzCX0nRW:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:OKq-</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3974351&amp;authToken=OKq-&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>xrtpX9KuzA</id>
+    <first-name>Russell</first-name>
+    <last-name>Cox</last-name>
+    <headline>Market Research Manager at Peterbilt Motors</headline>
+    <location>
+      <name>Dallas/Fort Worth Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Transportation/Trucking/Railroad</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/xrtpX9KuzA:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:k8n0</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=13184200&amp;authToken=k8n0&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>IFTB_fLwyA</id>
+    <first-name>Natalie</first-name>
+    <last-name>D'Anna</last-name>
+    <headline>Quality Assurance Analyst VI at Hewlett-Packard Co.</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/IFTB_fLwyA:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:FjmP</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=6791087&amp;authToken=FjmP&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/2/000/01c/1f2/093eb0b.jpg</picture-url>
+  </person>
+  <person>
+    <id>kCYu3VmRkn</id>
+    <first-name>Michael</first-name>
+    <last-name>Dang</last-name>
+    <headline>Configuration Management Lead at Seismic Micro-Technology</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/kCYu3VmRkn:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:R1jO</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=4095355&amp;authToken=R1jO&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>vAXIsVbaWV</id>
+    <first-name>Jason</first-name>
+    <last-name>Derrett</last-name>
+    <headline>Principal at Squeejee</headline>
+    <location>
+      <name>Austin, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/vAXIsVbaWV:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:tXyb</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3464659&amp;authToken=tXyb&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>5bs37p0vBS</id>
+    <first-name>Tri</first-name>
+    <last-name>Do</last-name>
+    <headline>Senior Software Engineer at Vision Source</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/5bs37p0vBS:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:hsL1</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3620461&amp;authToken=hsL1&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>GSU5z0ps8Q</id>
+    <first-name>Chris</first-name>
+    <last-name>Duke</last-name>
+    <headline>Web Solutions Architect at JEM Resource Partners and Internet Consultant</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Internet</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/GSU5z0ps8Q:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:VZdh</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=2541664&amp;authToken=VZdh&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>zjv6GSKYCx</id>
+    <first-name>Mary</first-name>
+    <last-name>Dvorak</last-name>
+    <headline>Computer Software Professional</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/zjv6GSKYCx:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:ujut</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=17962526&amp;authToken=ujut&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/021/257/38fce89.jpg</picture-url>
+  </person>
+  <person>
+    <id>-mQR-iHbt0</id>
+    <first-name>Lori</first-name>
+    <last-name>England</last-name>
+    <headline>Finance and Business Strategy and Planning Manager at HP</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/-mQR-iHbt0:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:N9SV</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3584807&amp;authToken=N9SV&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/033/3e3/2cbb55f.jpg</picture-url>
+  </person>
+  <person>
+    <id>UQyHxY5pp5</id>
+    <first-name>Brittanie</first-name>
+    <last-name>Flegle</last-name>
+    <headline>Video Production &amp; Graphic Design at MindBites</headline>
+    <location>
+      <name>Austin, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Online Media</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/UQyHxY5pp5:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:gXcn</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=14516818&amp;authToken=gXcn&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/012/115/24f7a44.jpg</picture-url>
+  </person>
+  <person>
+    <id>NZeaWXs0Y1</id>
+    <first-name>Lance</first-name>
+    <last-name>Fogtman</last-name>
+    <headline>Consultant</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/NZeaWXs0Y1:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:hzX6</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=279857&amp;authToken=hzX6&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>Q-tbkKyr7M</id>
+    <first-name>Wes</first-name>
+    <last-name>Gamble</last-name>
+    <headline>Senior Web Application Developer - Principal at Bison Consulting</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/Q-tbkKyr7M:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:OWrt</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=334481&amp;authToken=OWrt&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/01e/3f4/2e66f1c.jpg</picture-url>
+  </person>
+  <person>
+    <id>eRZF2UXFo5</id>
+    <first-name>Jasmine</first-name>
+    <last-name>Ganguly</last-name>
+    <headline>Computer Software Professional</headline>
+    <location>
+      <name>Greater Atlanta Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/eRZF2UXFo5:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:LGd6</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=7453800&amp;authToken=LGd6&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>AFOiwfcG6g</id>
+    <first-name>Rupak</first-name>
+    <last-name>Ganguly</last-name>
+    <headline>Solution Architect at HP, with .NET and Silverlight exp., good communication, is highly motivated and a strong leader.</headline>
+    <location>
+      <name>Greater Atlanta Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/AFOiwfcG6g:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:O9f8</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3621279&amp;authToken=O9f8&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/019/314/2dcb02e.jpg</picture-url>
+  </person>
+  <person>
+    <id>m4W3WMcbgt</id>
+    <first-name>Daniel</first-name>
+    <last-name>Gerstenzang</last-name>
+    <headline>IT Professional | Programs Management, Strategy &amp; Planning | Mergers and Acquisitions</headline>
+    <location>
+      <name>Greater New York City Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/m4W3WMcbgt:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:l1x2</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=1572693&amp;authToken=l1x2&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/035/322/05eff85.jpg</picture-url>
+  </person>
+  <person>
+    <id>NklNEDnoIs</id>
+    <first-name>Sai</first-name>
+    <last-name>Gonuguntla</last-name>
+    <headline>Electrical Engineer</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Electrical/Electronic Manufacturing</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/NklNEDnoIs:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:Yj1r</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=8786197&amp;authToken=Yj1r&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>wqfPY2Day8</id>
+    <first-name>Adrian</first-name>
+    <last-name>Gorena</last-name>
+    <headline>Operations Manager at Hewlett Packard</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Hardware</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/wqfPY2Day8:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:_WXI</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=1167921&amp;authToken=_WXI&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>-IZ3lyCJiJ</id>
+    <first-name>Manik</first-name>
+    <last-name>Gupta</last-name>
+    <headline>Geo Products Lead, Japan &amp; Asia-Pacific, Google</headline>
+    <location>
+      <name>India</name>
+      <country>
+        <code>in</code>
+      </country>
+    </location>
+    <industry>Internet</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/-IZ3lyCJiJ:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:MX15</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3748485&amp;authToken=MX15&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/005/1df/2a462c6.jpg</picture-url>
+  </person>
+  <person>
+    <id>opWNwr0IBs</id>
+    <first-name>Mike</first-name>
+    <last-name>Hagedorn</last-name>
+    <headline>Ruby on Rails Consultant</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/opWNwr0IBs:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:V1e8</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=107037&amp;authToken=V1e8&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/007/134/0b9b3b5.jpg</picture-url>
+  </person>
+  <person>
+    <id>27QX9BExFR</id>
+    <first-name>Ryan</first-name>
+    <last-name>Hankins</last-name>
+    <headline>Executive Director at M-POWER</headline>
+    <location>
+      <name>Birmingham, Alabama Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Non-Profit Organization Management</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/27QX9BExFR:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:C1y5</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=15502114&amp;authToken=C1y5&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>7sNolq-6a8</id>
+    <first-name>Mubashir</first-name>
+    <last-name>Haq</last-name>
+    <headline>Software Developer IV at Dell</headline>
+    <location>
+      <name>Austin, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/7sNolq-6a8:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:FfdP</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=18691417&amp;authToken=FfdP&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>9hN7SIuXzr</id>
+    <first-name>Brandy</first-name>
+    <last-name>Hays</last-name>
+    <headline>Managing Consultant, IBM</headline>
+    <location>
+      <name>Washington D.C. Metro Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/9hN7SIuXzr:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:W2_j</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=1381078&amp;authToken=W2_j&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/00a/133/31ea40f.jpg</picture-url>
+  </person>
+  <person>
+    <id>xpYrbtPyfc</id>
+    <first-name>Adam</first-name>
+    <last-name>Hems</last-name>
+    <headline>Senior Consultant at Microsoft Corporation</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/xpYrbtPyfc:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:O5Hl</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=82380&amp;authToken=O5Hl&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/000/36d/1bb01aa.jpg</picture-url>
+  </person>
+  <person>
+    <id>tjsR_gTuts</id>
+    <first-name>Paul</first-name>
+    <last-name>Hepner</last-name>
+    <headline>Information Technology and Services Consultant</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/tjsR_gTuts:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:jIMC</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=4774078&amp;authToken=jIMC&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/2/000/020/16e/3596320.jpg</picture-url>
+  </person>
+  <person>
+    <id>9PG6hMaitx</id>
+    <first-name>Scott</first-name>
+    <last-name>Hinze</last-name>
+    <headline>Web / Media Producer</headline>
+    <location>
+      <name>Dallas/Fort Worth Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Online Media</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/9PG6hMaitx:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:XD2_</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=7375789&amp;authToken=XD2_&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/00b/198/053a7f3.jpg</picture-url>
+  </person>
+  <person>
+    <id>XM0kEe2Ltp</id>
+    <first-name>Kym</first-name>
+    <last-name>Hoffpauir</last-name>
+    <headline>IT Employee at Hewlett-Packard</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/XM0kEe2Ltp:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:ZV7H</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=11520059&amp;authToken=ZV7H&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/007/1c6/3dfcb43.jpg</picture-url>
+  </person>
+  <person>
+    <id>G3TmulSNJp</id>
+    <first-name>Cathy</first-name>
+    <last-name>Holladay</last-name>
+    <headline>Strategy &amp; Capability Planning Manager at Hewlett-Packard Company</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Hardware</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/G3TmulSNJp:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:Y-kj</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3626213&amp;authToken=Y-kj&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>kIQvVBowuv</id>
+    <first-name>Ejaz</first-name>
+    <last-name>Hossain</last-name>
+    <headline>Software QA Analyst at HP</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Electrical/Electronic Manufacturing</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/kIQvVBowuv:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:5xSq</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=8013113&amp;authToken=5xSq&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>7oA4WXX_uf</id>
+    <first-name>Ejaz</first-name>
+    <last-name>Hossain, PMP</last-name>
+    <headline>Quality Assurance at Hewlett Packard</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/7oA4WXX_uf:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:Cgao</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3614298&amp;authToken=Cgao&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/000/1ae/26b7ee6.jpg</picture-url>
+  </person>
+  <person>
+    <id>p462AqLP1C</id>
+    <first-name>Brenda</first-name>
+    <last-name>Hunting, PMP</last-name>
+    <headline>Program Manager at Helwett-Packard</headline>
+    <location>
+      <name>Colorado Springs, Colorado Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/p462AqLP1C:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:zbaD</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=21026446&amp;authToken=zbaD&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/006/3ed/0bed821.jpg</picture-url>
+  </person>
+  <person>
+    <id>U6YB1O2bqv</id>
+    <first-name>Zach</first-name>
+    <last-name>Inglis</last-name>
+    <headline>Partner at London Made</headline>
+    <location>
+      <name>United Kingdom</name>
+      <country>
+        <code>gb</code>
+      </country>
+    </location>
+    <industry>Online Media</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/U6YB1O2bqv:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:vf4w</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3669630&amp;authToken=vf4w&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/2/000/02f/2d5/128a96f.jpg</picture-url>
+  </person>
+  <person>
+    <id>n9tC7rvTQL</id>
+    <first-name>Sunitha</first-name>
+    <last-name>Jayasim</last-name>
+    <headline>Information Technology and Services Consultant</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/n9tC7rvTQL:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:k8ZS</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=14317971&amp;authToken=k8ZS&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/024/37b/0b45d9b.jpg</picture-url>
+  </person>
+  <person>
+    <id>xVyvSMxRpv</id>
+    <first-name>Ross</first-name>
+    <last-name>Jimenez</last-name>
+    <headline>Information Technology Strategist and Architect</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/xVyvSMxRpv:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:98F6</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=2319492&amp;authToken=98F6&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/000/151/1119b88.jpg</picture-url>
+  </person>
+  <person>
+    <id>tbyDa8uih0</id>
+    <first-name>Nils</first-name>
+    <last-name>Jonsson</last-name>
+    <headline>Software builder</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/tbyDa8uih0:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:xkPq</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=71458&amp;authToken=xkPq&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/2/000/015/30a/3be881c.jpg</picture-url>
+  </person>
+  <person>
+    <id>22CWLjXnBG</id>
+    <first-name>Dustin</first-name>
+    <last-name>Joost</last-name>
+    <headline>Chapter Consultant at Pi Kappa Alpha</headline>
+    <location>
+      <name>Dallas/Fort Worth Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Management Consulting</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/22CWLjXnBG:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:tLH0</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=13539120&amp;authToken=tLH0&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/2/000/029/367/257f313.jpg</picture-url>
+  </person>
+  <person>
+    <id>rHM1aUSU3p</id>
+    <first-name>Bradley</first-name>
+    <last-name>Joyce</last-name>
+    <headline>Entrepreneur</headline>
+    <location>
+      <name>Dallas/Fort Worth Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/rHM1aUSU3p:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:Jtog</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=12595716&amp;authToken=Jtog&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/02e/1fa/2d02d08.jpg</picture-url>
+  </person>
+  <person>
+    <id>IcbBiDZsHj</id>
+    <first-name>Antony</first-name>
+    <last-name>Justin</last-name>
+    <headline>IT Manager at HP</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/IcbBiDZsHj:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:Fm1f</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=6041928&amp;authToken=Fm1f&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/000/307/1dfd6de.jpg</picture-url>
+  </person>
+  <person>
+    <id>qJSZtwj6SS</id>
+    <first-name>Arvinder Singh</first-name>
+    <last-name>Kang</last-name>
+    <headline>Manager of Media Technology at Student Media Center, University of Mississippi</headline>
+    <location>
+      <name>Greater Memphis Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Online Media</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/qJSZtwj6SS:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:dEyz</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=25962&amp;authToken=dEyz&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/2/000/028/04f/0fdc535.jpg</picture-url>
+  </person>
+  <person>
+    <id>6kxA-99XIg</id>
+    <first-name>Steve</first-name>
+    <last-name>Kean</last-name>
+    <headline>Application Architect and Developer</headline>
+    <location>
+      <name>Saudi Arabia</name>
+      <country>
+        <code>sa</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/6kxA-99XIg:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:lX4a</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=4673951&amp;authToken=lX4a&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/2/000/017/3fa/3eccf6f.jpg</picture-url>
+  </person>
+  <person>
+    <id>MlVKoHxPp6</id>
+    <first-name>Tom</first-name>
+    <last-name>Kern</last-name>
+    <headline>Senior .Net Developer at Benaissance</headline>
+    <location>
+      <name>Greater Omaha Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/MlVKoHxPp6:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:Ljcg</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3633826&amp;authToken=Ljcg&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>j4oWnjCP8y</id>
+    <first-name>Scott</first-name>
+    <last-name>Kildebeck</last-name>
+    <headline>Business Development Manager at Insight</headline>
+    <location>
+      <name>Dallas/Fort Worth Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/j4oWnjCP8y:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:vccD</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=45724488&amp;authToken=vccD&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>mo5nKdLuOU</id>
+    <first-name>Sue</first-name>
+    <last-name>Klinke</last-name>
+    <headline>IT Program/Project Manager</headline>
+    <location>
+      <name>Greater Denver Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/mo5nKdLuOU:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:QFmK</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3315929&amp;authToken=QFmK&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/2/000/015/2f8/3f0bd4d.jpg</picture-url>
+  </person>
+  <person>
+    <id>1NbNVs7llI</id>
+    <first-name>Hanu</first-name>
+    <last-name>Kommalapati</last-name>
+    <headline>Architect at Microsoft</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/1NbNVs7llI:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:93ol</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3613552&amp;authToken=93ol&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>Gl_1-hQc1N</id>
+    <first-name>Jeff</first-name>
+    <last-name>Kramer</last-name>
+    <headline>Manager at Polycot Labs</headline>
+    <location>
+      <name>Austin, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/Gl_1-hQc1N:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:XyiL</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=15128&amp;authToken=XyiL&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/001/009/309254b.jpg</picture-url>
+  </person>
+  <person>
+    <id>g0RA7B27no</id>
+    <first-name>Doug</first-name>
+    <last-name>Kulka</last-name>
+    <headline>IT Manager - Global Marketing IT (Customer Acquistion &amp; Intelligence) - Hewlett Packard</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/g0RA7B27no:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:w5hY</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=2587854&amp;authToken=w5hY&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>VqTuVpQDsd</id>
+    <first-name>Keith</first-name>
+    <last-name>Lancaster</last-name>
+    <headline>Independent Software Consultant - OS X, Ruby on Rails, iPhone</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/VqTuVpQDsd:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:O9Vk</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=4889683&amp;authToken=O9Vk&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>88UDLCogAb</id>
+    <first-name>Mona</first-name>
+    <last-name>Larson</last-name>
+    <headline>IT Consultant at BP</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Oil &amp; Energy</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/88UDLCogAb:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:4K3n</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=20590759&amp;authToken=4K3n&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>1bJ9lghNE-</id>
+    <first-name>Daniel</first-name>
+    <last-name>Lathrop</last-name>
+    <headline>Digital Strategist at InvestigateWest</headline>
+    <location>
+      <name>Greater Seattle Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Newspapers</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/1bJ9lghNE-:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:FBW_</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3429308&amp;authToken=FBW_&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/002/33d/196b180.jpg</picture-url>
+  </person>
+  <person>
+    <id>4NHud1u5Wg</id>
+    <first-name>Vu</first-name>
+    <last-name>Le</last-name>
+    <headline>Senior Consultant at Microsoft</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/4NHud1u5Wg:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:KFqn</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3616128&amp;authToken=KFqn&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>fvRejoqubS</id>
+    <first-name>Chris</first-name>
+    <last-name>Ledet</last-name>
+    <headline>Software Developer at EHS Technologies</headline>
+    <location>
+      <name>Greater Philadelphia Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/fvRejoqubS:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:iAiJ</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=22835029&amp;authToken=iAiJ&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/014/14e/05c4136.jpg</picture-url>
+  </person>
+  <person>
+    <id>mqw5Ms_RBQ</id>
+    <first-name>Chris</first-name>
+    <last-name>Lee</last-name>
+    <headline>Rails Consultant</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Internet</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/mqw5Ms_RBQ:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:Mq9T</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3259427&amp;authToken=Mq9T&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>Wt3wytYcN4</id>
+    <first-name>Toby</first-name>
+    <last-name>Lenz</last-name>
+    <headline>Founder at The Hype Networks</headline>
+    <location>
+      <name>San Francisco Bay Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/Wt3wytYcN4:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:q0Bs</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=54487957&amp;authToken=q0Bs&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/037/260/1721ba1.jpg</picture-url>
+  </person>
+  <person>
+    <id>DUw9_BLdSl</id>
+    <first-name>Alex</first-name>
+    <last-name>Leverington</last-name>
+    <headline>Simplicity Programmer</headline>
+    <location>
+      <name>Dallas/Fort Worth Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Internet</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/DUw9_BLdSl:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:nLcQ</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=17104074&amp;authToken=nLcQ&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/007/354/1e0c3ac.jpg</picture-url>
+  </person>
+  <person>
+    <id>j2rlFKcG_2</id>
+    <first-name>Kathy</first-name>
+    <last-name>Li</last-name>
+    <headline>Solution Architect at HP</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/j2rlFKcG_2:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:EcA_</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=8978676&amp;authToken=EcA_&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>KaykrUkY9b</id>
+    <first-name>Jay</first-name>
+    <last-name>Link</last-name>
+    <headline>VP, Business Planning &amp; Analysis at Invensys</headline>
+    <location>
+      <name>United States</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Industrial Automation</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/KaykrUkY9b:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:I1Mi</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=867183&amp;authToken=I1Mi&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>eAP_sDBbN-</id>
+    <first-name>Steven</first-name>
+    <last-name>Lopez</last-name>
+    <headline>Manager at Hewlett-Packard</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/eAP_sDBbN-:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:Cvkv</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=2538035&amp;authToken=Cvkv&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/00a/03c/35438c1.jpg</picture-url>
+  </person>
+  <person>
+    <id>cOvYRTfQoa</id>
+    <first-name>Steven</first-name>
+    <last-name>Lopez</last-name>
+    <headline>Manager at Hewlett-Packard</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/cOvYRTfQoa:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:bO9e</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3860082&amp;authToken=bO9e&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/2/000/02a/35a/285441a.jpg</picture-url>
+  </person>
+  <person>
+    <id>iUocDT8ucO</id>
+    <first-name>Judd</first-name>
+    <last-name>Lyon</last-name>
+    <headline>Principal, Trifecta Interactive Marketing, LLC</headline>
+    <location>
+      <name>Austin, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Marketing and Advertising</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/iUocDT8ucO:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:fJpS</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=24392843&amp;authToken=fJpS&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/025/39b/3d1cac1.jpg</picture-url>
+  </person>
+  <person>
+    <id>zEOJybAbjS</id>
+    <first-name>Stephany</first-name>
+    <last-name>Macon</last-name>
+    <headline>VP - Client Services at STARS (Survey Tabulations and Research Systems)</headline>
+    <location>
+      <name>Dallas/Fort Worth Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Market Research</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/zEOJybAbjS:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:lsJI</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=13155620&amp;authToken=lsJI&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>JO5lq5NLTJ</id>
+    <first-name>Cheryl</first-name>
+    <last-name>Madewell</last-name>
+    <headline>ChurchLife &amp; SeniorLife-Events at Denton Bible Church</headline>
+    <location>
+      <name>Dallas/Fort Worth Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Religious Institutions</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/JO5lq5NLTJ:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:bxaa</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=26792780&amp;authToken=bxaa&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>Z5NxDP7Shs</id>
+    <first-name>Deborah</first-name>
+    <last-name>Manzanares</last-name>
+    <headline>ecommerce at hp</headline>
+    <location>
+      <name>Colorado Springs, Colorado Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Internet</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/Z5NxDP7Shs:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:i_8e</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=7133603&amp;authToken=i_8e&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>JLciRoHssO</id>
+    <first-name>Lynn</first-name>
+    <last-name>Martin</last-name>
+    <headline>Owner at Coding Experts</headline>
+    <location>
+      <name>Dallas/Fort Worth Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Market Research</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/JLciRoHssO:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:TgUx</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=9530258&amp;authToken=TgUx&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>6dpl1eN52z</id>
+    <first-name>Adria</first-name>
+    <last-name>Maston</last-name>
+    <headline>Owner, Unstoppable Solutions</headline>
+    <location>
+      <name>Phoenix, Arizona Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Internet</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/6dpl1eN52z:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:fgyM</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=21055717&amp;authToken=fgyM&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>RQhhsgcJiK</id>
+    <first-name>Chris</first-name>
+    <last-name>McCroskey</last-name>
+    <headline>Director at Rockfish Interactive</headline>
+    <location>
+      <name>Dallas/Fort Worth Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/RQhhsgcJiK:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:b8Tx</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3588427&amp;authToken=b8Tx&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/01b/091/26945f1.jpg</picture-url>
+  </person>
+  <person>
+    <id>4k2lFtAZZj</id>
+    <first-name>Sunil</first-name>
+    <last-name>Menon</last-name>
+    <headline>Manager - Architecture and Development - Simple Commerce and Call Center Tools</headline>
+    <location>
+      <name>Greater Philadelphia Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/4k2lFtAZZj:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:8CBX</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3622810&amp;authToken=8CBX&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/00d/038/0a27cfc.jpg</picture-url>
+  </person>
+  <person>
+    <id>FNuc7-9bKG</id>
+    <first-name>Christopher</first-name>
+    <last-name>Merritt</last-name>
+    <headline>Ruby Developer at Nexplore Corporation</headline>
+    <location>
+      <name>Dallas/Fort Worth Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Internet</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/FNuc7-9bKG:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:_ClT</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=6496645&amp;authToken=_ClT&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/020/1b3/102d6b4.jpg</picture-url>
+  </person>
+  <person>
+    <id>jVe9Up97cQ</id>
+    <first-name>Dale</first-name>
+    <last-name>Merritt</last-name>
+    <headline>President at Folla MeDia, LLC</headline>
+    <location>
+      <name>Phoenix, Arizona Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Internet</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/jVe9Up97cQ:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:v_4s</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=22440791&amp;authToken=v_4s&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/2/000/030/23f/379b7ba.jpg</picture-url>
+  </person>
+  <person>
+    <id>ti_swBHCpg</id>
+    <first-name>Darnell</first-name>
+    <last-name>Milton</last-name>
+    <headline>Functional Analyst at AePONA</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/ti_swBHCpg:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:hX0D</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=14090841&amp;authToken=hX0D&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>DGCa2ko-fP</id>
+    <first-name>Luigi</first-name>
+    <last-name>Montanez</last-name>
+    <headline>Software Developer at Sunlight Foundation</headline>
+    <location>
+      <name>Washington D.C. Metro Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/DGCa2ko-fP:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:Z-5N</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=7276401&amp;authToken=Z-5N&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/02f/331/1d567e1.jpg</picture-url>
+  </person>
+  <person>
+    <id>0UmCmoomT5</id>
+    <first-name>Eric</first-name>
+    <last-name>Moore</last-name>
+    <headline>Programmer Analyst at HCC Service Company</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Insurance</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/0UmCmoomT5:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:TaIk</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3071163&amp;authToken=TaIk&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>vArXolo1zD</id>
+    <first-name>Tammi</first-name>
+    <last-name>Moore</last-name>
+    <headline>Information Technology Project Manager</headline>
+    <location>
+      <name>Greater Atlanta Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/vArXolo1zD:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:LUKJ</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=2610633&amp;authToken=LUKJ&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/007/1fb/35a0abd.jpg</picture-url>
+  </person>
+  <person>
+    <id>uWmB1hkc16</id>
+    <first-name>Tommy</first-name>
+    <last-name>Morgan</last-name>
+    <headline>Software Architect</headline>
+    <location>
+      <name>Austin, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/uWmB1hkc16:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:I3FU</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=4934210&amp;authToken=I3FU&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/002/213/13561b2.jpg</picture-url>
+  </person>
+  <person>
+    <id>nVuEI9NMGj</id>
+    <first-name>Josephine</first-name>
+    <last-name>Morris</last-name>
+    <headline>Member at IABC</headline>
+    <location>
+      <name>Phoenix, Arizona Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Internet</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/nVuEI9NMGj:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:53Cg</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=23997987&amp;authToken=53Cg&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/023/07c/04c1df1.jpg</picture-url>
+  </person>
+  <person>
+    <id>lH6TKY6v53</id>
+    <first-name>Jim</first-name>
+    <last-name>Mulholland</last-name>
+    <headline>Found / Partner At Squeejee</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/lH6TKY6v53:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:cmTl</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3587594&amp;authToken=cmTl&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>T7iKC79zIB</id>
+    <first-name>Merla</first-name>
+    <last-name>Murthy</last-name>
+    <headline>Information Technology and Services Consultant and Contractor</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/T7iKC79zIB:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:PyYp</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3596086&amp;authToken=PyYp&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>JmMU69zfhl</id>
+    <first-name>Alexander</first-name>
+    <last-name>Muse</last-name>
+    <headline>Entrepreneur</headline>
+    <location>
+      <name>Dallas/Fort Worth Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/JmMU69zfhl:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:n7h6</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=31287&amp;authToken=n7h6&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/000/32c/17b9339.jpg</picture-url>
+  </person>
+  <person>
+    <id>e53TSMlmXE</id>
+    <first-name>Alberto</first-name>
+    <last-name>Nardelli</last-name>
+    <headline>Making the world more open and better connected</headline>
+    <location>
+      <name>London, United Kingdom</name>
+      <country>
+        <code>gb</code>
+      </country>
+    </location>
+    <industry>Internet</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/e53TSMlmXE:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:c5Ix</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=841932&amp;authToken=c5Ix&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/025/25f/3535d39.jpg</picture-url>
+  </person>
+  <person>
+    <id>3mil6hY93h</id>
+    <first-name>David</first-name>
+    <last-name>Netherland</last-name>
+    <headline>Sergeant at Rapides Parish Sheriff's Office and Law Enforcement Consultant</headline>
+    <location>
+      <name>Alexandria, Louisiana Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Law Enforcement</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/3mil6hY93h:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:TyYW</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=10264243&amp;authToken=TyYW&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>Wg56CgmrNZ</id>
+    <first-name>Paula</first-name>
+    <last-name>Netherland</last-name>
+    <headline>Owner, TreeFrog Studios</headline>
+    <location>
+      <name>Dallas/Fort Worth Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Photography</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/Wg56CgmrNZ:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:ykZL</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=58354393&amp;authToken=ykZL&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/03b/1fd/191b80c.jpg</picture-url>
+  </person>
+  <person>
+    <id>rzbkQo73jD</id>
+    <first-name>Todd</first-name>
+    <last-name>Newman</last-name>
+    <headline>Owner, Newman Asset Management, LLC</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Investment Management</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/rzbkQo73jD:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:Rpkr</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=6252573&amp;authToken=Rpkr&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>UrkteuTm4I</id>
+    <first-name>Taylor</first-name>
+    <last-name>Norrish</last-name>
+    <headline>Founder &amp; CEO of PrintFriendly.com</headline>
+    <location>
+      <name>San Francisco Bay Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Internet</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/UrkteuTm4I:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:JSdN</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=2222998&amp;authToken=JSdN&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/2/000/01c/08f/1972de5.jpg</picture-url>
+  </person>
+  <person>
+    <id>MKsHzA4vU4</id>
+    <first-name>John</first-name>
+    <last-name>Nunemaker</last-name>
+    <headline>Farm-boy work ethic and common sense, mixed with a desire for all things new, particularly related to the web.</headline>
+    <location>
+      <name>South Bend, Indiana Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Internet</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/MKsHzA4vU4:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:q3gn</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=1798674&amp;authToken=q3gn&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/00a/16e/071f784.jpg</picture-url>
+  </person>
+  <person>
+    <id>pr-9uCrsYe</id>
+    <first-name>Tricia</first-name>
+    <last-name>Parker</last-name>
+    <headline>Senior Business Analyst at Community Health Solutions</headline>
+    <location>
+      <name>Tampa/St. Petersburg, Florida Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/pr-9uCrsYe:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:uGFc</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=10519650&amp;authToken=uGFc&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/027/0a4/3ac790d.jpg</picture-url>
+  </person>
+  <person>
+    <id>KLmTyFJZh4</id>
+    <first-name>Curtis</first-name>
+    <last-name>Parmer</last-name>
+    <headline>General Manager- RDC Cytex</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Plastics</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/KLmTyFJZh4:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:WOZd</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=5049950&amp;authToken=WOZd&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/2/000/002/3e6/14194c7.jpg</picture-url>
+  </person>
+  <person>
+    <id>pESfFDzQIr</id>
+    <first-name>Don</first-name>
+    <last-name>Parsons</last-name>
+    <headline>IT &amp; Technical Arts Director at The Fellowship at Cinco Ranch</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Internet</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/pESfFDzQIr:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:bOhz</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=1479299&amp;authToken=bOhz&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/2/000/004/159/1ca1799.jpg</picture-url>
+  </person>
+  <person>
+    <id>2fipb_xv9S</id>
+    <first-name>John</first-name>
+    <last-name>Payton</last-name>
+    <headline>Director of Business Development at RockSports</headline>
+    <location>
+      <name>United States</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Marketing and Advertising</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/2fipb_xv9S:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:rGbs</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=24312799&amp;authToken=rGbs&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/016/09a/0c21667.jpg</picture-url>
+  </person>
+  <person>
+    <id>pN8W8PEb9T</id>
+    <first-name>Travis</first-name>
+    <last-name>Plummer</last-name>
+    <headline>Solutions Architect II at HP</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/pN8W8PEb9T:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:pL4N</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3621753&amp;authToken=pL4N&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>SFcUHYB6Io</id>
+    <first-name>Gregg</first-name>
+    <last-name>Pollack</last-name>
+    <headline>Web Applications Developer and Idea Guy</headline>
+    <location>
+      <name>Orlando, Florida Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/SFcUHYB6Io:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:3Lct</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=8427456&amp;authToken=3Lct&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/005/2e4/17552ce.jpg</picture-url>
+  </person>
+  <person>
+    <id>8Ip7autIa9</id>
+    <first-name>Sunita</first-name>
+    <last-name>Pratti</last-name>
+    <headline>Senior Enterprise, Solutions and Technical Architect</headline>
+    <location>
+      <name>Dallas/Fort Worth Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/8Ip7autIa9:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:g6kZ</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=14318386&amp;authToken=g6kZ&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>kqEbRi4ODM</id>
+    <first-name>Nathan</first-name>
+    <last-name>Price</last-name>
+    <headline>Enterprise Architect at Hewlett-Packard</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Internet</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/kqEbRi4ODM:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:oSWN</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=6039211&amp;authToken=oSWN&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>RyRoMPiSAP</id>
+    <first-name>Ganesh</first-name>
+    <last-name>Raju</last-name>
+    <headline>Sr. Consultant / Lead Developer at KBR</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/RyRoMPiSAP:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:ZIGp</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=6040595&amp;authToken=ZIGp&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/01d/2d9/0abd329.jpg</picture-url>
+  </person>
+  <person>
+    <id>Sq1bJCb94i</id>
+    <first-name>Jeff</first-name>
+    <last-name>Reichman</last-name>
+    <headline>Founder at Tender Branch</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Hospital &amp; Health Care</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/Sq1bJCb94i:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:PF9q</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=2956472&amp;authToken=PF9q&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>ZYhARXlnf6</id>
+    <first-name>Jason</first-name>
+    <last-name>Reneau</last-name>
+    <headline>Founder and CEO - MindBites</headline>
+    <location>
+      <name>Austin, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Internet</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/ZYhARXlnf6:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:YNNy</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=5607514&amp;authToken=YNNy&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/00e/1c3/2e72f2b.jpg</picture-url>
+  </person>
+  <person>
+    <id>-YU8GplQXQ</id>
+    <first-name>Katrina</first-name>
+    <last-name>Rice</last-name>
+    <headline>Owner, Veribatim - Web Design and Consultation</headline>
+    <location>
+      <name>Dallas/Fort Worth Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Internet</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/-YU8GplQXQ:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:lXyN</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=23101700&amp;authToken=lXyN&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/00c/35a/1292d7f.jpg</picture-url>
+  </person>
+  <person>
+    <id>Q2b77hZgdY</id>
+    <first-name>Bobby</first-name>
+    <last-name>Richards</last-name>
+    <headline>Information Technology and Services Consultant and Professional</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/Q2b77hZgdY:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:2DAB</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=10734554&amp;authToken=2DAB&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>OcJr-zjcyb</id>
+    <first-name>Ryan</first-name>
+    <last-name>Roberts</last-name>
+    <headline>Startup Lawyer</headline>
+    <location>
+      <name>Dallas/Fort Worth Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Law Practice</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/OcJr-zjcyb:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:gp8k</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=13721795&amp;authToken=gp8k&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/2/000/02e/1c0/27e6bdb.jpg</picture-url>
+  </person>
+  <person>
+    <id>crV9XgvYyD</id>
+    <first-name>Joe</first-name>
+    <last-name>Romero</last-name>
+    <headline>Lead Designer</headline>
+    <location>
+      <name>Orange County, California Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Graphic Design</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/crV9XgvYyD:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:XA6h</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=6530531&amp;authToken=XA6h&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/2/000/02e/244/3833c69.jpg</picture-url>
+  </person>
+  <person>
+    <id>xolPzK1hlq</id>
+    <first-name>Linda</first-name>
+    <last-name>Ruehlman</last-name>
+    <headline>Director of Research at CBR</headline>
+    <location>
+      <name>Phoenix, Arizona Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Research</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/xolPzK1hlq:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:9aPv</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=16159335&amp;authToken=9aPv&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>SsKgadcdi-</id>
+    <first-name>Kelsey</first-name>
+    <last-name>Ruger</last-name>
+    <headline>Experienced Technology, Design and User Experience Executive</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Internet</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/SsKgadcdi-:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:uV9L</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=333612&amp;authToken=uV9L&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/2/000/009/0e1/1751c20.jpg</picture-url>
+  </person>
+  <person>
+    <id>6AETTFd6PX</id>
+    <first-name>Shermeen</first-name>
+    <last-name>Sadruddin</last-name>
+    <headline>Manager Strategy &amp; Planning at Hewlett-Packard</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/6AETTFd6PX:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:EXD2</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=11531872&amp;authToken=EXD2&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/2/000/00e/38f/26ec7c2.jpg</picture-url>
+  </person>
+  <person>
+    <id>OBwHVUyOR_</id>
+    <first-name>Matt</first-name>
+    <last-name>Sanders</last-name>
+    <headline>Partner / Systems Architect, Polycot Consulting</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/OBwHVUyOR_:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:OM_4</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3748128&amp;authToken=OM_4&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>5AVjueOL5L</id>
+    <first-name>Sean</first-name>
+    <last-name>Schofield</last-name>
+    <headline>CEO at Rails Dog LLC</headline>
+    <location>
+      <name>Washington D.C. Metro Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/5AVjueOL5L:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:6lAE</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=17879702&amp;authToken=6lAE&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/001/2ab/00e09ce.jpg</picture-url>
+  </person>
+  <person>
+    <id>iKEXMnzQNf</id>
+    <first-name>Keith</first-name>
+    <last-name>Scott</last-name>
+    <headline>XVice President at Survey Tabulations And Research Systems (STARS), Inc</headline>
+    <location>
+      <name>Dallas/Fort Worth Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Market Research</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/iKEXMnzQNf:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:UCpm</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=26732633&amp;authToken=UCpm&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>siONRzJwvO</id>
+    <first-name>Durga Prasad</first-name>
+    <last-name>Seloj</last-name>
+    <headline>Sr Quality Analyst at 99 Cents Only Stores</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/siONRzJwvO:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:EvjG</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3238818&amp;authToken=EvjG&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/02b/314/3def04f.jpg</picture-url>
+  </person>
+  <person>
+    <id>zmZxy1FbvF</id>
+    <first-name>Eddie</first-name>
+    <last-name>Shafer</last-name>
+    <headline>Director eBusiness at Hewlett Packard</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Hardware</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/zmZxy1FbvF:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:YffV</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3748214&amp;authToken=YffV&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>6lR9D7EdoD</id>
+    <first-name>Mark</first-name>
+    <last-name>Shively</last-name>
+    <headline>Global Mgr. - Security Systems at Shell Oil</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Oil &amp; Energy</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/6lR9D7EdoD:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:qmum</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=9844963&amp;authToken=qmum&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>CQH4NB8Lk9</id>
+    <first-name>Debbie</first-name>
+    <last-name>Sholk-Sousa</last-name>
+    <headline>Principal, ROAOR Holdings, Inc.</headline>
+    <location>
+      <name>Dallas/Fort Worth Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/CQH4NB8Lk9:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:vufZ</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=5652726&amp;authToken=vufZ&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/021/157/045fd45.jpg</picture-url>
+  </person>
+  <person>
+    <id>X2PNGD8v-y</id>
+    <first-name>Krishna</first-name>
+    <last-name>Sikharam</last-name>
+    <headline>Contractor at British Petroleum</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/X2PNGD8v-y:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:hBzI</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=21337958&amp;authToken=hBzI&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>Kra7me2LTt</id>
+    <first-name>Page</first-name>
+    <last-name>Sincler</last-name>
+    <headline>Software Implementation Consultant at Spectra Energy</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/Kra7me2LTt:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:gUln</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=7668108&amp;authToken=gUln&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>ydD3QxaKtx</id>
+    <first-name>Eric</first-name>
+    <last-name>Smith</last-name>
+    <headline>Principal at FifthRail</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/ydD3QxaKtx:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:0lFy</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=12696103&amp;authToken=0lFy&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/2/000/038/26f/0cf4457.jpg</picture-url>
+  </person>
+  <person>
+    <id>EFlS4-yEUQ</id>
+    <first-name>Rich</first-name>
+    <last-name>Spencer</last-name>
+    <headline>Consultant at Benaissance</headline>
+    <location>
+      <name>Greater Omaha Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/EFlS4-yEUQ:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:40aj</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=13851702&amp;authToken=40aj&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>b3dwY0ZjGl</id>
+    <first-name>Rich</first-name>
+    <last-name>Spencer</last-name>
+    <headline>Technical Consultant at HP</headline>
+    <location>
+      <name>Greater Omaha Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/b3dwY0ZjGl:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:NfH7</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3595330&amp;authToken=NfH7&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>nHDOpkvRi9</id>
+    <first-name>Adam</first-name>
+    <last-name>Stacoviak</last-name>
+    <headline>Designer &amp; Developer</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/nHDOpkvRi9:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:s2Mp</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=14190525&amp;authToken=s2Mp&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/2/000/02a/133/07f984b.jpg</picture-url>
+  </person>
+  <person>
+    <id>MU2Bpp9QN8</id>
+    <first-name>Carol</first-name>
+    <last-name>Sumrall</last-name>
+    <headline>Director Sales Compensation IT at Hewlett Packard</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Hardware</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/MU2Bpp9QN8:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:GgSt</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=15236950&amp;authToken=GgSt&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>d4NTx9MnMO</id>
+    <first-name>Richard</first-name>
+    <last-name>Tang</last-name>
+    <headline>Architect at Extreme Technologies</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/d4NTx9MnMO:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:Xr8v</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=9347377&amp;authToken=Xr8v&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>4HmxiWhzIr</id>
+    <first-name>Darren</first-name>
+    <last-name>Thompson</last-name>
+    <headline>Lead Programmer/Analyst at Horizon Health</headline>
+    <location>
+      <name>Dallas/Fort Worth Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Hospital &amp; Health Care</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/4HmxiWhzIr:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:35hN</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=22728915&amp;authToken=35hN&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>9Fci7xNKh7</id>
+    <first-name>ranga</first-name>
+    <last-name>tirumalaseti</last-name>
+    <headline>Sr.Developer at British Petroleum</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Oil &amp; Energy</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/9Fci7xNKh7:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:zjnx</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=19368289&amp;authToken=zjnx&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>V0210vnly9</id>
+    <first-name>Ranga</first-name>
+    <last-name>Tirumalaseti</last-name>
+    <headline>Computer Software Consultant and Contractor</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer Software</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/V0210vnly9:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:q6JH</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=7660859&amp;authToken=q6JH&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>xNOObJb-yZ</id>
+    <first-name>Darrin</first-name>
+    <last-name>Tvrdy, PMP</last-name>
+    <headline>Project Manager / Business Systems Analyst IV at Hewlett-Packard</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/xNOObJb-yZ:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:5DNj</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=6043885&amp;authToken=5DNj&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/03d/0d8/2c32744.jpg</picture-url>
+  </person>
+  <person>
+    <id>SL89b0uEoy</id>
+    <first-name>Vinod Goud</first-name>
+    <last-name>Udthawar</last-name>
+    <headline>Technical Consultent at BP</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Oil &amp; Energy</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/SL89b0uEoy:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:VdrQ</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=19665172&amp;authToken=VdrQ&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/01d/353/1f1dee3.jpg</picture-url>
+  </person>
+  <person>
+    <id>Qd3RH5Pmxo</id>
+    <first-name>Nataraja</first-name>
+    <last-name>Venkatarao</last-name>
+    <headline>Development Lead at Hewlett-Packard</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/Qd3RH5Pmxo:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:BNi5</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=22996938&amp;authToken=BNi5&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>PRfuLXitxn</id>
+    <first-name>Aaron</first-name>
+    <last-name>Vogt</last-name>
+    <headline>Partner at Intrinseco Inc.</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/PRfuLXitxn:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:zYFH</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=26808863&amp;authToken=zYFH&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>JAQUdtxn2X</id>
+    <first-name>Ben</first-name>
+    <last-name>Vogt</last-name>
+    <headline>Owner, OfficialTeamGear.Com (TechTeamShop.com)</headline>
+    <location>
+      <name>Baton Rouge, Louisiana Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Retail</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/JAQUdtxn2X:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:k8HQ</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=21502226&amp;authToken=k8HQ&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/005/086/2f026d0.jpg</picture-url>
+  </person>
+  <person>
+    <id>Vtl11azLvC</id>
+    <first-name>Fred</first-name>
+    <last-name>White, PMP</last-name>
+    <headline>Vice President, Business Development at Interactive Softworks</headline>
+    <location>
+      <name>Greater Atlanta Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/Vtl11azLvC:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:N-sd</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=7468149&amp;authToken=N-sd&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/004/0ec/1da7892.jpg</picture-url>
+  </person>
+  <person>
+    <id>LzLEA3I9UL</id>
+    <first-name>Eric</first-name>
+    <last-name>Whitten</last-name>
+    <headline>Owner, OfficialTeamGear.com</headline>
+    <location>
+      <name>Baton Rouge, Louisiana Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Sporting Goods</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/LzLEA3I9UL:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:nZrU</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=21527896&amp;authToken=nZrU&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>tlOb6PY8Qw</id>
+    <first-name>Andrew</first-name>
+    <last-name>Wilson</last-name>
+    <headline>Web Manager at Department of Health and Human Services</headline>
+    <location>
+      <name>Washington D.C. Metro Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Internet</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/tlOb6PY8Qw:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:hyx9</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=26207491&amp;authToken=hyx9&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/026/2a7/0cf7659.jpg</picture-url>
+  </person>
+  <person>
+    <id>DJUwxpvZwX</id>
+    <first-name>Eddy</first-name>
+    <last-name>Wu</last-name>
+    <headline>Analyst at HP</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Information Technology and Services</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/DJUwxpvZwX:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:ooEU</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=8498414&amp;authToken=ooEU&amp;authType=name</url>
+    </site-standard-profile-request>
+  </person>
+  <person>
+    <id>OZqLIEE0Oh</id>
+    <first-name>Emmett</first-name>
+    <last-name>Yuchnewicz</last-name>
+    <headline>IT Developer/Engineer III</headline>
+    <location>
+      <name>Houston, Texas Area</name>
+      <country>
+        <code>us</code>
+      </country>
+    </location>
+    <industry>Computer &amp; Network Security</industry>
+    <api-standard-profile-request>
+      <url>http://api.linkedin.com/v1/people/OZqLIEE0Oh:full</url>
+      <headers total="1">
+        <http-header>
+          <name>x-li-auth-token</name>
+          <value>name:s2EN</value>
+        </http-header>
+      </headers>
+    </api-standard-profile-request>
+    <site-standard-profile-request>
+      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=19951246&amp;authToken=s2EN&amp;authType=name</url>
+    </site-standard-profile-request>
+    <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/2/000/02d/06b/1dc7f2d.jpg</picture-url>
+  </person>
+</connections>

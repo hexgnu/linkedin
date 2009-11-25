@@ -46,10 +46,9 @@ module LinkedIn
     
     def get(path, options={})
       path = "/v1#{path}"
-      puts path
       response = access_token.get(path, options)
       raise_errors(response)
-      parse(response)
+      response.body
     end
     
     
@@ -61,17 +60,11 @@ module LinkedIn
         if options[:public] 
           path +=":public"
         else
-          path +=":(#{options[:fields].map{|f| f.to_s}.join(',')})"
+          path +=":(#{options[:fields].map{|f| f.to_s.gsub("_","-")}.join(',')})"
         end
       end
-      data = Hashie::Mash.new(get(path))
       
-      if data.errors.nil?
-        data.person
-      else
-        data
-      end
-
+      Profile.from_xml(get(path))
     end
     
     def connections(options={})
@@ -85,14 +78,15 @@ module LinkedIn
         end
       end
       
-      data = Hashie::Mash.new(get(path))
-      
-      if data.errors.nil?
-        data.connections
-      else
-        data
-      end
-
+      Connections.from_xml(get(path)).profiles
+    end
+    
+    # helpful in making authenticated calls and writing the 
+    # raw xml to a fixture file
+    def write_fixture(path, filename)
+      file = File.new("test/fixtures/#{filename}", "w")
+      file.puts(access_token.get(path).body)
+      file.close
     end
     
     private
@@ -105,11 +99,16 @@ module LinkedIn
           when 502..503
             raise Unavailable, "(#{response.code}): #{response.message}"
         end
+        
+        if response.body.include?("<error>")
+          error = LinkedIn::Error.from_xml(response.body)
+          case error.status
+          when 404
+            Raise LinkedInError, "(#{error.status}): #{error.code} - #{error.message}"
+          end
+        end
       end
 
-      def parse(response)
-        Crack::XML.parse(response.body)
-      end
       
       def person_path(options)
         path = "/people/"

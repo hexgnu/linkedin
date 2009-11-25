@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<person>
+  <first-name>Wynn</first-name>
+  <last-name>Netherland</last-name>
+  <headline>Pixel Pusher at Orrka</headline>
+  <relation-to-viewer>
+    <distance>0</distance>
+  </relation-to-viewer>
+  <positions total="4">
+    <position>
+      <id>95092599</id>
+      <title>Founder</title>
+      <summary></summary>
+      <start-date>
+        <year>2009</year>
+        <month>10</month>
+      </start-date>
+      <is-current>true</is-current>
+      <company>
+        <name>Orrka</name>
+      </company>
+    </position>
+    <position>
+      <id>21901644</id>
+      <title>Founder</title>
+      <summary>- Ruby on Rails development
+- Web application development
+- Web-based customer satisfaction tools
+- Hosted web applications
+- User Interface design and front end development</summary>
+      <start-date>
+        <year>2000</year>
+        <month>9</month>
+      </start-date>
+      <end-date>
+        <year>2009</year>
+        <month>11</month>
+      </end-date>
+      <is-current>false</is-current>
+      <company>
+        <name>Squeejee</name>
+      </company>
+    </position>
+    <position>
+      <id>4891362</id>
+      <title>Solution Architect</title>
+      <summary>Part of architecture team that develops worldwide software application frameworks for web storefronts and desktop call center applications using Microsoft .NET technology.
+Includes analyzing requirements, designing framework APIs, ensuring consistency and simplicity to enable regional extension.
+Evangelism of project throughout enterprise and partnering with other global teams to deliver the most robust and efficient platform for our business customers.
+Working closely with Microsoft consultants onstaff and in Redmond in order to influence future versions of Microsoft development products.</summary>
+      <start-date>
+        <year>2004</year>
+        <month>10</month>
+      </start-date>
+      <end-date>
+        <year>2007</year>
+        <month>6</month>
+      </end-date>
+      <is-current>false</is-current>
+      <company>
+        <name>Hewlett-Packard</name>
+      </company>
+    </position>
+    <position>
+      <id>4987329</id>
+      <title>Developer</title>
+      <start-date>
+        <year>1998</year>
+      </start-date>
+      <end-date>
+        <year>2000</year>
+      </end-date>
+      <is-current>false</is-current>
+      <company>
+        <name>Shell Services International</name>
+      </company>
+    </position>
+  </positions>
+</person>

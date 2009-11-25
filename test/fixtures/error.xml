@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<error>
+  <status>404</status>
+  <timestamp>1259166999063</timestamp>
+  <error-code>0000</error-code>
+  <message>Could not find person based on: ~~</message>
+</error>

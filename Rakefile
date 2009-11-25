@@ -14,8 +14,7 @@ begin
     
     
     gem.add_dependency('oauth', '~> 0.3.5')
-    gem.add_dependency('hashie', '~> 0.1.3')
-    gem.add_dependency('crack', '~> 0.1.4')
+    gem.add_dependency('roxml', '~> 3.1.3')
 
     gem.add_development_dependency('thoughtbot-shoulda', '>= 2.10.1')
     gem.add_development_dependency('jnunemaker-matchy', '0.4.0')

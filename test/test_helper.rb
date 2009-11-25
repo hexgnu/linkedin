@@ -27,7 +27,7 @@ def fixture_file(filename)
 end
 
 def linkedin_url(url)
-  url =~ /^http/ ? url : "https://api.linkedin.com:80#{url}"
+  url =~ /^http/ ? url : "https://api.linkedin.com#{url}"
 end
 
 def stub_get(url, filename, status=nil)

@@ -4,7 +4,6 @@ Ruby wrapper for the [LinkedIn API](http://developer.linkedin.com)
 
 ## TODO
 * Implement Search, Status, Invitation APIs
-* Swap Crack for ROXML for cleaner attribute access
 
 ## Note on Patches/Pull Requests
  
