@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{linkedin}
-  s.version = "0.0.2"
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Wynn Netherland"]
@@ -29,16 +29,24 @@ Gem::Specification.new do |s|
      "lib/linked_in/education.rb",
      "lib/linked_in/error.rb",
      "lib/linked_in/location.rb",
+     "lib/linked_in/network.rb",
+     "lib/linked_in/people.rb",
      "lib/linked_in/position.rb",
      "lib/linked_in/profile.rb",
+     "lib/linked_in/update.rb",
      "lib/linked_in/url_resource.rb",
      "lib/linkedin.rb",
      "test/client_test.rb",
+     "test/fixtures/blank.xml",
      "test/fixtures/connections.xml",
      "test/fixtures/error.xml",
+     "test/fixtures/network_statuses.xml",
+     "test/fixtures/picture_updates.xml",
      "test/fixtures/profile.xml",
      "test/fixtures/profile_full.xml",
      "test/fixtures/profile_with_positions.xml",
+     "test/fixtures/search.xml",
+     "test/fixtures/status.xml",
      "test/oauth_test.rb",
      "test/test_helper.rb"
   ]
@@ -60,6 +68,7 @@ Gem::Specification.new do |s|
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<oauth>, ["~> 0.3.5"])
       s.add_runtime_dependency(%q<roxml>, ["~> 3.1.3"])
+      s.add_runtime_dependency(%q<crack>, ["~> 0.1.4"])
       s.add_development_dependency(%q<thoughtbot-shoulda>, [">= 2.10.1"])
       s.add_development_dependency(%q<jnunemaker-matchy>, ["= 0.4.0"])
       s.add_development_dependency(%q<mocha>, ["= 0.9.4"])
@@ -67,6 +76,7 @@ Gem::Specification.new do |s|
     else
       s.add_dependency(%q<oauth>, ["~> 0.3.5"])
       s.add_dependency(%q<roxml>, ["~> 3.1.3"])
+      s.add_dependency(%q<crack>, ["~> 0.1.4"])
       s.add_dependency(%q<thoughtbot-shoulda>, [">= 2.10.1"])
       s.add_dependency(%q<jnunemaker-matchy>, ["= 0.4.0"])
       s.add_dependency(%q<mocha>, ["= 0.9.4"])
@@ -75,6 +85,7 @@ Gem::Specification.new do |s|
   else
     s.add_dependency(%q<oauth>, ["~> 0.3.5"])
     s.add_dependency(%q<roxml>, ["~> 3.1.3"])
+    s.add_dependency(%q<crack>, ["~> 0.1.4"])
     s.add_dependency(%q<thoughtbot-shoulda>, [">= 2.10.1"])
     s.add_dependency(%q<jnunemaker-matchy>, ["= 0.4.0"])
     s.add_dependency(%q<mocha>, ["= 0.9.4"])
