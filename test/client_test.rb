@@ -44,6 +44,61 @@ class ClientTest < Test::Unit::TestCase
       cons.size.should == 146
       cons.last.last_name.should == 'Yuchnewicz'
     end
+    
+    should "perform a search by keyword" do
+      stub_get("/v1/people?keywords=github", "search.xml")
+      results = @linkedin.search(:keywords => 'github')
+      results.start == 0
+      results.count == 10
+      results.profiles.first.first_name.should == 'Zach'
+      results.profiles.first.last_name.should == 'Inglis'
+    end
+    
+    should "perform a search by multiple keywords" do
+      stub_get("/v1/people?keywords=ruby+rails", "search.xml")
+      results = @linkedin.search(:keywords => ["ruby", "rails"])
+      results.start == 0
+      results.count == 10
+      results.profiles.first.first_name.should == 'Zach'
+      results.profiles.first.last_name.should == 'Inglis'
+    end
+    
+    should "perform a search by name" do
+      stub_get("/v1/people?name=Zach+Inglis", "search.xml")
+      results = @linkedin.search(:name => "Zach Inglis")
+      results.start == 0
+      results.count == 10
+      results.profiles.first.first_name.should == 'Zach'
+      results.profiles.first.last_name.should == 'Inglis'
+    end
+    
+    should "update a user's current status" do
+      stub_put("/v1/people/~/current-status", "blank.xml")
+      @linkedin.update_status("Testing out the LinkedIn API")
+    end
+    
+    should "clear a user's current status" do
+      stub_delete("/v1/people/~/current-status", "blank.xml")
+      @linkedin.clear_status
+    end
+    
+    should "retrieve the authenticated user's current status" do
+      stub_get("/v1/people/~/current-status", "status.xml")
+      @linkedin.current_status.should == "New blog post: What makes a good API wrapper? http://wynnnetherland.com/2009/11/what-makes-a-good-api-wrapper/"
+    end
+    
+    should "retrieve status updates for the authenticated user's network" do
+      stub_get("/v1/people/~/network?type=STAT", "network_statuses.xml")
+      stats = @linkedin.network_statuses
+      stats.updates.first.profile.first_name.should == 'Vahid'
+    end
+    
+    should "retrieve network updates" do
+      stub_get("/v1/people/~/network?type=PICT", "picture_updates.xml")
+      stats = @linkedin.network_updates(:type => "PICT")
+      stats.updates.size.should == 4
+      stats.updates.last.profile.headline.should == "Creative Director for Intridea"
+    end
 
   end
   

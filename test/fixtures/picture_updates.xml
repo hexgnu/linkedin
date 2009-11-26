@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<network>
+  <network-stats total="2">
+    <property key="degree-1-count">146</property>
+    <property key="degree-2-count">17000</property>
+  </network-stats>
+  <updates total="4">
+    <update>
+      <timestamp>1258714582136</timestamp>
+      <update-key>PICU-6043885-ffe88342*3bee0*3453f*38ffb*3460fde2eb011-*1</update-key>
+      <update-type>PICU</update-type>
+      <update-content>
+        <person>
+          <id>6043885</id>
+          <first-name>Darrin</first-name>
+          <last-name>Tvrdy, PMP</last-name>
+          <headline>Project Manager / Business Systems Analyst IV at Hewlett-Packard</headline>
+          <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/03d/0d8/2c32744.jpg</picture-url>
+          <api-standard-profile-request>
+            <url>http://api.linkedin.com/v1/people/xNOObJb-yZ:full</url>
+            <headers total="1">
+              <http-header>
+                <name>x-li-auth-token</name>
+                <value>name:5DNj</value>
+              </http-header>
+            </headers>
+          </api-standard-profile-request>
+          <site-standard-profile-request>
+            <url>http://www.linkedin.com/profile?viewProfile=&amp;key=6043885&amp;authToken=5DNj&amp;authType=name</url>
+          </site-standard-profile-request>
+        </person>
+      </update-content>
+      <is-commentable>true</is-commentable>
+    </update>
+    <update>
+      <timestamp>1258476132751</timestamp>
+      <update-key>PICU-6043885-070638e9*36873*34b5f*3ae0e*38317a0b7f845-*1</update-key>
+      <update-type>PICU</update-type>
+      <update-content>
+        <person>
+          <id>6043885</id>
+          <first-name>Darrin</first-name>
+          <last-name>Tvrdy, PMP</last-name>
+          <headline>Project Manager / Business Systems Analyst IV at Hewlett-Packard</headline>
+          <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/1/000/03c/2b2/32dd2ae.jpg</picture-url>
+          <api-standard-profile-request>
+            <url>http://api.linkedin.com/v1/people/xNOObJb-yZ:full</url>
+            <headers total="1">
+              <http-header>
+                <name>x-li-auth-token</name>
+                <value>name:5DNj</value>
+              </http-header>
+            </headers>
+          </api-standard-profile-request>
+          <site-standard-profile-request>
+            <url>http://www.linkedin.com/profile?viewProfile=&amp;key=6043885&amp;authToken=5DNj&amp;authType=name</url>
+          </site-standard-profile-request>
+        </person>
+      </update-content>
+      <is-commentable>true</is-commentable>
+    </update>
+    <update>
+      <timestamp>1257874533025</timestamp>
+      <update-key>PICU-58354393-3ce71c91*32ae4*349e4*39292*3fe67cf5f53e3-*1</update-key>
+      <update-type>PICU</update-type>
+      <update-content>
+        <person>
+          <id>58354393</id>
+          <first-name>Paula</first-name>
+          <last-name>Netherland</last-name>
+          <headline>Owner, TreeFrog Studios</headline>
+          <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/3/000/03b/1fd/191b80c.jpg</picture-url>
+          <api-standard-profile-request>
+            <url>http://api.linkedin.com/v1/people/Wg56CgmrNZ:full</url>
+            <headers total="1">
+              <http-header>
+                <name>x-li-auth-token</name>
+                <value>name:ykZL</value>
+              </http-header>
+            </headers>
+          </api-standard-profile-request>
+          <site-standard-profile-request>
+            <url>http://www.linkedin.com/profile?viewProfile=&amp;key=58354393&amp;authToken=ykZL&amp;authType=name</url>
+          </site-standard-profile-request>
+        </person>
+      </update-content>
+      <is-commentable>true</is-commentable>
+    </update>
+    <update>
+      <timestamp>1257862249721</timestamp>
+      <update-key>PICU-10801267-44155327*3e1a1*340bf*38507*313d4f654b91f-*1</update-key>
+      <update-type>PICU</update-type>
+      <update-content>
+        <person>
+          <id>10801267</id>
+          <first-name>Michael</first-name>
+          <last-name>Bleigh</last-name>
+          <headline>Creative Director for Intridea</headline>
+          <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/2/000/03b/1d6/1ae8bb6.jpg</picture-url>
+          <api-standard-profile-request>
+            <url>http://api.linkedin.com/v1/people/zIVkLLOYia:full</url>
+            <headers total="1">
+              <http-header>
+                <name>x-li-auth-token</name>
+                <value>name:BcLL</value>
+              </http-header>
+            </headers>
+          </api-standard-profile-request>
+          <site-standard-profile-request>
+            <url>http://www.linkedin.com/profile?viewProfile=&amp;key=10801267&amp;authToken=BcLL&amp;authType=name</url>
+          </site-standard-profile-request>
+        </person>
+      </update-content>
+      <is-commentable>true</is-commentable>
+    </update>
+  </updates>
+</network>
