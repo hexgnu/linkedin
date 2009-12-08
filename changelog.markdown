@@ -1,4 +1,8 @@
-## Changelog
+# Changelog
+
+##  0.1.1 - December 8, 2009
+
+* Applied patch from [nfo](http://github.com/nfo) to fix error handling 
 
 ### 0.1.0 - November 25, 2009
 
