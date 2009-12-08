@@ -29,7 +29,7 @@ module LinkedIn
     end
     
     # For web apps use params[:oauth_verifier], for desktop apps,
-    # use the verifier is the pin that twitter gives users.
+    # use the verifier is the pin that LinkedIn gives users.
     def authorize_from_request(rtoken, rsecret, verifier_or_pin)
       request_token = ::OAuth::RequestToken.new(consumer, rtoken, rsecret)
       access_token = request_token.get_access_token(:oauth_verifier => verifier_or_pin)
@@ -88,7 +88,7 @@ module LinkedIn
         if options[:public] 
           path +=":public"
         else
-          path +=":(#{options[:fields].map{|f| f.to_s}.join(',')})"
+          path +=":(#{options[:fields].map{|f| f.to_s.gsub("_","-")}.join(',')})"
         end
       end
       
