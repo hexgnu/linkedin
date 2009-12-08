@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{linkedin}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Wynn Netherland"]
-  s.date = %q{2009-11-25}
+  s.date = %q{2009-12-08}
   s.description = %q{Ruby wrapper for the LinkedIn API}
   s.email = %q{wynn.netherland@gmail.com}
   s.extra_rdoc_files = [
@@ -21,6 +21,11 @@ Gem::Specification.new do |s|
      "README.markdown",
      "Rakefile",
      "VERSION",
+     "examples/authenticate.rb",
+     "examples/network.rb",
+     "examples/profile.rb",
+     "examples/status.rb",
+     "examples/wynn.rb",
      "lib/linked_in/api_standard_profile_request.rb",
      "lib/linked_in/client.rb",
      "lib/linked_in/company.rb",
@@ -58,7 +63,11 @@ Gem::Specification.new do |s|
   s.test_files = [
     "test/client_test.rb",
      "test/oauth_test.rb",
-     "test/test_helper.rb"
+     "test/test_helper.rb",
+     "examples/authenticate.rb",
+     "examples/network.rb",
+     "examples/profile.rb",
+     "examples/status.rb"
   ]
 
   if s.respond_to? :specification_version then
