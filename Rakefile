@@ -10,7 +10,7 @@ begin
     gem.email = "wynn.netherland@gmail.com"
     gem.homepage = "http://github.com/pengwynn/linkedin"
     gem.authors = ["Wynn Netherland"]
-    gem.files   = FileList["[A-Z]*", "{examples,lib,test}/**/*"]
+    gem.files   = FileList["[A-Z]*", "{lib,test}/**/*"]
     
     
     gem.add_dependency('oauth', '~> 0.3.5')
