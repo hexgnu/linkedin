@@ -29,6 +29,40 @@ module LinkedIn
   class Unavailable   < StandardError; end
   class InformLinkedIn < StandardError; end
   class NotFound      < StandardError; end
+  
+  # config/initializers/linkedin.rb (for instance)
+  # 
+  # LinkedIn.configure do |config|
+  #   config.token = 'consumer_token'
+  #   config.secret = 'consumer_secret'
+  # end
+  # 
+  # elsewhere
+  #
+  # client = LinkedIn::Client.new
+  def self.configure
+    yield self
+      
+    LinkedIn.token = token
+    LinkedIn.secret = secret
+    true
+  end
+  
+  def self.token
+    @token
+  end
+  
+  def self.token=(token)
+    @token = token
+  end
+  
+  def self.secret
+    @secret
+  end
+  
+  def self.secret=(secret)
+    @secret = secret
+  end
 end
 
 directory = File.expand_path(File.dirname(__FILE__))

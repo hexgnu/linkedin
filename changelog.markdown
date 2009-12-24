@@ -1,5 +1,9 @@
 # Changelog
 
+##  0.1.3 - December 24, 2009
+
+* Added configure block for easier initialization of consumer token, secret
+
 ##  0.1.1 - December 8, 2009
 
 * Applied patch from [nfo](http://github.com/nfo) to fix error handling 

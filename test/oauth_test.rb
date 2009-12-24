@@ -102,5 +102,16 @@ class OAuthTest < Test::Unit::TestCase
     linkedin.access_token.secret.should == 'asecret'
   end
   
+  should "be able to configure consumer token and consumer secret without passing to initialize" do
+    LinkedIn.configure do |config|
+      config.token = 'consumer_token'
+      config.secret = 'consumer_secret'
+    end
+    
+    linkedin = LinkedIn::Client.new
+    linkedin.ctoken.should == 'consumer_token'
+    linkedin.csecret.should == 'consumer_secret'
+  end
+  
 
 end

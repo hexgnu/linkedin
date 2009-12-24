@@ -3,7 +3,7 @@ module LinkedIn
     
     attr_reader :ctoken, :csecret, :consumer_options
     
-    def initialize(ctoken, csecret, options={})
+    def initialize(ctoken=LinkedIn.token, csecret=LinkedIn.secret, options={})
       opts = { 
               :request_token_path => "/uas/oauth/requestToken",
               :access_token_path  => "/uas/oauth/accessToken",
@@ -23,7 +23,7 @@ module LinkedIn
     
     # Note: If using oauth with a web app, be sure to provide :oauth_callback.
     # Options:
-    #   :oauth_callback => String, url that twitter should redirect to
+    #   :oauth_callback => String, url that LinkedIn should redirect to
     def request_token(options={})
       @request_token ||= consumer.get_request_token(options)
     end
