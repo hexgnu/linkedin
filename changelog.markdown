@@ -1,5 +1,7 @@
 # Changelog
 
+##  0.1.5 - January 13, 2010
+* Added education and profile fields missing from updated LinkedIn docs
 ##  0.1.4 - January 13, 2010
 
 * Applied patch for position end month/year from @holman
