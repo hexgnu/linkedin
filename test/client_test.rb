@@ -17,6 +17,12 @@ class ClientTest < Test::Unit::TestCase
       p.last_name.should == 'Netherland'
       p.positions.size.should == 4
       p.positions.first.company.name.should == 'Orrka'
+      
+      hp = p.positions[2]
+      hp.start_month.should == 10
+      hp.start_year.should == 2004
+      hp.end_month.should == 6
+      hp.end_year.should == 2007
     end
     
     should "retrieve a profile for a member by id" do
