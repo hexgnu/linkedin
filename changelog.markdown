@@ -1,5 +1,9 @@
 # Changelog
 
+##  0.1.4 - January 13, 2010
+
+* Applied patch for position end month/year from @holman
+
 ##  0.1.3 - December 24, 2009
 
 * Added configure block for easier initialization of consumer token, secret
