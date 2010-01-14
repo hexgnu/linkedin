@@ -23,6 +23,12 @@ class ClientTest < Test::Unit::TestCase
       hp.start_year.should == 2004
       hp.end_month.should == 6
       hp.end_year.should == 2007
+      
+      education = p.education.first
+      education.start_month.should == 8
+      education.start_year.should == 1994
+      education.end_month.should == 5
+      education.end_year.should == 1998
     end
     
     should "retrieve a profile for a member by id" do

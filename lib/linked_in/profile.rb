@@ -15,11 +15,18 @@ module LinkedIn
     xml_reader :current_status_timestamp
     xml_reader :connections, :as => [Profile]
     xml_reader :summary
+    xml_reader :specialties
+    xml_reader :proposal_comments
+    xml_reader :associations
+    xml_reader :honors
+    xml_reader :interests
     xml_reader :positions, :as => [Position]
     xml_reader :education, :as => [Education]
+    xml_reader :three_current_positions, :as => [Position]
     xml_reader :member_url_resources, :as => [UrlResource], :from => 'member-url-resources/member-url'
     xml_reader :api_standard_profile_request
     xml_reader :site_standard_profile_request, :as => ApiStandardProfileRequest
     xml_reader :picture_url
+
   end
 end
