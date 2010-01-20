@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{linkedin}
-  s.version = "0.1.5"
+  s.version = "0.1.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Wynn Netherland"]
-  s.date = %q{2010-01-13}
+  s.date = %q{2010-01-20}
   s.description = %q{Ruby wrapper for the LinkedIn API}
   s.email = %q{wynn.netherland@gmail.com}
   s.extra_rdoc_files = [
