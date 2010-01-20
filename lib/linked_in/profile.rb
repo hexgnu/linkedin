@@ -13,7 +13,7 @@ module LinkedIn
     xml_reader :num_recommenders, :as => Integer
     xml_reader :current_status
     xml_reader :current_status_timestamp
-    xml_reader :connections, :as => [Profile]
+    xml_reader :connections, :as => [Profile], :from => "connections/person"
     xml_reader :summary
     xml_reader :specialties
     xml_reader :proposal_comments

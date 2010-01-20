@@ -15,6 +15,26 @@
           <first-name>Vahid</first-name>
           <last-name>Behzadi (vahid@cybercoders.com)</last-name>
           <headline>Executive Recruiter at CyberCoders  - Recruiting Manager</headline>
+          <connections total="1">
+            <person>
+              <id>28072758</id>
+              <first-name>Linda</first-name>
+              <last-name>Varone</last-name>
+              <headline>Best of Boston 2007 Feng Shui, Interior Design, Professional Speaker, Owner of Nurturing Spaces</headline>
+              <api-standard-profile-request>
+                <url>http://api.linkedin.com/v1/people/28072758:full</url>
+                <headers total="1">
+                  <http-header>
+                    <name>x-li-auth-token</name>
+                    <value>name:R5H-</value>
+                  </http-header>
+                </headers>
+              </api-standard-profile-request>
+              <site-standard-profile-request>
+                <url>http://www.linkedin.com/profile?viewProfile=&amp;key=28072758&amp;authToken=R5H-&amp;authType=name&amp;trk=api_1025_LUCIAN</url>
+              </site-standard-profile-request>
+            </person>
+          </connections>
           <current-status>said: Etsy Dallas Jingle Bash – Shop local for the Holidays http://ping.fm/0P80n(I+live+in+Dallas)</current-status>
           <api-standard-profile-request>
             <url>http://api.linkedin.com/v1/people/Hz_9mRaUxh:full</url>

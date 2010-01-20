@@ -29,6 +29,9 @@ class ClientTest < Test::Unit::TestCase
       education.start_year.should == 1994
       education.end_month.should == 5
       education.end_year.should == 1998
+      
+      p.connections.size.should == 146
+      p.connections.first.first_name.should == "Ali"
     end
     
     should "retrieve a profile for a member by id" do
@@ -102,7 +105,11 @@ class ClientTest < Test::Unit::TestCase
     should "retrieve status updates for the authenticated user's network" do
       stub_get("/v1/people/~/network?type=STAT", "network_statuses.xml")
       stats = @linkedin.network_statuses
+      stats.updates.first.profile.id.should == "19408512"
       stats.updates.first.profile.first_name.should == 'Vahid'
+      stats.updates.first.profile.connections.first.id.should == "28072758"
+      stats.updates.first.profile.connections.first.last_name.should == 'Varone'
+      
     end
     
     should "retrieve network updates" do
