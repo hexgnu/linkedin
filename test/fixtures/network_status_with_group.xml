@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<network>
+  <network-stats total="2">
+    <property key="degree-1-count">146</property>
+    <property key="degree-2-count">16998</property>
+  </network-stats>
+  <updates total="1" start="0" count="1">  
+ <update>
+      <timestamp>1265063139120</timestamp>
+      <update-type>JGRP</update-type>
+      <update-content>
+        <person>
+          <id>Ib6zlxq9IX</id>
+          <first-name>Scott</first-name>
+          <last-name>Simon (7000+)</last-name>
+          <headline>President of Access Points Inc</headline>
+          <picture-url>http://media.linkedin.com/mpr/mprx/0_XGm9LHEp5HVsv24Z6haLLEaxWWDZvoWZQ8sWLwSfnuJeEmY4eXYVwIJ3bFSb9DeNL3uHo2xmFwqC</picture-url>
+          <api-standard-profile-request>
+            <url>http://api.linkedin.com/v1/people/Ib6zlxq9IX:full</url>
+            <headers total="1">
+              <http-header>
+                <name>x-li-auth-token</name>
+                <value>name:Ect7</value>
+              </http-header>
+            </headers>
+          </api-standard-profile-request>
+          <site-standard-profile-request>
+            <url>http://www.linkedin.com/profile?viewProfile=&amp;key=46471&amp;authToken=Ect7&amp;authType=name&amp;trk=api*a101622*s101622*</url>
+          </site-standard-profile-request>
+          <member-groups total="1">
+            <member-group>
+              <id>1785828</id>
+              <name>IT Atlanta</name>
+              <site-group-request>
+                <url>http://www.linkedin.com/groups?gid=1785828</url>
+              </site-group-request>
+            </member-group>
+          </member-groups>
+        </person>
+      </update-content>
+      <is-commentable>false</is-commentable>
+    </update>
+</updates>
+</network>
