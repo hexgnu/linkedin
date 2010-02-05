@@ -1,5 +1,9 @@
 # Changelog
 
+##  0.1.7 - February 5, 2010
+
+* New group join status support JGRP from Terry Ray
+
 ##  0.1.6 - January 20, 2010
 
 * Fixed bug with network status update connection collections - thanks Terry Ray
