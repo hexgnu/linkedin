@@ -51,13 +51,20 @@ module LinkedIn
       response.body
     end
     
-    def put(path, options={})
+    def put(path, body, options={})
       path = "/v1#{path}"
-      response = access_token.put(path, options)
+      response = access_token.put(path, body, options)
       raise_errors(response)
       response
     end
     
+    def post(path, body, options={})
+      path = "/v1#{path}"
+      response = access_token.post(path, body, options)
+      raise_errors(response)
+      response
+    end
+
     def delete(path, options={})
       path = "/v1#{path}"
       response = access_token.delete(path, options)
@@ -111,6 +118,11 @@ module LinkedIn
     def update_status(text)
       path = "/people/~/current-status"
       put(path, status_to_xml(text))
+    end
+
+    def update_comment(network_key, comment)
+      path = "/people/~/network/updates/key=#{network_key}/update-comments"
+      post(path,comment_to_xml(comment),{'Content-Type' => 'application/xml'})
     end
     
     def clear_status
@@ -210,6 +222,9 @@ module LinkedIn
         <current-status>#{status}</current-status>}
       end
 
+      def comment_to_xml(comment)
+        %Q{<?xml version="1.0" encoding="UTF-8"?><update-comment><comment>#{comment}</comment></update-comment>}
+      end
     
   end
 end
