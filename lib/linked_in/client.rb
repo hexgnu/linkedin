@@ -51,9 +51,9 @@ module LinkedIn
       response.body
     end
 
-    def post(path, request, options={})
+    def post(path, body='', options={})
       path = "/v1#{path}"
-      response = access_token.post(path, request, options)
+      response = access_token.post(path, body, options)
       raise_errors(response)
       response
     end
@@ -136,12 +136,12 @@ module LinkedIn
       recipients.recipients = recipient_paths.map do |profile_path|
         recipient = LinkedIn::Recipient.new
         recipient.person = LinkedIn::Person.new
-        recipient.person.path = profile_path
+        recipient.person.path = "/people/#{profile_path}"
         recipient
       end
 
       message.recipients = recipients
-      post(path, message_to_xml(message)).code
+      post(path, message_to_xml(message), { "Content-Type" => "text/xml" }).code
     end
     
     def network_statuses(options={})
@@ -237,8 +237,8 @@ module LinkedIn
       end
 
     def message_to_xml(message)
-      %Q{<?xml version='1.0' encoding='UTF-8'?>
-         #{message.to_xml}}
+      %Q{<?xml version="1.0" encoding="UTF-8"?>
+      #{message.to_xml}}
     end
 
     
