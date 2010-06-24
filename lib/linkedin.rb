@@ -4,8 +4,8 @@ require 'rubygems'
 gem 'oauth', '~> 0.3.5'
 require 'oauth'
 
-gem 'roxml', '~> 3.1.3'
-require 'roxml'
+# gem 'roxml', '~> 3.1.3'
+# require 'roxml'
 
 gem 'crack', '~> 0.1.4'
 require 'crack'
