@@ -6,6 +6,7 @@ require 'oauth'
 
 # gem 'roxml', '~> 3.1.3'
 # require 'roxml'
+require 'nokogiri'
 
 gem 'crack', '~> 0.1.4'
 require 'crack'
