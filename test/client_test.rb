@@ -31,9 +31,10 @@ class ClientTest < Test::Unit::TestCase
       education.start_year.should == 1994
       education.end_month.should == 5
       education.end_year.should == 1998
-      #
-      # p.connections.size.should == 146
-      # p.connections.first.first_name.should == "Ali"
+      
+      p.connections.size.should == 146
+      p.connections.first.first_name.should == "Ali"
+      # puts p.connections.first.inspect
     end
 
     should "retrieve a profile for a member by id" do
