@@ -11,7 +11,7 @@ module LinkedIn
       @arry ||= begin
         @arry = []
         @doc.children.each do |position|
-          @arry << Resource.new(position) unless position.xpath('id').blank?
+          @arry << Resource.new(position) unless position.blank?
         end
         @arry
       end

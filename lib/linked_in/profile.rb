@@ -39,9 +39,8 @@ module LinkedIn
       @doc.xpath('//relation-to-viewer/distance').text
     end
     
-    # TODO: make UrlResource act like Position and Education 
     def member_url_resources
-      @url_resources ||= UrlResource.new(@doc.xpath('//member-url-resources'))
+      @url_resources ||= UrlResource.new(@doc.xpath('//member-url-resources')).resources
     end
 
     def positions

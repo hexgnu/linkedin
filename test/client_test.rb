@@ -55,6 +55,14 @@ class ClientTest < Test::Unit::TestCase
       p.connections.first.first_name.should == "Ali"
     end
     
+    should "retrieve a profiles member_url_resources" do
+      stub_get("/v1/people/~", "profile_full.xml")
+      p = @linkedin.profile
+      p.member_url_resources.size.should == 2
+      p.member_url_resources.first.url.should  == 'http://orrka.com'
+      p.member_url_resources.first.name.should == 'My Company'
+    end
+    
     should "retrieve a profiles connections api_standard_profile_request" do
       stub_get("/v1/people/~", "profile_full.xml")
       p = @linkedin.profile
