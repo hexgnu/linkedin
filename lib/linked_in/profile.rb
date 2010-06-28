@@ -3,7 +3,6 @@ module LinkedIn
 
     # xml_reader :location, :as => Location
     # xml_reader :relation_to_viewer, :as => {:key => :name, :value => :content}
-    # xml_reader :connections, :as => [Profile], :from => "connections/person"
 
     # xml_reader :three_current_positions, :as => [Position]
     # xml_reader :member_url_resources, :as => [UrlResource], :from => 'member-url-resources/member-url'

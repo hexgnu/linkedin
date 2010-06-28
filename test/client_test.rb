@@ -34,7 +34,6 @@ class ClientTest < Test::Unit::TestCase
       
       p.connections.size.should == 146
       p.connections.first.first_name.should == "Ali"
-      # puts p.connections.first.inspect
     end
 
     should "retrieve a profile for a member by id" do
@@ -56,12 +55,12 @@ class ClientTest < Test::Unit::TestCase
       p.last_name.should == 'Netherland'
     end
 
-    # should "retrieve connections for the authenticated user" do
-    #   stub_get("/v1/people/~/connections", "connections.xml")
-    #   cons = @linkedin.connections
-    #   cons.size.should == 146
-    #   cons.last.last_name.should == 'Yuchnewicz'
-    # end
+    should "retrieve connections for the authenticated user" do
+      stub_get("/v1/people/~/connections", "connections.xml")
+      cons = @linkedin.connections
+      cons.size.should == 146
+      cons.last.last_name.should == 'Yuchnewicz'
+    end
 
     # should "perform a search by keyword" do
     #   stub_get("/v1/people?keywords=github", "search.xml")
