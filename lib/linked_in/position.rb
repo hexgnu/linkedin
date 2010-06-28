@@ -23,7 +23,6 @@ module LinkedIn
         @position = position
       end
       
-      # TODO test is_current
       %w[id title summary is_current].each do |f|
         define_method(f.to_sym) do
           @position.xpath("./#{f.gsub(/_/,'-')}").text

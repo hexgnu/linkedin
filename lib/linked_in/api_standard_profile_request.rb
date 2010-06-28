@@ -6,7 +6,6 @@ module LinkedIn
     end
 
     def url
-      # puts @doc.inspect
       @doc.xpath("//api-standard-profile-request/url").text
     end
 

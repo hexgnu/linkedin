@@ -29,6 +29,8 @@ class ClientTest < Test::Unit::TestCase
       p = @linkedin.profile
       p.positions.size.should == 4
       p.positions.first.company.name.should == 'Orrka'
+      p.positions.first.is_current.should   == 'true'
+      
       hp = p.positions[2]
       hp.title.should       == 'Solution Architect'
       hp.id.should          == '4891362'
@@ -36,6 +38,7 @@ class ClientTest < Test::Unit::TestCase
       hp.start_year.should  == 2004
       hp.end_month.should   == 6
       hp.end_year.should    == 2007
+      hp.is_current.should  == 'false'
     end
 
     should "retrieve education information from a profile" do
