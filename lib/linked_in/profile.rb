@@ -4,12 +4,12 @@ module LinkedIn
     # xml_reader :three_current_positions, :as => [Position]
     # xml_reader :member_url_resources, :as => [UrlResource], :from => 'member-url-resources/member-url'
 
-    FIELDS = %w[id first_name last_name headline industry current_status
+    PROFILE_FIELDS = %w[id first_name last_name headline industry current_status
                 current_status_timestamp summary specialties proposal_comments
                 associations honors interests picture_url distance
                 num_recommenders]
 
-    FIELDS.each do |f|
+    PROFILE_FIELDS.each do |f|
       define_method(f.to_sym) do
         @doc.xpath("./person/#{f.gsub(/_/,'-')}").text
       end
@@ -24,15 +24,15 @@ module LinkedIn
     end
 
     def location
-      @location ||= Location.new(@doc.xpath('//location'))
+      @location ||= Location.new(@doc)
     end
 
     def api_standard_profile_request
-      @api_standard ||= ApiStandardProfileRequest.new(@doc.xpath('//api-standard-profile-request'))
+      @api_standard ||= ApiStandardProfileRequest.new(@doc.xpath('./person/api-standard-profile-request'))
     end
 
     def site_standard_profile_request
-      api_standard_profile_request
+      @doc.xpath('//site-standard-profile-request/url').text
     end
 
     def relation_to_viewer

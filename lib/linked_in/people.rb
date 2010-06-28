@@ -1,7 +1,5 @@
 module LinkedIn
   class People
-
-    # xml_reader :profiles, :as => [Profile], :from => 'person'
     
     def self.from_xml(doc)
       new(Nokogiri::XML(doc))
@@ -11,9 +9,7 @@ module LinkedIn
       @doc = doc
     end
   
-    FIELDS = %w[total start count]
-
-    FIELDS.each do |f|
+    %w[total start count].each do |f|
       define_method(f.to_sym) do
         @doc.xpath('.//people').first["#{f.gsub(/_/,'-')}"].to_i
       end

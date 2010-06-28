@@ -1,9 +1,7 @@
 module LinkedIn
   class Update
     
-    FIELDS = %w[update_key update_type is_commentable?]
-
-    FIELDS.each do |f|
+    %w[update_key update_type is_commentable?].each do |f|
       define_method(f.to_sym) do
         @doc.xpath("./update/#{f.gsub(/_/,'-')}").text
       end

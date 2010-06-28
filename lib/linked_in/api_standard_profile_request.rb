@@ -1,9 +1,22 @@
 module LinkedIn
   class ApiStandardProfileRequest
-    # include ROXML
-    # xml_convention {|val| val.gsub("_","-") }
-    # xml_reader :url
-    # xml_reader :headers, :as => {:key => 'name', :value => 'value'}, :in => 'headers/http-header'
+
+    def initialize(doc)
+      @doc = doc
+    end
+
+    def url
+      # puts @doc.inspect
+      @doc.xpath("//api-standard-profile-request/url").text
+    end
+
+    # returning a hash should be ok, but suggestions are welcome
+    def headers
+      hash = {}
+      hash[:name]  = @doc.xpath("//api-standard-profile-request/headers/http-header/name").text
+      hash[:value] = @doc.xpath("//api-standard-profile-request/headers/http-header/value").text
+      hash
+    end
     
   end
 end

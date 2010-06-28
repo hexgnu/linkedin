@@ -13,11 +13,22 @@ class ClientTest < Test::Unit::TestCase
     should "retrieve a profile for the authenticated user" do
       stub_get("/v1/people/~", "profile_full.xml")
       p = @linkedin.profile
-      p.first_name.should     == 'Wynn'
-      p.last_name.should      == 'Netherland'
+      p.first_name.should == 'Wynn'
+      p.last_name.should  == 'Netherland'
+    end
+    
+    should "retrieve location information" do
+      stub_get("/v1/people/~", "profile_full.xml")
+      p = @linkedin.profile
+      p.location.name.should    == 'Dallas/Fort Worth Area'
+      p.location.country.should == 'us'
+    end
+    
+    should "retrieve positions from a profile" do
+      stub_get("/v1/people/~", "profile_full.xml")
+      p = @linkedin.profile
       p.positions.size.should == 4
       p.positions.first.company.name.should == 'Orrka'
-
       hp = p.positions[2]
       hp.title.should       == 'Solution Architect'
       hp.id.should          == '4891362'
@@ -25,21 +36,44 @@ class ClientTest < Test::Unit::TestCase
       hp.start_year.should  == 2004
       hp.end_month.should   == 6
       hp.end_year.should    == 2007
-      
+    end
+
+    should "retrieve education information from a profile" do
+      stub_get("/v1/people/~", "profile_full.xml")
+      p = @linkedin.profile
       education = p.education.first
       education.start_month.should == 8
       education.start_year.should  == 1994
       education.end_month.should   == 5
       education.end_year.should    == 1998
-      
+    end
+
+    should "retrieve information about a profiles connections" do
+      stub_get("/v1/people/~", "profile_full.xml")
+      p = @linkedin.profile
       p.connections.size.should == 146
       p.connections.first.first_name.should == "Ali"
+    end
+    
+    should "retrieve a profiles connections api_standard_profile_request" do
+      stub_get("/v1/people/~", "profile_full.xml")
+      p = @linkedin.profile
+      p1 = p.connections.first
+      p1.api_standard_profile_request.url.should == 'http://api.linkedin.com/v1/people/3YNlBdusZ5:full'
+      p1.api_standard_profile_request.headers[:name].should  == 'x-li-auth-token'
+      p1.api_standard_profile_request.headers[:value].should == 'name:lui9'
     end
 
     should "retrieve a profile for a member by id" do
       stub_get("/v1/people/id=gNma67_AdI", "profile.xml")
       p = @linkedin.profile(:id => "gNma67_AdI")
       p.first_name.should == 'Wynn'
+    end
+
+    should "retrieve a site_standard_profile_request" do
+      stub_get("/v1/people/~", "profile.xml")
+      p = @linkedin.profile
+      p.site_standard_profile_request.should == "http://www.linkedin.com/profile?viewProfile=&key=3559698&authToken=yib-&authType=name"
     end
 
     should "retrieve a profile for a member by url" do
@@ -66,28 +100,28 @@ class ClientTest < Test::Unit::TestCase
       stub_get("/v1/people?keywords=github", "search.xml")
       results = @linkedin.search(:keywords => 'github')
       results.start.should == 0
-      results.count.should == 10      
+      results.count.should == 10
       results.profiles.first.first_name.should == 'Zach'
-      results.profiles.first.last_name.should == 'Inglis'
+      results.profiles.first.last_name.should  == 'Inglis'
     end
-    
+
     should "perform a search by multiple keywords" do
       stub_get("/v1/people?keywords=ruby+rails", "search.xml")
       results = @linkedin.search(:keywords => ["ruby", "rails"])
       results.start.should == 0
       results.count.should == 10
       results.profiles.first.first_name.should == 'Zach'
-      results.profiles.first.last_name.should == 'Inglis'
+      results.profiles.first.last_name.should  == 'Inglis'
     end
 
     should "perform a search by name" do
-       stub_get("/v1/people?name=Zach+Inglis", "search.xml")
-       results = @linkedin.search(:name => "Zach Inglis")
-       results.start.should == 0
-       results.count.should == 10
-       results.profiles.first.first_name.should == 'Zach'
-       results.profiles.first.last_name.should == 'Inglis'
-     end
+      stub_get("/v1/people?name=Zach+Inglis", "search.xml")
+      results = @linkedin.search(:name => "Zach Inglis")
+      results.start.should == 0
+      results.count.should == 10
+      results.profiles.first.first_name.should == 'Zach'
+      results.profiles.first.last_name.should  == 'Inglis'
+    end
 
     should "update a user's current status" do
       stub_put("/v1/people/~/current-status", "blank.xml")

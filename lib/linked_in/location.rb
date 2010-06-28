@@ -6,11 +6,11 @@ module LinkedIn
     end
 
     def name
-      @doc.xpath("//location/name").text
+      @doc.xpath("/person/location/name").text
     end
     
     def country
-      @doc.xpath("//location/country/code").text
+      @doc.xpath("/person/location/country/code").text
     end
     
   end

@@ -5,7 +5,7 @@
     <property key="degree-2-count">16998</property>
   </network-stats>
   <updates total="1" start="0" count="1">  
- <update>
+    <update>
       <timestamp>1265063139120</timestamp>
       <update-type>JGRP</update-type>
       <update-content>
@@ -40,5 +40,5 @@
       </update-content>
       <is-commentable>false</is-commentable>
     </update>
-</updates>
+  </updates>
 </network>
