@@ -165,7 +165,11 @@ class ClientTest < Test::Unit::TestCase
       stats.updates.size.should == 4
       stats.updates.last.profile.headline.should == "Creative Director for Intridea"
     end
-
+    
+    should "retrived errors" do
+      
+    end
+    
   end
 
 end

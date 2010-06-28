@@ -1,7 +1,5 @@
 module LinkedIn
   class Position
-
-    # xml_reader :is_current
     
     def initialize(doc)
       @doc = doc

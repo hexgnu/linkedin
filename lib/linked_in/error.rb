@@ -1,10 +1,33 @@
 module LinkedIn
   class Error
-    # include ROXML
-    # xml_convention {|val| val.gsub("_","-") }
-    # xml_reader :status, :as => Integer
-    # xml_reader :timestamp, :as => Integer
-    # xml_reader :code, :as => Integer, :from => "error-code"
-    # xml_reader :message
+
+    # <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    # <error>
+    #   <status>404</status>
+    #   <timestamp>1259166999063</timestamp>
+    #   <error-code>0000</error-code>
+    #   <message>Could not find person based on: ~~</message>
+    # </error>
+
+    def initialize(doc)
+      @doc = doc
+    end
+
+    def status
+      @doc.xpath('//status').text.to_i
+    end
+
+    def timestamp
+      @doc.xpath('//timestamp').text.to_i
+    end
+
+    def code
+      @doc.xpath('//error-coce').text.to_i
+    end
+
+    def message
+      @doc.xpath('//message').text
+    end
+
   end
 end

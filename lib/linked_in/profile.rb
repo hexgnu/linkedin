@@ -2,12 +2,11 @@ module LinkedIn
   class Profile
 
     # xml_reader :three_current_positions, :as => [Position]
-    # xml_reader :member_url_resources, :as => [UrlResource], :from => 'member-url-resources/member-url'
 
-    PROFILE_FIELDS = %w[id first_name last_name headline industry current_status
-                current_status_timestamp summary specialties proposal_comments
-                associations honors interests picture_url distance
-                num_recommenders]
+    PROFILE_FIELDS = %w[id first_name last_name headline industry 
+                        current_status current_status_timestamp summary 
+                        specialties proposal_comments associations honors 
+                        interests picture_url distance num_recommenders]
 
     PROFILE_FIELDS.each do |f|
       define_method(f.to_sym) do
