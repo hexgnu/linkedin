@@ -1,12 +1,8 @@
 module LinkedIn
   class Profile
 
-    # xml_reader :location, :as => Location
-    # xml_reader :relation_to_viewer, :as => {:key => :name, :value => :content}
-
     # xml_reader :three_current_positions, :as => [Position]
     # xml_reader :member_url_resources, :as => [UrlResource], :from => 'member-url-resources/member-url'
-
 
     FIELDS = %w[id first_name last_name headline industry current_status
                 current_status_timestamp summary specialties proposal_comments

@@ -10,13 +10,12 @@ module LinkedIn
     end
 
     def connections
-      @arry ||= begin
-        connections = @doc.xpath('//connections')
-        @arry = []
-        connections.children.each do |profile|
-          @arry << Profile.new(Nokogiri::XML(profile.to_xml)) unless profile.blank?
+      @array ||= begin
+        @array = []
+        @doc.xpath('//connections').children.each do |profile|
+          @array << Profile.new(Nokogiri::XML(profile.to_xml)) unless profile.blank?
         end
-        @arry
+        @array
       end
     end
     
