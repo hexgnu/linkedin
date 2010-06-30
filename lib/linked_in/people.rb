@@ -1,6 +1,6 @@
 module LinkedIn
   class People
-    
+
     def self.from_xml(doc)
       new(Nokogiri::XML(doc))
     end
@@ -8,13 +8,13 @@ module LinkedIn
     def initialize(doc)
       @doc = doc
     end
-  
+
     %w[total start count].each do |f|
       define_method(f.to_sym) do
         @doc.xpath('.//people').first["#{f.gsub(/_/,'-')}"].to_i
       end
     end
-    
+
     def profiles
       @array ||= begin
         @array = []
@@ -24,6 +24,6 @@ module LinkedIn
         @array
       end
     end
-    
+
   end
 end

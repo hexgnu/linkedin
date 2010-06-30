@@ -3,9 +3,9 @@ module LinkedIn
 
     # xml_reader :three_current_positions, :as => [Position]
 
-    PROFILE_FIELDS = %w[id first_name last_name headline industry 
-                        current_status current_status_timestamp summary 
-                        specialties proposal_comments associations honors 
+    PROFILE_FIELDS = %w[id first_name last_name headline industry
+                        current_status current_status_timestamp summary
+                        specialties proposal_comments associations honors
                         interests picture_url distance num_recommenders]
 
     PROFILE_FIELDS.each do |f|
@@ -37,7 +37,7 @@ module LinkedIn
     def relation_to_viewer
       @doc.xpath('//relation-to-viewer/distance').text
     end
-    
+
     def member_url_resources
       @url_resources ||= UrlResource.new(@doc.xpath('//member-url-resources')).resources
     end
@@ -49,10 +49,14 @@ module LinkedIn
     def education
       @education ||= Education.new(@doc.xpath('//educations')).education
     end
-    
+
     def connections
       @connections ||= Connections.new(@doc.xpath('//connections')).connections
     end
-    
+
+    def groups
+      @groups ||= Group.new(@doc.xpath('//member-groups')).groups
+    end
+
   end
 end

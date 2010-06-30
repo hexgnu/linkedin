@@ -1,10 +1,10 @@
 module LinkedIn
   class UrlResource
-    
+
     def initialize(doc)
       @doc = doc
     end
-    
+
     def resources
       @array ||= begin
         @array = []
@@ -28,6 +28,6 @@ module LinkedIn
       end
 
     end # resource class
-    
+
   end
 end

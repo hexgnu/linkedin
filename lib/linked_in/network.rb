@@ -1,14 +1,14 @@
 module LinkedIn
   class Network
-    
+
     def self.from_xml(doc)
       new(Nokogiri::XML(doc))
     end
-    
+
     def initialize(doc)
       @doc = doc
     end
-    
+
     def updates
       @array ||= begin
         @array = []
@@ -18,6 +18,6 @@ module LinkedIn
         @array
       end
     end
-    
+
   end
 end

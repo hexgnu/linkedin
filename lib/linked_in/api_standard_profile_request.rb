@@ -16,6 +16,6 @@ module LinkedIn
       hash[:value] = @doc.xpath("//api-standard-profile-request/headers/http-header/value").text
       hash
     end
-    
+
   end
 end

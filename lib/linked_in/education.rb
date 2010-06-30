@@ -8,7 +8,7 @@ module LinkedIn
       @array ||= begin
         @array = []
         @doc.children.each do |edu|
-          @array << Resource.new(edu) unless edu.xpath('id').blank?
+          @array << Resource.new(edu) unless edu.blank?
         end
         @array
       end

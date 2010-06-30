@@ -1,6 +1,6 @@
 module LinkedIn
   class Position
-    
+
     def initialize(doc)
       @doc = doc
     end
@@ -20,7 +20,7 @@ module LinkedIn
       def initialize(position)
         @position = position
       end
-      
+
       %w[id title summary is_current].each do |f|
         define_method(f.to_sym) do
           @position.xpath("./#{f.gsub(/_/,'-')}").text

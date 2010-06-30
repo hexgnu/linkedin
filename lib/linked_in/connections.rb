@@ -18,10 +18,10 @@ module LinkedIn
         @array
       end
     end
-    
+
     def profiles
       connections
     end
-    
+
   end
 end
