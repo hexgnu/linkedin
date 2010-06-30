@@ -18,7 +18,7 @@ module LinkedIn
     end
 
     def consumer
-      @consumer ||= ::OAuth::Consumer.new(@ctoken, @csecret, {:site => 'https://api.linkedin.com'}.merge(consumer_options))
+      @consumer ||= ::OAuth::Consumer.new(@ctoken, @csecret, {:site => 'https://api.linkedin.com'}.merge(@consumer_options))
     end
 
     def set_callback_url(url)
