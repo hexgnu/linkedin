@@ -1,5 +1,8 @@
 module LinkedIn
   class Error
+    def self.from_xml(doc)
+      new(Nokogiri::XML(doc))
+    end
 
     def initialize(doc)
       @doc = doc
