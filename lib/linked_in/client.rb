@@ -50,6 +50,13 @@ module LinkedIn
       raise_errors(response)
       response.body
     end
+
+    def post(path, body='', options={})
+      path = "/v1#{path}"
+      response = access_token.post(path, body, options)
+      raise_errors(response)
+      response
+    end
     
     def put(path, body, options={})
       path = "/v1#{path}"
@@ -128,6 +135,25 @@ module LinkedIn
     def clear_status
       path = "/people/~/current-status"
       delete(path).code
+    end
+
+    def send_message(subject, body, recipient_paths)
+      path = "/people/~/mailbox"
+
+      message = LinkedIn::Message.new
+      message.subject = subject
+      message.body    = body
+      recipients = LinkedIn::Recipients.new
+
+      recipients.recipients = recipient_paths.map do |profile_path|
+        recipient = LinkedIn::Recipient.new
+        recipient.person = LinkedIn::Person.new
+        recipient.person.path = "/people/#{profile_path}"
+        recipient
+      end
+
+      message.recipients = recipients
+      post(path, message_to_xml(message), { "Content-Type" => "text/xml" }).code
     end
     
     def network_statuses(options={})
@@ -224,6 +250,11 @@ module LinkedIn
 
       def comment_to_xml(comment)
         %Q{<?xml version="1.0" encoding="UTF-8"?><update-comment><comment>#{comment}</comment></update-comment>}
+      end
+      
+      def message_to_xml(message)
+        %Q{<?xml version="1.0" encoding="UTF-8"?>
+        #{message.to_xml}}
       end
     
   end

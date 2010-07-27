@@ -11,6 +11,7 @@ require 'shoulda'
 require 'matchy'
 require 'mocha'
 require 'fakeweb'
+require 'redgreen'
 
 FakeWeb.allow_net_connect = false
 
