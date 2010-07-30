@@ -149,14 +149,14 @@ module LinkedIn
     def send_message(subject, body, recipient_paths)
       path = "/people/~/mailbox"
 
-      message = LinkedIn::Message.new
+      message         = LinkedIn::Message.new
       message.subject = subject
       message.body    = body
-      recipients = LinkedIn::Recipients.new
+      recipients      = LinkedIn::Recipients.new
 
       recipients.recipients = recipient_paths.map do |profile_path|
-        recipient = LinkedIn::Recipient.new
-        recipient.person = LinkedIn::Person.new
+        recipient             = LinkedIn::Recipient.new
+        recipient.person      = LinkedIn::Person.new
         recipient.person.path = "/people/#{profile_path}"
         recipient
       end
