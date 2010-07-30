@@ -166,6 +166,14 @@ class ClientTest < Test::Unit::TestCase
       stats.updates.last.profile.headline.should == "Creative Director for Intridea"
     end
 
-  end
+    should "send a message to recipients" do
+      stub_post("/v1/people/~/mailbox", "mailbox_items.xml")
+      recipients = ["/people/~", "/people/abcdefg"]
+      subject    = "Congratulations on your new position."
+      body       = "You're certainly the best person for the job!"
 
+      @linkedin.send_message(subject, body, recipients).should == "200"
+    end
+
+  end
 end

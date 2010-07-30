@@ -11,6 +11,12 @@ require 'crack'
 
 require 'cgi'
 
+class Nokogiri::XML::Element
+  def has_key?(key)
+    self.keys.include?(key)
+  end
+end
+
 module LinkedIn
   class LinkedInError < StandardError
     attr_reader :data
@@ -82,5 +88,10 @@ require File.join(directory, 'linked_in', 'network')
 require File.join(directory, 'linked_in', 'people')
 require File.join(directory, 'linked_in', 'connections')
 require File.join(directory, 'linked_in', 'client')
+require File.join(directory, 'linked_in', 'person')
+require File.join(directory, 'linked_in', 'recipient')
+require File.join(directory, 'linked_in', 'recipients')
+require File.join(directory, 'linked_in', 'message')
 require File.join(directory, 'linked_in', 'group')
 require File.join(directory, 'linked_in', 'birthdate')
+
