@@ -4,8 +4,9 @@ require 'rubygems'
 gem 'oauth', '~> 0.3.5'
 require 'oauth'
 
-gem 'roxml', '~> 3.1.3'
-require 'roxml'
+# gem 'roxml', '~> 3.1.3'
+# require 'roxml'
+require 'nokogiri'
 
 gem 'crack', '~> 0.1.4'
 require 'crack'
@@ -91,3 +92,6 @@ require File.join(directory, 'linked_in', 'person')
 require File.join(directory, 'linked_in', 'recipient')
 require File.join(directory, 'linked_in', 'recipients')
 require File.join(directory, 'linked_in', 'message')
+require File.join(directory, 'linked_in', 'group')
+require File.join(directory, 'linked_in', 'birthdate')
+

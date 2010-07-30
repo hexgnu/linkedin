@@ -51,6 +51,7 @@ LinkedIn's API uses Oauth for authentication. Luckily, the LinkedIn gem hides mo
 
 More examples in the [examples folder](http://github.com/pengwynn/linkedin/blob/master/examples).
 
+For a nice example on using this in a [Rails App](http://pivotallabs.com/users/will/blog/articles/1096-linkedin-gem-for-a-web-app).
 
 
 ## TODO

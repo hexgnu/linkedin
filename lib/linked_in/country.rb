@@ -1,7 +1,13 @@
 module LinkedIn
   class Country
-    include ROXML
-    xml_convention {|val| val.gsub("_","-") }
-    xml_reader :code
+
+    def initialize(doc)
+      @doc = doc
+    end
+
+    def code
+      @doc.xpath("/person/location/country/code").text
+    end
+
   end
 end
