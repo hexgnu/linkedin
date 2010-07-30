@@ -1,12 +1,6 @@
 module LinkedIn
   class Birthdate < LinkedIn::Base
 
-    # <date-of-birth>
-    #   <year>1972</year>
-    #   <month>1</month>
-    #   <day>3</day>
-    # </date-of-birth>
-
     def year
       @year ||= @doc.xpath("/person/date-of-birth/year").text.to_i
     end
