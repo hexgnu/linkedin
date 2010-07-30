@@ -1,9 +1,5 @@
 module LinkedIn
-  class Country
-
-    def initialize(doc)
-      @doc = doc
-    end
+  class Country  < LinkedIn::Base
 
     def code
       @doc.xpath("/person/location/country/code").text

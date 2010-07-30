@@ -1,9 +1,5 @@
 module LinkedIn
-  class Company
-
-    def initialize(doc)
-      @doc = doc
-    end
+  class Company < LinkedIn::Base
 
     %w[type name industry].each do |f|
       define_method(f.to_sym) do

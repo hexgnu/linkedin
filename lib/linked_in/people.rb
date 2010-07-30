@@ -1,13 +1,5 @@
 module LinkedIn
-  class People
-
-    def self.from_xml(doc)
-      new(Nokogiri::XML(doc))
-    end
-
-    def initialize(doc)
-      @doc = doc
-    end
+  class People < LinkedIn::Base
 
     %w[total start count].each do |f|
       define_method(f.to_sym) do

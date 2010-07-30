@@ -1,9 +1,5 @@
 module LinkedIn
-  class ApiStandardProfileRequest
-
-    def initialize(doc)
-      @doc = doc
-    end
+  class ApiStandardProfileRequest < LinkedIn::Base
 
     def url
       @doc.xpath("//api-standard-profile-request/url").text

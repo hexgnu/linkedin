@@ -1,9 +1,5 @@
 module LinkedIn
-  class Location
-
-    def initialize(doc)
-      @doc = doc
-    end
+  class Location < LinkedIn::Base
 
     def name
       @doc.xpath("/person/location/name").text

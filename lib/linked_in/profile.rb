@@ -1,5 +1,5 @@
 module LinkedIn
-  class Profile
+  class Profile < LinkedIn::Base
 
     # xml_reader :three_current_positions, :as => [Position]
 
@@ -12,14 +12,6 @@ module LinkedIn
       define_method(f.to_sym) do
         @doc.xpath("./person/#{f.gsub(/_/,'-')}").text
       end
-    end
-
-    def self.from_xml(doc)
-      new(Nokogiri::XML(doc))
-    end
-
-    def initialize(doc)
-      @doc = doc
     end
 
     def location

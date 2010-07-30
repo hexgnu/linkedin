@@ -1,12 +1,5 @@
 module LinkedIn
-  class Error
-    def self.from_xml(doc)
-      new(Nokogiri::XML(doc))
-    end
-
-    def initialize(doc)
-      @doc = doc
-    end
+  class Error < LinkedIn::Base
 
     def status
       @doc.xpath('//status').text.to_i

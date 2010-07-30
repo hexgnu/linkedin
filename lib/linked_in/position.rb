@@ -1,9 +1,5 @@
 module LinkedIn
-  class Position
-
-    def initialize(doc)
-      @doc = doc
-    end
+  class Position < LinkedIn::Base
 
     def positions
       @arry ||= begin

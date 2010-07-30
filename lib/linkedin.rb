@@ -1,6 +1,6 @@
 # require 'forwardable'
 # require 'rubygems'
-# 
+#
 gem 'oauth', '~> 0.3.5'
 require 'oauth'
 
@@ -28,43 +28,45 @@ module LinkedIn
   class Unavailable   < StandardError; end
   class InformLinkedIn < StandardError; end
   class NotFound      < StandardError; end
-  
+
   # config/initializers/linkedin.rb (for instance)
-  # 
+  #
   # LinkedIn.configure do |config|
   #   config.token = 'consumer_token'
   #   config.secret = 'consumer_secret'
   # end
-  # 
+  #
   # elsewhere
   #
   # client = LinkedIn::Client.new
   def self.configure
     yield self
-      
+
     LinkedIn.token = token
     LinkedIn.secret = secret
     true
   end
-  
+
   def self.token
     @token
   end
-  
+
   def self.token=(token)
     @token = token
   end
-  
+
   def self.secret
     @secret
   end
-  
+
   def self.secret=(secret)
     @secret = secret
   end
 end
 
 directory = File.expand_path(File.dirname(__FILE__))
+
+require File.join(directory, 'linked_in', 'base')
 
 require File.join(directory, 'linked_in', 'api_standard_profile_request')
 require File.join(directory, 'linked_in', 'url_resource')

@@ -1,8 +1,5 @@
 module LinkedIn
-  class Education
-    def initialize(doc)
-      @doc = doc
-    end
+  class Education < LinkedIn::Base
 
     def education
       @array ||= begin

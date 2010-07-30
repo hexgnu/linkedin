@@ -1,9 +1,5 @@
 module LinkedIn
-  class Group
-
-    def initialize(doc)
-      @doc = doc
-    end
+  class Group  < LinkedIn::Base
 
     def groups
       @array ||= begin

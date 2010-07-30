@@ -1,13 +1,5 @@
 module LinkedIn
-  class Connections
-
-    def self.from_xml(doc)
-      new(Nokogiri::XML(doc))
-    end
-
-    def initialize(doc)
-      @doc = doc
-    end
+  class Connections < LinkedIn::Base
 
     def connections
       @array ||= begin

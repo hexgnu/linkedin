@@ -1,6 +1,6 @@
 module LinkedIn
   class Client
-    
+
     # TODO: @ http://developer.linkedin.com/docs/DOC-1061 && / DOC-1014
     # add in client.get("/people/~:(im-accounts)")
     #        client.get("/people/~:(twitter-accounts)")
@@ -99,9 +99,9 @@ module LinkedIn
 
       Connections.from_xml(get(path)).profiles
     end
-    
+
     ##
-    #  usage: 
+    #  usage:
     #    dob = client.birthdate
     #      returns a birthdate object allowing access to day, month, year
     #      dob.to_date will return a DATE object
@@ -109,7 +109,7 @@ module LinkedIn
       path = "/people/~:(date-of-birth)"
       Birthdate.from_xml(get(path))
     end
-    
+
     def search(options={})
       path = "/people"
       options = {:keywords => options} if options.is_a?(String)

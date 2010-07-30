@@ -1,9 +1,5 @@
 module LinkedIn
-  class UrlResource
-
-    def initialize(doc)
-      @doc = doc
-    end
+  class UrlResource < LinkedIn::Base
 
     def resources
       @array ||= begin
