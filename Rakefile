@@ -25,7 +25,7 @@ begin
     gem.add_development_dependency('shoulda', '>= 2.10.1')
     
     gem.add_development_dependency('jnunemaker-matchy', '0.4.0')
-    gem.add_development_dependency('mocha', '0.9.4')
+    gem.add_development_dependency('mocha', '>= 0.9.4')
     gem.add_development_dependency('fakeweb', '>= 1.2.5')
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
