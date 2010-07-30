@@ -11,11 +11,11 @@ require 'crack'
 
 require 'cgi'
 
-class Nokogiri::XML::Element
-  def has_key?(key)
-    self.keys.include?(key)
-  end
-end
+# class Nokogiri::XML::Element
+#   def has_key?(key)
+#     self.keys.include?(key)
+#   end
+# end
 
 module LinkedIn
   class LinkedInError < StandardError

@@ -8,7 +8,7 @@ group :development do
   gem 'jeweler'
   gem 'rake'
   gem 'test-unit'
-  gem 'redgreen'
+  # gem 'redgreen'
   gem 'shoulda'
   gem 'jnunemaker-matchy', "= 0.4.0", :require => 'matchy'
   gem 'mocha'
