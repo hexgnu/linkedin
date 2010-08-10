@@ -1,3 +1,5 @@
+require 'nokogiri'
+
 module LinkedIn
   class People < LinkedIn::Base
 
