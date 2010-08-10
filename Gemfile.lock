@@ -1,0 +1,46 @@
+PATH
+  remote: .
+  specs:
+    linkedin (0.1.8)
+      crack (~> 0.1.4)
+      nokogiri (~> 1.4.1)
+      oauth (~> 0.3.5)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    crack (0.1.8)
+    fakeweb (1.2.8)
+    gemcutter (0.5.0)
+      json_pure
+    git (1.2.5)
+    jeweler (1.4.0)
+      gemcutter (>= 0.1.0)
+      git (>= 1.2.5)
+      rubyforge (>= 2.0.0)
+    jnunemaker-matchy (0.4.0)
+    json_pure (1.4.3)
+    mocha (0.9.4)
+      rake
+    nokogiri (1.4.3.1)
+    oauth (0.3.5)
+      ruby-hmac (>= 0.3.1)
+    rake (0.8.7)
+    ruby-hmac (0.3.2)
+    rubyforge (2.0.4)
+      json_pure (>= 1.1.7)
+    shoulda (2.10.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  crack (~> 0.1.4)
+  fakeweb (>= 1.2.5)
+  jeweler
+  jnunemaker-matchy (>= 0.4.0)
+  linkedin!
+  mocha (>= 0.9.4)
+  nokogiri (~> 1.4.1)
+  oauth (~> 0.3.5)
+  shoulda (>= 2.10.1)

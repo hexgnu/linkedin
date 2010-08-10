@@ -1,5 +1,10 @@
 require 'rubygems'
-require 'rake'
+begin
+  require 'bundler'
+  Bundler.setup
+rescue LoadError
+  puts 'You must `gem install bundler` and `bundle install` to run rake tasks'
+end
 
 begin
   require 'jeweler'
@@ -11,22 +16,16 @@ begin
     gem.homepage = "http://github.com/pengwynn/linkedin"
     gem.authors = ["Wynn Netherland"]
     gem.files   = FileList["[A-Z]*", "{lib,test}/**/*"]
-    
-    
-    gem.add_dependency('oauth', '~> 0.3.5')
 
-    # roxml dependency removed
-    # gem.add_dependency('roxml', '~> 3.1.3')
-    
-    gem.add_dependency('crack', '~> 0.1.4')
-    
+    gem.add_dependency('oauth',    '~> 0.3.5')
+    gem.add_dependency('crack',    '~> 0.1.4')
+    gem.add_dependency('nokogiri', '~> 1.4.1')
+
     # updated gem dependency to shoulda
-    # gem.add_development_dependency('thoughtbot-shoulda', '>= 2.10.1')
     gem.add_development_dependency('shoulda', '>= 2.10.1')
-    
-    gem.add_development_dependency('jnunemaker-matchy', '0.4.0')
-    gem.add_development_dependency('mocha', '>= 0.9.4')
+    gem.add_development_dependency('mocha',   '>= 0.9.4')
     gem.add_development_dependency('fakeweb', '>= 1.2.5')
+    gem.add_development_dependency('jnunemaker-matchy', '>= 0.4.0')
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
@@ -54,8 +53,6 @@ rescue LoadError
     abort "RCov is not available. In order to run rcov, you must: sudo gem install spicycode-rcov"
   end
 end
-
-task :test => :check_dependencies
 
 task :default => :test
 
