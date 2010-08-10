@@ -4,10 +4,8 @@ Ruby wrapper for the [LinkedIn API](http://developer.linkedin.com). Heavily insp
 
 ## Installation
 
-    sudo gem install gemcutter
-    gem tumble
     sudo gem install linkedin
-    
+
 ## Usage
 
 ### Authenticate
@@ -46,7 +44,7 @@ LinkedIn's API uses Oauth for authentication. Luckily, the LinkedIn gem hides mo
 
     # get a profile for someone via their public profile url
     client.profile(:url => 'http://www.linkedin.com/in/netherland')
-    
+
 
 
 More examples in the [examples folder](http://github.com/pengwynn/linkedin/blob/master/examples).
@@ -59,7 +57,7 @@ For a nice example on using this in a [Rails App](http://pivotallabs.com/users/w
 * Implement Messaging APIs
 
 ## Note on Patches/Pull Requests
- 
+
 * Fork the project.
 * Make your feature addition or bug fix.
 * Add tests for it. This is important so I don't break it in a
