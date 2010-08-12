@@ -1,10 +1,10 @@
 require 'rubygems'
 begin
-  require 'bundler'
-  Bundler.setup
+  require 'bundler/setup'
 rescue LoadError
   puts 'You must `gem install bundler` and `bundle install` to run rake tasks'
 end
+
 
 begin
   require 'jeweler'
@@ -33,10 +33,10 @@ rescue LoadError
   puts "Jeweler (or a dependency) not available. Install it with: sudo gem install jeweler"
 end
 
+
 require 'rake/testtask'
 Rake::TestTask.new(:test) do |test|
   test.libs << 'test'
-  test.ruby_opts << '-rubygems'
   test.pattern = 'test/**/*_test.rb'
   test.verbose = true
 end
