@@ -16,21 +16,21 @@ class ClientTest < Test::Unit::TestCase
       p.first_name.should == 'Wynn'
       p.last_name.should  == 'Netherland'
     end
-    
+
     should "retrieve location information" do
       stub_get("/v1/people/~", "profile_full.xml")
       p = @linkedin.profile
       p.location.name.should    == 'Dallas/Fort Worth Area'
       p.location.country.should == 'us'
     end
-    
+
     should "retrieve positions from a profile" do
       stub_get("/v1/people/~", "profile_full.xml")
       p = @linkedin.profile
       p.positions.size.should == 4
       p.positions.first.company.name.should == 'Orrka'
       p.positions.first.is_current.should   == 'true'
-      
+
       hp = p.positions[2]
       hp.title.should       == 'Solution Architect'
       hp.id.should          == '4891362'
@@ -57,7 +57,7 @@ class ClientTest < Test::Unit::TestCase
       p.connections.size.should == 146
       p.connections.first.first_name.should == "Ali"
     end
-    
+
     should "retrieve a profiles member_url_resources" do
       stub_get("/v1/people/~", "profile_full.xml")
       p = @linkedin.profile
@@ -65,7 +65,7 @@ class ClientTest < Test::Unit::TestCase
       p.member_url_resources.first.url.should  == 'http://orrka.com'
       p.member_url_resources.first.name.should == 'My Company'
     end
-    
+
     should "retrieve a profiles connections api_standard_profile_request" do
       stub_get("/v1/people/~", "profile_full.xml")
       p = @linkedin.profile
@@ -137,6 +137,11 @@ class ClientTest < Test::Unit::TestCase
     should "update a user's current status" do
       stub_put("/v1/people/~/current-status", "blank.xml")
       @linkedin.update_status("Testing out the LinkedIn API")
+    end
+
+    should "post to a user's network stream" do
+      stub_post("/v1/people/~/person-activities", "blank.xml")
+      @linkedin.update_network("Testing out the LinkedIn API")
     end
 
     should "clear a user's current status" do
