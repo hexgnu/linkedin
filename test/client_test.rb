@@ -139,6 +139,11 @@ class ClientTest < Test::Unit::TestCase
       @linkedin.update_status("Testing out the LinkedIn API")
     end
 
+    should "post to a user's network stream" do
+      stub_post("/v1/people/~/person-activities", "blank.xml")
+      @linkedin.update_network("Testing out the LinkedIn API")
+    end
+
     should "clear a user's current status" do
       stub_delete("/v1/people/~/current-status", "blank.xml")
       @linkedin.clear_status

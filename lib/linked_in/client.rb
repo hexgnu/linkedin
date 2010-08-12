@@ -138,7 +138,12 @@ module LinkedIn
 
     def update_comment(network_key, comment)
       path = "/people/~/network/updates/key=#{network_key}/update-comments"
-      post(path,comment_to_xml(comment),{'Content-Type' => 'application/xml'})
+      post(path, comment_to_xml(comment), {'Content-Type' => 'application/xml'})
+    end
+
+    def update_network(message)
+      path = "/people/~/person-activities"
+      post(path, network_update_to_xml(message), {'Content-Type' => 'application/xml'})
     end
 
     def clear_status
@@ -261,6 +266,13 @@ module LinkedIn
       def message_to_xml(message)
         %Q{<?xml version="1.0" encoding="UTF-8"?>
         #{message.to_xml}}
+      end
+
+      def network_update_to_xml(message)
+        %Q{<activity locale="en_US">
+             <content-type>linkedin-html</content-type>
+             <body>#{message}</body>
+           </activity>}
       end
 
   end
