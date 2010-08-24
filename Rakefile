@@ -17,11 +17,10 @@ begin
     gem.authors = ["Wynn Netherland"]
     gem.files   = FileList["[A-Z]*", "{lib,test}/**/*"]
 
-    gem.add_dependency('oauth',    '~> 0.3.5')
+    gem.add_dependency('oauth',    '~> 0.4.0')
     gem.add_dependency('crack',    '~> 0.1.4')
     gem.add_dependency('nokogiri', '~> 1.4.1')
 
-    # updated gem dependency to shoulda
     gem.add_development_dependency('shoulda', '>= 2.10.1')
     gem.add_development_dependency('mocha',   '>= 0.9.4')
     gem.add_development_dependency('fakeweb', '>= 1.2.5')
