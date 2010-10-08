@@ -53,6 +53,7 @@ module LinkedIn
       path = "/v1#{path}"
       response = access_token.get(path, options)
       raise_errors(response)
+      log response.body
       response.body
     end
 
@@ -261,6 +262,12 @@ module LinkedIn
       def message_to_xml(message)
         %Q{<?xml version="1.0" encoding="UTF-8"?>
         #{message.to_xml}}
+      end
+
+      def log(msg)
+        if LinkedIn.logger
+          LinkedIn.logger.info("\e[33m#{msg}\e[0m")
+        end
       end
     
   end

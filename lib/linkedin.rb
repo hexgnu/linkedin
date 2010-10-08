@@ -53,21 +53,10 @@ module LinkedIn
     true
   end
 
-  def self.token
-    @token
+  class << self
+    attr_accessor :token, :secret, :logger
   end
 
-  def self.token=(token)
-    @token = token
-  end
-
-  def self.secret
-    @secret
-  end
-
-  def self.secret=(secret)
-    @secret = secret
-  end
 end
 
 directory = File.expand_path(File.dirname(__FILE__))
