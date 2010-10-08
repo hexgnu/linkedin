@@ -6,7 +6,7 @@ module LinkedIn
     PROFILE_FIELDS = %w[id first_name last_name headline industry
                         current_status current_status_timestamp summary
                         specialties proposal_comments associations honors
-                        interests picture_url distance num_recommenders]
+                        interests picture_url distance num_recommenders main_address]
 
     PROFILE_FIELDS.each do |f|
       define_method(f.to_sym) do
@@ -36,6 +36,10 @@ module LinkedIn
 
     def positions
       @positions ||= Position.new(@doc.xpath('//positions')).positions
+    end
+
+    def phone_numbers
+      @phone_numbers ||= PhoneNumbers.new(@doc.xpath('//phone-numbers')).numbers
     end
 
     def education

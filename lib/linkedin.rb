@@ -94,4 +94,5 @@ require File.join(directory, 'linked_in', 'recipients')
 require File.join(directory, 'linked_in', 'message')
 require File.join(directory, 'linked_in', 'group')
 require File.join(directory, 'linked_in', 'birthdate')
+require File.join(directory, 'linked_in', 'phone_numbers')
 
