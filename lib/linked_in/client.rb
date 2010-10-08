@@ -51,9 +51,10 @@ module LinkedIn
 
     def get(path, options={})
       path = "/v1#{path}"
+      LinkedIn.log path, 32
       response = access_token.get(path, options)
       raise_errors(response)
-      log response.body
+      LinkedIn.log response.body, 33
       response.body
     end
 
@@ -64,7 +65,7 @@ module LinkedIn
       raise_errors(response)
       response
     end
-    
+
     def put(path, body, options={})
       path = "/v1#{path}"
       response = access_token.put(path, body, options)
@@ -122,8 +123,11 @@ module LinkedIn
     def search(options={})
       path = "/people"
       options = {:keywords => options} if options.is_a?(String)
+      if options[:fields]
+        fields = options.delete(:fields)
+        path +=":(#{fields.map{|f| f.to_s.gsub("_","-")}.join(',')})"
+      end
       options = format_options_for_query(options)
-
       People.from_xml(get(to_uri(path, options)))
     end
 
@@ -141,7 +145,7 @@ module LinkedIn
       path = "/people/~/network/updates/key=#{network_key}/update-comments"
       post(path,comment_to_xml(comment),{'Content-Type' => 'application/xml'})
     end
-    
+
     def clear_status
       path = "/people/~/current-status"
       delete(path).code
@@ -165,7 +169,7 @@ module LinkedIn
       message.recipients = recipients
       post(path, message_to_xml(message), { "Content-Type" => "text/xml" }).code
     end
-    
+
     def network_statuses(options={})
       options[:type] = 'STAT'
       network_updates(options)
@@ -192,6 +196,9 @@ module LinkedIn
       def raise_errors(response)
         # Even if the XML answer contains the HTTP status code, LinkedIn also sets this code
         # in the HTTP answer (thankfully).
+        if response.code.to_i >= 400
+          LinkedIn.log(response.body, 31)
+        end
         case response.code.to_i
         when 400
           data = LinkedIn::Error.from_xml(response.body)
@@ -258,17 +265,12 @@ module LinkedIn
       def comment_to_xml(comment)
         %Q{<?xml version="1.0" encoding="UTF-8"?><update-comment><comment>#{comment}</comment></update-comment>}
       end
-      
+
       def message_to_xml(message)
         %Q{<?xml version="1.0" encoding="UTF-8"?>
         #{message.to_xml}}
       end
 
-      def log(msg)
-        if LinkedIn.logger
-          LinkedIn.logger.info("\e[33m#{msg}\e[0m")
-        end
-      end
-    
   end
+
 end

@@ -57,6 +57,12 @@ module LinkedIn
     attr_accessor :token, :secret, :logger
   end
 
+  def self.log(message, color = 0)
+    if logger
+      logger.info "\e[#{color}m#{message}\e[0m"
+    end
+  end
+
 end
 
 directory = File.expand_path(File.dirname(__FILE__))
