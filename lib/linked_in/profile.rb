@@ -39,6 +39,10 @@ module LinkedIn
       @positions ||= Position.new(@doc.xpath('//positions')).positions
     end
 
+    def twitter_accounts
+      @twitter_accounts ||= TwitterAccounts.new(@doc.xpath('//twitter-accounts')).accounts
+    end
+
     def phone_numbers
       @phone_numbers ||= PhoneNumbers.new(@doc.xpath('//phone-numbers')).numbers
     end
