@@ -48,7 +48,7 @@ class ClientTest < Test::Unit::TestCase
       education.start_month.should == 8
       education.start_year.should  == 1994
       education.end_month.should   == 5
-      education.end_year.should    == 1998
+      education.end_year.should    == 1998 
     end
 
     should "retrieve information about a profiles connections" do
@@ -56,6 +56,15 @@ class ClientTest < Test::Unit::TestCase
       p = @linkedin.profile
       p.connections.size.should == 146
       p.connections.first.first_name.should == "Ali"
+    end
+
+    should "retrieve recommendations recieved for a profile" do
+      stub_get("/v1/people/~", "profile_full.xml")
+      p = @linkedin.profile
+      p.recommendations_recieved.size.should == 1
+      p.recommendations_recieved.first.recommender.first_name.should == "Fred"
+      p.recommendations_recieved.first.recommender.last_name.should == "White, PMP"
+      p.recommendations_recieved.first.recommendation_type.should == "Colleague"
     end
     
     should "retrieve a profiles member_url_resources" do
@@ -73,7 +82,7 @@ class ClientTest < Test::Unit::TestCase
       p1.api_standard_profile_request.url.should == 'http://api.linkedin.com/v1/people/3YNlBdusZ5:full'
       p1.api_standard_profile_request.headers[:name].should  == 'x-li-auth-token'
       p1.api_standard_profile_request.headers[:value].should == 'name:lui9'
-    end
+    end 
 
     should "retrieve a profile for a member by id" do
       stub_get("/v1/people/id=gNma67_AdI", "profile.xml")

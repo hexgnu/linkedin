@@ -3845,5 +3845,16 @@ Working closely with Microsoft consultants onstaff and in Redmond in order to in
       <name>My Blog</name>
     </member-url>
   </member-url-resources>
+  <recommendations-recieved total="1">
+    <recommendation>
+      <id>885405</id>
+      <recommendation-type>Colleague</recommendation-type>
+      <recommender>
+        <id>Vtl11azLvC</id>
+        <first-name>Fred</first-name>
+        <last-name>White, PMP</last-name>
+      </recommender>
+    </recommendation>
+  </recommendations-recieved>
   <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/2/000/01c/359/041bc1b.jpg</picture-url>
 </person>
