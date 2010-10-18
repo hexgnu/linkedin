@@ -50,8 +50,8 @@ module LinkedIn
       @groups ||= Group.new(@doc.xpath('//member-groups')).groups
     end
 
-    def recommendations_recieved
-      @recommendations_recieved ||= Recommendation.new(@doc.xpath('//recommendations-recieved')).recommendations
+    def recommendations_received
+      @recommendations_received ||= Recommendation.new(@doc.xpath('//recommendations-received')).recommendations
     end
   end
 end
