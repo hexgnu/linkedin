@@ -17,7 +17,7 @@ module LinkedIn
         @education = education
       end
 
-      %w[id school_name degree field_of_study activities].each do |f|
+      %w[id school_name degree field_of_study activities notes].each do |f|
         define_method(f.to_sym) do
           @education.xpath("./#{f.gsub(/_/,'-')}").text
         end
