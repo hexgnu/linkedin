@@ -4,10 +4,8 @@ Ruby wrapper for the [LinkedIn API](http://developer.linkedin.com). Heavily insp
 
 ## Installation
 
-    sudo gem install gemcutter
-    gem tumble
     sudo gem install linkedin
-    
+
 ## Usage
 
 ### Authenticate
