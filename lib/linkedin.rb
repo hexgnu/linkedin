@@ -96,4 +96,5 @@ require File.join(directory, 'linked_in', 'message')
 require File.join(directory, 'linked_in', 'group')
 require File.join(directory, 'linked_in', 'birthdate')
 require File.join(directory, 'linked_in', 'short_profile')
+require File.join(directory, 'linked_in', 'search_params')
 
