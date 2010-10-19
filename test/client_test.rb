@@ -58,13 +58,13 @@ class ClientTest < Test::Unit::TestCase
       p.connections.first.first_name.should == "Ali"
     end
 
-    should "retrieve recommendations recieved for a profile" do
+    should "retrieve recommendations received for a profile" do
       stub_get("/v1/people/~", "profile_full.xml")
       p = @linkedin.profile
-      p.recommendations_recieved.size.should == 1
-      p.recommendations_recieved.first.recommender.first_name.should == "Fred"
-      p.recommendations_recieved.first.recommender.last_name.should == "White, PMP"
-      p.recommendations_recieved.first.recommendation_type.should == "Colleague"
+      p.recommendations_received.size.should == 1
+      p.recommendations_received.first.recommender.first_name.should == "Fred"
+      p.recommendations_received.first.recommender.last_name.should == "White, PMP"
+      p.recommendations_received.first.recommendation_type.should == "Colleague"
     end
     
     should "retrieve a profiles member_url_resources" do
