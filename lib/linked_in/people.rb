@@ -10,7 +10,7 @@ module LinkedIn
     def profiles
       @array ||= begin
         @array = []
-        @doc.children.each do |profile|
+        @doc.xpath('//people').children.each do |profile|
           @array << Profile.new(Nokogiri::XML(profile.to_xml)) unless profile.blank?
         end
         @array
