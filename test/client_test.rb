@@ -66,6 +66,15 @@ class ClientTest < Test::Unit::TestCase
       p.recommendations_received.first.recommender.last_name.should == "White, PMP"
       p.recommendations_received.first.recommendation_type.should == "Colleague"
     end
+
+    should "retrieve related connections for a profile" do
+      stub_get("/v1/people/~", "profile_full.xml")
+      p = @linkedin.profile
+      p.related_connections.size.should == 2
+      p.related_connections.first.first_name.should == "Wynn"
+      p.related_connections.first.last_name.should == "Netherland"
+      p.related_connections.first.id.should == "gNma67_AdI"
+    end
     
     should "retrieve a profiles member_url_resources" do
       stub_get("/v1/people/~", "profile_full.xml")

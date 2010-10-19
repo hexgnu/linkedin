@@ -30,6 +30,10 @@ module LinkedIn
       @doc.xpath('//relation-to-viewer/distance').text
     end
 
+    def related_connections
+      @related_connections ||= ShortProfileGroup.new(@doc.xpath('//relation-to-viewer/related-connections')).profiles
+    end
+
     def member_url_resources
       @url_resources ||= UrlResource.new(@doc.xpath('//member-url-resources')).resources
     end

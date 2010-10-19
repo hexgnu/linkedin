@@ -35,6 +35,7 @@ Gem::Specification.new do |s|
      "lib/linked_in/position.rb",
      "lib/linked_in/profile.rb",
      "lib/linked_in/recommendation.rb",
+     "lib/linked_in/short_profile.rb",
      "lib/linked_in/update.rb",
      "lib/linked_in/url_resource.rb",
      "lib/linkedin.rb",

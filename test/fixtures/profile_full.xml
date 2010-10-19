@@ -14,6 +14,19 @@
   <distance>0</distance>
   <relation-to-viewer>
     <distance>0</distance>
+    <num-related-connections>2</num-related-connections>
+    <related-connections>
+        <person>
+            <id>gNma67_AdI</id>
+            <first-name>Wynn</first-name>
+            <last-name>Netherland</last-name>
+        </person>
+        <person>
+            <id>gNFa67_AdI</id>
+            <first-name>Ryan</first-name>
+            <last-name>Brunner</last-name>
+        </person>
+    </related-connections>
   </relation-to-viewer>
   <num-recommenders>2</num-recommenders>
   <current-status>New blog post: What makes a good API wrapper? http://wynnnetherland.com/2009/11/what-makes-a-good-api-wrapper/</current-status>
