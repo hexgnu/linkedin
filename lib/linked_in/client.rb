@@ -123,9 +123,7 @@ module LinkedIn
       options = {:keywords => options} if options.is_a?(String)
       options = format_options_for_query(options)
 
-      xml = Nokogiri::XML(get(to_uri(path, options)))
-
-      People.new(xml.xpath("//people"))
+      People.from_xml(get(to_uri(path, options)))
     end
 
     def current_status
