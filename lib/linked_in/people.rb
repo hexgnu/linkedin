@@ -3,7 +3,7 @@ module LinkedIn
 
     %w[total start count].each do |f|
       define_method(f.to_sym) do
-        @doc.first["#{f.gsub(/_/,'-')}"].to_i
+        @doc.xpath('.//people').first["#{f.gsub(/_/,'-')}"].to_i
       end
     end
 
