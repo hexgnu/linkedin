@@ -1,7 +1,7 @@
 # require 'forwardable'
 # require 'rubygems'
 #
-gem 'oauth', '~> 0.3.5'
+gem 'oauth', '~> 0.4.0'
 require 'oauth'
 
 require 'nokogiri'
