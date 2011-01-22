@@ -138,11 +138,6 @@ class ClientTest < Test::Unit::TestCase
       stub_put("/v1/people/~/current-status", "blank.xml")
       @linkedin.update_status("Testing out the LinkedIn API")
     end
-    
-    should "send share instead of just update status" do
-      stub_put("/v1/people/~/shares", "blank.xml")
-      @linkedin.shares(:comment => "Testing out the LinkedIn API", :title => "Share", :url => "http://www.linkedin.com", :image_url => "http://images.bizjournals.com/travel/cityscapes/thumbs/sm_sanfrancisco.jpg")
-    end
 
     should "clear a user's current status" do
       stub_delete("/v1/people/~/current-status", "blank.xml")
@@ -180,5 +175,9 @@ class ClientTest < Test::Unit::TestCase
       @linkedin.send_message(subject, body, recipients).should == "200"
     end
 
+    should "share link instead of just update status" do
+      stub_post("/v1/people/~/shares", "blank.xml")
+      @linkedin.share(:comment => "Testing out the LinkedIn API", :title => "Share", :url => "http://www.linkedin.com", :image_url => "http://images.bizjournals.com/travel/cityscapes/thumbs/sm_sanfrancisco.jpg")
+    end
   end
 end
