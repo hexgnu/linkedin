@@ -135,6 +135,11 @@ module LinkedIn
       path = "/people/~/current-status"
       put(path, status_to_xml(text))
     end
+    
+    def share(options={})
+      path = "/people/~/shares"
+      post(path, share_to_xml(options), {'Content-Type' => 'application/xml'})
+    end
 
     def update_comment(network_key, comment)
       path = "/people/~/network/updates/key=#{network_key}/update-comments"
@@ -252,6 +257,21 @@ module LinkedIn
       def status_to_xml(status)
         %Q{<?xml version="1.0" encoding="UTF-8"?>
            <current-status>#{status}</current-status>}
+      end
+      
+      def share_to_xml(options={})
+        %Q{<?xml version="1.0" encoding="UTF-8"?>
+           <share>
+              <comment>#{options[:comment] if options[:comment]}</comment>
+              <content>
+                <title>#{options[:title] if options[:title]}</title>
+                <submitted-url>#{options[:url] if options[:url]}</submitted-url>
+                <submitted-image-url>#{options[:image_url] if options[:image_url]}</submitted-image-url>
+              </content>
+              <visibility>
+                <code>anyone</code>
+              </visibility>
+            </share>}
       end
 
       def comment_to_xml(comment)
