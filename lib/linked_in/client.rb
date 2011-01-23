@@ -12,7 +12,7 @@ module LinkedIn
       opts = {
         :request_token_path => "/uas/oauth/requestToken",
         :access_token_path  => "/uas/oauth/accessToken",
-        :authorize_path     => "/uas/oauth/authenticate"
+        :authorize_path     => "/uas/oauth/authorize"
       }
       @ctoken, @csecret, @consumer_options = ctoken, csecret, opts.merge(options)
     end
