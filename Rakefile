@@ -1,46 +1,22 @@
-require 'rubygems'
 require 'rake'
 
 begin
-  require 'jeweler'
-  Jeweler::Tasks.new do |gem|
-    gem.name = "linkedin"
-    gem.summary = %Q{Ruby wrapper for the LinkedIn API}
-    gem.description = %Q{Ruby wrapper for the LinkedIn API}
-    gem.email = "wynn.netherland@gmail.com"
-    gem.homepage = "http://github.com/pengwynn/linkedin"
-    gem.authors = ["Wynn Netherland"]
-    gem.files   = FileList["[A-Z]*", "{lib,test}/**/*"]
-    
-    
-    gem.add_dependency('oauth', '~> 0.3.5')
-
-    # roxml dependency removed
-    # gem.add_dependency('roxml', '~> 3.1.3')
-    
-    gem.add_dependency('crack', '~> 0.1.4')
-    
-    # updated gem dependency to shoulda
-    # gem.add_development_dependency('thoughtbot-shoulda', '>= 2.10.1')
-    gem.add_development_dependency('shoulda', '>= 2.10.1')
-    
-    gem.add_development_dependency('jnunemaker-matchy', '0.4.0')
-    gem.add_development_dependency('mocha', '>= 0.9.4')
-    gem.add_development_dependency('fakeweb', '>= 1.2.5')
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
-  end
-  Jeweler::GemcutterTasks.new
+  require 'bundler/setup'
+  Bundler::GemHelper.install_tasks
 rescue LoadError
-  puts "Jeweler (or a dependency) not available. Install it with: sudo gem install jeweler"
+  puts 'although not required, bundler is recommened for running the tests'
 end
+
+
+task :default => :test
 
 require 'rake/testtask'
 Rake::TestTask.new(:test) do |test|
   test.libs << 'test'
-  test.ruby_opts << '-rubygems'
   test.pattern = 'test/**/*_test.rb'
   test.verbose = true
 end
+
 
 begin
   require 'rcov/rcovtask'
@@ -55,9 +31,6 @@ rescue LoadError
   end
 end
 
-task :test => :check_dependencies
-
-task :default => :test
 
 require 'rake/rdoctask'
 Rake::RDocTask.new do |rdoc|
