@@ -1,13 +1,6 @@
 require 'test/unit'
 
 require 'pathname'
-require 'rubygems'
-
-gem 'mocha', '>= 0.9.4'
-gem 'shoulda', '>= 2.10.1'
-gem 'jnunemaker-matchy', '0.4.0'
-gem 'fakeweb', '>= 1.2.5'
-# gem 'redgreen'
 
 require 'mocha'
 require 'shoulda'
@@ -15,10 +8,9 @@ require 'matchy'
 require 'fakeweb'
 # require 'redgreen'
 
-FakeWeb.allow_net_connect = false
+require 'linkedin'
 
-dir = (Pathname(__FILE__).dirname + '../lib').expand_path
-require dir + 'linkedin'
+FakeWeb.allow_net_connect = false
 
 class Test::Unit::TestCase
 end
