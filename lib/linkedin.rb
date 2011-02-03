@@ -4,12 +4,6 @@ require 'crack'
 
 require 'cgi'
 
-# class Nokogiri::XML::Element
-#   def has_key?(key)
-#     self.keys.include?(key)
-#   end
-# end
-
 module LinkedIn
   class LinkedInError < StandardError
     attr_reader :data
@@ -24,9 +18,9 @@ module LinkedIn
   class Unauthorized      < LinkedInError; end
   class General           < LinkedInError; end
 
-  class Unavailable   < StandardError; end
+  class Unavailable    < StandardError; end
   class InformLinkedIn < StandardError; end
-  class NotFound      < StandardError; end
+  class NotFound       < StandardError; end
 
   # config/initializers/linkedin.rb (for instance)
   #
