@@ -1,8 +1,8 @@
 module LinkedIn
   class Recipients
-    
+
     attr_accessor :recipients
-    
+
     def to_xml
       str = ''
       recipients.each do |recipient|

@@ -276,12 +276,12 @@ Follow the SCRUM agile development methodology.</summary>
         <title>President / Technical Architect / Lead Developer</title>
         <summary>Owner, technical architect and lead developer for an independent software development consultancy.
 
-SilvaSoft has built numerous customer facing business web sites using Java web technologies that integrate with existing web service, shipping and secure credit card processing APIs. 
+SilvaSoft has built numerous customer facing business web sites using Java web technologies that integrate with existing web service, shipping and secure credit card processing APIs.
 
 We use technologies such as Java (1.4, 5, 6), Struts, JBoss Seam, Tomcat (5, 6), XFire, Apache Axis, Apache CXF and Sun Metro.
 
 We have integrated with third party web services such as:
-1. Amazon S3 
+1. Amazon S3
 2. PayPal credit card payment API
 3. Authorize.net credit card / check payment API
 4. UPS shipping API.

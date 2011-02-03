@@ -1,8 +1,8 @@
 module LinkedIn
   class Message
-    
+
     attr_accessor :subject, :body, :recipients
-    
+
     def to_xml
       "<mailbox-item>
         <recipients>
@@ -12,9 +12,9 @@ module LinkedIn
         <body>#{body}</body>
       </mailbox-item>"
     end
-    
+
   end
-  
+
 end
 
 # <mailbox-item>

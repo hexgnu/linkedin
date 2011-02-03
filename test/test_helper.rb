@@ -28,7 +28,7 @@ end
 def stub_get(url, filename, status=nil)
   options = {:body => fixture_file(filename)}
   options.merge!({:status => status}) unless status.nil?
-  
+
   FakeWeb.register_uri(:get, linkedin_url(url), options)
 end
 
@@ -42,5 +42,4 @@ end
 
 def stub_delete(url, filename)
   FakeWeb.register_uri(:delete, linkedin_url(url), :body => fixture_file(filename))
-
 end

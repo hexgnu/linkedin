@@ -4,7 +4,7 @@
     <property key="degree-1-count">146</property>
     <property key="degree-2-count">16998</property>
   </network-stats>
-  <updates total="1" start="0" count="1">  
+  <updates total="1" start="0" count="1">
     <update>
       <timestamp>1265063139120</timestamp>
       <update-type>JGRP</update-type>

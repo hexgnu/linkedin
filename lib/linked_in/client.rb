@@ -63,7 +63,7 @@ module LinkedIn
       raise_errors(response)
       response
     end
-    
+
     def put(path, body, options={})
       path = "/v1#{path}"
       response = access_token.put(path, body, options)
@@ -140,7 +140,7 @@ module LinkedIn
       path = "/people/~/network/updates/key=#{network_key}/update-comments"
       post(path,comment_to_xml(comment),{'Content-Type' => 'application/xml'})
     end
-    
+
     def clear_status
       path = "/people/~/current-status"
       delete(path).code
@@ -164,7 +164,7 @@ module LinkedIn
       message.recipients = recipients
       post(path, message_to_xml(message), { "Content-Type" => "text/xml" }).code
     end
-    
+
     def network_statuses(options={})
       options[:type] = 'STAT'
       network_updates(options)
@@ -257,11 +257,11 @@ module LinkedIn
       def comment_to_xml(comment)
         %Q{<?xml version="1.0" encoding="UTF-8"?><update-comment><comment>#{comment}</comment></update-comment>}
       end
-      
+
       def message_to_xml(message)
         %Q{<?xml version="1.0" encoding="UTF-8"?>
         #{message.to_xml}}
       end
-    
+
   end
 end

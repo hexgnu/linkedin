@@ -18,4 +18,4 @@ client.authorize_from_request(rtoken, rsecret, pin)
 # or authorize from previously fetched access keys
 c.authorize_from_access("OU812", "8675309")
 
-# you're now free to move about the cabin, call any API method 
+# you're now free to move about the cabin, call any API method
