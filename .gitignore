@@ -21,4 +21,5 @@ pkg
 ## PROJECT::SPECIFIC
 examples/wynn.rb
 
-brad_test.rb
+## Bundler
+Gemfile.lock
