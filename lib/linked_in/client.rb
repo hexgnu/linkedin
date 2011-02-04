@@ -1,7 +1,6 @@
 module LinkedIn
   class Client
-
-    XML_HEADER = %Q{<?xml version="1.0" encoding="UTF-8"?>}
+    include ToXmlHelpers
 
     # TODO: @ http://developer.linkedin.com/docs/DOC-1061 && / DOC-1014
     # add in client.get("/people/~:(im-accounts)")
@@ -137,6 +136,12 @@ module LinkedIn
       put(path, status_to_xml(text))
     end
 
+    def share(options={})
+      path = "/people/~/shares"
+      defaults = { :visability => 'anyone' }
+      post(path, share_to_xml(defaults.merge(options)))
+    end
+
     def update_comment(network_key, comment)
       path = "/people/~/network/updates/key=#{network_key}/update-comments"
       post(path, comment_to_xml(comment))
@@ -190,6 +195,7 @@ module LinkedIn
     end
 
     private
+
       def clear_request_token
         @request_token = nil
       end
@@ -253,25 +259,6 @@ module LinkedIn
         else
           path += "~"
         end
-      end
-
-      def status_to_xml(status)
-        %Q{#{XML_HEADER}\n<current-status>#{status}</current-status>}
-      end
-
-      def comment_to_xml(comment)
-        %Q{#{XML_HEADER}<update-comment><comment>#{comment}</comment></update-comment>}
-      end
-
-      def message_to_xml(message)
-        %Q{#{XML_HEADER}\n#{message.to_xml}}
-      end
-
-      def network_update_to_xml(message)
-        %Q{<activity locale="en_US">
-             <content-type>linkedin-html</content-type>
-             <body>#{message}</body>
-           </activity>}
       end
 
   end

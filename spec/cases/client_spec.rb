@@ -194,5 +194,18 @@ describe LinkedIn::Client do
       expect_post("/v1/people/~/mailbox", "mailbox_items.xml")
     end
 
+    it "should share a link" do
+      stub_post("/v1/people/~/shares", "blank.xml")
+
+      client.share({
+        :comment => "Testing out the LinkedIn API", 
+        :title => "Share", 
+        :url => "http://www.linkedin.com", 
+        :image_url => "http://www.linkedin.com/pretty_logo.jpg"
+      }).code.should == "201"
+      
+      expect_post("/v1/people/~/shares", "shares.xml")
+    end
+    
   end
 end

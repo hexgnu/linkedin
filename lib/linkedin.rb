@@ -59,6 +59,8 @@ end
 
 require 'linked_in/base'
 
+require 'linked_in/to_xml_helpers'
+
 require 'linked_in/api_standard_profile_request'
 require 'linked_in/url_resource'
 require 'linked_in/company'
@@ -79,4 +81,3 @@ require 'linked_in/recipients'
 require 'linked_in/message'
 require 'linked_in/group'
 require 'linked_in/birthdate'
-
