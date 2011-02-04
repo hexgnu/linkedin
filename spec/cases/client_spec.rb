@@ -184,7 +184,8 @@ describe LinkedIn::Client do
 
     it "should send a message to recipients" do
       stub_post("/v1/people/~/mailbox", "mailbox_items.xml")
-      recipients = ["/people/~", "/people/abcdefg"]
+      
+      recipients = ["~", "abcdefg"]
       subject    = "Congratulations on your new position."
       body       = "You're certainly the best person for the job!"
 
