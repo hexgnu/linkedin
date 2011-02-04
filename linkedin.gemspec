@@ -72,29 +72,29 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<roxml>, ["~> 3.1.3"])
-      s.add_runtime_dependency(%q<crack>, ["~> 0.1.4"])
       s.add_runtime_dependency(%q<oauth>,       ["~> 0.4.0"])
+      s.add_runtime_dependency(%q<crack>,       ["~> 0.1.4"])
+      s.add_runtime_dependency(%q<nokogiri>,    ["~> 1.4.4"])
       s.add_development_dependency(%q<shoulda>, [">= 2.10.1"])
       s.add_development_dependency(%q<jnunemaker-matchy>, ["= 0.4.0"])
-      s.add_development_dependency(%q<mocha>, ["= 0.9.4"])
+      s.add_development_dependency(%q<mocha>,   ["= 0.9.4"])
       s.add_development_dependency(%q<fakeweb>, [">= 1.2.5"])
     else
-      s.add_dependency(%q<roxml>, ["~> 3.1.3"])
-      s.add_dependency(%q<crack>, ["~> 0.1.4"])
-      s.add_dependency(%q<shoulda>, [">= 2.10.1"])
       s.add_dependency(%q<oauth>,     ["~> 0.4.0"])
+      s.add_dependency(%q<crack>,     ["~> 0.1.4"])
+      s.add_dependency(%q<nokogiri>,  ["~> 1.4.4"])
+      s.add_dependency(%q<shoulda>,   [">= 2.10.1"])
       s.add_dependency(%q<jnunemaker-matchy>, ["= 0.4.0"])
-      s.add_dependency(%q<mocha>, ["= 0.9.4"])
+      s.add_dependency(%q<mocha>,   ["= 0.9.4"])
       s.add_dependency(%q<fakeweb>, [">= 1.2.5"])
     end
   else
-    s.add_dependency(%q<roxml>, ["~> 3.1.3"])
-    s.add_dependency(%q<crack>, ["~> 0.1.4"])
-    s.add_dependency(%q<shoulda>, [">= 2.10.1"])
     s.add_dependency(%q<oauth>,     ["~> 0.4.0"])
+    s.add_dependency(%q<crack>,     ["~> 0.1.4"])
+    s.add_dependency(%q<nokogiri>,  ["~> 1.4.4"])
+    s.add_dependency(%q<shoulda>,   [">= 2.10.1"])
     s.add_dependency(%q<jnunemaker-matchy>, ["= 0.4.0"])
-    s.add_dependency(%q<mocha>, ["= 0.9.4"])
+    s.add_dependency(%q<mocha>,   ["= 0.9.4"])
     s.add_dependency(%q<fakeweb>, [">= 1.2.5"])
   end
 end
