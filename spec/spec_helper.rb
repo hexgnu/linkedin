@@ -1,19 +1,9 @@
-require 'test/unit'
-
-require 'pathname'
-
-require 'mocha'
-require 'shoulda'
-require 'matchy'
 require 'fakeweb'
-# require 'redgreen'
-
 require 'linkedin'
+
 
 FakeWeb.allow_net_connect = false
 
-class Test::Unit::TestCase
-end
 
 def fixture_file(filename)
   return '' if filename == ''

@@ -8,13 +8,11 @@ rescue LoadError
 end
 
 
-task :default => :test
+task :default => :spec
 
-require 'rake/testtask'
-Rake::TestTask.new(:test) do |test|
-  test.libs << 'test'
-  test.pattern = 'test/**/*_test.rb'
-  test.verbose = true
+require 'rspec/core/rake_task'
+RSpec::Core::RakeTask.new do |t|
+  t.rspec_opts = ["--color", '--format doc']
 end
 
 
