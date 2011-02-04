@@ -1,6 +1,8 @@
 module LinkedIn
   class Client
 
+    XML_HEADER = %Q{<?xml version="1.0" encoding="UTF-8"?>}
+
     # TODO: @ http://developer.linkedin.com/docs/DOC-1061 && / DOC-1014
     # add in client.get("/people/~:(im-accounts)")
     #        client.get("/people/~:(twitter-accounts)")
@@ -255,17 +257,15 @@ module LinkedIn
       end
 
       def status_to_xml(status)
-        %Q{<?xml version="1.0" encoding="UTF-8"?>
-           <current-status>#{status}</current-status>}
+        %Q{#{XML_HEADER}\n<current-status>#{status}</current-status>}
       end
 
       def comment_to_xml(comment)
-        %Q{<?xml version="1.0" encoding="UTF-8"?><update-comment><comment>#{comment}</comment></update-comment>}
+        %Q{#{XML_HEADER}<update-comment><comment>#{comment}</comment></update-comment>}
       end
 
       def message_to_xml(message)
-        %Q{<?xml version="1.0" encoding="UTF-8"?>
-        #{message.to_xml}}
+        %Q{#{XML_HEADER}\n#{message.to_xml}}
       end
 
       def network_update_to_xml(message)
