@@ -148,7 +148,7 @@ describe LinkedIn::Client do
     it "should post to a user's network stream" do
       stub_post("/v1/people/~/person-activities", "blank.xml")
       
-      client.update_network("Testing out the LinkedIn API").code.should == "200"
+      client.update_network("Testing out the LinkedIn API").code.should == "201"
     end
 
     it "should clear a user's current status" do
@@ -189,7 +189,7 @@ describe LinkedIn::Client do
       subject    = "Congratulations on your new position."
       body       = "You're certainly the best person for the job!"
 
-      client.send_message(subject, body, recipients).should == "200"
+      client.send_message(subject, body, recipients).should == "201"
     end
 
   end
