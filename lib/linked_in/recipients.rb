@@ -4,11 +4,10 @@ module LinkedIn
     attr_accessor :recipients
 
     def to_xml
-      str = ''
-      recipients.each do |recipient|
-        str << "<recipient><person path=#{recipient.person.path}/></recipient>"
+      recipients.inject('') do |result, recipient|
+        result << %Q{<recipient><person path="#{recipient.person.path}"/></recipient>}
+        result
       end
-      str
     end
   end
 end
