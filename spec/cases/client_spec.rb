@@ -190,6 +190,8 @@ describe LinkedIn::Client do
       body       = "You're certainly the best person for the job!"
 
       client.send_message(subject, body, recipients).should == "201"
+      
+      expect_post("/v1/people/~/mailbox", "mailbox_items.xml")
     end
 
   end
