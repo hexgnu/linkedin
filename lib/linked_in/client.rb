@@ -58,10 +58,10 @@ module LinkedIn
       response.body
     end
 
-
     def post(path, body='', options={})
       path = "/v1#{path}"
-      response = access_token.post(path, body, options)
+      default_options = { 'Content-Type' => 'application/xml' }
+      response = access_token.post(path, body, default_options.merge(options))
       raise_errors(response)
       response
     end
@@ -82,7 +82,6 @@ module LinkedIn
 
 
     def profile(options={})
-
       path = person_path(options)
 
       unless options[:fields].nil?
@@ -140,12 +139,12 @@ module LinkedIn
 
     def update_comment(network_key, comment)
       path = "/people/~/network/updates/key=#{network_key}/update-comments"
-      post(path, comment_to_xml(comment), {'Content-Type' => 'application/xml'})
+      post(path, comment_to_xml(comment))
     end
 
     def update_network(message)
       path = "/people/~/person-activities"
-      post(path, network_update_to_xml(message), {'Content-Type' => 'application/xml'})
+      post(path, network_update_to_xml(message))
     end
 
     def clear_status
@@ -169,7 +168,7 @@ module LinkedIn
       end
 
       message.recipients = recipients
-      post(path, message_to_xml(message), { "Content-Type" => "text/xml" }).code
+      post(path, message_to_xml(message)).code
     end
 
     def network_statuses(options={})
