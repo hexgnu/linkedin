@@ -16,16 +16,3 @@ module LinkedIn
   end
 
 end
-
-# <mailbox-item>
-#   <recipients>
-#     <recipient>
-#       <person path='/people/~'/>
-#     </recipient>
-#     <recipient>
-#       <person path="/people/abcdefg" />
-#     </recipient>
-#   </recipients>
-#   <subject>Congratulations on your new position.</subject>
-#   <body>You're certainly the best person for the job!</body>
-# </mailbox-item>
