@@ -38,8 +38,8 @@ module LinkedIn
       @positions ||= Position.new(@doc.xpath('//positions')).positions
     end
 
-    def education
-      @education ||= Education.new(@doc.xpath('//educations')).education
+    def educations
+      @educations ||= Education.new(@doc.xpath('//educations')).educations
     end
 
     def connections

@@ -42,7 +42,7 @@ describe LinkedIn::Client do
     it "should retrieve education information from a profile" do
       stub_get("/v1/people/~", "profile_full.xml")
 
-      education = client.profile.education.first
+      education = client.profile.educations.first
       education.start_month.should == 8
       education.start_year.should  == 1994
       education.end_month.should   == 5

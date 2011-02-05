@@ -1,7 +1,7 @@
 module LinkedIn
   class Education < LinkedIn::Base
 
-    def education
+    def educations
       @array ||= begin
         @array = []
         @doc.children.each do |edu|
