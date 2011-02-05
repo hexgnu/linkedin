@@ -22,40 +22,28 @@ module LinkedIn
   class InformLinkedIn < StandardError; end
   class NotFound       < StandardError; end
 
-  # config/initializers/linkedin.rb (for instance)
-  #
-  # LinkedIn.configure do |config|
-  #   config.token = 'consumer_token'
-  #   config.secret = 'consumer_secret'
-  # end
-  #
-  # elsewhere
-  #
-  # client = LinkedIn::Client.new
-  def self.configure
-    yield self
 
-    LinkedIn.token = token
-    LinkedIn.secret = secret
-    true
+  class << self
+    attr_accessor :token, :secret, :default_profile_fields
+
+    # config/initializers/linkedin.rb (for instance)
+    #
+    # LinkedIn.configure do |config|
+    #   config.token = 'consumer_token'
+    #   config.secret = 'consumer_secret'
+    # end
+    #
+    # elsewhere
+    #
+    # client = LinkedIn::Client.new
+    def configure
+      yield self
+      true
+    end
   end
 
-  def self.token
-    @token
-  end
-
-  def self.token=(token)
-    @token = token
-  end
-
-  def self.secret
-    @secret
-  end
-
-  def self.secret=(secret)
-    @secret = secret
-  end
 end
+
 
 require 'linked_in/base'
 

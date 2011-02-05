@@ -86,12 +86,12 @@ module LinkedIn
     def profile(options={})
       path = person_path(options)
 
-      unless options[:fields].nil?
-        if options[:public]
-          path +=":public"
-        else
-          path +=":(#{options[:fields].map{|f| f.to_s.gsub("_","-")}.join(',')})"
-        end
+      fields = options[:fields] || LinkedIn.default_profile_fields
+
+      if options[:public]
+        path +=":public"
+      elsif fields
+        path +=":(#{fields.map{|f| f.to_s.gsub("_","-")}.join(',')})"
       end
 
       Profile.from_xml(get(path))
