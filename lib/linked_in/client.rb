@@ -255,8 +255,6 @@ module LinkedIn
         path = "/people/"
         if options[:id]
           path += "id=#{options[:id]}"
-        elsif options[:email]
-          path += "email=#{options[:email]}"
         elsif options[:url]
           path += "url=#{CGI.escape(options[:url])}"
         else
