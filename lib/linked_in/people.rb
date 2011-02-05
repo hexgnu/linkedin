@@ -8,12 +8,9 @@ module LinkedIn
     end
 
     def profiles
-      @array ||= begin
-        @array = []
-        @doc.xpath('//people').children.each do |profile|
-          @array << Profile.new(Nokogiri::XML(profile.to_xml)) unless profile.blank?
-        end
-        @array
+      @profiles ||= @doc.xpath('//people').children.inject([]) do |list, profile|
+        list << Profile.new(Nokogiri::XML(profile.to_xml)) unless profile.blank?
+        list
       end
     end
 

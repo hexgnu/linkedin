@@ -2,12 +2,9 @@ module LinkedIn
   class UrlResource < LinkedIn::Base
 
     def resources
-      @array ||= begin
-        @array = []
-        @doc.children.each do |url|
-          @array << Resource.new(url) unless url.blank?
-        end
-        @array
+      @resources ||= @doc.children.inject([]) do |list, url|
+        list << Resource.new(url) unless url.blank?
+        list
       end
     end
 

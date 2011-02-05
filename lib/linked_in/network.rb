@@ -2,12 +2,9 @@ module LinkedIn
   class Network < LinkedIn::Base
 
     def updates
-      @array ||= begin
-        @array = []
-        @doc.xpath('//updates').children.each do |update|
-          @array << Update.new(Nokogiri::XML(update.to_xml)) unless update.blank?
-        end
-        @array
+      @updates ||= @doc.xpath('//updates').children.inject([]) do |list, update|
+        list << Update.new(Nokogiri::XML(update.to_xml)) unless update.blank?
+        list
       end
     end
 

@@ -2,12 +2,9 @@ module LinkedIn
   class Education < LinkedIn::Base
 
     def educations
-      @array ||= begin
-        @array = []
-        @doc.children.each do |edu|
-          @array << Resource.new(edu) unless edu.blank?
-        end
-        @array
+      @educations ||= @doc.children.inject([]) do |list, edu|
+        list << Resource.new(edu) unless edu.blank?
+        list
       end
     end
 

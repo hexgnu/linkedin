@@ -2,12 +2,9 @@ module LinkedIn
   class Group  < LinkedIn::Base
 
     def groups
-      @array ||= begin
-        @array = []
-        @doc.children.each do |group|
-          @array << Resource.new(group) unless group.blank?
-        end
-        @array
+      @groups ||= @doc.children.inject([]) do |list, group|
+        list << Resource.new(group) unless group.blank?
+        list
       end
     end
 
@@ -29,7 +26,7 @@ module LinkedIn
         @group.xpath('//member-group/site-group-request/url').text
       end
 
-    end # resource class
+    end
 
   end
 end

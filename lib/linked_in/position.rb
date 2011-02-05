@@ -2,12 +2,9 @@ module LinkedIn
   class Position < LinkedIn::Base
 
     def positions
-      @arry ||= begin
-        @arry = []
-        @doc.children.each do |position|
-          @arry << Resource.new(position) unless position.blank?
-        end
-        @arry
+      @positions ||= @doc.children.inject([]) do |list, position|
+        list << Resource.new(position) unless position.blank?
+        list
       end
     end
 
