@@ -21,19 +21,7 @@ module LinkedIn
       end
 
       def recommender
-        @recommender ||= Recommender.new(@recommendation.xpath('./recommender'))
-      end
-    end
-
-    class Recommender
-      def initialize(recommender)
-        @recommender = recommender
-      end
-
-      %w[id first_name last_name].each do |f|
-        define_method(f.to_sym) do
-          @recommender.xpath("./#{f.gsub(/_/,'-')}").text
-        end
+        @recommender ||= ShortProfile.new(@recommendation.xpath('./recommender'))
       end
     end
 

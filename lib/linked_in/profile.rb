@@ -54,5 +54,9 @@ module LinkedIn
       @recommendations ||= Recommendations.new(@doc.xpath('//recommendations-received')).recommendations
     end
 
+    def current_share
+      @current_share ||= CurrentShare.new(@doc.xpath('//current-share'))
+    end
+
   end
 end
