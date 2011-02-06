@@ -33,6 +33,8 @@ module LinkedIn
           'total'
         when 'values'
           'all'
+        when 'numResults'
+          'total_results'
         else
           underscore(key)
         end

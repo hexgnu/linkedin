@@ -2,6 +2,7 @@ require 'linked_in/helpers/request'
 require 'linked_in/helpers/authorization'
 require 'linked_in/api/query_methods'
 require 'linked_in/api/update_methods'
+require 'linked_in/search'
 
 require 'cgi'
 
@@ -12,6 +13,7 @@ module LinkedIn
     include Helpers::Authorization
     include Api::QueryMethods
     include Api::UpdateMethods
+    include Search
 
     attr_reader :ctoken, :csecret, :consumer_options
 
@@ -24,13 +26,6 @@ module LinkedIn
       @ctoken, @csecret, @consumer_options = ctoken, csecret, opts.merge(options)
     end
 
-    # def search(options={})
-    #   path = "/people"
-    #   options = { :keywords => options } if options.is_a?(String)
-    #   options = format_options_for_query(options)
-    #
-    #   People.from_xml(get(to_uri(path, options)))
-    # end
     #
     # def current_status
     #   path = "/people/~/current-status"
@@ -55,17 +50,6 @@ module LinkedIn
     #   file.close
     # end
 
-    private
-
-      # def format_options_for_query(opts)
-      #   opts.keys.each do |key|
-      #     value = opts.delete(key)
-      #     value = value.join("+") if value.is_a?(Array)
-      #     value = value.gsub(" ", "+") if value.is_a?(String)
-      #     opts[key.to_s.gsub("_","-")] = value
-      #   end
-      #   opts
-      # end
   end
 
 end
