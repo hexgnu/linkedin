@@ -51,9 +51,13 @@ More examples in the [examples folder](http://github.com/pengwynn/linkedin/blob/
 
 For a nice example on using this in a [Rails App](http://pivotallabs.com/users/will/blog/articles/1096-linkedin-gem-for-a-web-app).
 
+If you want to play with the LinkedIn api without using the gem, have a look at the [apigee LinkedIn console](http://app.apigee.com/console/linkedin).
 
 ## TODO
 
+* Change to json api
+* Update and correct test suite
+* Change to Faraday for authentication
 * Implement Messaging APIs
 
 ## Note on Patches/Pull Requests
