@@ -32,13 +32,12 @@ module LinkedIn
 
     def connections(options={})
       path = "#{person_path(options)}/connections"
+      fields = options[:fields] || LinkedIn.default_profile_fields
 
-      unless options[:fields].nil?
-        if options[:public]
-          path +=":public"
-        else
-          path +=":(#{options[:fields].map{|f| f.to_s.gsub("_","-")}.join(',')})"
-        end
+      if options[:public]
+        path +=":public"
+      elsif fields
+        path +=":(#{fields.map{ |f| f.to_s.gsub("_","-") }.join(',')})"
       end
 
       Connections.from_xml(get(path)).profiles
