@@ -17,14 +17,13 @@ module LinkedIn
 
 
     def profile(options={})
-      path = person_path(options)
-
+      path   = person_path(options)
       fields = options[:fields] || LinkedIn.default_profile_fields
 
       if options[:public]
         path +=":public"
       elsif fields
-        path +=":(#{fields.map{|f| f.to_s.gsub("_","-")}.join(',')})"
+        path +=":(#{fields.map{ |f| f.to_s.gsub("_","-") }.join(',')})"
       end
 
       Profile.from_xml(get(path))
@@ -45,7 +44,7 @@ module LinkedIn
 
     def search(options={})
       path = "/people"
-      options = {:keywords => options} if options.is_a?(String)
+      options = { :keywords => options } if options.is_a?(String)
       options = format_options_for_query(options)
 
       People.from_xml(get(to_uri(path, options)))
