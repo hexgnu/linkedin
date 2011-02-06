@@ -14,6 +14,10 @@ module LinkedIn
       end
     end
 
+    def birthdate
+      @birthday ||= Birthdate.new(@doc.xpath('./person/date-of-birth'))
+    end
+
     def location
       @location ||= Location.new(@doc)
     end
