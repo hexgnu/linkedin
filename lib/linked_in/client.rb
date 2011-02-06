@@ -4,11 +4,6 @@ module LinkedIn
     include RequestHelpers
     include AuthorizationHelpers
 
-    # TODO: @ http://developer.linkedin.com/docs/DOC-1061 && / DOC-1014
-    # add in client.get("/people/~:(im-accounts)")
-    #        client.get("/people/~:(twitter-accounts)")
-    #        client.get("/people/~:(date-of-birth)")
-    #        client.get("/people/~:(main-address)")
     attr_reader :ctoken, :csecret, :consumer_options
 
     def initialize(ctoken=LinkedIn.token, csecret=LinkedIn.secret, options={})
