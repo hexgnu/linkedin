@@ -1,13 +1,10 @@
 module LinkedIn
-  class Patent < LinkedIn::Base
+  class Patents < LinkedIn::Base
 
     def patents
-      @array ||= begin
-        @array = []
-        @doc.children.each do |patent|
-          @array << Resource.new(patent) unless patent.blank?
-        end
-        @array
+      @patents ||= @doc.children.inject([]) do |list, patent|
+        list << Resource.new(patent) unless patent.blank?
+        list
       end
     end
 
@@ -16,13 +13,13 @@ module LinkedIn
       def initialize(patent)
         @patent = patent
       end
-      
+
       %w[id title].each do |f|
         define_method(f.to_sym) do
           @patent.xpath("./#{f.gsub(/_/,'-')}").text
         end
       end
-      
+
       def year
         @year ||= @patent.xpath("./date/year").text.to_i
       end
@@ -38,7 +35,7 @@ module LinkedIn
       def date
         Date.civil(y=year,m=month,d=day)
       end
-      
+
     end # resource class
 
   end # patent class

@@ -1,28 +1,24 @@
 module LinkedIn
-  class Publication < LinkedIn::Base
+  class Publications < LinkedIn::Base
 
     def publications
-      @array ||= begin
-        @array = []
-        @doc.children.each do |publication|
-          @array << Resource.new(publication) unless publication.blank?
-        end
-        @array
+      @publications ||= @doc.children.inject([]) do |list, publication|
+        list << Resource.new(publication) unless publication.blank?
+        list
       end
     end
 
     class Resource
-
       def initialize(publication)
         @publication = publication
       end
-      
+
       %w[id title].each do |f|
         define_method(f.to_sym) do
           @publication.xpath("./#{f.gsub(/_/,'-')}").text
         end
       end
-      
+
       def year
         @year ||= @publication.xpath("./date/year").text.to_i
       end
@@ -36,10 +32,9 @@ module LinkedIn
       end
 
       def date
-        Date.civil(y=year,m=month,d=day)
+        Date.civil(year, month, day)
       end
-      
-    end # resource class
+    end
 
-  end # publication class
+  end
 end

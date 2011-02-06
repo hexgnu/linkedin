@@ -63,23 +63,23 @@ module LinkedIn
     end
 
     def languages
-      @languages ||= Language.new(@doc.xpath('//languages')).languages
+      @languages ||= Languages.new(@doc.xpath('//languages')).languages
     end
-    
+
     def skills
       @skills ||= Skill.new(@doc.xpath('//skills')).skills
     end
-    
+
     def phone_numbers
       @phone_number ||= PhoneNumber.new(@doc.xpath('//phone-numbers')).phone_numbers
     end
-    
+
     def publications
-      @publication ||= Publication.new(@doc.xpath('//publications')).publications
+      @publications ||= Publications.new(@doc.xpath('//publications')).publications
     end
-    
+
     def patents
-      @patent ||= Patent.new(@doc.xpath('//patents')).patents
+      @patents ||= Patents.new(@doc.xpath('//patents')).patents
     end
   end
 end
