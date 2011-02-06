@@ -2,7 +2,7 @@ module LinkedIn
   class Base
 
     def self.from_xml(doc)
-      new(Nokogiri::XML(doc))
+      new(doc)
     end
 
     def initialize(doc)
