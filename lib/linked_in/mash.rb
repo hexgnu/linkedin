@@ -19,6 +19,11 @@ module LinkedIn
       end
     end
 
+    def timestamp
+      value = self['timestamp']
+      Time.at(value / 1000)
+    end
+
     protected
 
       def contains_date_fields?
