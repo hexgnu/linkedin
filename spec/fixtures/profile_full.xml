@@ -3845,5 +3845,62 @@ Working closely with Microsoft consultants onstaff and in Redmond in order to in
       <name>My Blog</name>
     </member-url>
   </member-url-resources>
+    <languages total="2">
+    <language>
+      <id>70</id>
+      <language>
+        <name>English</name>
+      </language>
+    </language>
+    <language>
+      <id>72</id>
+      <language>
+        <name>Klingon</name>
+      </language>
+    </language>
+  </languages>
+  <skills total="1">
+    <skill>
+      <id>38</id>
+      <skill>
+        <name>Union negotiations</name>
+      </skill>
+    </skill>
+  </skills>
+  <certifications
+   total="1">
+    <certification>
+      <id>32</id>
+      <name>Series 7 Exam</name>
+    </certification>
+  </certifications>
+  <patents total="1">
+    <patent>
+      <id>51</id>
+      <title>Time machine</title>
+      <date>
+        <year>2008</year>
+        <month>7</month>
+        <day>23</day>
+      </date>
+    </patent>
+  </patents>
+  <phone-numbers total="1">
+    <phone-number>
+      <phone-type>mobile</phone-type>
+      <phone-number>+444444444444</phone-number>
+    </phone-number>
+  </phone-numbers>
+  <publications total="1">
+    <publication>
+      <id>31</id>
+      <title>How to host an awesome podcast</title>
+      <date>
+        <year>2006</year>
+        <month>8</month>
+        <day>1</day>
+      </date>
+    </publication>
+  </publications>
   <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/2/000/01c/359/041bc1b.jpg</picture-url>
 </person>
