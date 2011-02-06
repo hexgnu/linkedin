@@ -10,7 +10,7 @@ module LinkedIn
       API_PATH = '/v1'
 
       protected
-      
+
         def get(path, options={})
           response = access_token.get("#{API_PATH}#{path}", DEFAULT_HEADERS.merge(options))
           raise_errors(response)
@@ -38,24 +38,21 @@ module LinkedIn
       private
 
         def raise_errors(response)
-          # Even if the XML answer contains the HTTP status code, LinkedIn also sets this code
+          # Even if the json answer contains the HTTP status code, LinkedIn also sets this code
           # in the HTTP answer (thankfully).
           case response.code.to_i
-          when 400
-            data = LinkedIn::Error.from_xml(response.body)
-            raise RateLimitExceeded.new(data), "(#{response.code}): #{response.message} - #{data.code if data}"
           when 401
-            data = LinkedIn::Error.from_xml(response.body)
-            raise Unauthorized.new(data), "(#{response.code}): #{response.message} - #{data.code if data}"
-          when 403
-            data = LinkedIn::Error.from_xml(response.body)
-            raise General.new(data), "(#{response.code}): #{response.message} - #{data.code if data}"
+            data = Mash.from_json(response.body)
+            raise UnauthorizedError.new(data), "(#{data.status}): #{data.message}"
+          when 400, 403
+            data = Mash.from_json(response.body)
+            raise GeneralError.new(data), "(#{data.status}): #{data.message}"
           when 404
-            raise NotFound, "(#{response.code}): #{response.message}"
+            raise NotFoundError, "(#{response.code}): #{response.message}"
           when 500
-            raise InformLinkedIn, "LinkedIn had an internal error. Please let them know in the forum. (#{response.code}): #{response.message}"
+            raise InformLinkedInError, "LinkedIn had an internal error. Please let them know in the forum. (#{response.code}): #{response.message}"
           when 502..503
-            raise Unavailable, "(#{response.code}): #{response.message}"
+            raise UnavailableError, "(#{response.code}): #{response.message}"
           end
         end
 
