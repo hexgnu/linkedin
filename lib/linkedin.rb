@@ -23,8 +23,7 @@ module LinkedIn
 
 end
 
-require 'linked_in/request_helpers'
-require 'linked_in/authorization_helpers'
+
 require 'linked_in/mash'
 require 'linked_in/errors'
 require 'linked_in/client'
