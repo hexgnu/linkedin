@@ -49,6 +49,7 @@ require 'linked_in/base'
 
 require 'linked_in/to_xml_helpers'
 require 'linked_in/request_helpers'
+require 'linked_in/authorization_helpers'
 
 require 'linked_in/api_standard_profile_request'
 require 'linked_in/url_resource'
