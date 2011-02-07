@@ -77,6 +77,7 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<rspec>,     ["~> 2.4.0"])
       s.add_development_dependency(%q<rake>,      ["~> 0.8.7"])
       s.add_development_dependency(%q<webmock>,   ["~> 1.6.0"])
+      s.add_development_dependency(%q<vcr>,       ["~> 1.6.0"])
     else
       s.add_dependency(%q<oauth>,       ["~> 0.4.0"])
       s.add_dependency(%q<hashie>,      ["~> 1.0.0"])
@@ -85,6 +86,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<rspec>,       ["~> 2.4.0"])
       s.add_dependency(%q<rake>,        ["~> 0.8.7"])
       s.add_dependency(%q<webmock>,     ["~> 1.6.0"])
+      s.add_dependency(%q<vcr>,         ["~> 1.6.0"])
     end
   else
     s.add_dependency(%q<oauth>,       ["~> 0.4.0"])
@@ -94,6 +96,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<rspec>,       ["~> 2.4.0"])
     s.add_dependency(%q<rake>,        ["~> 0.8.7"])
     s.add_dependency(%q<webmock>,     ["~> 1.6.0"])
+    s.add_dependency(%q<vcr>,         ["~> 1.6.0"])
   end
 end
 
