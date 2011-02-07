@@ -15,15 +15,12 @@ module LinkedIn
     include Api::UpdateMethods
     include Search
 
-    attr_reader :ctoken, :csecret, :consumer_options
+    attr_reader :consumer_token, :consumer_secret, :consumer_options
 
     def initialize(ctoken=LinkedIn.token, csecret=LinkedIn.secret, options={})
-      opts = {
-        :request_token_path => "/uas/oauth/requestToken",
-        :access_token_path  => "/uas/oauth/accessToken",
-        :authorize_path     => "/uas/oauth/authorize"
-      }
-      @ctoken, @csecret, @consumer_options = ctoken, csecret, opts.merge(options)
+      @consumer_token   = ctoken
+      @consumer_secret  = csecret
+      @consumer_options = options
     end
 
     #
