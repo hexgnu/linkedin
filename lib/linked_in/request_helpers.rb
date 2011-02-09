@@ -56,10 +56,11 @@ module LinkedIn
       end
 
       def to_query(options)
-        options.inject([]) do |collection, opt|
+        query_string = options.inject([]) do |collection, opt|
           collection << "#{opt[0]}=#{opt[1]}"
           collection
         end * '&'
+        URI.escape(query_string)
       end
 
       def to_uri(path, options)
