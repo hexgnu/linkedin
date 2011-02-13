@@ -172,6 +172,9 @@ describe LinkedIn::Client do
       stats.updates.first.profile.first_name.should == 'Vahid'
       stats.updates.first.profile.connections.first.id.should == "28072758"
       stats.updates.first.profile.connections.first.last_name.should == 'Varone'
+      stats.updates.first.likes.size.should == 2
+      stats.updates.first.likes.last.profile.first_name.should == 'Napoleon'
+      stats.updates.last.likes.should be_empty
     end
 
     it "should retrieve network updates" do

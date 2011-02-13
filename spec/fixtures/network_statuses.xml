@@ -51,6 +51,24 @@
         </person>
       </update-content>
       <is-commentable>true</is-commentable>
+      <likes total="2">
+        <like>
+          <person>
+            <id>POfcN6JhcU</id>
+            <first-name>George</first-name>
+            <last-name>Washington</last-name>
+            <headline>President, United States of America</headline>
+          </person>
+        </like>
+        <like>
+          <person>
+            <id>ROfcN6JhcW</id>
+            <first-name>Napoleon</first-name>
+            <last-name>Bonaparte</last-name>
+            <headline>Emperor, France</headline>
+            </person>
+          </like>
+      </likes>
     </update>
     <update>
       <timestamp>1259134444850</timestamp>
