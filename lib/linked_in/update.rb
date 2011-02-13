@@ -15,5 +15,9 @@ module LinkedIn
       Profile.new(Nokogiri::XML(@doc.xpath('./update/update-content/person').to_xml))
     end
 
+    def likes
+      Likes.new(Nokogiri::XML(@doc.xpath('./update/likes').to_xml)).likes
+    end
+
   end
 end
