@@ -35,6 +35,11 @@ module LinkedIn
 </update-comment>}
     end
 
+    def is_liked_to_xml(is_liked)
+%Q{#{XML_HEADER}
+<is-liked>#{is_liked}</is-liked>}
+    end
+
     def network_update_to_xml(message)
 %Q{#{XML_HEADER}
 <activity locale="en_US">
