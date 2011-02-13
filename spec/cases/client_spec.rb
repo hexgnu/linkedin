@@ -168,6 +168,7 @@ describe LinkedIn::Client do
 
       stats = client.network_statuses
       stats.updates.first.timestamp.should == 1259179809524
+      stats.updates.first.should be_is_commentable
       stats.updates.first.profile.id.should == "19408512"
       stats.updates.first.profile.first_name.should == 'Vahid'
       stats.updates.first.profile.connections.first.id.should == "28072758"
