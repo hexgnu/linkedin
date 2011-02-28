@@ -2,6 +2,12 @@ require 'spec_helper'
 
 describe LinkedIn::Client do
   context "when hitting the LinkedIn API" do
+    before(:each) do
+      LinkedIn.token = nil
+      LinkedIn.secret = nil
+      LinkedIn.default_profile_fields = nil
+    end
+
     let(:client) do
       client = LinkedIn::Client.new('token', 'secret')
       consumer = OAuth::Consumer.new('token', 'secret', {:site => 'https://api.linkedin.com'})
@@ -252,6 +258,6 @@ describe LinkedIn::Client do
       patent.title.should == "Time machine"
       patent.date.should == Date.civil(y=2008,m=7,d=23)
     end
-    
+
   end
 end
