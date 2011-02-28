@@ -17,7 +17,7 @@ module LinkedIn
     end
 
     def share_to_xml(options={})
-      doc = Nokogiri.XML('<share><comment/><title/><submitted-url/><submitted-image-url/><visibility><code/></visibility></share>', nil, 'UTF-8')
+      doc = Nokogiri.XML('<share><comment/><content><title/><submitted-url/><submitted-image-url/></content><visibility><code/></visibility></share>', nil, 'UTF-8')
 
       {:comment => 'comment', :title => 'title', :url => 'submitted-url', :image_url => 'submitted-image-url'}.each do |key, name|
         doc.at_css(name).content = options[key] if options[key]
