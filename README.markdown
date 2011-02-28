@@ -2,6 +2,8 @@
 
 Ruby wrapper for the [LinkedIn API](http://developer.linkedin.com). Heavily inspired by [John Nunemaker's](http://github.com/jnunemaker) [Twitter gem](http://github.com/jnunemaker/twitter), the LinkedIn gem provides an easy-to-use wrapper for LinkedIn's Oauth/XML APIs.
 
+Travis CI : [![Build Status](http://travis-ci.org/pengwynn/linkedin.png)](http://travis-ci.org/pengwynn/linkedin)
+
 ## Installation
 
     [sudo] gem install linkedin
