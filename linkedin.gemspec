@@ -6,66 +6,24 @@
 Gem::Specification.new do |s|
   s.name = %q{linkedin}
   s.version = "0.1.7"
+  s.platform    = Gem::Platform::RUBY
 
-  s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Wynn Netherland"]
-  s.date = %q{2010-02-05}
+  s.authors = ["Wynn Netherland", "Josh Kalderimis"]
+  s.email   = ["wynn.netherland@gmail.com", "josh.kalderimis@gmail.com"]
+
+  s.homepage    = %q{http://github.com/pengwynn/linkedin}
+  s.summary     = %q{Ruby wrapper for the LinkedIn API}
   s.description = %q{Ruby wrapper for the LinkedIn API}
-  s.email = %q{wynn.netherland@gmail.com}
-  s.extra_rdoc_files = [
-    "LICENSE",
-     "README.markdown"
-  ]
-  s.files = [
-    "LICENSE",
-     "README.markdown",
-     "Rakefile",
-     "VERSION",
-     "lib/linked_in/api_standard_profile_request.rb",
-     "lib/linked_in/client.rb",
-     "lib/linked_in/company.rb",
-     "lib/linked_in/connections.rb",
-     "lib/linked_in/country.rb",
-     "lib/linked_in/education.rb",
-     "lib/linked_in/error.rb",
-     "lib/linked_in/group.rb",
-     "lib/linked_in/location.rb",
-     "lib/linked_in/network.rb",
-     "lib/linked_in/people.rb",
-     "lib/linked_in/position.rb",
-     "lib/linked_in/profile.rb",
-     "lib/linked_in/update.rb",
-     "lib/linked_in/url_resource.rb",
-     "lib/linkedin.rb",
-     "test/client_test.rb",
-     "test/fixtures/blank.xml",
-     "test/fixtures/connections.xml",
-     "test/fixtures/error.xml",
-     "test/fixtures/network_status_with_group.xml",
-     "test/fixtures/network_statuses.xml",
-     "test/fixtures/picture_updates.xml",
-     "test/fixtures/profile.xml",
-     "test/fixtures/profile_full.xml",
-     "test/fixtures/profile_with_positions.xml",
-     "test/fixtures/search.xml",
-     "test/fixtures/status.xml",
-     "test/oauth_test.rb",
-     "test/test_helper.rb"
-  ]
-  s.homepage = %q{http://github.com/pengwynn/linkedin}
-  s.rdoc_options = ["--charset=UTF-8"]
+
+  s.date = %q{2010-02-05}
+
+  s.rdoc_options  = ["--charset=UTF-8"]
+  s.extra_rdoc_files = ["README.markdown", "LICENSE"]
+
+  s.files         = `git ls-files`.split("\n")
+  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.5}
-  s.summary = %q{Ruby wrapper for the LinkedIn API}
-  s.test_files = [
-    "test/client_test.rb",
-     "test/oauth_test.rb",
-     "test/test_helper.rb",
-     "examples/authenticate.rb",
-     "examples/network.rb",
-     "examples/profile.rb",
-     "examples/status.rb"
-  ]
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
