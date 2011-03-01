@@ -38,8 +38,10 @@ def expect_post(url, body, result = nil)
   }).should have_been_made.once
 end
 
-def stub_put(url, returns_xml)
-  stub_request(:put, linkedin_url(url)).to_return(:body => fixture(returns_xml))
+def stub_put(url, returns_xml, status=nil)
+  options = { :body => fixture(returns_xml) }
+  options.merge!({ :status => status }) unless status.nil?
+  stub_request(:put, linkedin_url(url)).to_return(options)
 end
 
 def stub_delete(url, returns_xml)

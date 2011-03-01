@@ -71,6 +71,16 @@ module LinkedIn
       post(path, comment_to_xml(comment))
     end
 
+    def like(network_key, is_liked=true)
+      path = "/people/~/network/updates/key=#{network_key}/is-liked"
+      put(path, is_liked_to_xml(is_liked))
+    end
+
+    def likes(network_key)
+      path = "/people/~/network/updates/key=#{network_key}/likes"
+      Likes.from_xml(get(path)).likes
+    end
+
     def update_network(message)
       path = "/people/~/person-activities"
       post(path, network_update_to_xml(message))

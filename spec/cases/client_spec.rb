@@ -179,6 +179,9 @@ describe LinkedIn::Client do
       stats.updates.first.profile.first_name.should == 'Vahid'
       stats.updates.first.profile.connections.first.id.should == "28072758"
       stats.updates.first.profile.connections.first.last_name.should == 'Varone'
+      stats.updates.first.likes.size.should == 2
+      stats.updates.first.likes.last.profile.first_name.should == 'Napoleon'
+      stats.updates.last.likes.should be_empty
     end
 
     it "should retrieve network updates" do
@@ -257,6 +260,21 @@ describe LinkedIn::Client do
       patent.id.to_i.should == 51
       patent.title.should == "Time machine"
       patent.date.should == Date.civil(y=2008,m=7,d=23)
+    end
+
+    it "should retrieve likes for a network update" do
+      stub_get("/v1/people/~/network/updates/key=gNma67_AdI/likes","likes.xml")
+
+      likes = client.likes("gNma67_AdI")
+      likes.size.should == 2
+      likes.first.profile.first_name.should == "George"
+    end
+
+    it "should put a like to a network update" do
+      stub_put("/v1/people/~/network/updates/key=gNma67_AdI/is-liked","blank.xml", 201)
+
+      result = client.like("gNma67_AdI")
+      result.code.should == "201"
     end
 
   end

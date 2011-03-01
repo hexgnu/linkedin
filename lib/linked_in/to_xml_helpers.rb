@@ -25,7 +25,6 @@ module LinkedIn
       end
 
       doc.at_css('visibility > code').content = options[:visibility] || options[:visability] # backward-compatible typo fix
-
       doc.to_xml
     end
 
@@ -33,7 +32,13 @@ module LinkedIn
       doc = Nokogiri.XML('<update-comment><comment/><update-comment/>')
       doc.encoding = 'UTF-8'
       doc.at_css('comment').content = comment
+      doc.to_xml
+    end
 
+    def is_liked_to_xml(is_liked)
+      doc = Nokogiri.XML('<is-liked/>')
+      doc.encoding = 'UTF-8'
+      doc.at_css('is-liked').content = is_liked
       doc.to_xml
     end
 
