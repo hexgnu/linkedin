@@ -1,6 +1,5 @@
 require 'oauth'
 require 'nokogiri'
-require 'crack'
 
 require 'cgi'
 

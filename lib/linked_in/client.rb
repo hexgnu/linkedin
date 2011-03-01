@@ -52,7 +52,7 @@ module LinkedIn
 
     def current_status
       path = "/people/~/current-status"
-      Crack::XML.parse(get(path))['current_status']
+      Nokogiri::XML(get(path)).xpath('//current-status').text
     end
 
     def update_status(text)
