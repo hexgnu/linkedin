@@ -17,7 +17,8 @@ module LinkedIn
     end
 
     def share_to_xml(options={})
-      doc = Nokogiri.XML('<share><comment/><content><title/><submitted-url/><submitted-image-url/></content><visibility><code/></visibility></share>', nil, 'UTF-8')
+      doc = Nokogiri.XML('<share><comment/><content><title/><submitted-url/><submitted-image-url/></content><visibility><code/></visibility></share>')
+      doc.encoding = 'UTF-8'
 
       {:comment => 'comment', :title => 'title', :url => 'submitted-url', :image_url => 'submitted-image-url'}.each do |key, name|
         doc.at_css(name).content = options[key] if options[key]
@@ -29,14 +30,16 @@ module LinkedIn
     end
 
     def comment_to_xml(comment)
-      doc = Nokogiri.XML('<update-comment><comment/><update-comment/>', nil, 'UTF-8')
+      doc = Nokogiri.XML('<update-comment><comment/><update-comment/>')
+      doc.encoding = 'UTF-8'
       doc.at_css('comment').content = comment
 
       doc.to_xml
     end
 
     def network_update_to_xml(message)
-      doc = Nokogiri::XML('<activity locale="en_US"><content-type>linkedin-html</content-type><body/></activity>', nil, 'UTF-8')
+      doc = Nokogiri::XML('<activity locale="en_US"><content-type>linkedin-html</content-type><body/></activity>')
+      doc.encoding = 'UTF-8'
       doc.at_css('body').content = message
       doc.to_xml
     end
