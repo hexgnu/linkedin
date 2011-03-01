@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.summary     = %q{Ruby wrapper for the LinkedIn API}
   s.description = %q{Ruby wrapper for the LinkedIn API}
 
-  s.date = %q{2010-02-05}
+  s.date = %q{2010-03-01}
 
   s.rdoc_options  = ["--charset=UTF-8"]
   s.extra_rdoc_files = ["README.markdown", "LICENSE"]
