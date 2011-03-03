@@ -27,7 +27,7 @@ module LinkedIn
     end
 
     def site_standard_profile_request
-      @doc.xpath('//site-standard-profile-request/url').text
+      @doc.xpath('/person/site-standard-profile-request/url').text
     end
 
     def relation_to_viewer
