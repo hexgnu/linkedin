@@ -16,133 +16,143 @@ describe LinkedIn::Client do
       client
     end
 
-    it "should retrieve a profile for the authenticated user" do
-      stub_get("/v1/people/~", "profile_full.xml")
-      client.profile.first_name.should == 'Wynn'
-      client.profile.last_name.should  == 'Netherland'
+    describe "#profile" do
+      context "for the currently authenticated user" do
+        before do
+          stub_get("/v1/people/~", "profile_full.xml")
+        end
+
+        it "should retrieve their name" do
+          client.profile.first_name.should == 'Wynn'
+          client.profile.last_name.should  == 'Netherland'
+        end
+
+        it "should retrieve location information" do
+          client.profile.location.name.should    == 'Dallas/Fort Worth Area'
+          client.profile.location.country.should == 'us'
+        end
+
+        it "should retrieve positions from a profile" do
+          client.profile.positions.size.should == 4
+          client.profile.positions.first.company.name.should == 'Orrka'
+          client.profile.positions.first.is_current.should   == 'true'
+
+          hp = client.profile.positions[2]
+          hp.title.should       == 'Solution Architect'
+          hp.id.should          == '4891362'
+          hp.start_month.should == 10
+          hp.start_year.should  == 2004
+          hp.end_month.should   == 6
+          hp.end_year.should    == 2007
+          hp.is_current.should  == 'false'
+        end
+
+        it "should retrieve education information from a profile" do
+          education = client.profile.educations.first
+          education.start_month.should == 8
+          education.start_year.should  == 1994
+          education.end_month.should   == 5
+          education.end_year.should    == 1998
+        end
+
+        it "should retrieve information about a profiles connections" do
+          client.profile.connections.size.should == 146
+          client.profile.connections.first.first_name.should == "Ali"
+        end
+
+        it "should retrieve a profiles member_url_resources" do
+          client.profile.member_url_resources.size.should == 2
+          client.profile.member_url_resources.first.url.should  == 'http://orrka.com'
+          client.profile.member_url_resources.first.name.should == 'My Company'
+        end
+
+        it "should retrieve a profiles connections api_standard_profile_request" do
+          p1 = client.profile.connections.first
+          p1.api_standard_profile_request.url.should == 'http://api.linkedin.com/v1/people/3YNlBdusZ5:full'
+          p1.api_standard_profile_request.headers[:name].should  == 'x-li-auth-token'
+          p1.api_standard_profile_request.headers[:value].should == 'name:lui9'
+        end
+
+        it "should retrieve a site_standard_profile_request" do
+          client.profile.site_standard_profile_request.should == "http://www.linkedin.com/profile?viewProfile=&key=3559698&authToken=yib-&authType=name"
+        end
+
+        context "with field selection" do
+          it "should accept field selectors when retrieving a profile" do
+            stub_get("/v1/people/~:(first-name,last-name)", "profile.xml")
+
+            profile = client.profile(:fields => [:first_name, :last_name])
+            profile.first_name.should == 'Wynn'
+            profile.last_name.should == 'Netherland'
+          end
+        end
+
+        describe "#connections" do
+          it "should retrieve connections for the authenticated user" do
+            stub_get("/v1/people/~/connections", "connections.xml")
+
+            cons = client.connections
+            cons.size.should == 146
+            cons.last.last_name.should == 'Yuchnewicz'
+          end
+        end
+      end
+
+      context "by id" do
+        it "should retrieve a profile for a member by id" do
+          stub_get("/v1/people/id=gNma67_AdI", "profile.xml")
+
+          profile = client.profile(:id => "gNma67_AdI")
+          profile.first_name.should == 'Wynn'
+        end
+      end
+
+      context "by url" do
+        it "should retrieve a profile for a member by url" do
+          stub_get("/v1/people/url=http%3A%2F%2Fwww.linkedin.com%2Fin%2Fnetherland", "profile.xml")
+
+          profile = client.profile(:url => "http://www.linkedin.com/in/netherland")
+          profile.last_name.should == 'Netherland'
+        end
+      end
     end
 
-    it "should retrieve location information" do
-      stub_get("/v1/people/~", "profile_full.xml")
-      client.profile.location.name.should    == 'Dallas/Fort Worth Area'
-      client.profile.location.country.should == 'us'
-    end
+    describe "#search" do
+      context "by single keyword" do
+        it "should perform a search" do
+          stub_get("/v1/people?keywords=github", "search.xml")
 
-    it "should retrieve positions from a profile" do
-      stub_get("/v1/people/~", "profile_full.xml")
+          results = client.search(:keywords => 'github')
+          results.start.should == 0
+          results.count.should == 10
+          results.profiles.first.first_name.should == 'Zach'
+          results.profiles.first.last_name.should  == 'Inglis'
+        end
+      end
 
-      client.profile.positions.size.should == 4
-      client.profile.positions.first.company.name.should == 'Orrka'
-      client.profile.positions.first.is_current.should   == 'true'
+      context "by multiple keywords" do
+        it "should perform a search" do
+          stub_get("/v1/people?keywords=ruby+rails", "search.xml")
 
-      hp = client.profile.positions[2]
-      hp.title.should       == 'Solution Architect'
-      hp.id.should          == '4891362'
-      hp.start_month.should == 10
-      hp.start_year.should  == 2004
-      hp.end_month.should   == 6
-      hp.end_year.should    == 2007
-      hp.is_current.should  == 'false'
-    end
+          results = client.search(:keywords => ["ruby", "rails"])
+          results.start.should == 0
+          results.count.should == 10
+          results.profiles.first.first_name.should == 'Zach'
+          results.profiles.first.last_name.should  == 'Inglis'
+        end
+      end
 
-    it "should retrieve education information from a profile" do
-      stub_get("/v1/people/~", "profile_full.xml")
+      context "by name" do
+        it "should perform a search" do
+          stub_get("/v1/people?name=Zach+Inglis", "search.xml")
 
-      education = client.profile.educations.first
-      education.start_month.should == 8
-      education.start_year.should  == 1994
-      education.end_month.should   == 5
-      education.end_year.should    == 1998
-    end
-
-    it "should retrieve information about a profiles connections" do
-      stub_get("/v1/people/~", "profile_full.xml")
-
-      client.profile.connections.size.should == 146
-      client.profile.connections.first.first_name.should == "Ali"
-    end
-
-    it "should retrieve a profiles member_url_resources" do
-      stub_get("/v1/people/~", "profile_full.xml")
-
-      client.profile.member_url_resources.size.should == 2
-      client.profile.member_url_resources.first.url.should  == 'http://orrka.com'
-      client.profile.member_url_resources.first.name.should == 'My Company'
-    end
-
-    it "should retrieve a profiles connections api_standard_profile_request" do
-      stub_get("/v1/people/~", "profile_full.xml")
-
-      p1 = client.profile.connections.first
-      p1.api_standard_profile_request.url.should == 'http://api.linkedin.com/v1/people/3YNlBdusZ5:full'
-      p1.api_standard_profile_request.headers[:name].should  == 'x-li-auth-token'
-      p1.api_standard_profile_request.headers[:value].should == 'name:lui9'
-    end
-
-    it "should retrieve a profile for a member by id" do
-      stub_get("/v1/people/id=gNma67_AdI", "profile.xml")
-
-      profile = client.profile(:id => "gNma67_AdI")
-      profile.first_name.should == 'Wynn'
-    end
-
-    it "should retrieve a site_standard_profile_request" do
-      stub_get("/v1/people/~", "profile.xml")
-
-      client.profile.site_standard_profile_request.should == "http://www.linkedin.com/profile?viewProfile=&key=3559698&authToken=yib-&authType=name"
-    end
-
-    it "should retrieve a profile for a member by url" do
-      stub_get("/v1/people/url=http%3A%2F%2Fwww.linkedin.com%2Fin%2Fnetherland", "profile.xml")
-
-      profile = client.profile(:url => "http://www.linkedin.com/in/netherland")
-      profile.last_name.should == 'Netherland'
-    end
-
-    it "should accept field selectors when retrieving a profile" do
-      stub_get("/v1/people/~:(first-name,last-name)", "profile.xml")
-
-      profile = client.profile(:fields => [:first_name, :last_name])
-      profile.first_name.should == 'Wynn'
-      profile.last_name.should == 'Netherland'
-    end
-
-    it "should retrieve connections for the authenticated user" do
-      stub_get("/v1/people/~/connections", "connections.xml")
-
-      cons = client.connections
-      cons.size.should == 146
-      cons.last.last_name.should == 'Yuchnewicz'
-    end
-
-    it "should perform a search by keyword" do
-      stub_get("/v1/people?keywords=github", "search.xml")
-
-      results = client.search(:keywords => 'github')
-      results.start.should == 0
-      results.count.should == 10
-      results.profiles.first.first_name.should == 'Zach'
-      results.profiles.first.last_name.should  == 'Inglis'
-    end
-
-    it "should perform a search by multiple keywords" do
-      stub_get("/v1/people?keywords=ruby+rails", "search.xml")
-
-      results = client.search(:keywords => ["ruby", "rails"])
-      results.start.should == 0
-      results.count.should == 10
-      results.profiles.first.first_name.should == 'Zach'
-      results.profiles.first.last_name.should  == 'Inglis'
-    end
-
-    it "should perform a search by name" do
-      stub_get("/v1/people?name=Zach+Inglis", "search.xml")
-
-      results = client.search(:name => "Zach Inglis")
-      results.start.should == 0
-      results.count.should == 10
-      results.profiles.first.first_name.should == 'Zach'
-      results.profiles.first.last_name.should  == 'Inglis'
+          results = client.search(:name => "Zach Inglis")
+          results.start.should == 0
+          results.count.should == 10
+          results.profiles.first.first_name.should == 'Zach'
+          results.profiles.first.last_name.should  == 'Inglis'
+        end
+      end
     end
 
     it "should update a user's current status" do
