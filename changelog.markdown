@@ -1,6 +1,6 @@
 # Changelog
 
-##  0.2.x - March x, 2010
+##  0.2.2 - March 3, 2010
 
 * Removed Crack as a dependency, Nokogiri FTW
 
