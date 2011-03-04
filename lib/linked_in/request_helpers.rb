@@ -42,13 +42,13 @@ module LinkedIn
 
           case response.code.to_i
           when 400
-            raise RateLimitExceeded.new(data), message
+            raise BadRequest.new(data), message
           when 401
             raise Unauthorized.new(data), message
           when 403
-            raise General.new(data), message
+            raise Forbidden.new(data), message
           when 404
-            raise NotFound, message
+            raise NotFound.new(data), message
           when 500
             raise InformLinkedIn, "LinkedIn had an internal error. Please let them know in the forum. #{message}"
           when 502..503

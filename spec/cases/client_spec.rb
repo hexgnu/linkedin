@@ -114,7 +114,9 @@ describe LinkedIn::Client do
       end
 
       it "should raise that error correctly" do
-        expect { client.profile }.to raise_error(LinkedIn::General, "(403): Throttle limit for calls to this resource is reached. - 0")
+        expect { client.profile }.to raise_error(LinkedIn::Forbidden, "(403): Throttle limit for calls to this resource is reached. - 0") do |e|
+          e.data.message.should == "Throttle limit for calls to this resource is reached."
+        end
       end
     end
 
@@ -124,7 +126,9 @@ describe LinkedIn::Client do
       end
 
       it "should raise that error correctly" do
-        expect { client.profile }.to raise_error(LinkedIn::NotFound, "(404): Could not find person based on: ~~ - 11")
+        expect { client.profile }.to raise_error(LinkedIn::NotFound, "(404): Could not find person based on: ~~ - 11") do |e|
+          e.data.message.should == "Could not find person based on: ~~"
+        end
       end
     end
 

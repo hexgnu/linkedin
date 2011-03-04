@@ -13,13 +13,13 @@ module LinkedIn
     end
   end
 
-  class RateLimitExceeded < LinkedInError; end
-  class Unauthorized      < LinkedInError; end
-  class General           < LinkedInError; end
+  class BadRequest     < LinkedInError; end
+  class Unauthorized   < LinkedInError; end
+  class Forbidden      < LinkedInError; end
+  class NotFound       < LinkedInError; end
 
   class Unavailable    < StandardError; end
   class InformLinkedIn < StandardError; end
-  class NotFound       < StandardError; end
 
 
   class << self
