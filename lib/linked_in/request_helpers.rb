@@ -36,22 +36,24 @@ module LinkedIn
       def raise_errors(response)
         # Even if the XML answer contains the HTTP status code, LinkedIn also sets this code
         # in the HTTP answer (thankfully).
-        case response.code.to_i
-        when 400
+        if response.code.to_i >= 400
           data = LinkedIn::Error.from_xml(response.body)
-          raise RateLimitExceeded.new(data), "(#{response.code}): #{response.message} - #{data.code if data}"
-        when 401
-          data = LinkedIn::Error.from_xml(response.body)
-          raise Unauthorized.new(data), "(#{response.code}): #{response.message} - #{data.code if data}"
-        when 403
-          data = LinkedIn::Error.from_xml(response.body)
-          raise General.new(data), "(#{response.code}): #{response.message} - #{data.code if data}"
-        when 404
-          raise NotFound, "(#{response.code}): #{response.message}"
-        when 500
-          raise InformLinkedIn, "LinkedIn had an internal error. Please let them know in the forum. (#{response.code}): #{response.message}"
-        when 502..503
-          raise Unavailable, "(#{response.code}): #{response.message}"
+          message = "(#{response.code}): #{data.message} - #{data.code}"
+
+          case response.code.to_i
+          when 400
+            raise RateLimitExceeded.new(data), message
+          when 401
+            raise Unauthorized.new(data), message
+          when 403
+            raise General.new(data), message
+          when 404
+            raise NotFound, message
+          when 500
+            raise InformLinkedIn, "LinkedIn had an internal error. Please let them know in the forum. #{message}"
+          when 502..503
+            raise Unavailable, message
+          end
         end
       end
 
