@@ -108,6 +108,26 @@ describe LinkedIn::Client do
       end
     end
 
+    context "when the response is a 403" do
+      before do
+        stub_get("/v1/people/~", "403.xml", 403)
+      end
+
+      it "should raise that error correctly" do
+        expect { client.profile }.to raise_error(LinkedIn::General, "(403): Throttle limit for calls to this resource is reached. - 0")
+      end
+    end
+
+    context "when the response is a 404" do
+      before do
+        stub_get("/v1/people/~", "404.xml", 404)
+      end
+
+      it "should raise that error correctly" do
+        expect { client.profile }.to raise_error(LinkedIn::NotFound, "(404): Could not find person based on: ~~ - 11")
+      end
+    end
+
     describe "#profile" do
       context "for the currently authenticated user" do
         before do
