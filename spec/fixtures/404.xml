@@ -2,6 +2,6 @@
 <error>
   <status>404</status>
   <timestamp>1259166999063</timestamp>
-  <error-code>0000</error-code>
+  <error-code>11</error-code>
   <message>Could not find person based on: ~~</message>
 </error>
