@@ -10,6 +10,7 @@ module LinkedIn
     # LinkedIn.configure do |config|
     #   config.token = 'consumer_token'
     #   config.secret = 'consumer_secret'
+    #   config.default_profile_fields = ['education', 'positions']
     # end
     #
     # elsewhere
