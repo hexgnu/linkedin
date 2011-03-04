@@ -10,7 +10,7 @@ module LinkedIn
     end
 
     def code
-      @doc.xpath('//error-coce').text.to_i
+      @doc.xpath('//error-code').text.to_i
     end
 
     def message
