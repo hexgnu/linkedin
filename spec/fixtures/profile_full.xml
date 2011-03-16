@@ -15,6 +15,9 @@
   <relation-to-viewer>
     <distance>0</distance>
   </relation-to-viewer>
+  <site-standard-profile-request>
+    <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3559698&amp;authToken=yib-&amp;authType=name</url>
+  </site-standard-profile-request>
   <num-recommenders>2</num-recommenders>
   <current-status>New blog post: What makes a good API wrapper? http://wynnnetherland.com/2009/11/what-makes-a-good-api-wrapper/</current-status>
   <current-status-timestamp>1258404780000</current-status-timestamp>

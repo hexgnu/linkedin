@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<error>
+  <status>403</status>
+  <timestamp>1299190699260</timestamp>
+  <error-code>0</error-code>
+  <message>Throttle limit for calls to this resource is reached.</message>
+</error>

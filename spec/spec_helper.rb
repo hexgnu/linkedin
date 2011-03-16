@@ -19,7 +19,7 @@ end
 
 def stub_get(url, filename, status=nil)
   options = { :body => fixture(filename) }
-  options.merge!({ :status => status }) unless status.nil?
+  options.merge!({ :status => status }) if status
 
   stub_request(:get, linkedin_url(url)).to_return(options)
 end
@@ -40,7 +40,7 @@ end
 
 def stub_put(url, returns_xml, status=nil)
   options = { :body => fixture(returns_xml) }
-  options.merge!({ :status => status }) unless status.nil?
+  options.merge!({ :status => status }) if status
   stub_request(:put, linkedin_url(url)).to_return(options)
 end
 
