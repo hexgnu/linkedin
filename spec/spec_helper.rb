@@ -1,6 +1,15 @@
+begin
+  require 'bundler/setup'
+rescue LoadError
+  puts 'although not required, bundler is recommened for running the tests'
+end
+
 require 'webmock/rspec'
 
+require 'client_shared_examples'
+
 require 'linkedin'
+
 
 
 def fixture_path
