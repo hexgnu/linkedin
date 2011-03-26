@@ -4,7 +4,7 @@
     <property key="degree-1-count">146</property>
     <property key="degree-2-count">17000</property>
   </network-stats>
-  <updates total="4">
+  <updates total="6">
     <update>
       <timestamp>1258714582136</timestamp>
       <update-key>PICU-6043885-ffe88342*3bee0*3453f*38ffb*3460fde2eb011-*1</update-key>
@@ -112,6 +112,88 @@
         </person>
       </update-content>
       <is-commentable>true</is-commentable>
+    </update>
+    <update>
+      <timestamp>1262583600018</timestamp>
+      <update-key>PROF-8776816-baa646d0*3fcd8*34f0a*39224*3c9b64bc7ca6b-*1</update-key>
+      <update-type>PROF</update-type>
+      <update-content>
+        <person>
+          <id>216GGG68UZ</id>
+          <first-name>John</first-name>
+          <last-name>Irving</last-name>
+          <headline>Author</headline>
+          <positions count="1">
+            <position>
+              <id>1234</id>
+              <title>Technical Recruiter</title>
+              <company>
+                <id>1337</id>
+                <name>LinkedIn</name>
+                <company-type>
+                  <code>P</code>
+                  <name>Privately Held</name>
+                </company-type>
+              </company>
+            </position>
+          </positions>
+          <api-standard-profile-request>
+            <url>http://api.linkedin.com/v1/people/216GGG68UZ</url>
+            <headers total="1">
+              <http-header>
+                <name>x-li-auth-token</name>
+                <value>name:3L64</value>
+              </http-header>
+            </headers>
+          </api-standard-profile-request>
+          <site-standard-profile-request>
+            <url>http://www.linkedin.com/profile?viewProfile=&amp;key=1234&amp;authToken=3L64&amp;authType=name&amp;trk=api*a100117*</url>
+          </site-standard-profile-request>
+        </person>
+      </update-content>
+      <updated-fields count="1">
+        <update-field>
+          <name>person/positions</name>
+        </update-field>
+      </updated-fields>
+      <is-commentable>true</is-commentable>
+    </update>
+    <update>
+      <timestamp>1262645073369</timestamp>
+      <update-type>JOBP</update-type>
+      <update-content>
+        <job>
+          <id>8162505</id>
+          <position>
+            <title>Editor</title>
+          </position>
+          <company>
+            <name>Irving Books</name>
+          </company>
+          <job-poster>
+            <id>D4PrjjQMm1</id>
+            <first-name>John</first-name>
+            <last-name>Irving</last-name>
+            <headline>Author</headline>
+            <api-standard-profile-request>
+              <url>http://api.linkedin.com/v1/people/D4PrjjQMm1:full</url>
+              <headers total="1">
+                <http-header>
+                  <name>x-li-auth-token</name>
+                  <value>name:So2N</value>
+                </http-header>
+              </headers>
+            </api-standard-profile-request>
+            <site-standard-profile-request>
+              <url>http://www.linkedin.com/profile?viewProfile=&amp;key=32214&amp;authToken=So2N&amp;authType=name&amp;trk=api*a100117*</url>
+            </site-standard-profile-request>
+          </job-poster>
+          <site-job-request>
+            <url>http://www.linkedin.com/jobs?viewJob=&amp;jobId=8162505</url>
+          </site-job-request>
+        </job>
+      </update-content>
+      <is-commentable>false</is-commentable>
     </update>
   </updates>
 </network>

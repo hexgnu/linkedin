@@ -164,17 +164,25 @@ describe LinkedIn::Client do
         stats.updates.first.profile.connections.first.last_name.should == 'Varone'
         stats.updates.first.likes.size.should == 2
         stats.updates.first.likes.last.profile.first_name.should == 'Napoleon'
-        stats.updates.last.likes.should be_empty
       end
     end
 
     describe "#network_updates" do
       it "should retrieve network updates" do
-        stub_get("/v1/people/~/network?type=PICT", "picture_updates.xml")
+        stub_get("/v1/people/~/network?type=PICT,PROF,JOBP", "network_updates.xml")
 
-        stats = client.network_updates(:type => "PICT")
-        stats.updates.size.should == 4
-        stats.updates.last.profile.headline.should == "Creative Director for Intridea"
+        stats = client.network_updates(:type => "PICT,PROF,JOBP")
+        stats.updates.size.should == 6
+        stats.updates.first.profile.headline.should == "Project Manager / Business Systems Analyst IV at Hewlett-Packard"
+        
+        stats.updates[stats.updates.count - 2].update_type.should == 'PROF'
+        stats.updates[stats.updates.count - 2].updated_fields.first.should == 'person/positions'
+        stats.updates.last.update_type.should == 'JOBP'
+        stats.updates.last.job.id.should == 8162505
+        stats.updates.last.job.position.title == "Editor"
+        stats.updates.last.job.poster.id.should == "D4PrjjQMm1"
+        stats.updates.last.job.company.name.should == "Irving Books"
+
       end
     end
 
