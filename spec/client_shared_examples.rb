@@ -88,4 +88,10 @@ shared_examples_for "a full profile fetch" do
     language.name.should == "Klingon"
     language.id.to_i.should == 72
   end
+
+  it "should retrieve im_account from a profile" do
+    im = profile.im_accounts.last
+    im.im_account_type.should == "gtalk"
+    im.im_account_name.should == "somebody@example.com"
+  end
 end
