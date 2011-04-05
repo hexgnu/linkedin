@@ -57,9 +57,8 @@ module LinkedIn
         end
 
         def to_query(options)
-          options.inject([]) do |collection, opt|
-            collection << "#{opt[0]}=#{opt[1]}"
-            collection
+          options.map do |opt|
+            "#{opt[0]}=#{opt[1]}"
           end * '&'
         end
 

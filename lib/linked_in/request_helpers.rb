@@ -56,9 +56,8 @@ module LinkedIn
       end
 
       def to_query(options)
-        query_string = options.inject([]) do |collection, opt|
-          collection << "#{opt[0]}=#{opt[1]}"
-          collection
+        query_string = options.map do |opt|
+          "#{opt[0]}=#{opt[1]}"
         end * '&'
         URI.escape(query_string)
       end

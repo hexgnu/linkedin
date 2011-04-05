@@ -16,11 +16,12 @@ module LinkedIn
     private
 
       def format_options_for_query(opts)
-        opts.inject({}) do |list, kv|
-          key, value = kv.first.to_s.gsub("_","-"), kv.last
-          list[key]  = sanatize_value(value)
-          list
-        end
+        Hash[
+          opts.map do |kv|
+            key, value = kv.first.to_s.gsub("_","-"), kv.last
+            [key, sanatize_value(value)]
+          end
+        ]
       end
 
       def sanatize_value(value)
