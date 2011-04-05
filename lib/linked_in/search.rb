@@ -19,12 +19,12 @@ module LinkedIn
         Hash[
           opts.map do |kv|
             key, value = kv.first.to_s.gsub("_","-"), kv.last
-            [key, sanatize_value(value)]
+            [key, sanitize_value(value)]
           end
         ]
       end
 
-      def sanatize_value(value)
+      def sanitize_value(value)
         value = value.join("+") if value.is_a?(Array)
         value = value.gsub(" ", "+") if value.is_a?(String)
         value
