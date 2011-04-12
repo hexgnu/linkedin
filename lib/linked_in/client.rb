@@ -23,7 +23,7 @@ module LinkedIn
       if options[:public]
         path +=":public"
       elsif fields
-        path +=":(#{fields.map{ |f| f.to_s.gsub("_","-") }.join(',')})"
+        path += format_fields_for_query(fields)
       end
 
       Profile.from_xml(get(path))
@@ -36,14 +36,21 @@ module LinkedIn
       if options[:public]
         path +=":public"
       elsif fields
-        path +=":(#{fields.map{ |f| f.to_s.gsub("_","-") }.join(',')})"
+        path += format_fields_for_query(fields)
       end
 
       Connections.from_xml(get(path)).profiles
     end
 
     def search(options={})
-      path = "/people"
+      path = "/people-search"
+
+      fields = options.delete(:fields) || LinkedIn.default_profile_fields
+
+      if fields
+        path += format_fields_for_query(fields)
+      end
+
       options = { :keywords => options } if options.is_a?(String)
       options = format_options_for_query(options)
 
@@ -138,6 +145,25 @@ module LinkedIn
           opts[key.to_s.gsub("_","-")] = value
         end
         opts
+      end
+
+      def format_fields_for_query(fields)
+        result = ":("
+        fields.to_a.map! do |field|
+          if field.is_a?(Hash)
+            innerFields = []
+            field.each do |key, value|
+              innerFields << key.to_s.gsub("_","-") + format_fields_for_query(value)
+            end
+            innerFields.join(',')
+          else
+            field.to_s.gsub("_","-")
+          end
+        end
+        result += fields.join(',')
+        result += ")"
+
+        result
       end
 
       def person_path(options)

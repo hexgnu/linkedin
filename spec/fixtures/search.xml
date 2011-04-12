@@ -1,538 +1,244 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<people total="152" start="0" count="10">
-  <person>
-    <id>U6YB1O2bqv</id>
-    <first-name>Zach</first-name>
-    <last-name>Inglis</last-name>
-    <headline>Partner at London Made</headline>
-    <location>
-      <name>United Kingdom</name>
-      <country>
-        <code>gb</code>
-      </country>
-    </location>
-    <industry>Online Media</industry>
-    <connections total="333" />
-    <num-recommenders>0</num-recommenders>
-    <distance>1</distance>
-    <positions total="3">
-      <position>
-        <id>54820459</id>
-        <title>Owner</title>
-        <summary>London Made is a development and design shop. We also offer training and recruitment.</summary>
-        <start-date>
-          <year>2008</year>
-          <month>11</month>
-        </start-date>
-        <is-current>true</is-current>
-        <company>
-          <name>London Made</name>
-        </company>
-      </position>
-      <position>
-        <id>47016515</id>
-        <title>Writer</title>
-        <start-date>
-          <year>2008</year>
-          <month>8</month>
-        </start-date>
-        <is-current>true</is-current>
-        <company>
-          <name>Ruby Inside</name>
-        </company>
-      </position>
-      <position>
-        <id>30985289</id>
-        <title>Partner</title>
-        <summary>Clipgarden allows you to earn money by recording the things you do best. We’re still in the early stages of development but continue to hear positive things.</summary>
-        <start-date>
-          <year>2007</year>
-          <month>8</month>
-        </start-date>
-        <is-current>true</is-current>
-        <company>
-          <name>Clipgarden</name>
-        </company>
-      </position>
-    </positions>
-    <api-standard-profile-request>
-      <url>http://api.linkedin.com/v1/people/U6YB1O2bqv:full</url>
-      <headers total="1">
-        <http-header>
-          <name>x-li-auth-token</name>
-          <value>OUT_OF_NETWORK:h0Rc</value>
-        </http-header>
-      </headers>
-    </api-standard-profile-request>
-    <site-standard-profile-request>
-      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=3669630&amp;authToken=h0Rc&amp;authType=OUT_OF_NETWORK</url>
-    </site-standard-profile-request>
-  </person>
-  <person>
-    <id>OVeaSymWcX</id>
-    <first-name>Zach</first-name>
-    <last-name>Moazeni</last-name>
-    <headline>Founder at Downstream</headline>
-    <location>
-      <name>Greater Grand Rapids, Michigan Area</name>
-    </location>
-    <industry>Computer Software</industry>
-    <connections total="93" />
-    <num-recommenders>0</num-recommenders>
-    <distance>2</distance>
-    <positions total="2">
-      <position>
-        <id>78139799</id>
-        <title>Founder</title>
-        <summary>As a co-founder of Downstream, I am tasked with the development in order to bring the product to launch. I am also responsible for the Application Scaling plans as well as helping give language to the other founders as they communicate to investors.</summary>
-        <start-date>
-          <year>2009</year>
-          <month>5</month>
-        </start-date>
-        <is-current>true</is-current>
-        <company>
-          <name>Downstream</name>
-        </company>
-      </position>
-      <position>
-        <id>14106883</id>
-        <title>Software Developer</title>
-        <summary>I've taken the technical lead on many of Elevator Up's projects from decision, design, and the implementation. Beyond the codebase itself, I have also been tasked to train junior developers to become productive contributors to the team. These projects have exposed me to many leading edge open source technologies surrounding the Rails stack.
+<people-search>
+  <num-results>828</num-results>
+  <people total="110" count="20" start="0">
+    <person>
+      <id>8zFIWbKLrw</id>
+      <first-name>Marcello</first-name>
+      <last-name>Barnaba</last-name>
+      <headline>Sr. software engineer, independent researcher</headline>
+      <public-profile-url>http://www.linkedin.com/in/marcellobarnaba</public-profile-url>
+      <location>
+        <name>Rome Area, Italy</name>
+      </location>
+      <picture-url>http://media.linkedin.com/mpr/mprx/0_izp7Yx1lUA36P3P3_vjpYj1AB1cnACP3TqHrYjtTe9iQa6kT712_rg67MgBWt5tDG9Olls29eWb-</picture-url>
+      <distance>2</distance>
+    </person>
+    <person>
+      <id>_ay1AG1Pzc</id>
+      <first-name>Kyle</first-name>
+      <last-name>Neath</last-name>
+      <headline>Designer for GitHub</headline>
+      <public-profile-url>http://www.linkedin.com/in/kneath</public-profile-url>
+      <location>
+        <name>San Francisco Bay Area</name>
+      </location>
+      <picture-url>http://media.linkedin.com/mpr/mprx/0_hC1YLg2jpwFM9noqmXGSLO7rY2rRq1UqC5F3L0ShTdXIIBuNukitwxJaKCKXBqs43TA8oZ13X1o9</picture-url>
+      <distance>2</distance>
+    </person>
+    <person>
+      <id>WSCoPUJ7EP</id>
+      <first-name>Zach</first-name>
+      <last-name>Inglis</last-name>
+      <headline>Founder of London Made</headline>
+      <public-profile-url>http://www.linkedin.com/in/zachinglis</public-profile-url>
+      <location>
+        <name>London, United Kingdom</name>
+      </location>
+      <picture-url>http://media.linkedin.com/mpr/mprx/0_-KgZflKAdsPrPD6XrNjIf11yIpnOADBXKBWFf-83qJCaaW8kYnSNTtqfLt93tonH1PxQhvtVrtMV</picture-url>
+      <distance>1</distance>
+    </person>
+    <person>
+      <id>-i-wYn9X9n</id>
+      <first-name>Toby</first-name>
+      <last-name>Vervaart</last-name>
+      <headline>Director at Live Forever Pty Ltd</headline>
+      <public-profile-url>http://www.linkedin.com/in/tobyvervaart</public-profile-url>
+      <location>
+        <name>Sydney Area, Australia</name>
+      </location>
+      <picture-url>http://media.linkedin.com/mpr/mprx/0_HOKl9dQUjFwETrR0Hp9G9EqN0XmeiPE0E0ka9wbXh3sZpcgxk48gZI1oAEaB8Nw1djt7J2J4jlit</picture-url>
+      <distance>2</distance>
+    </person>
+    <person>
+      <id>t7RXGcp9SI</id>
+      <first-name>Kilian</first-name>
+      <last-name>Valkhof</last-name>
+      <headline>Front-end developer &amp; user-experience designer</headline>
+      <public-profile-url>http://www.linkedin.com/in/kilianvalkhof</public-profile-url>
+      <location>
+        <name>Rotterdam Area, Netherlands</name>
+      </location>
+      <picture-url>http://media.linkedin.com/mpr/mprx/0_IcAN_oNPmsdFty9M5K-F_WvymV75tybMWvLI_Wv3l0UvS4KJbA3ZDd3f8NfsAUQvoq1EuabgjlXx</picture-url>
+      <distance>2</distance>
+    </person>
+    <person>
+      <id>37g2JfwE-C</id>
+      <first-name></first-name>
+      <last-name>Private</last-name>
+      <headline>Co-founder at Noteleaf</headline>
+      <location>
+        <name>San Francisco Bay Area</name>
+      </location>
+      <distance>100</distance>
+    </person>
+    <person>
+      <id>f37uvp8ILh</id>
+      <first-name>Aaron</first-name>
+      <last-name>Gough</last-name>
+      <headline>Senior Platform Developer at mDialog</headline>
+      <public-profile-url>http://www.linkedin.com/in/aarongough</public-profile-url>
+      <location>
+        <name>Toronto, Canada Area</name>
+      </location>
+      <picture-url>http://media.linkedin.com/mpr/mprx/0_-KgZfllOw0A1lI9XtAYbf-3pIpnOADBXKlWFf-83qJCaaW8kYnSNTtqfLt93tonH1PxQhvOxN2VV</picture-url>
+      <distance>2</distance>
+    </person>
+    <person>
+      <id>SOFr_ngNKD</id>
+      <first-name>Vivien</first-name>
+      <last-name>Schilis</last-name>
+      <headline>Ruby developer at New bamboo</headline>
+      <public-profile-url>http://www.linkedin.com/in/vivienschiilis</public-profile-url>
+      <location>
+        <name>London, United Kingdom</name>
+      </location>
+      <picture-url>http://media.linkedin.com/mpr/mprx/0_DBwsjZ6mE1AwjakDS9Z5jVqYoAb50wND7zxLjVvYzqPvhf_STlUnPs3KXxFsyuv32NWk-gF5d8wO</picture-url>
+      <distance>2</distance>
+    </person>
+    <person>
+      <id>kS4q59VQWk</id>
+      <first-name>Davide</first-name>
+      <last-name>Callegari</last-name>
+      <headline>Web Applications Designer and Developer</headline>
+      <public-profile-url>http://www.linkedin.com/in/davidecallegari</public-profile-url>
+      <location>
+        <name>Italy</name>
+      </location>
+      <picture-url>http://media.linkedin.com/mpr/mprx/0_Pk_hAcmY-1cTq-tglLi1ANxgrN8AqqigA5BxANg2flN3IKqj0CP2xqdGOVhaB1GltbTOO1fpGG7B</picture-url>
+      <distance>2</distance>
+    </person>
+    <person>
+      <id>92Madws8_e</id>
+      <first-name>Richard</first-name>
+      <last-name>Halliwell</last-name>
+      <headline>Lead Developer at Videojug Corporation Ltd</headline>
+      <public-profile-url>http://www.linkedin.com/in/richhalliwell</public-profile-url>
+      <location>
+        <name>London, United Kingdom</name>
+      </location>
+      <picture-url>http://media.linkedin.com/mpr/mprx/0_r9mLMB17QQ8xtEO7Klp9MzCOX65lrEa7tcssMzKfRilTfaJfyrYdcvX3oeLmPSf_AzuRntGLsq8l</picture-url>
+      <distance>2</distance>
+    </person>
+    <person>
+      <id>Ei3m7F6Qat</id>
+      <first-name>Jeff</first-name>
+      <last-name>Verkoeyen</last-name>
+      <headline>Lead Engineer and Project Maintainer for Three20</headline>
+      <public-profile-url>http://www.linkedin.com/in/jeffverkoeyen</public-profile-url>
+      <location>
+        <name>Toronto, Canada Area</name>
+      </location>
+      <picture-url>http://media.linkedin.com/mpr/mprx/0_T8jL9R0KXklMzfmx_5O99MI3Xb_4cumxibds9Mu3RCBHHHM0DQDdZJ4fodiFNw7P8_0RJOY2Bmy3</picture-url>
+      <distance>2</distance>
+    </person>
+    <person>
+      <id>e9TuCcB5QE</id>
+      <first-name>Bradley</first-name>
+      <last-name>Grzesiak</last-name>
+      <headline>Principal at bendyworks LLC</headline>
+      <public-profile-url>http://www.linkedin.com/in/bradleygrzesiak</public-profile-url>
+      <location>
+        <name>Madison, Wisconsin Area</name>
+      </location>
+      <picture-url>http://media.linkedin.com/mpr/mprx/0_TLYPQp0A4WF9Uieq3Cg8Qx0j4HrNB8dqibE2Qxj8FDXkeXONDimxH0Wm9QKwqbH486ySW471LqjO</picture-url>
+      <distance>2</distance>
+    </person>
+    <person>
+      <id>zPnAwnUBcT</id>
+      <first-name>Lance</first-name>
+      <last-name>Ennen</last-name>
+      <headline>Software Consultant  at Obtiva</headline>
+      <public-profile-url>http://www.linkedin.com/in/lanceennen</public-profile-url>
+      <location>
+        <name>Greater Chicago Area</name>
+      </location>
+      <picture-url>http://media.linkedin.com/mpr/mprx/0_eyd5KSNVXrIJDft-oYo9KaFoXqyWSdi-oOjVKaLVRAeMtSqtXsJWOmlqospnaaGOWxIUxWR3_W8b</picture-url>
+      <distance>2</distance>
+    </person>
+    <person>
+      <id>Ph05DaSWI7</id>
+      <first-name>Alex</first-name>
+      <last-name>MacCaw</last-name>
+      <headline>Consultant at Made By Many</headline>
+      <public-profile-url>http://www.linkedin.com/in/alexmaccaw</public-profile-url>
+      <location>
+        <name>London, United Kingdom</name>
+      </location>
+      <picture-url>http://media.linkedin.com/mpr/mprx/0_VoW0f8j5MseaE35XZdE2fisXUpVTokqXZDg8fisMkJalzhikn2M1T_aBvtsYW_zHRdw3hkkerEaf</picture-url>
+      <distance>2</distance>
+    </person>
+    <person>
+      <id>9dJk8d9R2C</id>
+      <first-name>Leonardo Dario</first-name>
+      <last-name>Perna</last-name>
+      <headline>Ruby Coder at FacebookBackup - Open Source Project</headline>
+      <public-profile-url>http://www.linkedin.com/in/leoperna</public-profile-url>
+      <location>
+        <name>London, United Kingdom</name>
+      </location>
+      <picture-url>http://media.linkedin.com/mpr/mprx/0_CV5yQJhEp7kqhBeZC0N7QUCLpS3v2qZZhRliQU1Miez51K74apvKHRbB-iTE71MN_JbCWpD9lGwe</picture-url>
+      <distance>2</distance>
+    </person>
+    <person>
+      <id>WLhqqgew38</id>
+      <first-name>Basil</first-name>
+      <last-name>Shkara</last-name>
+      <headline>Senior Software Engineer</headline>
+      <public-profile-url>http://www.linkedin.com/in/basilshkara</public-profile-url>
+      <location>
+        <name>Sydney Area, Australia</name>
+      </location>
+      <picture-url>http://media.linkedin.com/mpr/mprx/0_Y7bJr-sXDcLfeYk1pH8ErKRdSltfERN1pePQrleZtNQ0vx_P-WBzYApn_0-rdpv0xu5F09smgC3-</picture-url>
+      <distance>2</distance>
+    </person>
+    <person>
+      <id>qiw8epuoUG</id>
+      <first-name>Jonathan</first-name>
+      <last-name>Leighton</last-name>
+      <headline>Ruby on Rails Expert</headline>
+      <public-profile-url>http://www.linkedin.com/in/jonleighton</public-profile-url>
+      <location>
+        <name>Oxford, United Kingdom</name>
+      </location>
+      <picture-url>http://media.linkedin.com/mpr/mprx/0_lxZqPArFeK9Oad9PlJMIPPCHevPY2u6P1YuwPP3zBKbm1HA1jMe4j1vRQR1T7wFxKysoyq0Vc5xQ</picture-url>
+      <distance>2</distance>
+    </person>
+    <person>
+      <id>_XQPp1gvpC</id>
+      <first-name>Rein</first-name>
+      <last-name>Henrichs</last-name>
+      <headline>Freelance Developer</headline>
+      <public-profile-url>http://www.linkedin.com/in/reinh</public-profile-url>
+      <location>
+        <name>Austin, Texas Area</name>
+      </location>
+      <distance>2</distance>
+    </person>
+    <person>
+      <id>IlrS7tM_Mt</id>
+      <first-name>Claudio</first-name>
+      <last-name>Agosti</last-name>
+      <headline>Project leader at SniffJoke</headline>
+      <public-profile-url>http://www.linkedin.com/in/vecna</public-profile-url>
+      <location>
+        <name>Milan Area, Italy</name>
+      </location>
+      <picture-url>http://media.linkedin.com/mpr/mprx/0_iqpxyYGYBtKU13zC_cD8yjltU-cn1CzCTzHhyj-GkciQ26GG7-2P-gQ2vyBWK5qmGcOTPsutg2t3</picture-url>
+      <distance>2</distance>
+    </person>
+    <person>
+      <id>kttjgl9DE3</id>
+      <first-name>Gareth</first-name>
+      <last-name>Rushgrove</last-name>
+      <headline>Developer and occasional sysadmin</headline>
+      <public-profile-url>http://www.linkedin.com/in/garethrushgrove</public-profile-url>
+      <location>
+        <name>Cambridge, United Kingdom</name>
+      </location>
+      <picture-url>http://media.linkedin.com/mpr/mprx/0_ZPIPyQBuZNjCpiNaV1U2yLLa4qEfyQLaVt02yXkYFAY0_G-mqvRx-krK9sor0TXGMKdSP_92ltzo</picture-url>
+      <distance>2</distance>
+    </person>
+  </people>
+</people-search>
 
-Though my role is primarily as a developer, I've also taken responsibility in a wide variety of non-software areas. Business Planning, Business/Revenue Modeling, Interviewing/Hiring, Proposals, Estimating, Project Management, Server and Network Engineering/Administration, User Interface Design. My role(s) have consistently required me to distill technical knowledge and translate it into business terms.</summary>
-        <start-date>
-          <year>2007</year>
-          <month>1</month>
-        </start-date>
-        <is-current>true</is-current>
-        <company>
-          <name>Elevator Up</name>
-        </company>
-      </position>
-    </positions>
-    <api-standard-profile-request>
-      <url>http://api.linkedin.com/v1/people/OVeaSymWcX:full</url>
-      <headers total="1">
-        <http-header>
-          <name>x-li-auth-token</name>
-          <value>OUT_OF_NETWORK:-TzE</value>
-        </http-header>
-      </headers>
-    </api-standard-profile-request>
-    <site-standard-profile-request>
-      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=10342418&amp;authToken=-TzE&amp;authType=OUT_OF_NETWORK</url>
-    </site-standard-profile-request>
-  </person>
-  <person>
-    <id>HbUhpG4QBG</id>
-    <first-name>Kyle</first-name>
-    <last-name>Neath</last-name>
-    <headline>Designer for GitHub</headline>
-    <location>
-      <name>San Francisco Bay Area</name>
-    </location>
-    <industry>Internet</industry>
-    <connections total="103" />
-    <num-recommenders>0</num-recommenders>
-    <distance>2</distance>
-    <positions total="1">
-      <position>
-        <id>91660562</id>
-        <title>Designer</title>
-        <summary>I make shiny things for http://github.com and other Logical Awesome offerings.</summary>
-        <start-date>
-          <year>2009</year>
-          <month>10</month>
-        </start-date>
-        <is-current>true</is-current>
-        <company>
-          <name>Logical Awesome</name>
-        </company>
-      </position>
-    </positions>
-    <api-standard-profile-request>
-      <url>http://api.linkedin.com/v1/people/HbUhpG4QBG:full</url>
-      <headers total="1">
-        <http-header>
-          <name>x-li-auth-token</name>
-          <value>OUT_OF_NETWORK:Tia4</value>
-        </http-header>
-      </headers>
-    </api-standard-profile-request>
-    <site-standard-profile-request>
-      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=5178019&amp;authToken=Tia4&amp;authType=OUT_OF_NETWORK</url>
-    </site-standard-profile-request>
-  </person>
-  <person>
-    <id>YDJZU3B5E-</id>
-    <first-name>Rizwan</first-name>
-    <last-name>Reza</last-name>
-    <headline>Freelance Web Developer &amp; Interaction Designer</headline>
-    <location>
-      <name>Saudi Arabia</name>
-    </location>
-    <industry>Computer Software</industry>
-    <connections total="46" />
-    <num-recommenders>0</num-recommenders>
-    <distance>2</distance>
-    <positions total="1">
-      <position>
-        <id>83027482</id>
-        <title>Freelance Web Developer &amp; Interaction Designer</title>
-        <summary></summary>
-        <start-date>
-          <year>2009</year>
-          <month>8</month>
-        </start-date>
-        <is-current>true</is-current>
-        <company>
-          <name>Rizwan Reza</name>
-        </company>
-      </position>
-    </positions>
-    <api-standard-profile-request>
-      <url>http://api.linkedin.com/v1/people/YDJZU3B5E-:full</url>
-      <headers total="1">
-        <http-header>
-          <name>x-li-auth-token</name>
-          <value>OUT_OF_NETWORK:y2-T</value>
-        </http-header>
-      </headers>
-    </api-standard-profile-request>
-    <site-standard-profile-request>
-      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=26468354&amp;authToken=y2-T&amp;authType=OUT_OF_NETWORK</url>
-    </site-standard-profile-request>
-  </person>
-  <person>
-    <id>MUidFvxKQ6</id>
-    <first-name>Lance</first-name>
-    <last-name>Ennen</last-name>
-    <headline>Software Consultant at Obtiva</headline>
-    <location>
-      <name>Greater Chicago Area</name>
-    </location>
-    <industry>Computer Software</industry>
-    <connections total="206" />
-    <num-recommenders>0</num-recommenders>
-    <distance>2</distance>
-    <positions total="1">
-      <position>
-        <id>82862186</id>
-        <title>Software Consultant</title>
-        <summary></summary>
-        <start-date>
-          <year>2009</year>
-          <month>5</month>
-        </start-date>
-        <is-current>true</is-current>
-        <company>
-          <name>Obtiva</name>
-        </company>
-      </position>
-    </positions>
-    <api-standard-profile-request>
-      <url>http://api.linkedin.com/v1/people/MUidFvxKQ6:full</url>
-      <headers total="1">
-        <http-header>
-          <name>x-li-auth-token</name>
-          <value>OUT_OF_NETWORK:etcX</value>
-        </http-header>
-      </headers>
-    </api-standard-profile-request>
-    <site-standard-profile-request>
-      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=19558926&amp;authToken=etcX&amp;authType=OUT_OF_NETWORK</url>
-    </site-standard-profile-request>
-  </person>
-  <person>
-    <id>KH1gMc_rDG</id>
-    <first-name>Dominic</first-name>
-    <last-name>Da Silva</last-name>
-    <headline>Enterprise Application Developer specilizing in Java, .NET and Ruby technologies</headline>
-    <location>
-      <name>Orlando, Florida Area</name>
-    </location>
-    <industry>Information Technology and Services</industry>
-    <connections total="191" />
-    <num-recommenders>0</num-recommenders>
-    <distance>2</distance>
-    <positions total="2">
-      <position>
-        <id>71614339</id>
-        <title>Software Engineer</title>
-        <summary>Develop .NET applications using Microsoft and ALT.NET technologies, Service Oriented Architecture, and proven enterprise and software design patterns.
-
-Follow the SCRUM agile development methodology.</summary>
-        <start-date>
-          <year>2009</year>
-          <month>4</month>
-        </start-date>
-        <is-current>true</is-current>
-        <company>
-          <name>Aptitude Solutions</name>
-        </company>
-      </position>
-      <position>
-        <id>18897619</id>
-        <title>President / Technical Architect / Lead Developer</title>
-        <summary>Owner, technical architect and lead developer for an independent software development consultancy.
-
-SilvaSoft has built numerous customer facing business web sites using Java web technologies that integrate with existing web service, shipping and secure credit card processing APIs.
-
-We use technologies such as Java (1.4, 5, 6), Struts, JBoss Seam, Tomcat (5, 6), XFire, Apache Axis, Apache CXF and Sun Metro.
-
-We have integrated with third party web services such as:
-1. Amazon S3
-2. PayPal credit card payment API
-3. Authorize.net credit card / check payment API
-4. UPS shipping API.
-
-Clients include Intellavia LLC, Amazon Web Services, Chenoa Information Services, adaptiveblue and  Developer.com.
-
-Client work includes:
-
-JVI Inspection - http://www.jviinspection.com/
-
-Coolaroo USA - http://www.coolaroousa.com/
-
-IAPP - http://www.iappnet.org/
-
-BMS Biowrap - http://biometricwrap.com/
-
-Building a Struts-Based Web Application on Amazon S3 - http://tinyurl.com/d596b6
-
-Building a Web Application with Ruby on Rails and Amazon S3 - http://tinyurl.com/236yk4</summary>
-        <start-date>
-          <year>2003</year>
-          <month>9</month>
-        </start-date>
-        <is-current>true</is-current>
-        <company>
-          <name>SilvaSoft, Inc.</name>
-        </company>
-      </position>
-    </positions>
-    <api-standard-profile-request>
-      <url>http://api.linkedin.com/v1/people/KH1gMc_rDG:full</url>
-      <headers total="1">
-        <http-header>
-          <name>x-li-auth-token</name>
-          <value>OUT_OF_NETWORK:VunB</value>
-        </http-header>
-      </headers>
-    </api-standard-profile-request>
-    <site-standard-profile-request>
-      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=13457424&amp;authToken=VunB&amp;authType=OUT_OF_NETWORK</url>
-    </site-standard-profile-request>
-  </person>
-  <person>
-    <id>k8ASaj0HMi</id>
-    <first-name>Barry</first-name>
-    <last-name>Hess</last-name>
-    <headline>Independent consultant in the web world</headline>
-    <location>
-      <name>Rochester, Minnesota Area</name>
-    </location>
-    <industry>Internet</industry>
-    <connections total="64" />
-    <num-recommenders>0</num-recommenders>
-    <distance>2</distance>
-    <positions total="2">
-      <position>
-        <id>17303961</id>
-        <title>Prime Hacker</title>
-        <summary>Helping Harvest be all that it can be.  Primary developer on Co-op.  Manage Iridesco programmer outreach.
-
-http://getharvest.com
-http://coopapp.com
-http://github.com/iridesco</summary>
-        <start-date>
-          <year>2007</year>
-        </start-date>
-        <is-current>true</is-current>
-        <company>
-          <name>Iridesco</name>
-        </company>
-      </position>
-      <position>
-        <id>16038108</id>
-        <title>Prime Hacker</title>
-        <summary>Backend programming in Ruby on Rails, I also have a sense of design and interface.  Live projects:
-
-http://followcost.com
-http://scrawlers.com
-http://ventorium.com
-http://gethoffed.com</summary>
-        <start-date>
-          <year>2007</year>
-          <month>2</month>
-        </start-date>
-        <is-current>true</is-current>
-        <company>
-          <name>bjhess.com</name>
-        </company>
-      </position>
-    </positions>
-    <api-standard-profile-request>
-      <url>http://api.linkedin.com/v1/people/k8ASaj0HMi:full</url>
-      <headers total="1">
-        <http-header>
-          <name>x-li-auth-token</name>
-          <value>OUT_OF_NETWORK:WcpW</value>
-        </http-header>
-      </headers>
-    </api-standard-profile-request>
-    <site-standard-profile-request>
-      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=9202576&amp;authToken=WcpW&amp;authType=OUT_OF_NETWORK</url>
-    </site-standard-profile-request>
-  </person>
-  <person>
-    <id>SvKzNaGjHa</id>
-    <first-name>Sukhchander</first-name>
-    <last-name>Khanna</last-name>
-    <headline>Software Manufacturer, Plumber, and Mechanic</headline>
-    <location>
-      <name>Greater New York City Area</name>
-    </location>
-    <industry>Internet</industry>
-    <connections total="276" />
-    <num-recommenders>0</num-recommenders>
-    <distance>2</distance>
-    <positions total="1">
-      <position>
-        <id>95304666</id>
-        <title>Software Manufacturer, Plumber, and Mechanic</title>
-        <summary></summary>
-        <start-date>
-          <year>2009</year>
-          <month>11</month>
-        </start-date>
-        <is-current>true</is-current>
-        <company>
-          <name>16012</name>
-        </company>
-      </position>
-    </positions>
-    <api-standard-profile-request>
-      <url>http://api.linkedin.com/v1/people/SvKzNaGjHa:full</url>
-      <headers total="1">
-        <http-header>
-          <name>x-li-auth-token</name>
-          <value>OUT_OF_NETWORK:_YOz</value>
-        </http-header>
-      </headers>
-    </api-standard-profile-request>
-    <site-standard-profile-request>
-      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=7452363&amp;authToken=_YOz&amp;authType=OUT_OF_NETWORK</url>
-    </site-standard-profile-request>
-  </person>
-  <person>
-    <id>qpgZ6hzBr7</id>
-    <first-name>John</first-name>
-    <last-name>Griffiths</last-name>
-    <headline>Web / Media / iPhone</headline>
-    <location>
-      <name>Colchester, United Kingdom</name>
-    </location>
-    <industry>Internet</industry>
-    <connections total="271" />
-    <num-recommenders>0</num-recommenders>
-    <distance>2</distance>
-    <positions total="1">
-      <position>
-        <id>16016691</id>
-        <title>Owner</title>
-        <summary>Personal site, now 7 years &amp; going strong. Technical tutorials, code snippets &amp; research. Ported from Typo to my own RoR CMS.</summary>
-        <start-date>
-          <year>2000</year>
-          <month>1</month>
-        </start-date>
-        <is-current>true</is-current>
-        <company>
-          <name>Red91.com</name>
-        </company>
-      </position>
-    </positions>
-    <api-standard-profile-request>
-      <url>http://api.linkedin.com/v1/people/qpgZ6hzBr7:full</url>
-      <headers total="1">
-        <http-header>
-          <name>x-li-auth-token</name>
-          <value>OUT_OF_NETWORK:VtL8</value>
-        </http-header>
-      </headers>
-    </api-standard-profile-request>
-    <site-standard-profile-request>
-      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=7104192&amp;authToken=VtL8&amp;authType=OUT_OF_NETWORK</url>
-    </site-standard-profile-request>
-  </person>
-  <person>
-    <id>6Vt1KQjwGB</id>
-    <first-name>Matt</first-name>
-    <last-name>Aimonetti</last-name>
-    <headline>Senior Software Engineer</headline>
-    <location>
-      <name>Greater San Diego Area</name>
-    </location>
-    <industry>Computer Software</industry>
-    <connections total="237" />
-    <num-recommenders>0</num-recommenders>
-    <distance>2</distance>
-    <positions total="3">
-      <position>
-        <id>59051476</id>
-        <title>Evangelist/Developer Relation Engineer</title>
-        <summary></summary>
-        <start-date>
-          <year>2008</year>
-          <month>12</month>
-        </start-date>
-        <is-current>true</is-current>
-        <company>
-          <name>Ruby on Rails</name>
-        </company>
-      </position>
-      <position>
-        <id>49599478</id>
-        <title>Lead Evangelist/ Developer</title>
-        <summary>Build a critical mass of support and awareness around Merb, a flexible yet powerful Ruby framework.</summary>
-        <start-date>
-          <year>2008</year>
-          <month>9</month>
-        </start-date>
-        <is-current>true</is-current>
-        <company>
-          <name>Merb</name>
-        </company>
-      </position>
-      <position>
-        <id>17113878</id>
-        <title>Owner and Lead Developer</title>
-        <summary>- Help the customer evaluate and define their IT needs using Agile Methodologies
- - Develop Ruby on Rails / Merb based solutions
- - Evaluate effectiveness of provided solutions
- - Audit on existing project
- - Provide training/coaching for on-site teams</summary>
-        <start-date>
-          <year>2005</year>
-          <month>6</month>
-        </start-date>
-        <is-current>true</is-current>
-        <company>
-          <name>m|a agile consulting, inc.</name>
-        </company>
-      </position>
-    </positions>
-    <api-standard-profile-request>
-      <url>http://api.linkedin.com/v1/people/6Vt1KQjwGB:full</url>
-      <headers total="1">
-        <http-header>
-          <name>x-li-auth-token</name>
-          <value>OUT_OF_NETWORK:1QZs</value>
-        </http-header>
-      </headers>
-    </api-standard-profile-request>
-    <site-standard-profile-request>
-      <url>http://www.linkedin.com/profile?viewProfile=&amp;key=6347192&amp;authToken=1QZs&amp;authType=OUT_OF_NETWORK</url>
-    </site-standard-profile-request>
-  </person>
-</people>

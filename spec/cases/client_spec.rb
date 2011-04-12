@@ -84,37 +84,50 @@ describe LinkedIn::Client do
     describe "#search" do
       context "by single keyword" do
         it "should perform a search" do
-          stub_get("/v1/people?keywords=github", "search.xml")
+          stub_get("/v1/people-search?keywords=github", "search.xml")
 
           results = client.search(:keywords => 'github')
           results.start.should == 0
-          results.count.should == 10
-          results.profiles.first.first_name.should == 'Zach'
-          results.profiles.first.last_name.should  == 'Inglis'
+          results.count.should == 20
+          results.profiles.first.first_name.should == 'Marcello'
+          results.profiles.first.last_name.should  == 'Barnaba'
         end
       end
 
       context "by multiple keywords" do
         it "should perform a search" do
-          stub_get("/v1/people?keywords=ruby+rails", "search.xml")
+          stub_get("/v1/people-search?keywords=ruby+rails", "search.xml")
 
           results = client.search(:keywords => ["ruby", "rails"])
           results.start.should == 0
-          results.count.should == 10
-          results.profiles.first.first_name.should == 'Zach'
-          results.profiles.first.last_name.should  == 'Inglis'
+          results.count.should == 20
+          results.profiles.first.first_name.should == 'Marcello'
+          results.profiles.first.last_name.should  == 'Barnaba'
         end
       end
 
       context "by name" do
         it "should perform a search" do
-          stub_get("/v1/people?name=Zach+Inglis", "search.xml")
+          stub_get("/v1/people-search?name=Zach+Inglis", "search.xml")
 
           results = client.search(:name => "Zach Inglis")
           results.start.should == 0
-          results.count.should == 10
-          results.profiles.first.first_name.should == 'Zach'
-          results.profiles.first.last_name.should  == 'Inglis'
+          results.count.should == 20
+          results.profiles.first.first_name.should == 'Marcello'
+          results.profiles.first.last_name.should  == 'Barnaba'
+        end
+      end
+
+      context "with fields" do
+        it "should perform a search" do
+          stub_get("/v1/people-search:(people:(first-name,last-name,picture-url))?keywords=github", "search.xml")
+
+          results = client.search(:keywords => 'github', :fields => [:people => ['first-name', 'last-name', 'picture-url']])
+          results.start.should == 0
+          results.count.should == 20
+          results.profiles.first.first_name.should == 'Marcello'
+          results.profiles.first.last_name.should  == 'Barnaba'
+          results.profiles.first.picture_url.should  == 'http://media.linkedin.com/mpr/mprx/0_izp7Yx1lUA36P3P3_vjpYj1AB1cnACP3TqHrYjtTe9iQa6kT712_rg67MgBWt5tDG9Olls29eWb-'
         end
       end
     end
