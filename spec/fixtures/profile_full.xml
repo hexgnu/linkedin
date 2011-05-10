@@ -3905,5 +3905,11 @@ Working closely with Microsoft consultants onstaff and in Redmond in order to in
       </date>
     </publication>
   </publications>
+  <im-accounts total="1">
+    <im-account>
+      <im-account-type>gtalk</im-account-type>
+      <im-account-name>somebody@example.com</im-account-name>
+    </im-account>
+  </im-accounts>
   <picture-url>http://media.linkedin.com/mpr/mpr/shrink_80_80/p/2/000/01c/359/041bc1b.jpg</picture-url>
 </person>

@@ -81,5 +81,9 @@ module LinkedIn
     def patents
       @patents ||= Patents.new(@doc.xpath('//patents')).patents
     end
+
+    def im_accounts
+      @im_accounts ||= ImAccounts.new(@doc.xpath('//im-accounts')).im_accounts
+    end
   end
 end
