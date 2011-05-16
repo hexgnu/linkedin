@@ -23,3 +23,4 @@ examples/wynn.rb
 
 ## Bundler
 Gemfile.lock
+.bundle
