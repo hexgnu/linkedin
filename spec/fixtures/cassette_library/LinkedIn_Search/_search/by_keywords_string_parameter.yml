@@ -5,12 +5,6 @@
     uri: https://api.linkedin.com:443/v1/people-search?keywords=github
     body: 
     headers: 
-      user-agent: 
-      - OAuth gem v0.4.4
-      authorization: 
-      - OAuth oauth_consumer_key="C2UfeHxZrij1PyppziDLbdUQti6f4TLaL-N0dyiV_us4Pj18_vsHcjKIX0i69fSn", oauth_nonce="KenR6ArkWDl5wqulIJZyecJGRWPE7CEDy9COzkWQXR8", oauth_signature="aPgVcIv2aiTr74Wh3sujsTBD4%2B8%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1305061358", oauth_token="afb39322-be32-4b83-83a0-7e35e18d3082", oauth_version="1.0"
-      x-li-format: 
-      - json
   response: !ruby/struct:VCR::Response 
     status: !ruby/struct:VCR::ResponseStatus 
       code: 200
@@ -21,7 +15,7 @@
       server: 
       - Apache-Coyote/1.1
       date: 
-      - Tue, 10 May 2011 21:02:40 GMT
+      - Mon, 30 May 2011 19:38:26 GMT
       x-li-format: 
       - json
       vary: 
@@ -30,7 +24,7 @@
       - chunked
     body: |-
       {
-        "numResults": 905,
+        "numResults": 962,
         "people": {
           "values": [
             {
@@ -44,12 +38,22 @@
               "firstName": "Ivan"
             },
             {
+              "id": "ZrSoErJWcC",
+              "lastName": "Private",
+              "firstName": ""
+            },
+            {
               "id": "k-wxkgFDYL",
               "lastName": "Private",
               "firstName": ""
             },
             {
               "id": "xT-OdnpncE",
+              "lastName": "Private",
+              "firstName": ""
+            },
+            {
+              "id": "cPANxsayPK",
               "lastName": "Private",
               "firstName": ""
             },
@@ -64,11 +68,6 @@
               "firstName": "Stephen"
             },
             {
-              "id": "cPANxsayPK",
-              "lastName": "Private",
-              "firstName": ""
-            },
-            {
               "id": "SbMT09zllx",
               "lastName": "L.",
               "firstName": "Rodolfo"
@@ -77,11 +76,6 @@
               "id": "GrH-5d4mH1",
               "lastName": "Barnaba",
               "firstName": "Marcello"
-            },
-            {
-              "id": "pdzrGpyP0h",
-              "lastName": "C.",
-              "firstName": "Pablo"
             }
           ],
           "_count": 10,

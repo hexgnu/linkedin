@@ -2,6 +2,7 @@ require 'linked_in/helpers/request'
 require 'linked_in/helpers/authorization'
 require 'linked_in/api/query_methods'
 require 'linked_in/api/update_methods'
+require 'linked_in/api/company_methods'
 require 'linked_in/search'
 
 require 'cgi'
@@ -13,6 +14,7 @@ module LinkedIn
     include Helpers::Authorization
     include Api::QueryMethods
     include Api::UpdateMethods
+    include Api::CompanyMethods
     include Search
 
     attr_reader :consumer_token, :consumer_secret, :consumer_options

@@ -1,0 +1,68 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.linkedin.com:443/v1/companies/162479:(id,name,universal-name,email-domains,logo-url,industry)
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/json;charset=UTF-8
+      server: 
+      - Apache-Coyote/1.1
+      date: 
+      - Mon, 30 May 2011 19:38:21 GMT
+      x-li-format: 
+      - json
+      vary: 
+      - x-li-format,Accept-Encoding
+      transfer-encoding: 
+      - chunked
+    body: |-
+      {
+        "universalName": "apple-inc",
+        "id": 162479,
+        "name": "Apple Inc.",
+        "emailDomains": {
+          "values": [
+            "asia.apple.com",
+            "research.apple.com",
+            "topcall3.corp.apple.com",
+            "newton.apple.com",
+            "lists.apple.com",
+            "solutions.apple.com",
+            "apple.com",
+            "appplelink.apple.com",
+            "msgate.corp.apple.com",
+            "taurus.apple.com",
+            "services.apple.com",
+            "aruba.apple.com",
+            "applelink.apple.com",
+            "qmgate.corp.apple.com",
+            "msgate.apple.com",
+            "applelindk.apple.com",
+            "applink.apple.com",
+            "applenews.lists.apple.com",
+            "applelinl.apple.com",
+            "powertalk.apple.com",
+            "euromailer.lists.apple.com",
+            "pico.apple.com",
+            "online.apple.com",
+            "list.seminars.apple.com",
+            "aoce.austin.apple.com",
+            "austin.apple.com",
+            "mail.apple.com",
+            "atg.apple.com",
+            "group.apple.com",
+            "euro.apple.com"
+          ],
+          "_total": 30
+        },
+        "logoUrl": "http://media.linkedin.com/mpr/mpr/p/2/000/082/2e6/39570d2.png",
+        "industry": "Computer Hardware"
+      }
+    http_version: "1.1"

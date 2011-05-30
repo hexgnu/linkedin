@@ -34,23 +34,6 @@ module LinkedIn
         value
       end
       
-      def field_selector(fields)
-        result = ":("
-        fields.to_a.map! do |field|
-          if field.is_a?(Hash)
-            innerFields = []
-            field.each do |key, value|
-              innerFields << key.to_s.gsub("_","-") + field_selector(value)
-            end
-            innerFields.join(',')
-          else
-            field.to_s.gsub("_","-")
-          end
-        end
-        result += fields.join(',')
-        result += ")"
-        result
-      end
   end
 
 end

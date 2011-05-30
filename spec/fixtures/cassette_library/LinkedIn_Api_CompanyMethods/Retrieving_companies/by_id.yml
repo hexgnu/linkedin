@@ -2,7 +2,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://api.linkedin.com:443/v1/people-search?first-name=Giliardi&last-name=Pires
+    uri: https://api.linkedin.com:443/v1/companies/162479
     body: 
     headers: 
   response: !ruby/struct:VCR::Response 
@@ -15,7 +15,7 @@
       server: 
       - Apache-Coyote/1.1
       date: 
-      - Mon, 30 May 2011 19:38:33 GMT
+      - Mon, 30 May 2011 19:38:19 GMT
       x-li-format: 
       - json
       vary: 
@@ -24,14 +24,7 @@
       - chunked
     body: |-
       {
-        "numResults": 1,
-        "people": {
-          "values": [{
-            "id": "YkdnFl04s_",
-            "lastName": "Pires",
-            "firstName": "Giliardi"
-          }],
-          "_total": 1
-        }
+        "id": 162479,
+        "name": "Apple Inc."
       }
     http_version: "1.1"
