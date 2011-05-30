@@ -26,7 +26,7 @@ describe LinkedIn::Api::CompanyMethods do
       
       it "should get a valid company" do
         result.id.should == 162479
-        result.name == 'Apple Inc.'
+        result.name.should == 'Apple Inc.'
       end
     end
     
@@ -39,11 +39,11 @@ describe LinkedIn::Api::CompanyMethods do
       
       it "should get a valid company" do
         result.id.should == 162479
-        result.name == 'Apple Inc.'
-        result.universal_name == 'apple-inc'
-        result.industry == 'Computer Hardware'
-        result.logo_url == 'http://media.linkedin.com/mpr/mpr/p/2/000/082/2e6/39570d2.png'
-        result.email_domains.all.size == 30
+        result.name.should == 'Apple Inc.'
+        result.universal_name.should == 'apple-inc'
+        result.industry.should == 'Computer Hardware'
+        result.logo_url.should == 'http://media.linkedin.com/mpr/mpr/p/2/000/082/2e6/39570d2.png'
+        result.email_domains.all.size.should == 30
       end
     end
     
@@ -56,7 +56,7 @@ describe LinkedIn::Api::CompanyMethods do
       
       it "should get a valid company" do
         result.id.should == 162479
-        result.name == 'Apple Inc.'
+        result.name.should == 'Apple Inc.'
       end
     end
     
@@ -69,10 +69,45 @@ describe LinkedIn::Api::CompanyMethods do
       
       it "should get a valid list of companies" do
         results.all.size.should == 2
-        results.all.first.id == 162479
-        results.all.first.name == 'Apple Inc.'
-        results.all.last.id == 1276
-        results.all.last.name == 'Apple Retail'
+        results.all.first.id.should == 162479
+        results.all.first.name.should == 'Apple Inc.'
+        results.all.last.id.should == 1276
+        results.all.last.name.should == 'Apple Retail'
+      end
+    end
+    
+  end
+  
+  context "Searching for companies" do
+    
+    describe "by keyword" do
+      use_vcr_cassette :record => :new_episodes
+      
+      let(:result) do
+        client.company_search('Apple')
+      end
+      
+      it "should perform a search" do
+        result.companies.all.size.should == 10
+        result.companies.all.first.id.should == 162479
+        result.companies.all.first.name.should == 'Apple Inc.'
+      end
+    end
+    
+    describe "by keyword with count and fields" do
+      use_vcr_cassette :record => :new_episodes
+      
+      let(:result) do
+        client.company_search('Apple', :count => 1, :fields => [{:companies => ['id', 'name', 'universal-name', 'email-domains', 'logo-url', 'industry']}])
+      end
+      
+      it "should perform a search" do
+        result.companies.all.size.should == 1
+        result.companies.all.first.name.should == 'Apple Inc.'
+        result.companies.all.first.universal_name.should == 'apple-inc'
+        result.companies.all.first.industry.should == 'Computer Hardware'
+        result.companies.all.first.logo_url.should == 'http://media.linkedin.com/mpr/mpr/p/2/000/082/2e6/39570d2.png'
+        result.companies.all.first.email_domains.all.size.should == 30
       end
     end
     

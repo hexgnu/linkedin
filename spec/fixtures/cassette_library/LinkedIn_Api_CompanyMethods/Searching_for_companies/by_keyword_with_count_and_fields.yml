@@ -1,0 +1,73 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.linkedin.com:443/v1/company-search:(companies:(id,name,universal-name,email-domains,logo-url,industry))?count=1&keywords=Apple
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/json;charset=UTF-8
+      server: 
+      - Apache-Coyote/1.1
+      date: 
+      - Mon, 30 May 2011 23:23:18 GMT
+      x-li-format: 
+      - json
+      vary: 
+      - x-li-format,Accept-Encoding
+      transfer-encoding: 
+      - chunked
+    body: |-
+      {"companies": {
+        "values": [{
+          "universalName": "apple-inc",
+          "id": 162479,
+          "name": "Apple Inc.",
+          "emailDomains": {
+            "values": [
+              "asia.apple.com",
+              "research.apple.com",
+              "topcall3.corp.apple.com",
+              "newton.apple.com",
+              "lists.apple.com",
+              "solutions.apple.com",
+              "apple.com",
+              "appplelink.apple.com",
+              "msgate.corp.apple.com",
+              "taurus.apple.com",
+              "services.apple.com",
+              "aruba.apple.com",
+              "applelink.apple.com",
+              "qmgate.corp.apple.com",
+              "msgate.apple.com",
+              "applelindk.apple.com",
+              "applink.apple.com",
+              "applenews.lists.apple.com",
+              "applelinl.apple.com",
+              "powertalk.apple.com",
+              "euromailer.lists.apple.com",
+              "pico.apple.com",
+              "online.apple.com",
+              "list.seminars.apple.com",
+              "aoce.austin.apple.com",
+              "austin.apple.com",
+              "mail.apple.com",
+              "atg.apple.com",
+              "group.apple.com",
+              "euro.apple.com"
+            ],
+            "_total": 30
+          },
+          "logoUrl": "http://media.linkedin.com/mpr/mpr/p/2/000/082/2e6/39570d2.png",
+          "industry": "Computer Hardware"
+        }],
+        "_count": 1,
+        "_start": 0,
+        "_total": 4523
+      }}
+    http_version: "1.1"

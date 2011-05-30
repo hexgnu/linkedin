@@ -1,0 +1,148 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.linkedin.com:443/v1/company-search?keywords=Apple
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/json;charset=UTF-8
+      server: 
+      - Apache-Coyote/1.1
+      date: 
+      - Mon, 30 May 2011 23:22:55 GMT
+      x-li-format: 
+      - json
+      vary: 
+      - x-li-format,Accept-Encoding
+      transfer-encoding: 
+      - chunked
+    body: |-
+      {
+        "facets": {
+          "values": [{
+            "buckets": {
+              "values": [
+                {
+                  "selected": false,
+                  "count": 1556,
+                  "name": "United States",
+                  "code": "us:0"
+                },
+                {
+                  "selected": false,
+                  "count": 404,
+                  "name": "United Kingdom",
+                  "code": "gb:0"
+                },
+                {
+                  "selected": false,
+                  "count": 203,
+                  "name": "San Francisco Bay Area",
+                  "code": "us:84"
+                },
+                {
+                  "selected": false,
+                  "count": 182,
+                  "name": "Netherlands",
+                  "code": "nl:0"
+                },
+                {
+                  "selected": false,
+                  "count": 180,
+                  "name": "Greater New York City Area",
+                  "code": "us:70"
+                },
+                {
+                  "selected": false,
+                  "count": 165,
+                  "name": "Canada",
+                  "code": "ca:0"
+                },
+                {
+                  "selected": false,
+                  "count": 106,
+                  "name": "Greater Los Angeles Area",
+                  "code": "us:49"
+                },
+                {
+                  "selected": false,
+                  "count": 96,
+                  "name": "London, United Kingdom",
+                  "code": "gb:4573"
+                },
+                {
+                  "selected": false,
+                  "count": 95,
+                  "name": "Australia",
+                  "code": "au:0"
+                },
+                {
+                  "selected": false,
+                  "count": 91,
+                  "name": "India",
+                  "code": "in:0"
+                }
+              ],
+              "_total": 10
+            },
+            "name": "Location",
+            "code": "location"
+          }],
+          "_total": 1
+        },
+        "numResults": 4523,
+        "companies": {
+          "values": [
+            {
+              "id": 162479,
+              "name": "Apple Inc."
+            },
+            {
+              "id": 1276,
+              "name": "Apple Retail"
+            },
+            {
+              "id": 1373,
+              "name": "Xerox"
+            },
+            {
+              "id": 19271,
+              "name": "Apple Vacations"
+            },
+            {
+              "id": 163801,
+              "name": "FileMaker"
+            },
+            {
+              "id": 772044,
+              "name": "Stone Apple Solutions"
+            },
+            {
+              "id": 88452,
+              "name": "Apple REIT Companies"
+            },
+            {
+              "id": 112136,
+              "name": "Apple & Associates"
+            },
+            {
+              "id": 21482,
+              "name": "GHA Technologies"
+            },
+            {
+              "id": 165158,
+              "name": "Netflix"
+            }
+          ],
+          "_count": 10,
+          "_start": 0,
+          "_total": 4523
+        }
+      }
+    http_version: "1.1"

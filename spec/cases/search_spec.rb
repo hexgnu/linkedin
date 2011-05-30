@@ -93,8 +93,8 @@ describe LinkedIn::Search do
         results.people.all.first.first_name.should == 'Giliardi'
         results.people.all.first.last_name.should == 'Pires'
         results.people.all.first.id.should == 'YkdnFl04s_'
-        results.people.all.first.picture_url == 'http://media.linkedin.com/mpr/mprx/0_Oz05kn9xkWziAEOUKtOVkqzjXd8Clf7UyqIVkqchR2NtmwZRt1fWoN_aobhg-HmB09jUwPLKrAhU'
-        results.people.all.first.public_profile_url == 'http://www.linkedin.com/in/gibanet'
+        results.people.all.first.picture_url.should == 'http://media.linkedin.com/mpr/mprx/0_Oz05kn9xkWziAEOUKtOVkqzjXd8Clf7UyqIVkqchR2NtmwZRt1fWoN_aobhg-HmB09jUwPLKrAhU'
+        results.people.all.first.public_profile_url.should == 'http://www.linkedin.com/in/gibanet'
       end
     end
     
