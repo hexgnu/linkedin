@@ -56,12 +56,12 @@ describe LinkedIn::Search do
       
       it "should perform a search" do
         results.people.all.size.should == 5
-        results.people.all.first.first_name.should == 'Stephen'
-        results.people.all.first.last_name.should == 'M.'
-        results.people.all.first.id.should == 'z2XMcxa_dR'
-        results.people.all.last.first_name.should == 'Pablo'
-        results.people.all.last.last_name.should == 'C.'
-        results.people.all.last.id.should == 'pdzrGpyP0h'
+        results.people.all.first.should respond_to(:first_name)
+        results.people.all.first.should respond_to(:last_name)
+        results.people.all.first.should respond_to(:id)
+        results.people.all.last.should respond_to(:first_name)
+        results.people.all.last.should respond_to(:last_name)
+        results.people.all.last.should respond_to(:id)
       end
     end
     
