@@ -1,0 +1,27 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.linkedin.com:443/v1/people-search?keywords=jos%C3%A9
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/json;charset=UTF-8
+      server: 
+      - Apache-Coyote/1.1
+      date: 
+      - Thu, 09 Jun 2011 15:30:18 GMT
+      x-li-format: 
+      - json
+      vary: 
+      - x-li-format,Accept-Encoding
+      transfer-encoding: 
+      - chunked
+    body: "{\n  \"numResults\": 605349,\n  \"people\": {\n    \"values\": [\n      {\n        \"id\": \"8SdLYrOM7u\",\n        \"lastName\": \"Ramalho\",\n        \"firstName\": \"Jose\"\n      },\n      {\n        \"id\": \"qKqmauqRu8\",\n        \"lastName\": \"Alvarez V\xC3\xA1zquez\",\n        \"firstName\": \"Jos\xC3\xA9\"\n      },\n      {\n        \"id\": \"6YWynOGxRJ\",\n        \"lastName\": \"Prado\",\n        \"firstName\": \"Jose\"\n      },\n      {\n        \"id\": \"HgFSwBtkAw\",\n        \"lastName\": \"Pacheco\",\n        \"firstName\": \"Jos\xC3\xA9 Henrique\"\n      },\n      {\n        \"id\": \"nuJwNG5Hkg\",\n        \"lastName\": \"Queiroz\",\n        \"firstName\": \"Jos\xC3\xA9\"\n      },\n      {\n        \"id\": \"O6CdHmzIMQ\",\n        \"lastName\": \"Cardarelli\",\n        \"firstName\": \"Jos\xC3\xA9 Roberto\"\n      },\n      {\n        \"id\": \"3ZS0PjMk59\",\n        \"lastName\": \"Palazzo M. de Oliveira\",\n        \"firstName\": \"Jos\xC3\xA9\"\n      },\n      {\n        \"id\": \"Uvz04XMPUA\",\n        \"lastName\": \"Carvalho\",\n        \"firstName\": \"Jos\xC3\xA9 Oscar Fontanini\"\n      },\n      {\n        \"id\": \"b2gFVUcJ2e\",\n        \"lastName\": \"de Souza Lima\",\n        \"firstName\": \"Jose Mario\"\n      },\n      {\n        \"id\": \"wRr525rL-3\",\n        \"lastName\": \"Furtado\",\n        \"firstName\": \"Jose Antonio\"\n      }\n    ],\n    \"_count\": 10,\n    \"_start\": 0,\n    \"_total\": 110\n  }\n\
+      }"
+    http_version: "1.1"

@@ -15,7 +15,7 @@
       server: 
       - Apache-Coyote/1.1
       date: 
-      - Mon, 30 May 2011 23:23:30 GMT
+      - Thu, 09 Jun 2011 15:30:24 GMT
       x-li-format: 
       - json
       vary: 
@@ -24,7 +24,7 @@
       - chunked
     body: |-
       {
-        "numResults": 5620,
+        "numResults": 5836,
         "people": {
           "values": [
             {

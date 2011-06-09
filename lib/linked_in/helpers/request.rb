@@ -100,7 +100,7 @@ module LinkedIn
 
         def sanatize_value(value)
           value = value.join("+") if value.is_a?(Array)
-          value = value.gsub(" ", "+") if value.is_a?(String)
+          value = CGI.escape(value.to_s) if value.respond_to?(:to_s)
           value
         end
     end

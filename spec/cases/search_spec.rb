@@ -26,9 +26,9 @@ describe LinkedIn::Search do
       
       it "should perform a search" do
         results.people.all.size.should == 10
-        results.people.all.first.first_name.should == 'Giliardi'
-        results.people.all.first.last_name.should == 'Pires'
-        results.people.all.first.id.should == 'YkdnFl04s_'
+        results.people.all.first.should respond_to(:first_name)
+        results.people.all.first.should respond_to(:last_name)
+        results.people.all.first.should respond_to(:id)
       end
     end
     
@@ -41,9 +41,24 @@ describe LinkedIn::Search do
       
       it "should perform a search" do
         results.people.all.size.should == 10
-        results.people.all.first.first_name.should == 'Giliardi'
-        results.people.all.first.last_name.should == 'Pires'
-        results.people.all.first.id.should == 'YkdnFl04s_'
+        results.people.all.first.should respond_to(:first_name)
+        results.people.all.first.should respond_to(:last_name)
+        results.people.all.first.should respond_to(:id)
+      end
+    end
+    
+    describe "by single keywords option (escape need)" do
+      use_vcr_cassette :record => :new_episodes
+      
+      let(:results) do
+        client.search(:keywords => 'josé')
+      end
+      
+      it "should perform a search" do
+        results.people.all.size.should == 10
+        results.people.all.first.should respond_to(:first_name)
+        results.people.all.first.should respond_to(:last_name)
+        results.people.all.first.should respond_to(:id)
       end
     end
     
@@ -107,9 +122,9 @@ describe LinkedIn::Search do
       
       it "should perform a search" do
         results.people.all.size.should == 10
-        results.people.all.first.first_name.should == 'Donald'
-        results.people.all.first.last_name.should == 'Denker'
-        results.people.all.first.id.should == 'VQcsz5Hp_h'
+        results.people.all.first.should respond_to(:first_name)
+        results.people.all.first.should respond_to(:last_name)
+        results.people.all.first.should respond_to(:id)
       end
     end
     

@@ -60,6 +60,19 @@ describe LinkedIn::Api::CompanyMethods do
       end
     end
     
+    describe "by universal name (escape need)" do
+      use_vcr_cassette :record => :new_episodes
+      
+      let(:result) do
+        client.company(:universal_name => 'barnes-&-noble')
+      end
+      
+      it "should get a valid company" do
+        result.id.should == 4417
+        result.name.should == 'Barnes & Noble'
+      end
+    end
+    
     describe "by email domain" do
       use_vcr_cassette :record => :new_episodes
       
@@ -91,6 +104,20 @@ describe LinkedIn::Api::CompanyMethods do
         result.companies.all.size.should == 10
         result.companies.all.first.id.should == 162479
         result.companies.all.first.name.should == 'Apple Inc.'
+      end
+    end
+    
+    describe "by keyword (escape need)" do
+      use_vcr_cassette :record => :new_episodes
+      
+      let(:result) do
+        client.company_search('Ci&T')
+      end
+      
+      it "should perform a search" do
+        result.companies.all.size.should == 2
+        result.companies.all.first.id.should == 203563
+        result.companies.all.first.name.should == 'Ci&T'
       end
     end
     

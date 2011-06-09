@@ -15,7 +15,7 @@
       server: 
       - Apache-Coyote/1.1
       date: 
-      - Mon, 30 May 2011 23:22:55 GMT
+      - Thu, 09 Jun 2011 15:30:09 GMT
       x-li-format: 
       - json
       vary: 
@@ -30,13 +30,13 @@
               "values": [
                 {
                   "selected": false,
-                  "count": 1556,
+                  "count": 1565,
                   "name": "United States",
                   "code": "us:0"
                 },
                 {
                   "selected": false,
-                  "count": 404,
+                  "count": 405,
                   "name": "United Kingdom",
                   "code": "gb:0"
                 },
@@ -48,7 +48,7 @@
                 },
                 {
                   "selected": false,
-                  "count": 182,
+                  "count": 183,
                   "name": "Netherlands",
                   "code": "nl:0"
                 },
@@ -73,18 +73,18 @@
                 {
                   "selected": false,
                   "count": 96,
-                  "name": "London, United Kingdom",
-                  "code": "gb:4573"
-                },
-                {
-                  "selected": false,
-                  "count": 95,
                   "name": "Australia",
                   "code": "au:0"
                 },
                 {
                   "selected": false,
-                  "count": 91,
+                  "count": 96,
+                  "name": "London, United Kingdom",
+                  "code": "gb:4573"
+                },
+                {
+                  "selected": false,
+                  "count": 93,
                   "name": "India",
                   "code": "in:0"
                 }
@@ -96,7 +96,7 @@
           }],
           "_total": 1
         },
-        "numResults": 4523,
+        "numResults": 4562,
         "companies": {
           "values": [
             {
@@ -142,7 +142,7 @@
           ],
           "_count": 10,
           "_start": 0,
-          "_total": 4523
+          "_total": 4562
         }
       }
     http_version: "1.1"

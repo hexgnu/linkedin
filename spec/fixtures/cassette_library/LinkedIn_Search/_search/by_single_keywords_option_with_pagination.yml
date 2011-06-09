@@ -15,7 +15,7 @@
       server: 
       - Apache-Coyote/1.1
       date: 
-      - Mon, 30 May 2011 23:23:25 GMT
+      - Thu, 09 Jun 2011 15:30:20 GMT
       x-li-format: 
       - json
       vary: 
@@ -24,9 +24,14 @@
       - chunked
     body: |-
       {
-        "numResults": 962,
+        "numResults": 993,
         "people": {
           "values": [
+            {
+              "id": "xT-OdnpncE",
+              "lastName": "Private",
+              "firstName": ""
+            },
             {
               "id": "cPANxsayPK",
               "lastName": "Private",
@@ -41,11 +46,6 @@
               "id": "z2XMcxa_dR",
               "lastName": "M.",
               "firstName": "Stephen"
-            },
-            {
-              "id": "SbMT09zllx",
-              "lastName": "L.",
-              "firstName": "Rodolfo"
             },
             {
               "id": "GrH-5d4mH1",

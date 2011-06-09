@@ -17,13 +17,13 @@ module LinkedIn
         
         # retrieve companies by email domain
         if options[:email_domain]
-          path = path.chomp('/') + "?email-domain=#{options[:email_domain]}"
+          path = path.chomp('/') + "?email-domain=#{sanatize_value(options[:email_domain])}"
         else
           # retrieve company by id or universal name identification
           if options[:id]
             path += options[:id]
           elsif options[:universal_name]
-            path += "universal-name=#{options[:universal_name]}"
+            path += "universal-name=#{sanatize_value(options[:universal_name])}"
           end
           # define fields to retrieve 
           path += field_selector(options[:fields]) if options[:fields]

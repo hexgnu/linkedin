@@ -1,0 +1,27 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.linkedin.com:443/v1/company-search?keywords=Ci%26T
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/json;charset=UTF-8
+      server: 
+      - Apache-Coyote/1.1
+      date: 
+      - Thu, 09 Jun 2011 15:30:11 GMT
+      x-li-format: 
+      - json
+      vary: 
+      - x-li-format,Accept-Encoding
+      transfer-encoding: 
+      - chunked
+    body: "{\n  \"facets\": {\n    \"values\": [{\n      \"buckets\": {\n        \"values\": [\n          {\n            \"selected\": false,\n            \"count\": 2,\n            \"name\": \"Japan\",\n            \"code\": \"jp:0\"\n          },\n          {\n            \"selected\": false,\n            \"count\": 1,\n            \"name\": \"Brazil\",\n            \"code\": \"br:0\"\n          },\n          {\n            \"selected\": false,\n            \"count\": 1,\n            \"name\": \"Vila Velha Area, Brazil\",\n            \"code\": \"br:6029\"\n          },\n          {\n            \"selected\": false,\n            \"count\": 1,\n            \"name\": \"Campinas Area, Brazil\",\n            \"code\": \"br:6104\"\n          },\n          {\n            \"selected\": false,\n            \"count\": 1,\n            \"name\": \"Belo Horizonte Area, Brazil\",\n            \"code\": \"br:6156\"\n          },\n          {\n            \"selected\": false,\n            \"count\": 1,\n            \"name\": \"S\xC3\xA3o Paulo Area, Brazil\",\n            \"code\": \"br:6368\"\n          },\n          {\n            \"selected\": false,\n            \"count\": 1,\n            \"name\": \"China\",\n            \"code\": \"cn:0\"\n          },\n          {\n            \"selected\": false,\n            \"count\": 1,\n            \"name\": \"United States\",\n            \"code\": \"us:0\"\n          },\n          {\n            \"selected\": false,\n            \"count\": 1,\n            \"name\": \"Greater Philadelphia Area\",\n            \"code\": \"us:77\"\n          }\n        ],\n        \"_total\": 9\n      },\n      \"name\": \"Location\",\n      \"code\": \"location\"\n    }],\n    \"_total\": 1\n  },\n  \"numResults\": 2,\n  \"companies\": {\n    \"values\": [\n      {\n        \"id\": 203563,\n        \"name\": \"Ci&T\"\n      },\n      {\n        \"id\": 974977,\n        \"name\": \"Rococo Co., Ltd.\"\n      }\n    ],\n    \"_total\": 2\n  }\n\
+      }"
+    http_version: "1.1"
