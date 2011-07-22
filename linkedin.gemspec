@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'yajl-ruby', '~> 0.8.2'
 
   gem.add_runtime_dependency 'hashie',        '~> 1.0.0'
-  gem.add_runtime_dependency 'multi_json',    '~> 1.0.0'
+  gem.add_runtime_dependency 'multi_json',    '~> 1.0.3'
   gem.add_runtime_dependency 'oauth',         '~> 0.4.0'
 
   gem.authors = ["Wynn Netherland", "Josh Kalderimis"]
