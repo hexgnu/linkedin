@@ -2,7 +2,7 @@
 require File.expand_path('../lib/linked_in/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.add_development_dependency 'rake',      '~> 0.8.7'
+  gem.add_development_dependency 'rake',      '~> 0.9.2'
   gem.add_development_dependency 'rspec',     '~> 2.4.0'
   gem.add_development_dependency 'vcr',       '~> 1.6.0'
   gem.add_development_dependency 'webmock',   '~> 1.6.0'
