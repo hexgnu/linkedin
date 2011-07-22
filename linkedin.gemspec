@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
 
   gem.add_runtime_dependency 'hashie',        '~> 1.0.0'
   gem.add_runtime_dependency 'multi_json',    '~> 1.0.3'
-  gem.add_runtime_dependency 'oauth',         '~> 0.4.0'
+  gem.add_runtime_dependency 'oauth',         '~> 0.4.5'
 
   gem.authors = ["Wynn Netherland", "Josh Kalderimis"]
   gem.description = %q{Ruby wrapper for the LinkedIn API}
