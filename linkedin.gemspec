@@ -2,13 +2,13 @@
 require File.expand_path('../lib/linked_in/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.add_development_dependency 'rake',      '~> 0.9.2'
+  gem.add_development_dependency 'rake',      '~> 0.9'
   gem.add_development_dependency 'rdoc',      '~> 3.8'
-  gem.add_development_dependency 'rspec',     '~> 2.6.0'
-  gem.add_development_dependency 'simplecov', '~> 0.4.2'
-  gem.add_development_dependency 'vcr',       '~> 1.10.2'
-  gem.add_development_dependency 'webmock',   '~> 1.6.4'
-  gem.add_development_dependency 'yajl-ruby', '~> 0.8.2'
+  gem.add_development_dependency 'rspec',     '~> 2.6'
+  gem.add_development_dependency 'simplecov', '~> 0.4'
+  gem.add_development_dependency 'vcr',       '~> 1.10'
+  gem.add_development_dependency 'webmock',   '~> 1.6'
+  gem.add_development_dependency 'yajl-ruby', '~> 0.8'
 
   gem.add_runtime_dependency 'hashie',        '~> 1.0.0'
   gem.add_runtime_dependency 'multi_json',    '~> 1.0.3'
