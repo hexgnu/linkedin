@@ -1,9 +1,3 @@
-require 'linked_in/helpers/request'
-require 'linked_in/helpers/authorization'
-require 'linked_in/api/query_methods'
-require 'linked_in/api/update_methods'
-require 'linked_in/search'
-
 require 'cgi'
 
 module LinkedIn

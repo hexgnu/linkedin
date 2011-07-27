@@ -18,12 +18,12 @@ module LinkedIn
       def format_options_for_query(opts)
         opts.inject({}) do |list, kv|
           key, value = kv.first.to_s.gsub("_","-"), kv.last
-          list[key]  = sanatize_value(value)
+          list[key]  = sanitize_value(value)
           list
         end
       end
 
-      def sanatize_value(value)
+      def sanitize_value(value)
         value = value.join("+") if value.is_a?(Array)
         value = value.gsub(" ", "+") if value.is_a?(String)
         value
