@@ -13,8 +13,8 @@ module LinkedIn
   class UnauthorizedError      < LinkedInError; end
   class GeneralError           < LinkedInError; end
 
-  class UnavailableError    < StandardError; end
-  class InformLinkedInError < StandardError; end
-  class NotFoundError       < StandardError; end
+  class UnavailableError       < StandardError; end
+  class InformLinkedInError    < StandardError; end
+  class NotFoundError          < StandardError; end
 
 end
