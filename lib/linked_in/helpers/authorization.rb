@@ -7,8 +7,8 @@ module LinkedIn
         :request_token_path => "/uas/oauth/requestToken",
         :access_token_path  => "/uas/oauth/accessToken",
         :authorize_path     => "/uas/oauth/authorize",
-        :api_host  => 'https://api.linkedin.com',
-        :auth_host => 'https://www.linkedin.com'
+        :api_host           => "https://api.linkedin.com",
+        :auth_host          => "https://www.linkedin.com"
       }
 
       def consumer
