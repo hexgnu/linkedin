@@ -41,6 +41,10 @@ LinkedIn's API uses Oauth for authentication. Luckily, the LinkedIn gem hides mo
     # get the profile for the authenticated user
     client.profile
 
+    # get the profile Job History
+    LinkedIn.default_profile_fields = ['positions']
+    client.positions
+
     # get a profile for someone found in network via ID
     client.profile(:id => 'gNma67_AdI')
 
