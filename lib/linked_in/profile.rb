@@ -66,6 +66,10 @@ module LinkedIn
       @current_share ||= CurrentShare.new(@doc.xpath('//current-share'))
     end
 
+    def certifications
+      @certifications ||= Certification.new(@doc.xpath('//certifications')).certifications
+    end
+
     def languages
       @languages ||= Languages.new(@doc.xpath('//languages')).languages
     end
