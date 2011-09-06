@@ -11,7 +11,7 @@ task :default => :spec
 
 require 'rdoc/task'
 require File.expand_path('../lib/linked_in/version', __FILE__)
-Rake::RDocTask.new do |rdoc|
+RDoc::Task.new do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title = "linkedin #{LinkedIn::VERSION::STRING}"
   rdoc.rdoc_files.include('README*')
