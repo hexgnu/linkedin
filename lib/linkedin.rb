@@ -1,4 +1,6 @@
 require 'oauth'
+require 'linked_in/client'
+require 'linked_in/errors'
 
 module LinkedIn
 
@@ -22,11 +24,4 @@ module LinkedIn
     end
   end
 
-  autoload :Api,     "linked_in/api"
-  autoload :Client,  "linked_in/client"
-  autoload :Mash,    "linked_in/mash"
-  autoload :Errors,  "linked_in/errors"
-  autoload :Helpers, "linked_in/helpers"
-  autoload :Search,  "linked_in/search"
-  autoload :Version, "linked_in/version"
 end

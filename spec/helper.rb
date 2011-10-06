@@ -5,26 +5,59 @@ SimpleCov.start
 require 'linkedin'
 require 'rspec'
 require 'webmock/rspec'
-require 'vcr'
 
-VCR.config do |c|
-  c.cassette_library_dir     = 'spec/fixtures/cassette_library'
-  c.stub_with                :webmock
-  c.ignore_localhost         = true
-  c.default_cassette_options = { :record => :none }
+def a_delete(url)
+  a_request(:delete, linkedin_url(url))
 end
 
-RSpec.configure do |c|
-  c.extend VCR::RSpec::Macros
+def a_get(url)
+  a_request(:get, linkedin_url(url))
+end
+
+def a_patch(url)
+  a_request(:patch, linkedin_url(url))
+end
+
+def a_post(url)
+  a_request(:post, linkedin_url(url))
+end
+
+def a_put(url)
+  a_request(:put, linkedin_url(url))
+end
+
+def stub_delete(url)
+  stub_request(:delete, linkedin_url(url))
+end
+
+def stub_get(url)
+  stub_request(:get, linkedin_url(url))
+end
+
+def stub_patch(url)
+  stub_request(:patch, linkedin_url(url))
+end
+
+def stub_post(url)
+  stub_request(:post, linkedin_url(url))
+end
+
+def stub_put(url)
+  stub_request(:put, linkedin_url(url))
+end
+
+def fixture_path
+  File.expand_path("../fixtures", __FILE__)
+end
+
+def fixture(file)
+  File.new(fixture_path + '/' + file)
 end
 
 def linkedin_url(url)
-  url =~ /^http/ ? url : "https://api.linkedin.com#{url}"
-end
-
-def expect_post(url, body, result = nil)
-  a_request(:post, linkedin_url(url)).with({
-    :body => fixture(body).read,
-    :headers => { :content_type => 'application/xml' }
-  }).should have_been_made.once
+  if url =~ /^http/
+    url
+  else
+    "http://api.linkedin.com#{url}"
+  end
 end
