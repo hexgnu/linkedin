@@ -11,7 +11,8 @@ module LinkedIn
       merged_options = faraday_options.merge({
         :headers => {
           'Accept' => "application/#{format}",
-          'User-Agent' => user_agent
+          'User-Agent' => user_agent,
+          'x-li-format' => 'json'
         },
         :proxy => proxy,
         :ssl => {:verify => false},
