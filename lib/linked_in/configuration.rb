@@ -28,7 +28,7 @@ module LinkedIn
 
     # The endpoint that will be used to connect if none is set
     #
-    DEFAULT_ENDPOINT = 'https://api.linkedin.com/'.freeze
+    DEFAULT_ENDPOINT = 'https://api.linkedin.com/v1'.freeze
 
     # The response format appended to the path and sent in the 'Accept' header if none is set
     #

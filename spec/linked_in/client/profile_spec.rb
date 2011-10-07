@@ -8,7 +8,7 @@ describe LinkedIn::Client::Profile do
 
   describe ".profile" do
     it "should return the basic profile for the current user" do
-      stub_get("https://api.linkedin.com/v1/people/~").
+      stub_get("/people/~").
         to_return(:body => fixture("basic.json"))
       profile = @client.profile
       profile.firstName.should == "Ryan"
