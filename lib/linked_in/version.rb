@@ -1,11 +1,4 @@
 module LinkedIn
-
-  module VERSION #:nodoc:
-    MAJOR = 0
-    MINOR = 3
-    PATCH = 2
-    PRE   = nil
-    STRING = [MAJOR, MINOR, PATCH, PRE].compact.join('.')
-  end
-
+  #The version of the gem
+  VERSION = '4.0.0'.freeze unless defined?(::LinkedIn::VERSION)
 end

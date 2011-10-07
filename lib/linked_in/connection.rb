@@ -19,7 +19,6 @@ module LinkedIn
       })
 
       Faraday.new(merged_options) do |builder|
-        puts authentication
         builder.use Faraday::Request::OAuth, authentication if authenticated?
         builder.use Faraday::Request::UrlEncoded
         builder.use Faraday::Response::Mashify
