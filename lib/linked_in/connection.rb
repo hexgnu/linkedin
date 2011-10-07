@@ -1,23 +1,30 @@
+require 'faraday'
 require 'faraday_middleware'
+require 'faraday/oauth'
 
 module LinkedIn
   # @private
   module Connection
     private
 
-    def connection
-      options = {
+    def connection(options={})
+      merged_options = faraday_options.merge({
+        :headers => {
+          'Accept' => "application/#{format}",
+          'User-Agent' => user_agent
+        },
         :proxy => proxy,
-        :ssl => { :verify => false },
-        :url => 'http://www.linkedin.com/',
-      }
+        :ssl => {:verify => false},
+        :url => options.fetch(:endpoint, api_endpoint)
+      })
 
-      connection = Faraday.new(options) do |builder|
-          builder.use Faraday::Request::JSON
-          builder.use Faraday::Request::UrlEncoded
-          builder.use Faraday::Response::Mashify
-          builder.use Faraday::Response::ParseJson
-          builder.adapter(Faraday.default_adapter)
+      Faraday.new(merged_options) do |builder|
+        puts authentication
+        builder.use Faraday::Request::OAuth, authentication if authenticated?
+        builder.use Faraday::Request::UrlEncoded
+        builder.use Faraday::Response::Mashify
+        builder.use Faraday::Response::ParseJson
+        builder.adapter(adapter)
       end
     end
   end

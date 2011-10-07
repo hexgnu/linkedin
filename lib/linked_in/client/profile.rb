@@ -2,8 +2,8 @@ module LinkedIn
   class Client
     module Profile
 
-      def profile(options)
-        get("/v1/people/~")
+      def profile
+        get("/v1/people/~?format=json")
       end
     end
   end

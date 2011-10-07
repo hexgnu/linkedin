@@ -1,4 +1,4 @@
-require 'oauth'
+require 'linked_in/api'
 require 'linked_in/configuration'
 require 'linked_in/client'
 require 'linked_in/errors'
@@ -6,21 +6,21 @@ require 'linked_in/errors'
 module LinkedIn
   extend Configuration
   class << self
-    attr_accessor :token, :secret, :default_profile_fields
-
-    # config/initializers/linkedin.rb (for instance)
+    # Alias for LinkedIn::Client.new
     #
-    # LinkedIn.configure do |config|
-    #   config.token = 'consumer_token'
-    #   config.secret = 'consumer_secret'
-    #   config.default_profile_fields = ['education', 'positions']
-    # end
-    #
-    # elsewhere
-    #
-    # client = LinkedIn::Client.new
-    def new(token, secret, options={})
+    # @return [LinkedIn::Client]
+    def new(options={})
       LinkedIn::Client.new(options)
+    end
+
+    # Delegate to LinkedIn::Client
+    def method_missing(method, *args, &block)
+      return super unless new.respond_to?(method)
+      new.send(method, *args, &block)
+    end
+
+    def respond_to?(method, include_private = false)
+      new.respond_to?(method, include_private) || super(method, include_private)
     end
   end
 
