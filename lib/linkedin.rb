@@ -1,9 +1,10 @@
 require 'oauth'
+require 'linked_in/configuration'
 require 'linked_in/client'
 require 'linked_in/errors'
 
 module LinkedIn
-
+  extend Configuration
   class << self
     attr_accessor :token, :secret, :default_profile_fields
 
@@ -18,9 +19,8 @@ module LinkedIn
     # elsewhere
     #
     # client = LinkedIn::Client.new
-    def configure
-      yield self
-      true
+    def new(token, secret, options={})
+      LinkedIn::Client.new(options)
     end
   end
 

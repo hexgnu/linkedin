@@ -1,43 +1,26 @@
 module LinkedIn
-  # Defines HTTP request methods
   module Request
-    # Perform an HTTP GET request
-    def get(path, params={}, options={})
-      request(:get, path, params, options)
+    def get(path, options={})
+      request(:get, path, options)
     end
 
-    def post(path, params={}, options={})
-      request(:post, path, params, options)
-    end
-
-    # Perform an HTTP PUT request
-    def put(path, params={}, options={})
-      request(:put, path, params, options)
-    end
-
-    # Perform an HTTP DELETE request
-    def delete(path, params={}, options={})
-      request(:delete, path, params, options)
+    def post(path, options={})
+      request(:post, path, options)
     end
 
     private
 
-    # Perform an HTTP request
-    def request(method, path, params, options)
-      response = connection(options).send(method) do |request|
-        case method.to_sym
-        when :get, :delete
-          request.url(formatted_path(path, options), params)
-        when :post, :put
-          request.path = formatted_path(path, options)
-          request.body = params unless params.empty?
-        end
+    def request(method, path, options)
+      response = connection.send(method) do |request|
+        case method
+          when :get
+            request.url(path, options)
+          when :post
+            request.path = path
+            request.body = options unless options.empty?
+          end
       end
-      options[:raw] ? response : response.body
-    end
-
-    def formatted_path(path, options={})
-      [path, options.fetch(:format, format)].compact.join('.')
+      response.body
     end
   end
 end
