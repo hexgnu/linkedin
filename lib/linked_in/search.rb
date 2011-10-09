@@ -7,8 +7,8 @@ module LinkedIn
 
       options = { :keywords => options } if options.is_a?(String)
 			fields = options.delete :fields
-      if !fields.nil?
-        path +=":(#{fields.map{ |f| f.to_s.gsub("_","-") }.join(',')})"
+      if !fields.nil? && fields.any?
+        path +=":(people:(#{fields.map{ |f| f.to_s.gsub("_","-") }.join(',')}),num-results)"
       end
       options = format_options_for_query(options)
 
