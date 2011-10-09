@@ -12,24 +12,28 @@ module LinkedIn
       protected
 
         def get(path, options={})
+        	ActiveRecord::Base.logger.debug "LinkedIn::GET #{API_PATH}#{path}"
           response = access_token.get("#{API_PATH}#{path}", DEFAULT_HEADERS.merge(options))
           raise_errors(response)
           response.body
         end
 
         def post(path, body='', options={})
+        	ActiveRecord::Base.logger.debug "LinkedIn::POST #{API_PATH}#{path}"
           response = access_token.post("#{API_PATH}#{path}", body, DEFAULT_HEADERS.merge(options))
           raise_errors(response)
           response
         end
 
         def put(path, body, options={})
+        	ActiveRecord::Base.logger.debug "LinkedIn::PUT #{API_PATH}#{path}"
           response = access_token.put("#{API_PATH}#{path}", body, DEFAULT_HEADERS.merge(options))
           raise_errors(response)
           response
         end
 
         def delete(path, options={})
+        	ActiveRecord::Base.logger.debug "LinkedIn::DELETE #{API_PATH}#{path}"
           response = access_token.delete("#{API_PATH}#{path}", DEFAULT_HEADERS.merge(options))
           raise_errors(response)
           response
