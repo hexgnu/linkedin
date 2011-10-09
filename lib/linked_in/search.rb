@@ -6,6 +6,10 @@ module LinkedIn
       path = "/people-search"
 
       options = { :keywords => options } if options.is_a?(String)
+			fields = options.delete :fields
+      if !fields.nil?
+        path +=":(#{fields.map{ |f| f.to_s.gsub("_","-") }.join(',')})"
+      end
       options = format_options_for_query(options)
 
       result_json = get(to_uri(path, options))
