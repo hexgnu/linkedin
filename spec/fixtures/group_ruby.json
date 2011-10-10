@@ -1,0 +1,157 @@
+{
+  "allowMemberInvites": true,
+  "category": {"code": "network"},
+  "countsByCategory": {
+    "_total": 2,
+    "values": [
+      {
+        "category": {"code": "discussion"},
+        "count": 0
+      },
+      {
+        "category": {"code": "job"},
+        "count": 0
+      }
+    ]
+  },
+  "description": "Ruby is a dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.\r\n\r\nThis group exists to help Ruby programmers network with each other. Job postings will be deleted.",
+  "id": "120725",
+  "isOpenToNonMembers": true,
+  "largeLogoUrl": "http://media.linkedin.com/mpr/mpr/p/3/000/00c/1d4/1f051cb.gif",
+  "locale": "en_US",
+  "name": "Rubyists",
+  "posts": {
+    "_count": 10,
+    "_start": 0,
+    "_total": 201,
+    "values": [
+      {
+        "creator": {
+          "firstName": "Jeff",
+          "headline": "A vaguely funny recruiter, I help create relationships that enhance careers and the bottom line.",
+          "id": "8KLSCmnF_l",
+          "lastName": "W.",
+          "pictureUrl": "http://media.linkedin.com/mpr/mprx/0_iqpxyYG1M9tV03zC3vRhyj3pU-cn1CzCT1Hhyj-GkciQ26GG7-2P-gQ2vyBWK5qmGcOTPsh_tbc3"
+        },
+        "id": "g-120725-S-74432131",
+        "title": "Google Cloud SQL: your database in the cloud",
+        "type": {"code": "standard"}
+      },
+      {
+        "id": "g-120725-N-824263884",
+        "title": "Plans for 1.8.7",
+        "type": {"code": "news"}
+      },
+      {
+        "creator": {
+          "firstName": "Jeff",
+          "headline": "A vaguely funny recruiter, I help create relationships that enhance careers and the bottom line.",
+          "id": "8KLSCmnF_l",
+          "lastName": "W.",
+          "pictureUrl": "http://media.linkedin.com/mpr/mprx/0_iqpxyYG1M9tV03zC3vRhyj3pU-cn1CzCT1Hhyj-GkciQ26GG7-2P-gQ2vyBWK5qmGcOTPsh_tbc3"
+        },
+        "id": "g-120725-S-74307208",
+        "title": "Rails 3.1.1.rc3 has been released. as of about 2am today.",
+        "type": {"code": "standard"}
+      },
+      {
+        "creator": {
+          "firstName": "Jeff",
+          "headline": "A vaguely funny recruiter, I help create relationships that enhance careers and the bottom line.",
+          "id": "8KLSCmnF_l",
+          "lastName": "W.",
+          "pictureUrl": "http://media.linkedin.com/mpr/mprx/0_iqpxyYG1M9tV03zC3vRhyj3pU-cn1CzCT1Hhyj-GkciQ26GG7-2P-gQ2vyBWK5qmGcOTPsh_tbc3"
+        },
+        "id": "g-120725-S-74265390",
+        "title": "Justify Your Choice of Ruby on Rails: Articles and Links",
+        "type": {"code": "standard"}
+      },
+      {
+        "creator": {
+          "firstName": "Vito",
+          "headline": "Uk Lead Developer at OnApp",
+          "id": "oYEHPbFKkI",
+          "lastName": "B.",
+          "pictureUrl": "http://media.linkedin.com/mpr/mprx/0_Ol4nOBhio9i7jaq2O9d5Oq9fonLaxSX2yK2dOq61zPAO8d1utBHsKNtjX45ApELh0tVeAP4AggSJ"
+        },
+        "id": "g-120725-S-74132486",
+        "title": "Rest in peace, Steve",
+        "type": {"code": "standard"}
+      },
+      {
+        "creator": {
+          "firstName": "Angappan",
+          "headline": "Seo Specialist at Anubavam",
+          "id": "GJJrsJWsfL",
+          "lastName": "G.",
+          "pictureUrl": "http://media.linkedin.com/mpr/mprx/0_yq555BzuSdk7jR7My9QV5qBaTW_8xZ7MO1lV5zqxYuBK8pZJr-vWIv8l7FixpxmvgcbUEtQepPIM"
+        },
+        "id": "g-120725-S-73034581",
+        "title": "Ruby on rails development guide",
+        "type": {"code": "standard"}
+      },
+      {
+        "creator": {
+          "firstName": "Anna",
+          "headline": "Talent Acquisition Professional  at Ainstainer Group",
+          "id": "mgO_cbjYS7",
+          "lastName": "O.",
+          "pictureUrl": "http://media.linkedin.com/mpr/mprx/0_itf3qV_uB3QVK6gp_qpYqZiYzQis-5SpTrRYqZG2o_cED3sy7N0Ds4nGRH_5lCurGlD0R0pUHJw4"
+        },
+        "id": "g-120725-S-72535993",
+        "title": "October,5-th Kharkov Ruby Meetup",
+        "type": {"code": "standard"}
+      },
+      {
+        "creator": {
+          "firstName": "Iryna",
+          "headline": "Business Development Manager at Svitla Systems, Inc.",
+          "id": "YPJJklHOTm",
+          "lastName": "A.",
+          "pictureUrl": "http://media.linkedin.com/mpr/mprx/0_FJCU17hzDzVv_MBtLZre12lvfPgzTV9t54nX12tErnWLYY3-w0tBgu6k3jjoGjcY6V85pwhMn1B7"
+        },
+        "id": "g-120725-S-72170321",
+        "title": "Upcoming Ruby conferences",
+        "type": {"code": "standard"}
+      },
+      {
+        "creator": {
+          "firstName": "Kazuhiro",
+          "headline": "Domestic Mission Coordinator at Fukuoka Prefecture",
+          "id": "NWfJkMe5PR",
+          "lastName": "K.",
+          "pictureUrl": "http://media.linkedin.com/mpr/mprx/0_5R4EH7Pnkoub2HOQL4IMHD856uZBaSOQFM2zHDrnJWubAdd6djHQQSkZHG4eSE0Ek4VNFEC_Zl4w"
+        },
+        "id": "g-120725-S-71961776",
+        "title": "Upcoming Ruby Programming Competitions",
+        "type": {"code": "standard"}
+      },
+      {
+        "creator": {
+          "firstName": "Robin",
+          "headline": "Techvestor. Providing Technology Investment for Startups in Cloud and Mobile space.",
+          "id": "_Ve5PrYz68",
+          "lastName": "P.",
+          "pictureUrl": "http://media.linkedin.com/mpr/mprx/0_wM8zEmXsa7O5usZkwUloEDvBawUk8JekdRNEE2cHAm7NxgxXFxKJXu_6hLRUiOWeEsCI5w5ElvVx"
+        },
+        "id": "g-120725-S-70995336",
+        "title": "Unofficial Ruby coding style guide",
+        "type": {"code": "standard"}
+      }
+    ]
+  },
+  "relationToViewer": {
+    "availableActions": {
+      "_total": 2,
+      "values": [
+        {"code": "leave"},
+        {"code": "view-posts"}
+      ]
+    },
+    "membershipState": {"code": "awaiting-confirmation"}
+  },
+  "shortDescription": "Ruby is a dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.\r\n\r\nThis group exists to help Ruby programmers network with each other. Job postings will be deleted.",
+  "siteGroupUrl": "http://www.linkedin.com/groups?gid=120725&trk=api*a133056*s141444*",
+  "smallLogoUrl": "http://media.linkedin.com/mpr/mpr/p/2/000/00b/05d/070c891.gif",
+  "websiteUrl": "http://www.ruby-lang.org/"
+}
