@@ -2,11 +2,37 @@ module LinkedIn
   class Client
     module Profile
 
-      def profile(options={})
-        response = get(person_path(options), options)
+     def profile(options={})
+        path = person_path(options)
+        simple_query(path, options)
+      end
+
+      def connections(options={})
+        path = "#{person_path(options)}/connections"
+        simple_query(path, options)
+      end
+
+      def network_updates(options={})
+        path = "#{person_path(options)}/network/updates"
+        simple_query(path, options)
       end
 
       private
+
+        def simple_query(path, options={})
+          #fields = options[:fields] || LinkedIn.default_profile_fields
+
+          fields = options[:fields]
+
+          if options[:public]
+            path +=":public"
+          elsif fields
+            path +=":(#{fields.map{ |f| f.to_s.gsub("_","-") }.join(',')})"
+          end
+
+          get(path)
+        end
+
         def person_path(options)
           path = "people/"
           if options[:id]
