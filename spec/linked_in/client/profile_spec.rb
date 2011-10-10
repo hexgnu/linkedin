@@ -20,7 +20,7 @@ describe LinkedIn::Client::Profile do
       stub_get("/people/~/connections").
         to_return(:body => fixture("connections.json"))
       connections = @client.connections
-      connections.values.last.first.firstName.should == "Matt"
+      connections._total.should == 3
     end
   end
 
@@ -29,7 +29,7 @@ describe LinkedIn::Client::Profile do
       stub_get("/people/~/network/updates").
         to_return(:body => fixture("network_updates.json"))
       network_updates = @client.network_updates
-      network_updates.values.last.first.updateContent.person.currentStatus.should == "Ruby is Awesome"
+      network_updates._count.should == 10
     end
   end
 
