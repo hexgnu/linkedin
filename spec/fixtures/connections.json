@@ -1,0 +1,73 @@
+{
+  "_total": 3,
+  "values": [
+    {
+      "apiStandardProfileRequest": {
+        "headers": {
+          "_total": 1,
+          "values": [{
+            "name": "x-li-auth-token",
+            "value": "name:uEOm"
+          }]
+        },
+        "url": "http://api.linkedin.com/v1/people/bt8MwQmZDG"
+      },
+      "firstName": "Matt",
+      "headline": "Fellow at Code for America",
+      "id": "bt8MwQmZDG",
+      "industry": "Internet",
+      "lastName": "Lewis",
+      "location": {
+        "country": {"code": "us"},
+        "name": "San Francisco Bay Area"
+      },
+      "siteStandardProfileRequest": {"url": "http://www.linkedin.com/profile?viewProfile=&key=70795972&authToken=uEOm&authType=name&trk=api*a133056*s141444*"}
+    },
+    {
+      "apiStandardProfileRequest": {
+        "headers": {
+          "_total": 1,
+          "values": [{
+            "name": "x-li-auth-token",
+            "value": "name:LwdT"
+          }]
+        },
+        "url": "http://api.linkedin.com/v1/people/6uYxBZSMFh"
+      },
+      "firstName": "Erik",
+      "headline": "Fellow at Code for America",
+      "id": "6uYxBZSMFh",
+      "industry": "Internet",
+      "lastName": "Michaels-Ober",
+      "location": {
+        "country": {"code": "us"},
+        "name": "San Francisco Bay Area"
+      },
+      "pictureUrl": "http://media.linkedin.com/mpr/mprx/0_HAcsUHv2DGDZtxZue1v5UEnG73eHYpZuEriLUw6AKXy4TZ72kcFnzIt0T7HcjRM8d-zkN2ZtMMqX",
+      "siteStandardProfileRequest": {"url": "http://www.linkedin.com/profile?viewProfile=&key=62215200&authToken=LwdT&authType=name&trk=api*a133056*s141444*"}
+    },
+    {
+      "apiStandardProfileRequest": {
+        "headers": {
+          "_total": 1,
+          "values": [{
+            "name": "x-li-auth-token",
+            "value": "name:2fgV"
+          }]
+        },
+        "url": "http://api.linkedin.com/v1/people/SN6168LZHW"
+      },
+      "firstName": "Tyler",
+      "headline": "Fellow at Code for America",
+      "id": "SN6168LZHW",
+      "industry": "Information Technology and Services",
+      "lastName": "Stalder",
+      "location": {
+        "country": {"code": "us"},
+        "name": "San Francisco Bay Area"
+      },
+      "pictureUrl": "http://media.linkedin.com/mpr/mprx/0_I3FrdoaDgSxeVvMHIQ97deoSxWoWZ9WHWh17dWWj8uOMbtYebFcpbdj1lFEnRAeXoGLa6aUw0nHz",
+      "siteStandardProfileRequest": {"url": "http://www.linkedin.com/profile?viewProfile=&key=13783843&authToken=2fgV&authType=name&trk=api*a133056*s141444*"}
+    }
+  ]
+}
