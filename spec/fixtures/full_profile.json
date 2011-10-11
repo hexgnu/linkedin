@@ -1,0 +1,125 @@
+{
+  "firstName": "Ryan",
+  "headline": "Fellow at Code for America",
+  "lastName": "Resella",
+  "siteStandardProfileRequest": {"url": "http://www.linkedin.com/profile?viewProfile=&key=abc123&authToken=xyz&authType=name&trk=api*"},
+ "dateOfBirth": {
+    "day": 17,
+    "month": 12,
+    "year": 1987
+  },
+  "educations": {
+    "_total": 2,
+    "values": [
+      {
+        "activities": "",
+        "degree": "Masters",
+        "endDate": {"year": 2010},
+        "fieldOfStudy": "Public Administration",
+        "id": 54676090,
+        "notes": "",
+        "schoolName": "California State University-Northridge",
+        "startDate": {"year": 2008}
+      },
+      {
+        "activities": "Computer club",
+        "degree": "BS",
+        "endDate": {"year": 2006},
+        "fieldOfStudy": "Computer Science",
+        "id": 7781028,
+        "notes": "Computers",
+        "schoolName": "California State University-Northridge",
+        "startDate": {"year": 1999}
+      }
+    ]
+  },
+  "phoneNumbers": {
+    "_total": 1,
+    "values": [{
+      "phoneNumber": "415-555-5555",
+      "phoneType": "mobile"
+    }]
+  },
+  "pictureUrl": "http://media.linkedin.com/mpr/mprx/0_-ev3kz2Er7LOolgRrfnOknxwKE3tH-SRKoTYkBg977zCcnsUYm5Docd4YXTSwzuc1wB0wr_Cxt1q",
+  "positions": {
+    "_total": 2,
+    "values": [
+      {
+        "company": {
+          "id": 660862,
+          "industry": "Internet",
+          "name": "Code for America",
+          "type": "Nonprofit"
+        },
+        "id": 158612282,
+        "isCurrent": true,
+        "startDate": {
+          "month": 1,
+          "year": 2011
+        },
+        "summary": "Inaugural class of 2011 Code for America Fellows\n\n",
+        "title": "Fellow"
+      },
+      {
+        "company": {
+          "id": 30493,
+          "industry": "Government Administration",
+          "name": "City of Santa Clarita",
+          "type": "Government Agency"
+        },
+        "endDate": {
+          "month": 12,
+          "year": 2010
+        },
+        "id": 139152118,
+        "isCurrent": false,
+        "startDate": {
+          "month": 9,
+          "year": 2005
+        },
+        "summary": "Made government software",
+        "title": "Senior Information Technology Analyst"
+      }
+    ]
+  },
+  "skills": {
+    "_total": 3,
+    "values": [
+      {
+        "id": 3,
+        "skill": {"name": "Ruby on Rails"}
+      },
+      {
+        "id": 4,
+        "skill": {"name": "ESRI"}
+      },
+      {
+        "id": 15,
+        "skill": {"name": "GIS"}
+      }
+    ]
+  },
+  "languages": {
+    "_total": 2,
+    "values": [
+    {
+      "id": 23,
+      "language": {"name": "English"}
+    },
+    {
+      "id": 24,
+      "language": {"name": "Klingon"}
+    }
+    ]
+  },
+  "certifications": {
+    "_total": 1,
+    "values": [
+    {
+      "id": 32,
+      "certification": {"name": "Series 7 Exam"}
+    }
+    ]
+  },
+  "summary": "I like Ruby"
+}
