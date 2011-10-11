@@ -11,7 +11,7 @@ describe LinkedIn::Client::Profile do
       stub_get("/people/~").
         to_return(:body => fixture("basic.json"))
       profile = @client.profile
-      profile.firstName.should == "Ryan"
+      profile.first_name.should == "Ryan"
     end
 
     it "should return the users educations when passing a field" do
@@ -29,6 +29,12 @@ describe LinkedIn::Client::Profile do
       profile.positions._total.should == 2
     end
 
+    it "should return the profile for a connection" do
+      stub_get("/people/id=123").
+        to_return(:body => fixture("matt_lewis.json"))
+      profile = @client.profile(:id => "123")
+      profile.first_name.should == "Matt"
+    end
 
   end
 
