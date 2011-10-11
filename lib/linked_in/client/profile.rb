@@ -35,11 +35,6 @@ module LinkedIn
       end
 
 
-      def network_updates(options={})
-        path = "#{person_path(options)}/network/updates"
-        simple_query(path, options)
-      end
-
       private
 
         def simple_query(path, options={})
