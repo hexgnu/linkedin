@@ -8,6 +8,7 @@ module LinkedIn
       :adapter,
       :consumer_key,
       :consumer_secret,
+      :default_profile_fields,
       :endpoint,
       :format,
       :gateway,
@@ -41,6 +42,9 @@ module LinkedIn
     # By default, don't set a user oauth secret
     DEFAULT_OAUTH_TOKEN_SECRET = nil
 
+    # By default, don't set any profile fields
+    DEFAULT_PROFILE_FIELDS = nil
+
     # By default, don't use a proxy server
     DEFAULT_PROXY = nil
 
@@ -73,17 +77,18 @@ module LinkedIn
 
     # Reset all configuration options to defaults
     def reset
-      self.adapter            = DEFAULT_ADAPTER
-      self.consumer_key       = DEFAULT_CONSUMER_KEY
-      self.consumer_secret    = DEFAULT_CONSUMER_SECRET
-      self.endpoint           = DEFAULT_ENDPOINT
-      self.format             = DEFAULT_FORMAT
-      self.oauth_token        = DEFAULT_OAUTH_TOKEN
-      self.oauth_token_secret = DEFAULT_OAUTH_TOKEN_SECRET
-      self.proxy              = DEFAULT_PROXY
-      self.user_agent         = DEFAULT_USER_AGENT
-      self.gateway            = DEFAULT_GATEWAY
-      self.faraday_options    = DEFAULT_FARADAY_OPTIONS
+      self.adapter                = DEFAULT_ADAPTER
+      self.consumer_key           = DEFAULT_CONSUMER_KEY
+      self.consumer_secret        = DEFAULT_CONSUMER_SECRET
+      self.default_profile_fields = DEFAULT_PROFILE_FIELDS
+      self.endpoint               = DEFAULT_ENDPOINT
+      self.format                 = DEFAULT_FORMAT
+      self.oauth_token            = DEFAULT_OAUTH_TOKEN
+      self.oauth_token_secret     = DEFAULT_OAUTH_TOKEN_SECRET
+      self.proxy                  = DEFAULT_PROXY
+      self.user_agent             = DEFAULT_USER_AGENT
+      self.gateway                = DEFAULT_GATEWAY
+      self.faraday_options        = DEFAULT_FARADAY_OPTIONS
       self
     end
   end
