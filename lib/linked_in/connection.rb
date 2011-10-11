@@ -22,6 +22,7 @@ module LinkedIn
       Faraday.new(merged_options) do |builder|
         builder.use Faraday::Request::OAuth, authentication if authenticated?
         builder.use Faraday::Request::UrlEncoded
+        builder.use Faraday::Response::Rashify
         builder.use Faraday::Response::Mashify
         builder.use Faraday::Response::ParseJson
         builder.adapter(adapter)
