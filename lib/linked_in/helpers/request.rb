@@ -13,7 +13,9 @@ module LinkedIn
 
         def get(path, options={})
         	ActiveRecord::Base.logger.debug "LinkedIn::GET #{API_PATH}#{path}"
+        	start = Time.now
           response = access_token.get("#{API_PATH}#{path}", DEFAULT_HEADERS.merge(options))
+          ActiveRecord::Base.logger.debug "Done in #{(Time.now-start).seconds}"
           raise_errors(response)
           response.body
         end
