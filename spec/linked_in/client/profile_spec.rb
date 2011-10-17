@@ -47,4 +47,13 @@ describe LinkedIn::Client::Profile do
     end
   end
 
+  describe ".search" do
+    it "should return the people search for the current users network" do
+      stub_get("/people-search").
+        to_return(:body => fixture("people_search.json"))
+      search = @client.search
+      search.people._total.should == 110
+    end
+  end
+
 end
