@@ -34,6 +34,30 @@ module LinkedIn
         simple_query(path, options)
       end
 
+      # Use the People Search API to find people using keywords, company, name, or other criteria. It returns a list of matching member profiles.
+      #
+      # @see https://developer.linkedin.com/documents/people-search-api
+      # @param options [Hash] A customizable set of options.
+      # @option options keywords [String] Keywords for anywhere in the profile.
+      # @option options first_name [String] Members with a matching first name.
+      # @option options last_name [String] Members with a matching last name.
+      # @option options company_name [String] Members who have a matching company name on their profile.
+      # @option options current_company [String] Valid values are true or false. A value of true matches members who currently work at the company specified in the company-name parameter
+      # @option options title [String] Matches members with that title on their profile.
+      # @option options current_title [String] Valid values are true or false. A value of true matches members whose title is currently the one specified in the title-name parameter.
+      # @option options school_name [String] Members who have a matching school name on their profile.
+      # @option options current_school [String] Valid values are true or false. A value of true matches members who currently attend the school specified in the school-name parameter.
+      # @option options country_code [String] Matches members with a location in a specific country. Values are defined in by ISO 3166 standard - http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements Country codes must be in all lower case.
+      # @option options postal_code [String] Matches members centered around a Postal Code.
+      # @option options distance [String] Matches members within a distance from a central point.
+      # @option options facet [String] Facet values to search over.
+      # @option options facets [String] Facet buckets to return.
+      # @option options start [String] Start location within the result set for paginated returns.
+      # @option options count [String] Ranges are specified with a starting index and a number of results to return. You may specify any number. Default and max page size is 500. Implement pagination to retrieve more than 500 connections.
+      # @option options sort [String] Controls the search result order. Options: connections, recommenders, distance, relevance.
+      # @return [Hashie::Rash]
+      # @example
+      #   client.search(:keyword => "ruby")
       def search(options={})
         path = "people-search"
 
