@@ -54,6 +54,21 @@ describe LinkedIn::Client::Profile do
       search = @client.search
       search.people._total.should == 110
     end
+
+    it "should return a search with people keyword Ruby" do
+      stub_get("/people-search?keywords=ruby").
+        to_return(:body => fixture("people_search_ruby.json"))
+      search = @client.search(:keywords => "ruby")
+      search.people._count.should == 10
+    end
+
+    it "should return a search with first and last name" do
+      stub_get("/people-search?first-name=matt&last-name=lewis").
+        to_return(:body => fixture("people_search_matt_lewis.json"))
+      search = @client.search(:first_name => "matt", :last_name => "lewis")
+      search.num_results.should == 637
+    end
+
   end
 
 end
