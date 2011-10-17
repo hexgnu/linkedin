@@ -34,6 +34,14 @@ module LinkedIn
         simple_query(path, options)
       end
 
+      def search(options={})
+        path = "people-search"
+
+        options = { :keywords => options } if options.is_a?(String)
+        options = format_options_for_query(options)
+
+        get(path,options)
+      end
 
       private
 
@@ -59,6 +67,21 @@ module LinkedIn
             path += "~"
           end
         end
+
+        def format_options_for_query(opts)
+          opts.inject({}) do |list, kv|
+            key, value = kv.first.to_s.gsub("_","-"), kv.last
+            list[key]  = sanitize_value(value)
+            list
+          end
+        end
+
+        def sanitize_value(value)
+          value = value.join("+") if value.is_a?(Array)
+          value = value.gsub(" ", "+") if value.is_a?(String)
+          value
+        end
+
     end
   end
 end
