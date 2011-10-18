@@ -4,8 +4,8 @@ module LinkedIn
 
      def company(options={})
         path = company_path(options)
-        get(path)
-      end
+        simple_query(path, options)
+     end
 
       private
 
@@ -17,8 +17,6 @@ module LinkedIn
             path += "/universal-name=#{options[:universal_name]}"
           elsif options[:email_domain]
             path += "?email-domain=#{options[:email_domain]}"
-          else
-            path
           end
         end
     end
