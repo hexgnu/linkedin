@@ -28,5 +28,13 @@ describe LinkedIn::Client::Company do
       company._total.should == 2
     end
 
+    it "should return the company with company fields passed" do
+      stub_get("/companies/660862:(id,name,ticker,description)").
+        to_return(:body => fixture("company.json"))
+      company = @client.company(:id => "660862",:fields => ['id','name','ticker','description'])
+      company.description.should == "Code For America seeks to connect talented developers within the tech industry to work directly with cities around the country to create and deploy open source solutions to make civic services more effective, efficient, and open."
+    end
+
+
   end
 end
