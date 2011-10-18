@@ -42,6 +42,12 @@ describe LinkedIn::Client::Company do
       following._total.should == 2
     end
 
+    it "should return a list of suggested companies for a user to follow" do
+      stub_get("/people/~/suggestions/to-follow/companies").
+        to_return(:body => fixture("suggested_companies.json"))
+      suggested = @client.suggested_companies
+      suggested._count.should == 10
+    end
 
   end
 end
