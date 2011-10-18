@@ -35,6 +35,13 @@ describe LinkedIn::Client::Company do
       company.description.should == "Code For America seeks to connect talented developers within the tech industry to work directly with cities around the country to create and deploy open source solutions to make civic services more effective, efficient, and open."
     end
 
+    it "should return the list of companies the user is following" do
+      stub_get("/people/~/following/companies").
+        to_return(:body => fixture("company_following.json"))
+      following = @client.following_companies
+      following._total.should == 2
+    end
+
 
   end
 end
