@@ -21,6 +21,12 @@ module LinkedIn
         simple_query(path, options)
       end
 
+      def following_companies(options={})
+        path = person_path(options)
+        path += "/following/companies"
+        simple_query(path, options)
+      end
+
       private
 
         def company_path(options)
