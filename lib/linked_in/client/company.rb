@@ -21,6 +21,13 @@ module LinkedIn
         simple_query(path, options)
       end
 
+      # Returns the companies that a user follows.
+      #
+      # @see https://developer.linkedin.com/documents/company-follow-and-suggestions
+      # @param options [Hash] A customizable set of options.
+      # @return [Hashie::Rash]
+      # @example
+      #   client.following_companies
       def following_companies(options={})
         path = person_path(options)
         path += "/following/companies"
