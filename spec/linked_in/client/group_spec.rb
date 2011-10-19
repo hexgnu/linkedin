@@ -11,7 +11,14 @@ describe LinkedIn::Client::Group do
       stub_get("/groups/120725").
         to_return(:body => fixture("group_ruby.json"))
       group = @client.group(120725)
-      group.name == "Rubyists"
+      group.name.should == "Rubyists"
+    end
+
+    it "should return a group when passing multiple fields" do
+      stub_get("/groups/120725:(id,name,site-group-url,posts)").
+        to_return(:body => fixture("group_ruby.json"))
+      group = @client.group(120725, :fields => ['id','name','site-group-url','posts'])
+      group.site_group_url.should == "http://www.linkedin.com/groups?gid=120725&trk=api*a133056*s141444*"
     end
   end
 end
