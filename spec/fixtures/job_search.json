@@ -1,0 +1,238 @@
+{
+  "facets": {
+    "_total": 1,
+    "values": [{
+      "buckets": {
+        "_total": 11,
+        "values": [
+          {
+            "code": "1035",
+            "count": 4652,
+            "name": "Microsoft",
+            "selected": false
+          },
+          {
+            "code": "21836",
+            "count": 2499,
+            "name": "CyberCoders",
+            "selected": false
+          },
+          {
+            "code": "1614",
+            "count": 2462,
+            "name": "SAIC",
+            "selected": false
+          },
+          {
+            "code": "1033",
+            "count": 2151,
+            "name": "Accenture",
+            "selected": false
+          },
+          {
+            "code": "1441",
+            "count": 1416,
+            "name": "Google",
+            "selected": false
+          },
+          {
+            "code": "2203697",
+            "count": 1083,
+            "name": "Experis",
+            "selected": false
+          },
+          {
+            "code": "157236",
+            "count": 667,
+            "name": "Enterprise Rent-A-Car",
+            "selected": false
+          },
+          {
+            "code": "1799",
+            "count": 660,
+            "name": "ManpowerGroup",
+            "selected": false
+          },
+          {
+            "code": "2696",
+            "count": 521,
+            "name": "Verizon Wireless",
+            "selected": false
+          },
+          {
+            "code": "1431",
+            "count": 507,
+            "name": "PepsiCo",
+            "selected": false
+          },
+          {
+            "code": "1093",
+            "count": 488,
+            "name": "Dell",
+            "selected": false
+          }
+        ]
+      },
+      "code": "company",
+      "name": "Company"
+    }]
+  },
+  "jobs": {
+    "_count": 10,
+    "_start": 0,
+    "_total": 82792,
+    "values": [
+      {
+        "company": {
+          "id": 39923,
+          "name": "dpiX"
+        },
+        "descriptionSnippet": "Position Description: Analysis, Design, Development, Deployment and Administration of MES and related software applications (Camstar-InSite/MS SQL Server/Windows Servers). Enterprise reports development and 24/7 support of the applications.   Major Responsibilities:  (List the essential functions of the job, starting with the most critical) 1.  Responsible for design, development, test, implement ",
+        "id": 2091080,
+        "jobPoster": {
+          "firstName": "Brandon",
+          "headline": "Human Resource Professional",
+          "id": "NYUoEtP2ki",
+          "lastName": "H."
+        },
+        "locationDescription": "Colorado Springs, CO "
+      },
+      {
+        "company": {
+          "id": 70082,
+          "name": "POS Portal"
+        },
+        "descriptionSnippet": "The Job... POS Portal has a wide array of Java based webapps geared towards the payment card industry (String[] webapps = new String[10];).  We are searching for a highly skilled Java web developer to join our team of superstars, and help take these sites to the next level.  That\u2019s where you come in!",
+        "id": 2091079,
+        "jobPoster": {
+          "firstName": "Sarah",
+          "headline": "Director of Human Resources at POS Portal",
+          "id": "H-C_togVck",
+          "lastName": "N."
+        },
+        "locationDescription": "Sacramento, California Area"
+      },
+      {
+        "company": {
+          "id": 660560,
+          "name": "Cotton On Group"
+        },
+        "descriptionSnippet": "Due to internal promotion and global growth we are seeking an experienced individual to be Head of our Rubi Buying Team. As the driving force behind the team you will ensure a streamlined production process and fast turnaround for this fast paced brand. Rubi is experiencing phenomenal success, this is your chance to take the lead, develop a collaborative, productive team and direct product in line",
+        "id": 2091078,
+        "jobPoster": {
+          "firstName": "Samantha",
+          "headline": "Group Recruitment Manager at Cotton On Group",
+          "id": "hYShPGnT8Q",
+          "lastName": "H."
+        },
+        "locationDescription": "Victoria"
+      },
+      {
+        "company": {
+          "id": 2203697,
+          "name": "Experis formerly Manpower Professional"
+        },
+        "descriptionSnippet": "Position Summary/Scope Work with all customers to ensure shipments are packaged and delivered timely. Offering world class customer service and logistical solutions to grow the department into a profit-making center. Essential Functions End of Lease Returns - Work directly with portfolio management to collect correct pick up information - Contact customer to discuss return process and instructions",
+        "id": 2091077,
+        "jobPoster": {
+          "firstName": "Danielle",
+          "headline": "Digital Recruiting Manager at ManpowerGroup",
+          "id": "-0LQ_5zGIs",
+          "lastName": "G."
+        },
+        "locationDescription": "Andover, Massachusetts",
+        "salary": "USD21.00 per hour"
+      },
+      {
+        "company": {
+          "id": 11424,
+          "name": "Janney Montgomery Scott"
+        },
+        "descriptionSnippet": "GFM Advisory Group, Amongst the Top Teams at Janney   This is an exciting and challenging opportunity to assist Financial Advisors in all aspects of client servicing including analyzing financial information to determine strategies for high net worth clients and prospects. The firm offers a full range of investment services designed to help affluent individuals and families preserve and enhance th",
+        "id": 2091075,
+        "jobPoster": {
+          "firstName": "Steve",
+          "headline": "Planning based Advisor at Janney Montgomery Scott",
+          "id": "jd-LviJXBe",
+          "lastName": "M."
+        },
+        "locationDescription": "West Chester Branch Office"
+      },
+      {
+        "company": {
+          "id": 39923,
+          "name": "dpiX"
+        },
+        "descriptionSnippet": "Job Description: ﻿﻿﻿﻿﻿﻿Business Analyst/Report Writer - with excellent skill sets in business process and procedures, requirements definition, MS Dynamics ERP implementations and Reporting Tools.   Major Responsibilities: Serve as core member of the internal ERP team. Serve as the lead in gathering requirements, development and delivery of critical management-level and executive-level reporting, a",
+        "id": 2091074,
+        "jobPoster": {
+          "firstName": "Brandon",
+          "headline": "Human Resource Professional",
+          "id": "NYUoEtP2ki",
+          "lastName": "H."
+        },
+        "locationDescription": "Colorado Springs, CO"
+      },
+      {
+        "company": {
+          "id": 162250,
+          "name": "AccessData"
+        },
+        "descriptionSnippet": "Summary The Sales Representative will be responsible for strengthening and further developing AccessData's presence and business in Eastern Europe and CIS Countries. This role would suit a self-motivated, results-oriented individual who is comfortable in an entrepreneurial environment; is capable of forming new and developing existing relationships with our partner as well as customer base.   Esse",
+        "id": 2091072,
+        "jobPoster": {
+          "firstName": "Erik",
+          "headline": "Technical Recruiter at AccessData",
+          "id": "fnNAnILEa7",
+          "lastName": "B."
+        },
+        "locationDescription": "Frankfurt Am Main Area, Germany"
+      },
+      {
+        "company": {
+          "id": 12650,
+          "name": "iRise"
+        },
+        "descriptionSnippet": "Are you a hands on Senior Software Developer looking for theopportunity to challenge the way things are done in software development?  Are you living in Xcode and cranking out greatObjective-C code?  Want to be in acollaborative environment which pushes out the boundaries of technology to makegroundbreaking, rapidly adopted, cool products?   We are looking for a sharp, fun, team playing Senior Sof",
+        "id": 2091071,
+        "jobPoster": {
+          "firstName": "Shawn",
+          "headline": "Strategic Advisor",
+          "id": "GNzt5hPEwF",
+          "lastName": "M."
+        },
+        "locationDescription": "Greater Los Angeles Area",
+        "salary": "DOE"
+      },
+      {
+        "company": {
+          "id": 30291,
+          "name": "Ledcor"
+        },
+        "descriptionSnippet": "Job Summary The role of the CRM Specialist is to work with the business to enhance the CRM (Customer Relations Management) program within Ledcor. The CRM Specialist will implement, maintain and modify the CRM program to align with business needs. This role may be located in Edmonton, Vancouver or Calgary.   Responsibilities   Manages the Ledcor CRM system and applies enhancements to the program wi",
+        "id": 2091070,
+        "jobPoster": {
+          "firstName": "Penelope",
+          "headline": "Recruitment Coordinator at Ledcor",
+          "id": "6H3UnUYZaP",
+          "lastName": "C."
+        },
+        "locationDescription": "This position could be located in Vancouver, Edmonton or Calgary"
+      },
+      {
+        "company": {"name": "ModusLink Global Solutions"},
+        "descriptionSnippet": "                        GENERAL MANAGER                                                                                                    GENERAL DESCRIPTION This position is responsible for directing work of senior level managers to control daily operations of the Riverside Solution Center and to establish strategic direction for the Solution Center and management team.  High level focus on fina",
+        "id": 2091068,
+        "jobPoster": {
+          "firstName": "Marjolein",
+          "headline": "Human Resource Manager at ModusLink",
+          "id": "w1YDLUmTGP",
+          "lastName": "V."
+        },
+        "locationDescription": "Riverside, UT",
+        "salary": "$120K - $130K"
+      }
+    ]
+  },
+  "numResults": 82792
+}

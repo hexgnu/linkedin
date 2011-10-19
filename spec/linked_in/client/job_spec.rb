@@ -39,4 +39,22 @@ describe LinkedIn::Client::Company do
       suggestions.jobs._total.should == 50
     end
   end
+
+  describe ".job_search" do
+    it "should return a list of jobs" do
+      stub_get("/job-search").
+        to_return(:body => fixture("job_search.json"))
+      search = @client.job_search
+      search.jobs._total.should == 82792
+    end
+
+    it "should return a list of jobs when passing a keyword" do
+      stub_get("/job-search?keywords=ruby").
+        to_return(:body => fixture("job_search_ruby.json"))
+      search = @client.job_search(:keywords => "ruby")
+      search.num_results.should == 1047
+    end
+
+  end
+
 end

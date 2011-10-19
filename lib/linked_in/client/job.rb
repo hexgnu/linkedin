@@ -43,6 +43,30 @@ module LinkedIn
         simple_query(path,options)
       end
 
+      # Searches for jobs across the Job Search API using keywords.
+      #
+      # @see https://developer.linkedin.com/documents/job-search-api
+      # @param options [Hash] A customizable set of options.
+      # @option options keyword [Hash]  Jobs that have all the keywords anywhere in their listing. Multiple words should be separated by a space.
+      # @option options company_name [Hash] Jobs with a matching company name.
+      # @option options job_title [Hash] Matches jobs with the same job title.
+      # @option options country_code [Hash] Matches jobs with a location in a specific country. Values are defined in by ISO 3166 standard. Country codes must be in all lower case.
+      # @option options postal_code [Hash] Matches jobs centered around a Postal Code.
+      # @option options distance [Hash] Matches jobs within a distance from a central point.
+      # @option options facet [Hash] Facet values to search over.
+      # @option options facets [Hash] Facet buckets to return.
+      # @option options start [Hash] Start location within the result set for paginated returns.
+      # @option options count [Hash] The number of jobs to return
+      # @option options sort [Hash] Controls the search result order.
+      # @return [Hashie::Rash]
+      # @example
+      #   client.job_search
+      #   client.job_search(:keywords => "ruby")
+      def job_search(options={})
+        path = "job-search"
+        get(path,options)
+      end
+
       private
         def job_path(id,options)
           path = "jobs/#{id}"

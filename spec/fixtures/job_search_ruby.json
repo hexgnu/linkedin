@@ -1,0 +1,239 @@
+{
+  "facets": {
+    "_total": 1,
+    "values": [{
+      "buckets": {
+        "_total": 11,
+        "values": [
+          {
+            "code": "21836",
+            "count": 212,
+            "name": "CyberCoders",
+            "selected": false
+          },
+          {
+            "code": "1337",
+            "count": 19,
+            "name": "LinkedIn",
+            "selected": false
+          },
+          {
+            "code": "1614",
+            "count": 14,
+            "name": "SAIC",
+            "selected": false
+          },
+          {
+            "code": "481652",
+            "count": 13,
+            "name": "LivingSocial",
+            "selected": false
+          },
+          {
+            "code": "1586",
+            "count": 12,
+            "name": "Amazon",
+            "selected": false
+          },
+          {
+            "code": "93902",
+            "count": 12,
+            "name": "Ooyala",
+            "selected": false
+          },
+          {
+            "code": "1441",
+            "count": 10,
+            "name": "Google",
+            "selected": false
+          },
+          {
+            "code": "5234",
+            "count": 10,
+            "name": "Rackspace Hosting",
+            "selected": false
+          },
+          {
+            "code": "96622",
+            "count": 10,
+            "name": "Twitter",
+            "selected": false
+          },
+          {
+            "code": "1025",
+            "count": 7,
+            "name": "Hewlett-Packard",
+            "selected": false
+          },
+          {
+            "code": "1035",
+            "count": 7,
+            "name": "Microsoft",
+            "selected": false
+          }
+        ]
+      },
+      "code": "company",
+      "name": "Company"
+    }]
+  },
+  "jobs": {
+    "_count": 10,
+    "_start": 0,
+    "_total": 1047,
+    "values": [
+      {
+        "company": {
+          "id": 227461,
+          "name": "GoNow"
+        },
+        "descriptionSnippet": "Queremos te conhecer!!   Qualificações Mínimas - Experiência com programação em Ruby para Web (frameworks Ruby on Rails, Sinatra) -  Experiência com desenvolvimento de aplicações Web -  Familiaridade  a desenvolver utilizando TDD e BDD, incluindo ferramentas como RSpec, Celerity, etc.   Considerações Positivas: - Contribuições em projetos open source (fornecer URL do Github) - Experiências anterio",
+        "id": 1993941,
+        "jobPoster": {
+          "firstName": "Gonow",
+          "headline": "Human Resources",
+          "id": "OorOC0TsK8",
+          "lastName": "T."
+        },
+        "locationDescription": "São Paulo e redondezas, Brasil",
+        "salary": "A negociar"
+      },
+      {
+        "company": {
+          "id": 21836,
+          "name": "CyberCoders"
+        },
+        "descriptionSnippet": "Junior Ruby Developer - Ruby Developer, RoR Developer, RoR, Ruby Junior Ruby Developer - Ruby Developer, RoR Developer, RoR, Ruby, Ruby Programmer, Ruby Engineer - Skills Required - Junior Ruby Developer, Ruby Developer, RoR Developer, RoR, Ruby, Ruby Programmer, Ruby Engineer, RoR Programmer, Ruby on Rails, RailsJunior Ruby Developer A fantastically inventive and already ridiculously popular star",
+        "id": 1960316,
+        "jobPoster": {
+          "firstName": "David",
+          "headline": "Technologist at Enigma Associates",
+          "id": "2IZGQyD3CK",
+          "lastName": "Z."
+        },
+        "locationDescription": "San Francisco ,CA"
+      },
+      {
+        "company": {
+          "id": 21836,
+          "name": "CyberCoders"
+        },
+        "descriptionSnippet": "Senior Ruby Developer - Ruby Developer, RoR Developer, RoR, Ruby Senior Ruby Developer - Ruby Developer, RoR Developer, RoR, Ruby, Ruby Programmer, Ruby Engineer - Skills Required - Senior Ruby Developer, Ruby Developer, RoR Developer, RoR, Ruby, Ruby Programmer, Ruby Engineer, RoR Programmer, Ruby on Rails, RailsSenior Ruby Developer A fantastically inventive and already ridiculously popular star",
+        "id": 1960314,
+        "jobPoster": {
+          "firstName": "David",
+          "headline": "Technologist at Enigma Associates",
+          "id": "2IZGQyD3CK",
+          "lastName": "Z."
+        },
+        "locationDescription": "San Francisco ,CA"
+      },
+      {
+        "company": {
+          "id": 21836,
+          "name": "CyberCoders"
+        },
+        "descriptionSnippet": "Ruby on Rails Developer - Ruby on Rails Programmer - Ruby Ruby on Rails Developer - Ruby on Rails Programmer - Ruby on Rails - Skills Required - Ruby on Rails, Ruby, PHP, LAMP, MySQL, SQL, JavaScript, CoffeeScriptRuby on Rails - SQL - MySQL - Ruby - RoRBased in San Francisco, CA, we are a WELL FUNDED and strongly positioned software company with specific interests within the IT industry. Due to ma",
+        "id": 1979109,
+        "jobPoster": {
+          "firstName": "David",
+          "headline": "Technologist at Enigma Associates",
+          "id": "2IZGQyD3CK",
+          "lastName": "Z."
+        },
+        "locationDescription": "San Francisco ,CA"
+      },
+      {
+        "company": {
+          "id": 21836,
+          "name": "CyberCoders"
+        },
+        "descriptionSnippet": "Ruby on Rails Developer - Ruby Programmer - ROR Developer - ROR Ruby on Rails Developer - Ruby on Rails Programmer - Ruby on Rails Engineer - Ruby Developer - Ruby - Skills Required - Ruby, ROR, LAMP, PHP, Perl, Opensource, Ruby on Rails Programmer, Ruby on Rails Developer, Ruby on Rails Engineer, Ruby Programmer, Ruby Developer, Ruby Engineer, ROR Programmer, ROR Developer, ROR Engineer, Software",
+        "id": 2002316,
+        "jobPoster": {
+          "firstName": "David",
+          "headline": "Technologist at Enigma Associates",
+          "id": "2IZGQyD3CK",
+          "lastName": "Z."
+        },
+        "locationDescription": "Beverly Hills ,CA"
+      },
+      {
+        "company": {
+          "id": 21836,
+          "name": "CyberCoders"
+        },
+        "descriptionSnippet": "Ruby on Rails Developer - Ruby Programmer - ROR Developer - ROR Ruby on Rails Developer - Ruby on Rails Programmer - Ruby on Rails Engineer - Ruby Developer - Ruby - Skills Required - Ruby, ROR, LAMP, PHP, Perl, Opensource, Ruby on Rails Programmer, Ruby on Rails Developer, Ruby on Rails Engineer, Ruby Programmer, Ruby Developer, Ruby Engineer, ROR Programmer, ROR Developer, ROR Engineer, Software",
+        "id": 1979233,
+        "jobPoster": {
+          "firstName": "David",
+          "headline": "Technologist at Enigma Associates",
+          "id": "2IZGQyD3CK",
+          "lastName": "Z."
+        },
+        "locationDescription": "Beverly Hills ,CA"
+      },
+      {
+        "company": {
+          "id": 21836,
+          "name": "CyberCoders"
+        },
+        "descriptionSnippet": "Ruby on Rails Developer - RoR Developer, Ruby Developer, Ruby Ruby on Rails Developer - RoR Developer, Ruby Developer, Ruby, Software Developer, Software Engineer - Skills Required - RoR Developer, Ruby Developer, Ruby, Ruby on Rails Developer, Software Developer, Software Engineer, Developer, Ruby on Rails, Software, ProgrammerRuby on Rails Grokstar - DHTML, CSS, Javascript, MySQL.An established ",
+        "id": 1965613,
+        "jobPoster": {
+          "firstName": "David",
+          "headline": "Technologist at Enigma Associates",
+          "id": "2IZGQyD3CK",
+          "lastName": "Z."
+        },
+        "locationDescription": "Manitou Springs ,CO"
+      },
+      {
+        "company": {
+          "id": 21836,
+          "name": "CyberCoders"
+        },
+        "descriptionSnippet": "Ruby on Rails Developer - RoR Developer, Ruby Developer, Ruby Ruby on Rails Developer - RoR Developer, Ruby Developer, Ruby, Software Developer, Software Engineer - Skills Required - RoR Developer, Ruby Developer, Ruby, Ruby on Rails Developer, Software Developer, Software Engineer, Developer, Ruby on Rails, Software, ProgrammerRuby on Rails Developer An established (client list reads like a Fortu",
+        "id": 1988045,
+        "jobPoster": {
+          "firstName": "David",
+          "headline": "Technologist at Enigma Associates",
+          "id": "2IZGQyD3CK",
+          "lastName": "Z."
+        },
+        "locationDescription": "San Francisco ,CA"
+      },
+      {
+        "company": {
+          "id": 21836,
+          "name": "CyberCoders"
+        },
+        "descriptionSnippet": "Ruby on Rails Engineer - Ruby - Rails - ROR - UI - Ruby on Rails Ruby on Rails Engineer - Software Engineer - Ruby on Rails Engineer - Well-Funded Stellar Start-Up - Skills Required - Ruby, Ruby on Rails, RoR, Rails, UI, User InterfaceRuby on Rails - RoR - Ruby - Rails - scalable - scalability - distributed computing - Hadoop - MapReduce - Lucene - Solr - Erlang - User Interface - UIIf you are a s",
+        "id": 1864676,
+        "jobPoster": {
+          "firstName": "David",
+          "headline": "Technologist at Enigma Associates",
+          "id": "2IZGQyD3CK",
+          "lastName": "Z."
+        },
+        "locationDescription": "Los Angeles ,CA"
+      },
+      {
+        "company": {
+          "id": 21836,
+          "name": "CyberCoders"
+        },
+        "descriptionSnippet": "Ruby Developer - Ruby on Rails Engineer - Website Applications Ruby Developer - Ruby on Rails Engineer - Website Applications - Skills Required - Back-End Developer, Ruby on Rails, Backend, Linux, Apache, MySQL, Database, JavaScript, jQueryGOT RUBY!! This is a great opportunity to get into an angel-backed fast growing start-up here in the Bay. If you are a strong RoR / Ruby on Rails developer.....",
+        "id": 1975042,
+        "jobPoster": {
+          "firstName": "David",
+          "headline": "Technologist at Enigma Associates",
+          "id": "2IZGQyD3CK",
+          "lastName": "Z."
+        },
+        "locationDescription": "Menlo Park ,CA"
+      }
+    ]
+  },
+  "numResults": 1047
+}
