@@ -20,20 +20,23 @@ describe LinkedIn::Client::Company do
       job = @client.job(1337, :fields => ['id','company','posting-date'])
       job.posting_date.year.should == 2005
     end
+  end
 
+  describe ".job_bookmarks" do
     it "should return the job bookmarks for the current user" do
       stub_get("/people/~/job-bookmarks").
         to_return(:body => fixture("job_bookmarks.json"))
       bookmark = @client.job_bookmarks
       bookmark._total.should == 3
     end
+  end
 
+  describe ".job_suggestions" do
     it "should return a list of suggested jobs" do
       stub_get("/people/~/suggestions/job-suggestions:(jobs)").
         to_return(:body => fixture("job_suggestions.json"))
       suggestions = @client.job_suggestions
       suggestions.jobs._total.should == 50
     end
-
   end
 end
