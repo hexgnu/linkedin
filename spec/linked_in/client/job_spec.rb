@@ -28,5 +28,12 @@ describe LinkedIn::Client::Company do
       bookmark._total.should == 3
     end
 
+    it "should return a list of suggested jobs" do
+      stub_get("/people/~/suggestions/job-suggestions:(jobs)").
+        to_return(:body => fixture("job_suggestions.json"))
+      suggestions = @client.job_suggestions
+      suggestions.jobs._total.should == 50
+    end
+
   end
 end

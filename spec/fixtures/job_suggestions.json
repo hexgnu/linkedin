@@ -1,0 +1,158 @@
+{
+  "facets": {"_total": 0},
+  "jobs": {
+    "_count": 10,
+    "_start": 0,
+    "_total": 50,
+    "values": [
+      {
+        "company": {
+          "id": 23576,
+          "name": "The New Teacher Project"
+        },
+        "descriptionSnippet": "Business Analyst \u2013 InformationTechnology Department Flexible location The New Teacher Project (TNTP) strives to endthe injustice of educational inequality by providing excellent teachers to thestudents who need them most and by advancing policies and practices that ensureeffective teaching in every classroom. A national nonprofit organizationfounded by teachers, TNTP is driven by the knowledge tha",
+        "id": 2017219,
+        "jobPoster": {
+          "firstName": "Nichole",
+          "headline": "Recruitment Manager, Human Capital at The New Teacher Project",
+          "id": "PGPIYhL0KS",
+          "lastName": "L."
+        },
+        "locationDescription": "Flexible USA Location",
+        "salary": "$70,000"
+      },
+      {
+        "company": {
+          "id": 11677,
+          "name": "NewPage Corporation"
+        },
+        "descriptionSnippet": "SUMMARY DESCRIPTION:This position primarily exists to identify, analyze and implement manufacturing application solutions to optimize the Rumford Mill Operations and achieve NewPage business goals in addition to providing support of manufacturing applications.  This includes working closely with the operational teams to optimize key processes, leveraging Information Technology focused on driving v",
+        "id": 1856734,
+        "jobPoster": {
+          "firstName": "Rich",
+          "headline": "Sr. Recruiter at NewPage",
+          "id": "q57dPK4NWm",
+          "lastName": "L."
+        },
+        "locationDescription": "Rumford, ME"
+      },
+      {
+        "company": {
+          "id": 19828,
+          "name": "Miami Children's Hospital"
+        },
+        "descriptionSnippet": "Job Summary: The Level II Clinical Systems Analyst is expected to meet or responsibilities of the Level I in addition to being able to provide expertise in problem determination, evaluation, and solution. Develops and coordinates comprehensive test plans. ** Experience with Cerner, Pathnet, Powerchart, or related experience, preferred **   Knowledge/Skills/Abilities: Ability to communicate effecti",
+        "id": 1986302,
+        "jobPoster": {
+          "firstName": "Juanita",
+          "headline": "Human Resources Professional",
+          "id": "wN59LNJCHW",
+          "lastName": "H."
+        },
+        "locationDescription": "Miami/Fort Lauderdale Area"
+      },
+      {
+        "company": {
+          "id": 458327,
+          "name": "Hinduja Global Solutions Inc.,"
+        },
+        "descriptionSnippet": "HGS is a world leader in Customer Relationship and Business Process Management.  With a global footprint and an experience of over three decades, we have helped our clients deliver exceptional results.  Our operational excellence, combined with functional expertise, has made us the \u201cPreferred Partner\u201d for most of our clients.  We deliver seamless service to some of the world\u2019s most recognized bran",
+        "id": 2025163,
+        "jobPoster": {
+          "firstName": "Debra",
+          "headline": "Office Administrator / Travel Coordinator @ HGS",
+          "id": "2jYTPr9yOm",
+          "lastName": "B."
+        },
+        "locationDescription": "Peoria, Illinois Area"
+      },
+      {
+        "company": {"name": "Rohrer Corporation"},
+        "descriptionSnippet": "Rohrer Corporation is looking to add a Senior Programmer/Analyst to their information technology staff.  This position will be based at the company's headquarters in Wadsworth, Ohio.  This position will be part of a team that develops and maintains the company's primary order management and ERP applications. Duties can include requirements gathering, writing specifications, coding, testing, docume",
+        "id": 2073907,
+        "jobPoster": {
+          "firstName": "Alane",
+          "headline": "Marketing Manager at Rohrer Corporation",
+          "id": "VOadLrDe85",
+          "lastName": "U."
+        },
+        "locationDescription": "Cleveland/Akron, Ohio Area"
+      },
+      {
+        "company": {
+          "id": 17715,
+          "name": "Verifications, Inc."
+        },
+        "descriptionSnippet": "Travel:                                      Variable Location:                                  Maple Grove     General Description:    Directs, plans and manages the company's Information Systems policies to assure the development and implementation of data processing, computer operations and related functions (communications, office systems, production activities, etc.) As an advisor to the exe",
+        "id": 2023729,
+        "jobPoster": {
+          "firstName": "Kelly",
+          "headline": "Talent Acquisition Specialist at Verifications, Inc.",
+          "id": "6kFZMkBzrR",
+          "lastName": "W."
+        },
+        "locationDescription": "Maple Grove, MN"
+      },
+      {
+        "company": {
+          "id": 3032,
+          "name": "Ameriprise Financial"
+        },
+        "descriptionSnippet": "Job DescriptionAvailable Openings: 1Job Title: Technology AnalystJob ID: 83277Location: Minneapolis, MNBusiness Unit: Service DeliveryFull/Part Time: Full-TimeEligible for Relocation: NRegular/Temporary: RegularTravel Percentage: NoneLicense:About AmeripriseYou give more, you want moreYou've worked hard and now you're looking for a career that's as rewarding as it is challenging. Ameriprise Financ",
+        "id": 2059119,
+        "jobPoster": {
+          "firstName": "Trevor",
+          "headline": "Recruiting Manager at Ameriprise Financial Services, Inc.",
+          "id": "cKsEkf3nWN",
+          "lastName": "K."
+        },
+        "locationDescription": "Minneapolis ,MN"
+      },
+      {
+        "company": {"name": "Collier County Government"},
+        "descriptionSnippet": "We are seeking a Director of Information Technology who can balance innovation with constrained resources, build consensus, collaborate with multiple departments and divisions, and be responsive to competing priorities.  The successful candidate will be equally skilled in the management of technology, resources, and relationships (with customers and vendors), forward thinking, and able to quickly ",
+        "id": 2080985,
+        "jobPoster": {
+          "firstName": "Mary",
+          "headline": "Account Manager at NAS Recruitment Communications",
+          "id": "n-FKYWsNmG",
+          "lastName": "J."
+        },
+        "locationDescription": "Naples, Florida Area",
+        "salary": "$92,597.00 - $103,000.00 Annually"
+      },
+      {
+        "company": {
+          "id": 1009,
+          "name": "IBM"
+        },
+        "descriptionSnippet": "Job descriptionEntry-level Technical Specialist positions for either Software or Hardware. During the first twelve months of this dynamic position, you will be a trainee in the Sales &amp; Distribution (S&amp;D) Summit Program. Your time as a S&amp;D Summit Program Trainee will consist of sales and technical training to enable you to match the technical capabilities of IBM offerings to client requ",
+        "id": 1879962,
+        "jobPoster": {
+          "firstName": "Michael",
+          "headline": "IBM Account Manager- Research/Internet Controls Program Manager",
+          "id": "0p0pWOc1fi",
+          "lastName": "K."
+        },
+        "locationDescription": "United States"
+      },
+      {
+        "company": {
+          "id": 136253,
+          "name": "Computer Staff"
+        },
+        "descriptionSnippet": "Information Technology Recruiter\r\n________________________________________\r\nLocation/City :   Dallas, Texas (Grapevine, Texas)\r\n________________________________________\r\nWe are looking for an Information Technology Recruiter who has proven success in their previous work history.  Ideally, candidates will possess 3 years of experience recruiting information technology professionals.  Additional tec",
+        "id": 2041248,
+        "jobPoster": {
+          "firstName": "Larry",
+          "headline": "www.ComputerStaff.com L a r r y@ComputerStaff.com, specializing in placing: C# ASP.NET C++ QA SQL Agile TDD 817-424-1411",
+          "id": "cCDYRfEudp",
+          "lastName": "B."
+        },
+        "locationDescription": "Dallas/Fort Worth Area",
+        "salary": "40,000 - 120,000 per year"
+      }
+    ]
+  },
+  "numResults": 50
+}

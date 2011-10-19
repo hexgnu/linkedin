@@ -17,9 +17,29 @@ module LinkedIn
         simple_query(path,options)
       end
 
+      # Returns a list of bookmarked jobs for the user.
+      #
+      # @see https://developer.linkedin.com/documents/job-bookmarks-and-suggestions
+      # @param options [Hash] A customizable set of options.
+      # @return [Hashie::Rash]
+      # @example
+      #   client.job_bookmarks
       def job_bookmarks(options={})
         path = person_path(options)
         path += "/job-bookmarks"
+        simple_query(path,options)
+      end
+
+      # Returns a list of suggested jobs for a user.
+      #
+      # @see https://developer.linkedin.com/documents/job-bookmarks-and-suggestions
+      # @param options [Hash] A customizable set of options.
+      # @return [Hashie::Rash]
+      # @example
+      #   client.job_suggestions
+      def job_suggestions(options={})
+        path = person_path(options)
+        path += "/suggestions/job-suggestions:(jobs)"
         simple_query(path,options)
       end
 
