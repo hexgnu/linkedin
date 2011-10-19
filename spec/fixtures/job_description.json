@@ -1,0 +1,57 @@
+{
+  "active": false,
+  "company": {"name": "Smart Connections"},
+  "description": "Description: Institutional brokerage seeks equity sales traders. Must have a minimum of three years equity sales trading and institutional execution experience. Should have an independent book of institutional agency business with strong buy-side relationships. Compensation and benefits. <br><br>Qualifications:<br>Qualifications: Should have an independent book of institutional agency business with strong buy-side relationships. <br><br>We are looking for extraordinary people with vision, self-motivation, marketing skills, and strong customer service orientation.<br><br>Biggest challenge is the ever changing business & regulatory environment.",
+  "descriptionSnippet": "Description: Institutional brokerage seeks equity sales traders. Must have a minimum of three years equity sales trading and institutional execution experience. Should have an independent book of institutional agency business with strong buy-side relationships. Compensation and benefits. \r\n\r\nQualifications:\r\nQualifications: Should have an independent book of institutional agency business with stro",
+  "expirationDate": {
+    "day": 17,
+    "month": 3,
+    "year": 2005
+  },
+  "id": 1337,
+  "jobPoster": {
+    "firstName": "Steve",
+    "headline": "B2B Sales / Digital Marketing / Tech & New Media Business Development",
+    "id": "AOd423mQoK",
+    "lastName": "T."
+  },
+  "locationDescription": "Great Neck, NY",
+  "position": {
+    "experienceLevel": {
+      "code": "4",
+      "name": "Mid-Senior level"
+    },
+    "industries": {
+      "_total": 1,
+      "values": [{
+        "code": "45",
+        "id": 45,
+        "name": "Investment Banking"
+      }]
+    },
+    "jobFunctions": {
+      "_total": 1,
+      "values": [{
+        "code": "sale",
+        "name": "Sales"
+      }]
+    },
+    "jobType": {
+      "code": "F",
+      "name": "Full-time"
+    },
+    "location": {
+      "country": {"code": "us"},
+      "name": "Greater New York City Area"
+    },
+    "title": "Institutional - Equities Sales Trader"
+  },
+  "postingDate": {
+    "day": 16,
+    "month": 1,
+    "year": 2005
+  },
+  "postingTimestamp": 1105886628000,
+  "salary": "45% net of ticket",
+  "siteJobUrl": "http://www.linkedin.com/jobs?viewJob=&jobId=1337&trk=api*a133056*s141444*"
+}
