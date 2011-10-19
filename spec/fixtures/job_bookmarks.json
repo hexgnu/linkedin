@@ -1,0 +1,40 @@
+{
+  "_count": 2,
+  "_start": 0,
+  "_total": 3,
+  "values": [
+    {
+      "applyTimestamp": 1313544366000,
+      "isApplied": true,
+      "isSaved": true,
+      "job": {
+        "active": false,
+        "company": {
+          "id": 46338,
+          "name": "City of Baltimore"
+        },
+        "descriptionSnippet": "The City of Baltimore Mayor\u2019s Office of Information Technology is seeking highly qualified, results-oriented professional to serve as Director, Innovation &amp; Application Developement in the Mayor\u2019s Office of Information Technology. The primary expectation of this role is to be innovative and drive a organization through innovative and creative transformational initiatives leveraging new and eme",
+        "id": 1848763,
+        "position": {"title": "Director of Innovation & Application Development"},
+        "postingTimestamp": 1312919109000
+      },
+      "savedTimestamp": 1313544366000
+    },
+    {
+      "isApplied": false,
+      "isSaved": true,
+      "job": {
+        "active": true,
+        "company": {
+          "id": 1337,
+          "name": "LinkedIn"
+        },
+        "descriptionSnippet": "About Software Engineering Want to work on advanced information-retrieval algorithms, massive scalability infrastructure and storage solutions, and large-scale applications for users on web and mobile devices? Apply Now! We'll review your application and consider you for all possible software engineering roles at LinkedIn. For every software engineering role, you should have extensive object-orien",
+        "id": 1827679,
+        "position": {"title": "Software Engineers"},
+        "postingTimestamp": 1312355927000
+      },
+      "savedTimestamp": 1319063948000
+    }
+  ]
+}

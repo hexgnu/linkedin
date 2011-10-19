@@ -21,5 +21,12 @@ describe LinkedIn::Client::Company do
       job.posting_date.year.should == 2005
     end
 
+    it "should return the job bookmarks for the current user" do
+      stub_get("/people/~/job-bookmarks").
+        to_return(:body => fixture("job_bookmarks.json"))
+      bookmark = @client.job_bookmarks
+      bookmark._total.should == 3
+    end
+
   end
 end

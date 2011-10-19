@@ -17,6 +17,12 @@ module LinkedIn
         simple_query(path,options)
       end
 
+      def job_bookmarks(options={})
+        path = person_path(options)
+        path += "/job-bookmarks"
+        simple_query(path,options)
+      end
+
       private
         def job_path(id,options)
           path = "jobs/#{id}"
