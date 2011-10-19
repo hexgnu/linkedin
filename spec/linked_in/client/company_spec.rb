@@ -49,5 +49,18 @@ describe LinkedIn::Client::Company do
       suggested._count.should == 10
     end
 
+    it "should return a list of procuts related to a company" do
+      stub_get("/companies/1337/products").
+        to_return(:body => fixture("company_products.json"))
+      products = @client.company_products(1337)
+      products._count.should == 5
+    end
+
+    it "should return a list of procuts related to a company when passing fields" do
+      stub_get("/companies/1337/products:(id,name,type,creation-timestamp)").
+        to_return(:body => fixture("company_products.json"))
+      products = @client.company_products(1337,:fields => ['id','name','type','creation-timestamp'])
+      products._total.should == 33
+    end
   end
 end

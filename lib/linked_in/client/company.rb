@@ -21,6 +21,22 @@ module LinkedIn
         simple_query(path, options)
       end
 
+      # Returns the products or services provided by the company..
+      #
+      # @see https://developer.linkedin.com/documents/company-products-and-recommendations
+      # @param id [Integer] Retreive a company using the Company ID
+      # @param options [Hash] A customizable set of options.
+      # @option options fields [Hash] A list of company fields
+      # @return [Hashie::Rash]
+      # @example
+      #   client.company_products(660862)
+      #   client.company_products(660862,:fields => ['id','name','ticker','description'])
+      def company_products(id, options={})
+        path = company_path(options)
+        path += "/#{id}/products"
+        simple_query(path,options)
+      end
+
       # Returns the companies that a user follows.
       #
       # @see https://developer.linkedin.com/documents/company-follow-and-suggestions
@@ -58,6 +74,7 @@ module LinkedIn
           elsif options[:email_domain]
             path += "?email-domain=#{options[:email_domain]}"
           end
+          path
         end
     end
   end

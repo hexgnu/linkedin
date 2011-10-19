@@ -1,0 +1,294 @@
+{
+  "_count": 5,
+  "_start": 0,
+  "_total": 33,
+  "values": [
+    {
+      "creationTimestamp": 1288188851297,
+      "description": "LinkedIn Content Ads offer marketers the opportunity to distribute multiple streams of dynamic, robust content in a single ad unit. From video and blogs to Twitter and RSS feeds, these unique ad units can be targeted to a unique segment of LinkedIn professionals through our enhanced targeting capabilities. Easy to execute and available in standard 300x250 and 160x600 media sizes, content ads require minimal maintenance. Marketers can build loyal followers by exposing LinkedIn members to the full spectrum of your most valuable content.Key Features include:",
+      "features": {
+        "_total": 4,
+        "values": [
+          "Engaging user experience",
+          "Dynamic and fresh content",
+          "Ease of building and maintenance",
+          "Fully targetable"
+        ]
+      },
+      "id": 1353,
+      "logoUrl": "http://media.linkedin.com/mpr/mpr/p/1/000/07b/03f/2165a65.jpg",
+      "name": "LinkedIn Content Ads",
+      "numRecommendations": 2,
+      "productCategory": {
+        "code": "INT",
+        "name": "Internet"
+      },
+      "recommendations": {
+        "_count": 2,
+        "_start": 0,
+        "values": [
+          {
+            "id": 22974,
+            "productId": 1353,
+            "recommender": {
+              "firstName": "Adele",
+              "id": "xfRC9uYrIj",
+              "lastName": "C."
+            },
+            "timestamp": 1292234549556
+          },
+          {
+            "id": 3463,
+            "productId": 1353,
+            "recommender": {
+              "firstName": "Alexandros",
+              "id": "hjx5PivK8n",
+              "lastName": "T."
+            },
+            "timestamp": 1289225062991
+          }
+        ]
+      },
+      "type": {
+        "code": "P",
+        "name": "PRODUCT"
+      },
+      "websiteUrl": "http://marketing.linkedinlabs.com/solutions/"
+    },
+    {
+      "creationTimestamp": 1288189388838,
+      "description": "LinkedIn Polls Sponsorship enable marketers to engage with professionals and gain valuable insights. The LinkedIn polls application is a market research tool that makes it easy to collect actionable data from the professional audience on LinkedIn. With instant, interactive results, marketers can align your ad message with member responses while comment functionality drives discussion and encourages sharing. Through our enhanced targeting capabilities, polls can be targeted to a specific segment of LinkedIn professionals to provide marketers with an easy, compelling way to lead conversations around topics relevant to your brand.Key Features include:",
+      "features": {
+        "_total": 5,
+        "values": [
+          "Association of  your brand with insights",
+          "Interactive way to engage with customers",
+          "Standard ad-serving technology",
+          "Dynamic ads aligned with member response",
+          "Alignment with topics relevant to brands."
+        ]
+      },
+      "id": 1355,
+      "logoUrl": "http://media.linkedin.com/mpr/mpr/p/3/000/07b/03f/2850067.jpg",
+      "name": "LinkedIn Polls Sponsorship",
+      "numRecommendations": 2,
+      "productCategory": {
+        "code": "INT",
+        "name": "Internet"
+      },
+      "recommendations": {
+        "_count": 2,
+        "_start": 0,
+        "values": [
+          {
+            "id": 27619,
+            "productId": 1355,
+            "recommender": {
+              "firstName": "James",
+              "id": "CGZfSpZGmW",
+              "lastName": "M."
+            },
+            "text": "Great Tool, with Polls Sponsorship our brands will be more dynamic .",
+            "timestamp": 1292992221392
+          },
+          {
+            "id": 8867,
+            "productId": 1355,
+            "recommender": {
+              "firstName": "Rajendra Nath",
+              "id": "qyE-HHazIt",
+              "lastName": "B."
+            },
+            "text": "It is a good product. I recommend this product. User can post a poll option should be there.",
+            "timestamp": 1289981830700
+          }
+        ]
+      },
+      "type": {
+        "code": "P",
+        "name": "PRODUCT"
+      },
+      "websiteUrl": "http://www.linkedin.com/opensocialInstallation/preview?_ch_panel_id=1&_applicationId=1900"
+    },
+    {
+      "creationTimestamp": 1288189671698,
+      "description": "LinkedIn Events Sponsorship allows marketers to reach professionals looking to stay on top of their industry. The LinkedIn Events application helps professionals search for and discover industry events related to their profession. Users can read event details, see who from their network is attending or speaking, and indicate their own attendance. By sponsoring this application, marketers have exclusive ownership of all display ads within the application, accessing on-the-go professionals looking to stay connected to their specific industry. When combined with LinkedIn's rich profile data, marketers extend reach to a well-targeted yet highly scalable segment of the LinkedIn member base.",
+      "features": {
+        "_total": 3,
+        "values": [
+          "Access to on-the-go professionals",
+          "Alignment with relevant industry events",
+          "Maximum share of voice"
+        ]
+      },
+      "id": 1358,
+      "logoUrl": "http://media.linkedin.com/mpr/mpr/p/2/000/07b/03f/2ce0c6a.jpg",
+      "name": "LinkedIn Events Sponsorship",
+      "numRecommendations": 1,
+      "productCategory": {
+        "code": "MARKET",
+        "name": "Marketing & Advertising"
+      },
+      "recommendations": {
+        "_count": 1,
+        "_start": 0,
+        "values": [{
+          "id": 99768,
+          "productId": 1358,
+          "recommender": {
+            "firstName": "Brian",
+            "id": "asMgOqqtsa",
+            "lastName": "H."
+          },
+          "text": "Nice tool. Be great if you could customize it either on the Events Home page or my Profile Home page so that I can search on areas of interests.",
+          "timestamp": 1309202304318
+        }]
+      },
+      "type": {
+        "code": "P",
+        "name": "PRODUCT"
+      },
+      "websiteUrl": "http://marketing.linkedin.com/events/"
+    },
+    {
+      "creationTimestamp": 1288276842801,
+      "description": "LinkedIn helps you be great at what you do. Over 100 million professionals use LinkedIn to create a free online profile, connect with colleagues, and discover breaking news and professional insights. Your professional network of trusted contacts gives you an advantage in your career, and is one of your most valuable assets. LinkedIn enables you to make better use of this network to help the people you trust. Use your LinkedIn profile to manage your professional identity online. Connect with current co-workers and keep in touch with classmates and former co-workers. Browse job listings to land a new position or find top candidates for your company. Research clients, business partners and companies prior to an important meeting or interview. Discuss breaking news in your industry in a small group setting or discover what your entire network is talking about. Participate in the conversation by sharing your own status updates and insights with your network. LinkedIn's mission is to connect the world's professionals to make them more productive and successful. In a global connected economy, your success as a professional and your competitiveness as a company depend upon faster access to people, insights, and resources you can trust.",
+      "features": {
+        "_total": 5,
+        "values": [
+          "Profile defining your professional identity",
+          "News and insights from stream of updates",
+          "Introductions to clients and experts",
+          "Job listings to get you the best talent",
+          "Follow companies to be in the loop"
+        ]
+      },
+      "id": 1436,
+      "logoUrl": "http://media.linkedin.com/mpr/mpr/p/1/000/07b/031/0c57ed4.jpg",
+      "name": "LinkedIn",
+      "numRecommendations": 60,
+      "productCategory": {
+        "code": "INT",
+        "name": "Internet"
+      },
+      "recommendations": {
+        "_count": 3,
+        "_start": 0,
+        "values": [
+          {
+            "id": 152544,
+            "productId": 1436,
+            "recommender": {
+              "firstName": "Britt",
+              "id": "YUYWF579H8",
+              "lastName": "T."
+            },
+            "timestamp": 1318355790355
+          },
+          {
+            "id": 149637,
+            "productId": 1436,
+            "recommender": {
+              "firstName": "Maria",
+              "id": "uafHxAISW_",
+              "lastName": "S."
+            },
+            "text": "I recommend LinkedIn for helping us to be great and better at what we do.",
+            "timestamp": 1317826410839
+          },
+          {
+            "id": 131166,
+            "productId": 1436,
+            "recommender": {
+              "firstName": "Nishad",
+              "id": "275OvD4tSq",
+              "lastName": "D."
+            },
+            "timestamp": 1314767611127
+          }
+        ]
+      },
+      "type": {
+        "code": "P",
+        "name": "PRODUCT"
+      },
+      "video": {
+        "title": "What is LinkedIn?",
+        "url": "http://www.youtube.com/v/IzT3JVUGUzM"
+      },
+      "websiteUrl": "http://www.linkedin.com"
+    },
+    {
+      "creationTimestamp": 1288276963673,
+      "description": "LinkedIn Mobile is for professionals going places.  Find and connect with over 80 million professionals, get the latest updates, and share your status - all from your mobile device.  \r\n\r\nLinkedIn\u2019s mobile solutions mean that your professional network is available anytime, anywhere.   Get the free LinkedIn application for the iPhone, Blackberry or Palm or sign-in through our mobile site, m.linkedin.com.\r\n\r\nNever walk into a meeting unprepared.  Whether it\u2019s an interview, a client meeting, or a sales pitch, now you can join any conversation knowing who you are going to meet with, and what you have in common. Type in a name or keyword and LinkedIn will get you the information you need -  whether it\u2019s 5 days or 5 minutes before your important meeting.  You can also stay informed about breaking news in your network and industry in real-time.",
+      "disclaimer": "",
+      "features": {
+        "_total": 4,
+        "values": [
+          "Connect with over 80M professionals",
+          "Get apps for the iPhone, Blackberry & Pre",
+          "For all other devices go to m.linkedin.com",
+          "Get real-time updates to stay informed"
+        ]
+      },
+      "id": 1437,
+      "logoUrl": "http://media.linkedin.com/mpr/mpr/p/3/000/07b/030/3c07d83.jpg",
+      "name": "LinkedIn Mobile",
+      "numRecommendations": 22,
+      "productCategory": {
+        "code": "INT",
+        "name": "Internet"
+      },
+      "recommendations": {
+        "_count": 3,
+        "_start": 0,
+        "values": [
+          {
+            "id": 146776,
+            "productId": 1437,
+            "recommender": {
+              "firstName": "Bettina",
+              "id": "gOGUQ5cAmu",
+              "lastName": "K."
+            },
+            "text": "The new LinkedIn mobile app for smart phones works fantastic, is super engaging and incredibly simple to use.",
+            "timestamp": 1317320615688
+          },
+          {
+            "id": 144288,
+            "productId": 1437,
+            "recommender": {
+              "firstName": "Sandy",
+              "id": "CSKgEU2taf",
+              "lastName": "R."
+            },
+            "timestamp": 1317001819423
+          },
+          {
+            "id": 143106,
+            "productId": 1437,
+            "recommender": {
+              "firstName": "Ricardo",
+              "id": "T0m-z--z1P",
+              "lastName": "G."
+            },
+            "timestamp": 1316719956670
+          }
+        ]
+      },
+      "salesPersons": {
+        "_total": 1,
+        "values": [{
+          "firstName": "Chad",
+          "id": "egU3pXA1Ry",
+          "lastName": "W."
+        }]
+      },
+      "type": {
+        "code": "P",
+        "name": "PRODUCT"
+      },
+      "websiteUrl": "http://www.linkedin.com/static?key=mobile"
+    }
+  ]
+}
