@@ -4,12 +4,15 @@ module LinkedIn
 
     def search(options={})
       path = "/people-search"
-
       options = { :keywords => options } if options.is_a?(String)
+      
+      if fields = options.delete(:fields)
+        path +=":(#{fields.map{ |f| f.to_s.gsub("_","-") }.join(',')})"
+      end
+      
       options = format_options_for_query(options)
 
       result_json = get(to_uri(path, options))
-
       Mash.from_json(result_json)
     end
 
