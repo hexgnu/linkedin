@@ -29,4 +29,25 @@ describe LinkedIn::Api do
     client.network_updates.should be_an_instance_of(LinkedIn::Mash)
   end
 
+  context "Company API" do
+    use_vcr_cassette
+
+    it "should be able to view a company profile" do 
+      stub_request(:get, "https://api.linkedin.com/v1/companies/id=1586").to_return(:body => "{}")
+      client.company(:id => 1586).should be_an_instance_of(LinkedIn::Mash)
+    end
+
+    it "should load correct company data" do
+      client.company(:id => 1586).name.should == "Amazon"
+
+      data = client.company(:id => 1586, :fields => %w{ id name industry locations:(address:(city state country-code) is-headquarters) employee-count-range })
+      data.id.should == 1586
+      data.name.should == "Amazon"
+      data.employee_count_range.name.should == "10001+"
+      data.industry.should == "Internet"
+      data.locations.all[0].address.city.should == "Seattle"
+      data.locations.all[0].is_headquarters.should == true
+    end
+  end
+
 end
