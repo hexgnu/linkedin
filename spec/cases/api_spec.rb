@@ -44,6 +44,13 @@ describe LinkedIn::Api do
     client.search(:first_name => "Javan", :fields => ["num_results", "total"]).should be_an_instance_of(LinkedIn::Mash)
   end
 
+  it "should be able to share a new status" do
+    stub_request(:post, "https://api.linkedin.com/v1/people/~/shares").to_return(:body => "", :status => 201)
+    response = client.add_share(:comment => "Testing, 1, 2, 3")
+    response.body.should == ""
+    response.code.should == "201"
+  end
+
   context "Company API" do
     use_vcr_cassette
 
