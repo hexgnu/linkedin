@@ -2,6 +2,7 @@ require 'helper'
 
 describe LinkedIn::Api do
   before do
+    LinkedIn.default_profile_fields = nil
     client.stub(:consumer).and_return(consumer)
     client.authorize_from_access('atoken', 'asecret')
   end
