@@ -7,6 +7,11 @@ module LinkedIn
         simple_query(path, options)
       end
 
+      def current_share(options={})
+        path = "#{person_path(options)}:(current-share)"
+        get(path,options)
+      end
+
     end
   end
 end
