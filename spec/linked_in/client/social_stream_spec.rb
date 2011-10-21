@@ -24,4 +24,13 @@ describe LinkedIn::Client::SocialStream do
     end
   end
 
+  describe ".network_stats" do
+    it "should return the network statistics for teh user" do
+      stub_get("/people/~/network/network-stats").
+        to_return(:body => fixture("network_stats.json"))
+      net_stats = @client.network_stats
+      net_stats._total.should == 2
+    end
+  end
+
 end
