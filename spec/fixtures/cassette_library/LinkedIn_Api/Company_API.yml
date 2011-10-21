@@ -3,7 +3,7 @@
   request: !ruby/struct:VCR::Request
     method: :get
     uri: https://api.linkedin.com:443/v1/companies/id=1586
-    body: !!null 
+    body: !!null
     headers:
       x-li-format:
       - json
@@ -37,7 +37,7 @@
   request: !ruby/struct:VCR::Request
     method: :get
     uri: https://api.linkedin.com:443/v1/companies/id=1586:(id,name,industry,locations:(address:(city,state,country-code),is-headquarters),employee-count-range)
-    body: !!null 
+    body: !!null
     headers:
       x-li-format:
       - json
@@ -66,8 +66,8 @@
       date:
       - Thu, 20 Oct 2011 16:57:24 GMT
     body: ! "{\n  \"employeeCountRange\": {\n    \"code\": \"I\",\n    \"name\": \"10001+\"\n
-      \ },\n  \"id\": 1586,\n  \"industry\": \"Internet\",\n  \"locations\": {\n    \"_total\":
+       },\n  \"id\": 1586,\n  \"industry\": \"Internet\",\n  \"locations\": {\n    \"_total\":
       1,\n    \"values\": [{\n      \"address\": {\n        \"city\": \"Seattle\",\n
-      \       \"countryCode\": \"us\",\n        \"state\": \"WA\"\n      },\n      \"isHeadquarters\":
+             \"countryCode\": \"us\",\n        \"state\": \"WA\"\n      },\n      \"isHeadquarters\":
       true\n    }]\n  },\n  \"name\": \"Amazon\"\n}"
     http_version: '1.1'
