@@ -1,0 +1,22 @@
+{"currentShare": {
+  "author": {
+    "firstName": "Ryan",
+    "id": "DkGZ4D6VEI",
+    "lastName": "Resella"
+  },
+  "comment": "Need a fixture for the LinkedIn Gem so I'm updating my status - http://lnkd.in/cN-79i",
+  "content": {
+    "description": "README.markdown Ruby wrapper for the LinkedIn API. Heavily inspired by John Nunemaker's Twitter gem, the LinkedIn gem provides an easy-to-use wrapper for LinkedIn's Oauth/XML APIs. LinkedIn's API uses Oauth for authentication....",
+    "eyebrowUrl": "http://www.linkedin.com/share?viewLink=&sid=s652704697&url=http%3A%2F%2Flnkd%2Ein%2FcN-79i&urlhash=ZWKb",
+    "resolvedUrl": "https://github.com/pengwynn/linkedin",
+    "shortenedUrl": "http://lnkd.in/cN-79i",
+    "submittedImageUrl": "https://secure.gravatar.com/avatar/89b5b27ee2912643421bbd4d0281aa50?s=140&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png",
+    "submittedUrl": "https://github.com/pengwynn/linkedin",
+    "thumbnailUrl": "http://media.linkedin.com/media-proxy/ext?w=80&h=100&hash=3b%2FydvQT8P%2FgjCZ%2FJjR8DlbfCLo%3D&url=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2F89b5b27ee2912643421bbd4d0281aa50%3Fs%3D140%26d%3Dhttps%3A%2F%2Fa248.e.akamai.net%2Fassets.github.com%252Fimages%252Fgravatars%252Fgravatar-140.png",
+    "title": "pengwynn / linkedin"
+  },
+  "id": "s652704697",
+  "source": {"serviceProvider": {"name": "LINKEDIN"}},
+  "timestamp": 1319153990000,
+  "visibility": {"code": "anyone"}
+}}
