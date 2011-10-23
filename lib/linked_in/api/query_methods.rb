@@ -36,9 +36,9 @@ module LinkedIn
 
           if options[:count] or options[:start]
             path += "?"
-            path += "count=#{CGI::escape(options[:count])}" if options[:count]
+            path += "count=#{options[:count].to_i}" if options[:count]
             path += "&" if options[:count] and options[:start]
-            path += "start=#{CGI::escape(options[:start])}" if options[:start]
+            path += "start=#{options[:start].to_i}" if options[:start]
           end
 
           Mash.from_json(get(path))
