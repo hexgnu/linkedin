@@ -45,6 +45,13 @@ describe LinkedIn::Client::Profile do
       connections = @client.connections
       connections._total.should == 3
     end
+
+    it "should return connections when passing paramaters" do
+      stub_get("/people/~/connections?count=2").
+        to_return(:body => fixture("connections_params.json"))
+      connections = @client.connections(:count => 2)
+      connections._count.should == 2
+    end
   end
 
   describe ".search" do
