@@ -33,9 +33,10 @@ module LinkedIn
       # @return [Hashie::Rash]
       # @example
       #   client.network_updates
-      def network_updates(options={})
+      def network_updates(options={},params={})
         path = "#{person_path(options)}/network/updates"
-        simple_query(path, options)
+        path = simple_query(path, options)
+        get(path,params)
       end
     end
   end

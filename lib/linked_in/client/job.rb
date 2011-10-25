@@ -12,9 +12,10 @@ module LinkedIn
       # @example
       #   client.job(1337)
       #   client.job(1337,:fields => ['id','company','posting-date'])
-      def job(id,options={})
+      def job(id,options={},params={})
         path = job_path(id,options)
-        simple_query(path,options)
+        path = simple_query(path,options)
+        get(path,params)
       end
 
       # Returns a list of bookmarked jobs for the user.
@@ -24,10 +25,11 @@ module LinkedIn
       # @return [Hashie::Rash]
       # @example
       #   client.job_bookmarks
-      def job_bookmarks(options={})
+      def job_bookmarks(options={},params={})
         path = person_path(options)
         path += "/job-bookmarks"
-        simple_query(path,options)
+        path = simple_query(path,options)
+        get(path,params)
       end
 
       # Returns a list of suggested jobs for a user.
@@ -37,10 +39,11 @@ module LinkedIn
       # @return [Hashie::Rash]
       # @example
       #   client.job_suggestions
-      def job_suggestions(options={})
+      def job_suggestions(options={},params={})
         path = person_path(options)
         path += "/suggestions/job-suggestions:(jobs)"
-        simple_query(path,options)
+        path = simple_query(path,options)
+        get(path,params)
       end
 
       # Searches for jobs across the Job Search API using keywords.

@@ -13,9 +13,10 @@ module LinkedIn
       #   client.profile(:fields => ['educations'])
       #   client.profile(:fields => ['educations','positions'])
       #   client.profile(:id => "123")
-      def profile(options={})
+      def profile(options={},params={})
         path = person_path(options)
-        simple_query(path, options)
+        path = simple_query(path, options)
+        get(path, params)
       end
 
       # Returns the list of connections for a user who has granted access to his/her account
@@ -29,9 +30,10 @@ module LinkedIn
       # @return [Hashie::Rash]
       # @example
       #   client.connections
-      def connections(options={})
+      def connections(options={},params={})
         path = "#{person_path(options)}/connections"
-        simple_query(path, options)
+        path = simple_query(path, options)
+        get(path,params)
       end
 
       # Use the People Search API to find people using keywords, company, name, or other criteria. It returns a list of matching member profiles.
@@ -78,7 +80,8 @@ module LinkedIn
             path +=":(#{fields.map{ |f| f.to_s.gsub("_","-") }.join(',')})"
           end
 
-          get(path)
+          path
+
         end
 
         def person_path(options)

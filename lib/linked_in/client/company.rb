@@ -16,9 +16,10 @@ module LinkedIn
       #   client.company(:universal_name => "linkedin")
       #   client.company(:email_domain => "apple.com")
       #   client.company(:id => "660862",:fields => ['id','name','ticker','description'])
-      def company(options={})
+      def company(options={},params={})
         path = company_path(options)
-        simple_query(path, options)
+        path = simple_query(path, options)
+        get(path,params)
       end
 
       # Returns the products or services provided by the company..
@@ -31,10 +32,11 @@ module LinkedIn
       # @example
       #   client.company_products(660862)
       #   client.company_products(660862,:fields => ['id','name','ticker','description'])
-      def company_products(id, options={})
+      def company_products(id, options={},params={})
         path = company_path(options)
         path += "/#{id}/products"
-        simple_query(path,options)
+        path = simple_query(path,options)
+        get(path,params)
       end
 
       # Returns the companies that a user follows.
@@ -44,10 +46,11 @@ module LinkedIn
       # @return [Hashie::Rash]
       # @example
       #   client.following_companies
-      def following_companies(options={})
+      def following_companies(options={},params={})
         path = person_path(options)
         path += "/following/companies"
-        simple_query(path, options)
+        path = simple_query(path, options)
+        get(path,params)
       end
 
       # Returns suggested companies to follow for the current user
@@ -60,7 +63,8 @@ module LinkedIn
       def suggested_companies(options={})
         path = person_path(options)
         path += "/suggestions/to-follow/companies"
-        simple_query(path,options)
+        path = simple_query(path,options)
+        get(path,options)
       end
 
       private

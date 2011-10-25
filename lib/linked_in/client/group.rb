@@ -12,9 +12,10 @@ module LinkedIn
       # @example
       #   client.group(120725)
       #   client.company_products(120725,:fields => :fields => ['id','name','site-group-url','posts'])
-      def group(id,options={})
+      def group(id,options={},params={})
         path = group_path(id,options)
-        simple_query(path,options)
+        path = simple_query(path,options)
+        get(path,params)
       end
 
       private

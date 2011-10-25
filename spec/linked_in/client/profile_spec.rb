@@ -49,7 +49,7 @@ describe LinkedIn::Client::Profile do
     it "should return connections when passing paramaters" do
       stub_get("/people/~/connections?count=2").
         to_return(:body => fixture("connections_params.json"))
-      connections = @client.connections(:count => 2)
+      connections = @client.connections({},:count => 2)
       connections._count.should == 2
     end
   end
