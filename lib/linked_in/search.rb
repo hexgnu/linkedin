@@ -36,10 +36,10 @@ module LinkedIn
       def get_or_mock_search(uri)
       	puts "Search mocking"
       	if LinkedIn.mocking
-      		s = YAML::load(File.open('mock/search_results.yml'))
+      		s = YAML::load(File.open(File.expand_path("../../../mock/search_results.yml", __FILE__)))
       		s["people"]["_count"] = 2
-      		s["people"]["values"] << YAML::load(File.open("mock/profiles/obama.yml"))
-      		s["people"]["values"] << YAML::load(File.open("mock/profiles/toto.yml"))
+      		s["people"]["values"] << YAML::load(File.open(File.expand_path("../../../mock/profiles/obama.yml", __FILE__)))
+      		s["people"]["values"] << YAML::load(File.open(File.expand_path("../../../mock/profiles/toto.yml", __FILE__)))
       		s.to_json
       	else
       		get(uri)
