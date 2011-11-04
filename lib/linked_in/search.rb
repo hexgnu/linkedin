@@ -1,3 +1,5 @@
+require 'json'
+
 module LinkedIn
 
   module Search
@@ -12,9 +14,7 @@ module LinkedIn
       end
       options = format_options_for_query(options)
 
-      result_json = get(to_uri(path, options))
-
-      Mash.from_json(result_json)
+      Mash.from_json(get_or_mock_search(to_uri(path, options)))
     end
 
     private
@@ -31,6 +31,19 @@ module LinkedIn
         value = value.join("+") if value.is_a?(Array)
         value = value.gsub(" ", "+") if value.is_a?(String)
         value
+      end
+      
+      def get_or_mock_search(uri)
+      	puts "Search mocking"
+      	if LinkedIn.mocking
+      		s = YAML::load(File.open('mock/search_results.yml'))
+      		s["people"]["_count"] = 2
+      		s["people"]["values"] << YAML::load(File.open("mock/profiles/obama.yml"))
+      		s["people"]["values"] << YAML::load(File.open("mock/profiles/toto.yml"))
+      		s.to_json
+      	else
+      		get(uri)
+      	end
       end
 
   end

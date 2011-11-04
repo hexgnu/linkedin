@@ -19,6 +19,18 @@ module LinkedIn
       end
 
       private
+      
+		    def get_or_mock_profile(uri)
+		    	if LinkedIn.mocking
+		    		if uri[0..9] == '/people/~'
+			    		YAML::load(File.open('mock/profiles/me.yml')).to_json
+			    	else
+			    		YAML::load(File.open('mock/profiles/toto.yml')).to_json
+			    	end
+		    	else
+		    		get(uri)
+		    	end
+		    end
 
         def simple_query(path, options={})
           fields = options[:fields] || LinkedIn.default_profile_fields
@@ -29,7 +41,7 @@ module LinkedIn
             path +=":(#{fields.map{ |f| f.to_s.gsub("_","-") }.join(',')})"
           end
 
-          Mash.from_json(get(path))
+          Mash.from_json(get_or_mock_profile(path))
         end
 
         def person_path(options)

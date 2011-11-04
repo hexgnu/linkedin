@@ -5,6 +5,18 @@ module LinkedIn
   class << self
     attr_accessor :token, :secret, :default_profile_fields
 
+		# to see all debug information in log
+    attr_accessor :debug
+    def debug
+    	@debug || false
+    end
+    
+    # wether to use mock data instead of consuming real API requests
+    attr_accessor :mocking
+    def mocking
+    	@mocking || false
+    end
+
     # config/initializers/linkedin.rb (for instance)
     #
     # LinkedIn.configure do |config|
