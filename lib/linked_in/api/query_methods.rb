@@ -22,11 +22,7 @@ module LinkedIn
       
 		    def get_or_mock_profile(uri)
 		    	if LinkedIn.mocking
-		    		if uri[0..9] == '/people/~'
-			    		YAML::load(File.open(File.expand_path("../../../../mock/profiles/me.yml", __FILE__))).to_json
-			    	else
-			    		YAML::load(File.open(File.expand_path("../../../../mock/profiles/toto.yml", __FILE__))).to_json
-			    	end
+		    		LinkedIn.mocker.answer(uri)
 		    	else
 		    		get(uri)
 		    	end

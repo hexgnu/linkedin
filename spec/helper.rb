@@ -28,3 +28,4 @@ def expect_post(url, body, result = nil)
     :headers => { :content_type => 'application/xml' }
   }).should have_been_made.once
 end
+
