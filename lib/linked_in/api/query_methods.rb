@@ -54,6 +54,10 @@ module LinkedIn
             path += "id=#{options[:id]}"
           elsif options[:url]
             path += "url=#{CGI.escape(options[:url])}"
+          elsif options[:name]
+            path += "universal-name=#{CGI.escape(options[:name])}"
+          elsif options[:domain]
+            path += "email-domain=#{CGI.escape(options[:domain])}"
           else
             path += "~"
           end
