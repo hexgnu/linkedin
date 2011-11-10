@@ -51,9 +51,13 @@ module LinkedIn
         def company_path(options)
           path = "/companies/"
           if options[:id]
-            path += "id=#{options[:id]}"
+            path += options[:id]
           elsif options[:url]
             path += "url=#{CGI.escape(options[:url])}"
+          elsif options[:name]
+            path += "universal-name=#{CGI.escape(options[:name])}"
+          elsif options[:domain]
+            path += "email-domain=#{CGI.escape(options[:domain])}"
           else
             path += "~"
           end
