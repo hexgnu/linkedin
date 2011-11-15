@@ -3,11 +3,12 @@ module LinkedIn
 
     module UpdateMethods
 
-      # def update_status(text)
-      #   path = "/people/~/current-status"
-      #   put(path, status_to_xml(text))
-      # end
-      #
+      def add_share(share)
+        path = "/people/~/shares"
+        defaults = {:visibility => {:code => "anyone"}}
+        post(path, defaults.merge(share).to_json, "Content-Type" => "application/json")
+      end
+
       # def share(options={})
       #   path = "/people/~/shares"
       #   defaults = { :visability => 'anyone' }

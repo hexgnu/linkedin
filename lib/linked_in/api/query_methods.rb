@@ -18,10 +18,15 @@ module LinkedIn
         simple_query(path, options)
       end
 
+      def company(options = {})
+        path = company_path(options)
+        simple_query(path, options)
+      end
+
 ################################################################################
 
       private
-      
+
 ################################################################################
 
 	    def get_or_mock_profile(uri)

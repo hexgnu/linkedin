@@ -1,0 +1,73 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://api.linkedin.com:443/v1/companies/id=1586
+    body: !!null
+    headers:
+      x-li-format:
+      - json
+      user-agent:
+      - OAuth gem v0.4.5
+      authorization:
+      - OAuth oauth_consumer_key="consumer_key",
+        oauth_nonce="nonce", oauth_signature="signature",
+        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1319129843", oauth_token="token",
+        oauth_version="1.0"
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      vary:
+      - ! '*'
+      x-li-format:
+      - json
+      content-type:
+      - application/json;charset=UTF-8
+      transfer-encoding:
+      - chunked
+      date:
+      - Thu, 20 Oct 2011 16:57:24 GMT
+    body: ! "{\n  \"id\": 1586,\n  \"name\": \"Amazon\"\n}"
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://api.linkedin.com:443/v1/companies/id=1586:(id,name,industry,locations:(address:(city,state,country-code),is-headquarters),employee-count-range)
+    body: !!null
+    headers:
+      x-li-format:
+      - json
+      user-agent:
+      - OAuth gem v0.4.5
+      authorization:
+      - OAuth oauth_consumer_key="consumer_key",
+        oauth_nonce="nonc", oauth_signature="signature",
+        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1319129844", oauth_token="token",
+        oauth_version="1.0"
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      vary:
+      - ! '*'
+      x-li-format:
+      - json
+      content-type:
+      - application/json;charset=UTF-8
+      transfer-encoding:
+      - chunked
+      date:
+      - Thu, 20 Oct 2011 16:57:24 GMT
+    body: ! "{\n  \"employeeCountRange\": {\n    \"code\": \"I\",\n    \"name\": \"10001+\"\n
+       },\n  \"id\": 1586,\n  \"industry\": \"Internet\",\n  \"locations\": {\n    \"_total\":
+      1,\n    \"values\": [{\n      \"address\": {\n        \"city\": \"Seattle\",\n
+             \"countryCode\": \"us\",\n        \"state\": \"WA\"\n      },\n      \"isHeadquarters\":
+      true\n    }]\n  },\n  \"name\": \"Amazon\"\n}"
+    http_version: '1.1'

@@ -15,6 +15,7 @@
 .elc
 .redcar
 .yardoc
+.rvmrc
 /.emacs.desktop
 /.emacs.desktop.lock
 Desktop.ini
