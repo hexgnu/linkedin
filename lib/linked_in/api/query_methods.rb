@@ -18,38 +18,31 @@ module LinkedIn
         simple_query(path, options)
       end
 
+################################################################################
+
       private
       
-		    def get_or_mock_profile(uri)
-		    	if LinkedIn.mocking
-		    		LinkedIn.mocker.answer(uri)
-		    	else
-		    		get(uri)
-		    	end
-		    end
+################################################################################
 
-        def simple_query(path, options={})
-          fields = options[:fields] || LinkedIn.default_profile_fields
+	    def get_or_mock_profile(uri)
+	    	if LinkedIn.mocking
+	    		LinkedIn.mocker.answer(uri)
+	    	else
+	    		get(uri)
+	    	end
+	    end
 
-          if options[:public]
-            path +=":public"
-          elsif fields
-            path +=":(#{fields.map{ |f| f.to_s.gsub("_","-") }.join(',')})"
-          end
+      def simple_query(path, options={})
+        fields = options[:fields] || LinkedIn.default_profile_fields
 
-          Mash.from_json(get_or_mock_profile(path))
+        if options[:public]
+          path +=":public"
+        elsif fields
+          path +=":(#{fields.map{ |f| f.to_s.gsub("_","-") }.join(',')})"
         end
 
-        def person_path(options)
-          path = "/people/"
-          if options[:id]
-            path += "id=#{options[:id]}"
-          elsif options[:url]
-            path += "url=#{CGI.escape(options[:url])}"
-          else
-            path += "~"
-          end
-        end
+        Mash.from_json(get_or_mock_profile(path))
+      end
 
     end
 
