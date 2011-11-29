@@ -1,0 +1,92 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.linkedin.com:443/v1/people-search?keywords=github
+    body: 
+    headers: 
+      user-agent: 
+      - OAuth gem v0.4.4
+      authorization: 
+      - OAuth oauth_consumer_key="C2UfeHxZrij1PyppziDLbdUQti6f4TLaL-N0dyiV_us4Pj18_vsHcjKIX0i69fSn", oauth_nonce="KenR6ArkWDl5wqulIJZyecJGRWPE7CEDy9COzkWQXR8", oauth_signature="aPgVcIv2aiTr74Wh3sujsTBD4%2B8%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1305061358", oauth_token="afb39322-be32-4b83-83a0-7e35e18d3082", oauth_version="1.0"
+      x-li-format: 
+      - json
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/json;charset=UTF-8
+      server: 
+      - Apache-Coyote/1.1
+      date: 
+      - Tue, 10 May 2011 21:02:40 GMT
+      x-li-format: 
+      - json
+      vary: 
+      - x-li-format,Accept-Encoding
+      transfer-encoding: 
+      - chunked
+    body: |-
+      {
+        "numResults": 905,
+        "people": {
+          "values": [
+            {
+              "id": "YkdnFl04s_",
+              "lastName": "Pires",
+              "firstName": "Giliardi"
+            },
+            {
+              "id": "5oELVyNfN3",
+              "lastName": "Alencar",
+              "firstName": "Ivan"
+            },
+            {
+              "id": "k-wxkgFDYL",
+              "lastName": "Private",
+              "firstName": ""
+            },
+            {
+              "id": "xT-OdnpncE",
+              "lastName": "Private",
+              "firstName": ""
+            },
+            {
+              "id": "GAG-lE3XVw",
+              "lastName": "Private",
+              "firstName": ""
+            },
+            {
+              "id": "z2XMcxa_dR",
+              "lastName": "M.",
+              "firstName": "Stephen"
+            },
+            {
+              "id": "cPANxsayPK",
+              "lastName": "Private",
+              "firstName": ""
+            },
+            {
+              "id": "SbMT09zllx",
+              "lastName": "L.",
+              "firstName": "Rodolfo"
+            },
+            {
+              "id": "GrH-5d4mH1",
+              "lastName": "Barnaba",
+              "firstName": "Marcello"
+            },
+            {
+              "id": "pdzrGpyP0h",
+              "lastName": "C.",
+              "firstName": "Pablo"
+            }
+          ],
+          "_count": 10,
+          "_start": 0,
+          "_total": 110
+        }
+      }
+    http_version: "1.1"
