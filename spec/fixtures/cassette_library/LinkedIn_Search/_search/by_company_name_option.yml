@@ -1,0 +1,92 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.linkedin.com:443/v1/people-search?company-name=linkedin
+    body: 
+    headers: 
+      user-agent: 
+      - OAuth gem v0.4.4
+      authorization: 
+      - OAuth oauth_consumer_key="C2UfeHxZrij1PyppziDLbdUQti6f4TLaL-N0dyiV_us4Pj18_vsHcjKIX0i69fSn", oauth_nonce="5DbPHhxweU6eNBPoAJqkobtxNsZDDIgtmfF0sx3rmQE", oauth_signature="DkRDger8eQvtJq1i8%2FjHzrNAFis%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1305061368", oauth_token="afb39322-be32-4b83-83a0-7e35e18d3082", oauth_version="1.0"
+      x-li-format: 
+      - json
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/json;charset=UTF-8
+      server: 
+      - Apache-Coyote/1.1
+      date: 
+      - Tue, 10 May 2011 21:02:49 GMT
+      x-li-format: 
+      - json
+      vary: 
+      - x-li-format,Accept-Encoding
+      transfer-encoding: 
+      - chunked
+    body: |-
+      {
+        "numResults": 5228,
+        "people": {
+          "values": [
+            {
+              "id": "VQcsz5Hp_h",
+              "lastName": "Denker",
+              "firstName": "Donald"
+            },
+            {
+              "id": "YEDghC612B",
+              "lastName": "S.",
+              "firstName": "Daniel"
+            },
+            {
+              "id": "KMioNXVEg9",
+              "lastName": "H.",
+              "firstName": "Reid"
+            },
+            {
+              "id": "ILGTOKmto4",
+              "lastName": "Ruff",
+              "firstName": "Lori"
+            },
+            {
+              "id": "xr5jcMXKPm",
+              "lastName": "C.",
+              "firstName": "Ed"
+            },
+            {
+              "id": "aeejoSqHsN",
+              "lastName": "T.",
+              "firstName": "Brian"
+            },
+            {
+              "id": "VYC0P9hxVN",
+              "lastName": "Giffen",
+              "firstName": "Sean"
+            },
+            {
+              "id": "kWPJPI1lrJ",
+              "lastName": "Seps",
+              "firstName": "Chad"
+            },
+            {
+              "id": "1PYJr69P5V",
+              "lastName": "Vasconcelos",
+              "firstName": "Cesar"
+            },
+            {
+              "id": "AU5Dv63Fma",
+              "lastName": "Ling",
+              "firstName": "James"
+            }
+          ],
+          "_count": 10,
+          "_start": 0,
+          "_total": 110
+        }
+      }
+    http_version: "1.1"
