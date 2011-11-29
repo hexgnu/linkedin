@@ -1,0 +1,25 @@
+id: NhZXBl_O6f
+
+firstName: Barack
+lastName: Obama
+
+headline: President of the United States
+
+pictureUrl: http://media.linkedin.com/mpr/mprx/0_fsPnURNRhLhk_Ue2fjKLUZkB2FL6TOe2S4bdUZz61GA9Ysxu_y_sz4THGW5JGJWhaMleN0F61-Dg
+
+industry: Executive Branch
+location:
+  name: Washington, DC
+  country:
+    code: us
+
+siteStandardProfileRequest:
+  url: http://www.linkedin.com/profile?viewProfile=&key=11554268&authToken=3KMh&authType=name&trk=api*a124520*s132954*
+
+apiStandardProfileRequest:
+  headers:
+    values:
+    - name: x-li-auth-token
+      value: name:3KMh
+    _total: 1
+  url: http://api.linkedin.com/v1/people/NhZXBl_O6f

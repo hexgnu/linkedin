@@ -7,6 +7,7 @@ module LinkedIn
     include Helpers::Authorization
     include Api::QueryMethods
     include Api::UpdateMethods
+    include Api::CommunicationMethods
     include Search
 
     attr_reader :consumer_token, :consumer_secret, :consumer_options

@@ -1,0 +1,67 @@
+id: abcDEFR90s
+
+firstName: Albert
+lastName: Toto
+
+headline: Managing Director
+
+pictureUrl: http://i.agoravox.fr/local/cache-vignettes/L289xH384/Nicolas-Agoravox-2-c0bcb.jpg
+
+location:
+  country:
+    code: fr
+  name: Paris Area, France
+
+positions:
+  total: 2
+  all:
+  - company:
+      industry: Internet
+      name: One Great Company
+    id: 123920069
+    isCurrent: true
+    startDate:
+      month: 9
+      year: 2011
+    summary: A good summary for my company.
+    title: Managing Director
+  - company:
+      id: 1426789
+      industry: Internet
+      name: Another great company
+      size: 1-10 employees
+      type: Privately Held
+    endDate:
+      month: 9
+      year: 2011
+    id: 146424263
+    isCurrent: false
+    startDate:
+      month: 1
+      year: 2010
+    summary: This is useful...
+    title: ManagingDirector
+
+educations:
+  total: 3
+  all:
+  - activities: ''
+    degree: ''
+    endDate:
+      year: 2010
+    fieldOfStudy: A Great Field
+    id: 47232861
+    notes: ''
+    schoolName: A Great School
+    startDate:
+      year: 2009
+  - activities: ''
+    degree: Master
+    endDate:
+      year: 2006
+    fieldOfStudy: Business
+    id: 42568220
+    notes: ''
+    schoolName: Another Great School
+    startDate:
+      year: 2002
