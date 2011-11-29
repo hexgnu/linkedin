@@ -1,0 +1,43 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.linkedin.com:443/v1/people-search?first-name=Giliardi&last-name=Pires
+    body: 
+    headers: 
+      user-agent: 
+      - OAuth gem v0.4.4
+      authorization: 
+      - OAuth oauth_consumer_key="C2UfeHxZrij1PyppziDLbdUQti6f4TLaL-N0dyiV_us4Pj18_vsHcjKIX0i69fSn", oauth_nonce="IVMcA0gCXgVmgwAn56FRIpQUdQmyFcoP2RRN6ZzPv4", oauth_signature="8aXd44yIB6fsVy%2BYZJNvR01yp2w%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1305061364", oauth_token="afb39322-be32-4b83-83a0-7e35e18d3082", oauth_version="1.0"
+      x-li-format: 
+      - json
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/json;charset=UTF-8
+      server: 
+      - Apache-Coyote/1.1
+      date: 
+      - Tue, 10 May 2011 21:02:45 GMT
+      x-li-format: 
+      - json
+      vary: 
+      - x-li-format,Accept-Encoding
+      transfer-encoding: 
+      - chunked
+    body: |-
+      {
+        "numResults": 1,
+        "people": {
+          "values": [{
+            "id": "YkdnFl04s_",
+            "lastName": "Pires",
+            "firstName": "Giliardi"
+          }],
+          "_total": 1
+        }
+      }
+    http_version: "1.1"

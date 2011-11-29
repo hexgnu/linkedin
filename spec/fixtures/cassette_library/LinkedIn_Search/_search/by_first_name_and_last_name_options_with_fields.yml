@@ -1,0 +1,45 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.linkedin.com:443/v1/people-search:(people:(id,first-name,last-name,public-profile-url,picture-url),num-results)?first-name=Giliardi&last-name=Pires
+    body: 
+    headers: 
+      user-agent: 
+      - OAuth gem v0.4.4
+      authorization: 
+      - OAuth oauth_consumer_key="C2UfeHxZrij1PyppziDLbdUQti6f4TLaL-N0dyiV_us4Pj18_vsHcjKIX0i69fSn", oauth_nonce="p445iIZd1oQn2e1JL6M2ZbGEUi2nTMqacOQ4S1xeDY", oauth_signature="639UhE9asgiYLgUzBYUFrdIF%2BS8%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1305061366", oauth_token="afb39322-be32-4b83-83a0-7e35e18d3082", oauth_version="1.0"
+      x-li-format: 
+      - json
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/json;charset=UTF-8
+      server: 
+      - Apache-Coyote/1.1
+      date: 
+      - Tue, 10 May 2011 21:02:47 GMT
+      x-li-format: 
+      - json
+      vary: 
+      - x-li-format,Accept-Encoding
+      transfer-encoding: 
+      - chunked
+    body: |-
+      {
+        "numResults": 1,
+        "people": {
+          "values": [{
+            "id": "YkdnFl04s_",
+            "publicProfileUrl": "http://www.linkedin.com/in/gibanet",
+            "lastName": "Pires",
+            "pictureUrl": "http://media.linkedin.com/mpr/mprx/0_Oz05kn9xkWziAEOUKtOVkqzjXd8Clf7UyqIVkqchR2NtmwZRt1fWoN_aobhg-HmB09jUwPLKrAhU",
+            "firstName": "Giliardi"
+          }],
+          "_total": 1
+        }
+      }
+    http_version: "1.1"
