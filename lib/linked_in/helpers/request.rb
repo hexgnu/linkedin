@@ -139,6 +139,14 @@ module LinkedIn
 				uri.to_s
 			end
 
+      def get_or_mock_query(uri)
+        if LinkedIn.mocking
+	    		LinkedIn.mocker.answer(uri)
+	    	else
+	    		get(uri)
+	    	end
+	    end
+
 		end
 
 	end
