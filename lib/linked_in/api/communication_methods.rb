@@ -29,7 +29,7 @@ module LinkedIn
 			# TODO here: add email way to 'catch' recipients
 			# subject is ignored when using ID + oauth_token
 			def send_invite(subject, body, recipient, oauth_header)
-				throw "LinkedIn::Error -> oauth_header must contain x-li-auth-token" if oauth_header.name != 'x-li-auth-token'
+				throw "LinkedIn::Error -> oauth_header must contain x-li-auth-token" if oauth_header[:name] != 'x-li-auth-token'
 				message = {
 					:recipients			=> message_recipients(recipient),
 					:subject				=> subject,
@@ -38,8 +38,8 @@ module LinkedIn
 						"invitation-request"	=> {
 							"connect-type"	=> "friend",
 							"authorization"	=> {
-								"name"	=> oauth_header.value.split(':').first,
-								"value"	=> oauth_header.value.split(':').last
+								"name"	=> oauth_header[:value].split(':').first,
+								"value"	=> oauth_header[:value].split(':').last
 							}
 						}
 					}
