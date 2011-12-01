@@ -113,6 +113,15 @@ describe LinkedIn::Search do
       end
     end
 
+    describe "#field_selector" do
+      it "should not modify the parameter object" do
+        fields = [{:people => [:id, :first_name]}]
+        fields_dup = fields.dup
+        client.send(:field_selector, fields)
+        fields.should eq fields_dup
+      end
+    end
+
   end
 
 end
