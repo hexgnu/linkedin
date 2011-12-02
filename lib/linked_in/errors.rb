@@ -8,7 +8,6 @@ module LinkedIn
       end
     end
 
-    class RateLimitExceededError < LinkedInError; end
     class UnauthorizedError      < LinkedInError; end
     class GeneralError           < LinkedInError; end
 
