@@ -33,8 +33,8 @@ module LinkedIn
           elsif fields
             path +=":(#{fields.map{ |f| f.to_s.gsub("_","-") }.join(',')})"
           end
-
-          Mash.from_json(get(path))
+          headers = options[:headers] || {}
+          Mash.from_json(get(path, headers))
         end
 
         def person_path(options)
