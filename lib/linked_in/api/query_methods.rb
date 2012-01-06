@@ -43,10 +43,10 @@ module LinkedIn
 
         def person_path(options)
           path = "/people/"
-          if options[:id]
-            path += "id=#{options[:id]}"
-          elsif options[:url]
-            path += "url=#{CGI.escape(options[:url])}"
+          if id = options.delete(:id)
+            path += "id=#{id}"
+          elsif url = options.delete(:url)
+            path += "url=#{CGI.escape(url)}"
           else
             path += "~"
           end
@@ -54,14 +54,14 @@ module LinkedIn
 
         def company_path(options)
           path = "/companies/"
-          if options[:id]
-            path += "id=#{options[:id]}"
-          elsif options[:url]
-            path += "url=#{CGI.escape(options[:url])}"
-          elsif options[:name]
-            path += "universal-name=#{CGI.escape(options[:name])}"
-          elsif options[:domain]
-            path += "email-domain=#{CGI.escape(options[:domain])}"
+          if id = options.delete(:id)
+            path += "id=#{id}"
+          elsif url = options.delete(:url)
+            path += "url=#{CGI.escape(url)}"
+          elsif name = options.delete(:name)
+            path += "universal-name=#{CGI.escape(name)}"
+          elsif domain = options.delete(:domain)
+            path += "email-domain=#{CGI.escape(domain)}"
           else
             path += "~"
           end
