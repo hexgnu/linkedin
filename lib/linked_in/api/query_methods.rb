@@ -26,14 +26,18 @@ module LinkedIn
       private
 
         def simple_query(path, options={})
-          fields = options[:fields] || LinkedIn.default_profile_fields
+          fields = options.delete(:fields) || LinkedIn.default_profile_fields
 
-          if options[:public]
+          if options.delete(:public)
             path +=":public"
           elsif fields
             path +=":(#{fields.map{ |f| f.to_s.gsub("_","-") }.join(',')})"
           end
-          headers = options[:headers] || {}
+          
+          headers = options.delete(:headers) || {}
+          params  = options.map { |k,v| "#{k}=#{v}" }.join("&")
+          path   += "?#{params}" if not params.empty?
+
           Mash.from_json(get(path, headers))
         end
 
