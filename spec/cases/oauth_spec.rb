@@ -148,7 +148,6 @@ describe "LinkedIn::Client" do
     it "should return a valid auth token" do
       access_token.should be_a_kind_of OAuth::AccessToken
       access_token.token.should be_a_kind_of String
-      access_token.token.should be_a_kind_of String
     end
   end
 
