@@ -29,13 +29,19 @@ module LinkedIn
 
 ################################################################################
 
-	    def get_or_mock_profile(uri)
-	    	if LinkedIn.mocking
-	    		LinkedIn.mocker.answer(uri)
-	    	else
-	    		get(uri)
-	    	end
-	    end
+      def format_options_for_query(opts)
+        opts.inject({}) do |list, kv|
+          key, value = kv.first.to_s.gsub("_","-"), kv.last
+          list[key]  = sanitize_value(value)
+          list
+        end
+      end
+  
+      def sanitize_value(value)
+        value = value.join("+") if value.is_a?(Array)
+        value = value.gsub(" ", "+") if value.is_a?(String)
+        value
+      end
 
       def simple_query(path, options={})
         fields = options[:fields] || LinkedIn.default_profile_fields
@@ -45,8 +51,10 @@ module LinkedIn
         elsif fields
           path +=":(#{fields.map{ |f| f.to_s.gsub("_","-") }.join(',')})"
         end
+        
+        options = format_options_for_query(options)
 
-        Mash.from_json(get_or_mock_profile(path))
+        Mash.from_json(get_or_mock_query(to_uri(path, options)))
       end
 
     end

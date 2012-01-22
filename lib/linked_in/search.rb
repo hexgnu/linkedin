@@ -14,7 +14,7 @@ module LinkedIn
 
       options = format_options_for_query(options)
 
-      Mash.from_json(get_or_mock_search(to_uri(path, options)))
+      Mash.from_json(get_or_mock_query(to_uri(path, options)))
     end
 
 ################################################################################
@@ -37,14 +37,6 @@ module LinkedIn
       value
     end
     
-    def get_or_mock_search(uri)
-    	if LinkedIn.mocking
-    		LinkedIn.mocker.answer(uri)
-    	else
-    		get(uri)
-    	end
-    end
-
   end
 
 end
