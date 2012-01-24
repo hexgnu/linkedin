@@ -83,4 +83,10 @@ describe LinkedIn::Api do
     end
   end
 
+  context "Errors" do
+    it "should raise AccessDeniedError when LinkedIn returns 403 status code" do
+      stub_request(:get, "https://api.linkedin.com/v1/people-search?first-name=Javan").to_return(:body => "{}", :status => 403)
+      expect{ client.search(:first_name => "Javan") }.to raise_error(LinkedIn::Errors::AccessDeniedError)
+    end
+  end
 end
