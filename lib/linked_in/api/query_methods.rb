@@ -52,6 +52,7 @@ module LinkedIn
           path = "/companies/"
           if options[:domain]
             path[10] = "?email-domain=#{CGI.escape(options[:domain])}/"
+            end
           elsif options[:id]
             path += "id=#{options[:id]}"
           elsif options[:url]
