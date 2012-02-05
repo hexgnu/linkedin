@@ -66,7 +66,7 @@ describe LinkedIn::Api do
     end
 
     it "should be able to view a company by e-mail domain" do
-      stub_request(:get, "https://api.linkedin.com/v1/companies/email-domain=acme.com").to_return(:body => "{}")
+      stub_request(:get, "https://api.linkedin.com/v1/companies?email-domain=acme.com").to_return(:body => "{}")
       client.company(:domain => 'acme.com').should be_an_instance_of(LinkedIn::Mash)
     end
 
