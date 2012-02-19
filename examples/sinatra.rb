@@ -7,29 +7,24 @@ enable :sessions
 
 helpers do
   def login?
-    if session[:atoken].nil?
-      return false
-    else
-      return true
-    end
+    session[:atoken].nil?
   end
   
   def profile
-    unless session[:atoken].nil?
-      client = LinkedIn::Client.new(settings.api, settings.secret)
-      client.authorize_from_access(session[:atoken], session[:asecret])
-      return client.profile
-    end
+    linkedin_client.profile unless session[:atoken].nil?
   end
   
   def connections
-    unless session[:atoken].nil?
-      client = LinkedIn::Client.new(settings.api, settings.secret)
-      client.authorize_from_access(session[:atoken], session[:asecret])
-      return client.connections
-    end
+    linkedin_client.connections unless session[:atoken].nil?
   end
-   
+  
+  private
+  def linkedin_client
+    client = LinkedIn::Client.new(settings.api, settings.secret)
+    client.authorize_from_access(session[:atoken], session[:asecret])
+    client
+  end 
+  
 end
 
 configure do
