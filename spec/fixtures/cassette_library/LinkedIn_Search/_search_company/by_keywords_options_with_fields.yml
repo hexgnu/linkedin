@@ -1,0 +1,252 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://api.linkedin.com:443/v1/company-search:(companies:(id,name,industries,description,specialties),num-results)?keywords=apple
+    body: 
+    headers:
+      x-li-format:
+      - json
+      user-agent:
+      - OAuth gem v0.4.5
+      authorization:
+      - OAuth oauth_consumer_key="n22cs9eyo36s", oauth_nonce="q7OIazxfRqNeuKtIn86PThFXYXwe16NtNQgFe6mETo",
+        oauth_signature="tBpOJdPV3CvjKM%2Fu3IQ2oS%2BfKvI%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1329994002", oauth_token="a39e395e-bc38-4d5b-ae3b-52f840f821e9",
+        oauth_version="1.0"
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      x-li-request-id:
+      - HHH4PB27GU
+      vary:
+      - ! '*'
+      x-li-format:
+      - json
+      content-type:
+      - application/json;charset=UTF-8
+      transfer-encoding:
+      - chunked
+      date:
+      - Thu, 23 Feb 2012 10:46:46 GMT
+    body: ! "{\n  \"companies\": {\n    \"_count\": 10,\n    \"_start\": 0,\n    \"_total\":
+      5696,\n    \"values\": [\n      {\n        \"description\": \"Apple designs
+      Macs, the best personal computers in the world, along with Mac OS X, iLife,
+      iWork, and professional software. Apple leads the digital music revolution with
+      its iPods and iTunes online store. Apple is reinventing the mobile phone with
+      its revolutionary iPhone and App Store, and has recently introduced its magical
+      iPad which is defining the future of mobile media and computing devices.\",\n
+      \       \"id\": 162479,\n        \"industries\": {\n          \"_total\": 1,\n
+      \         \"values\": [{\n            \"code\": \"4\",\n            \"name\":
+      \"Computer Software\"\n          }]\n        },\n        \"name\": \"Apple\",\n
+      \       \"specialties\": {\n          \"_total\": 4,\n          \"values\":
+      [\n            \"Innovative product development\",\n            \"world class
+      operations\",\n            \"Retail\",\n            \"Telephone Support\"\n
+      \         ]\n        }\n      },\n      {\n        \"description\": \"Every
+      Apple Retail Store offers customers great ways to get the most out of their
+      Mac and iPod, such as free advice at the Genius Bar, popular in-store workshops
+      and special programs for kids. Customers can also book a free appointment with
+      a Personal Shopper to get expert buying advice or help selecting the perfect
+      gift for everyone on their list. The hands-on Apple Retail Store experience
+      gives customers a chance to test-drive Apple\\u2019s entire product line.\",\n
+      \       \"id\": 1276,\n        \"industries\": {\n          \"_total\": 1,\n
+      \         \"values\": [{\n            \"code\": \"27\",\n            \"name\":
+      \"Retail\"\n          }]\n        },\n        \"name\": \"Apple Retail\",\n
+      \       \"specialties\": {\n          \"_total\": 3,\n          \"values\":
+      [\n            \"retail\",\n            \"technology\",\n            \"computers\"\n
+      \         ]\n        }\n      },\n      {\n        \"description\": \"Xerox
+      was founded in 1906 in Rochester, New York as \\\"The Haloid Company\\\", which
+      originally manufactured photographic paper and equipment. The company subsequently
+      changed its name to \\\"Haloid Xerox\\\" in 1958 and then simply \\\"Xerox\\\"
+      in 1961. The company came to prominence in 1959 with the introduction of the
+      first plain paper photocopier using the process of xerography developed by Chester
+      Carlson, the Xerox 914. Before releasing the 914, Xerox had also introduced
+      the first xerographic printer, the \\\"Copyflo\\\" in 1955.\\r\\n\\r\\nIn 1970
+      Xerox opened the Xerox PARC research facility. The facility developed many modern
+      computing methods such as the mouse and the graphical user interface. From these
+      inventions, Xerox PARC created the Xerox Alto in 1973, a small minicomputer
+      similar to a workstation and personal computer. The Alto was never commercially
+      sold, as Xerox itself could not see the sales potential of it. In 1979, several
+      Apple Computer employees, including Steve Jobs, visited Xerox PARC, interested
+      in seeing their developments. Jobs and the others saw the commercial potential
+      of the GUI and mouse, and began development of the Apple Lisa, which Apple introduced
+      in 1983.\\r\\n \\r\\nHeadquartered in Norwalk, Conn., today Xerox  is a $22
+      billion leading global enterprise for business process and document management.
+      Through its portfolio of technology and services, Xerox provides the essential
+      back-office support that clears the way for clients to focus on what they do
+      best: their real business. Xerox provides leading-edge document technology,
+      services, software and genuine Xerox supplies for graphic communication and
+      office printing environments of any size. Through ACS, A Xerox Company, which
+      Xerox acquired in February 2010, Xerox also offers extensive business process
+      outsourcing and IT outsourcing services, including data processing, HR benefits
+      management, finance support, and CRM services for commercial and government
+      organizations worldwide.\",\n        \"id\": 1373,\n        \"industries\":
+      {\n          \"_total\": 1,\n          \"values\": [{\n            \"code\":
+      \"83\",\n            \"name\": \"Printing\"\n          }]\n        },\n        \"name\":
+      \"Xerox\",\n        \"specialties\": {\n          \"_total\": 6,\n          \"values\":
+      [\n            \"Office Solutions\",\n            \"Printing\",\n            \"document
+      management\",\n            \"managed print services\",\n            \"ITO\",\n
+      \           \"BPO\"\n          ]\n        }\n      },\n      {\n        \"description\":
+      \"With more than 23 million members in the United States and Canada, Netflix,
+      Inc. [Nasdaq: NFLX] is the world\\u2019s leading Internet subscription service
+      for enjoying movies and TV shows. For $7.99 a month, Netflix members can instantly
+      watch unlimited movies and TV episodes streamed over the Internet to PCs, Macs
+      and TVs. Among the large and expanding base of devices streaming from Netflix
+      are Microsoft\\u2019s Xbox 360, Nintendo\\u2019s Wii and Sony\\u2019s PS3 consoles;
+      an array of Blu-ray disc players, Internet-connected TVs, home theater systems,
+      digital video recorders and Internet video players; Apple\\u2019s iPhone, iPad
+      and iPod touch, as well as Apple TV and Google TV. In all, more than 200 devices
+      that stream from Netflix are available in the U.S. and a growing number are
+      available in Canada. For more information, visit www.netflix.com.\",\n        \"id\":
+      165158,\n        \"industries\": {\n          \"_total\": 1,\n          \"values\":
+      [{\n            \"code\": \"28\",\n            \"name\": \"Entertainment\"\n
+      \         }]\n        },\n        \"name\": \"Netflix\",\n        \"specialties\":
+      {\n          \"_total\": 1,\n          \"values\": [\"The best way to watch
+      movies and TV shows instantly.\"]\n        }\n      },\n      {\n        \"description\":
+      \"HCL Infosystems Ltd, with revenue of US $ 2.5 billion (Rs. 12,057 Cr) is India\\u2019s
+      premier hardware, services and ICT systems integration company offering a wide
+      \ spectrum of ICT products that includes Computing, Storage, Networking, Security,
+      Telecom, Imaging and Retail. HCL is a one-stop-shop for all the ICT requirements
+      of an organization. India's leading System Integration and Infrastructure Management
+      Services Organization, HCL has specialized expertise across verticals including
+      Telecom, BFSI, eGovernance & Power. HCL has India's largest distribution and
+      retail network, taking to market a range of Digital Lifestyle products in partnership
+      with leading global ICT brands, including Apple, Cisco, Ericsson, Kingston,
+      Kodak, Konica Minolta, Microsoft, Nokia, and many more. HCL today has India's
+      largest vertically integrated computer manufacturing facility with over three
+      decades of electronic manufacturing experience & HCL desktops is the largest
+      selling brand into the enterprise space. With India\\u2019s largest ICT services
+      network that reaches to every corner of India, HCL\\u2019s award winning Support
+      Services makes it the preferred choice of enterprise and consumers alike. HCL
+      Infosystems has a 100% subsidiary that addresses the physical security technology
+      system integration market. The subsidiary leverages technology to build a security
+      framework called \\u2018Safe State\\u2019 that safe guard\\u2019s life, infrastructure
+      & society. \\r\\nFor more information please visit us at www.hclinfosystems.com\",\n
+      \       \"id\": 7240,\n        \"industries\": {\n          \"_total\": 1,\n
+      \         \"values\": [{\n            \"code\": \"96\",\n            \"name\":
+      \"Information Technology and Services\"\n          }]\n        },\n        \"name\":
+      \"HCL Infosystems Ltd\",\n        \"specialties\": {\n          \"_total\":
+      9,\n          \"values\": [\n            \"ERP Consulting & Services\",\n            \"System
+      Integration\",\n            \"IT Infrastructure Consultancy\",\n            \"Managed
+      Services\",\n            \"Strategic Outsourcing Services\",\n            \"Infostructure
+      Services\",\n            \"Networking Infrastructure\",\n            \"Facilities
+      Management\",\n            \"Career Development Centre and VPN & Managed Network\"\n
+      \         ]\n        }\n      },\n      {\n        \"description\": \"Experience
+      the Difference.      \\r\\nFor over 40 years, Apple Vacations has provided the
+      most value in vacations to millions of people. Throughout the years, we\\u2019ve
+      provided what you want in a vacation \\u2013 great service, convenience, and
+      value. We understand just how important your vacation is. We know because, like
+      you, vacations are important to us too. \\r\\n \\r\\nApple Vacations is now
+      a company of almost 1500 energetic, hardworking employees with the same entrepreneurial
+      attitudes as our founders. Headquartered just outside Philadelphia with regional
+      offices in Chicago and Boston, the company is completely focused on providing
+      quality vacations for our customers. Employees are empowered to make decisions
+      that impact the quality of their customers\\u2019 vacations on a daily basis.
+      Since our humble beginnings, Apple Vacations has created the ultimate \\u201cbeginning-to-end\\u201d
+      vacation experience for customers. Apple Vacations employees will greet you
+      at your departure airport in more than 20 cities; and will meet your flight
+      in our charter destinations. Apple Vacations\\u2019 sister companies, USA3000
+      Airlines, flies customers to their destinations from more than 20 U.S. cities;
+      and Amstar, is the destination management company in-resort with uniformed representatives,
+      who will greet you upon arrival and assist you while you are at your resort.
+      Unlike any other travel company, Apple Vacations truly provides the ultimate
+      in a quality vacation experience.\",\n        \"id\": 19271,\n        \"industries\":
+      {\n          \"_total\": 1,\n          \"values\": [{\n            \"code\":
+      \"30\",\n            \"name\": \"Leisure and Travel\"\n          }]\n        },\n
+      \       \"name\": \"Apple Vacations\",\n        \"specialties\": {\n          \"_total\":
+      2,\n          \"values\": [\n            \"Leisure travel\",\n            \"all
+      inclusive vacation packages\"\n          ]\n        }\n      },\n      {\n        \"description\":
+      \"FileMaker is the leader in easy-to-use database software. Millions of people,
+      from individuals to some of the world's largest companies, rely on FileMaker
+      software to manage, analyze and share essential information. \\r\\n\\r\\nThe
+      company's products are the FileMaker Pro line - versatile database software
+      for teams and organizations, for Windows, Mac, iPhone, iPad and the web - and
+      Bento, the personal database for Mac, iPhone and iPad. FileMaker, Inc. is a
+      subsidiary of Apple.\",\n        \"id\": 163801,\n        \"industries\": {\n
+      \         \"_total\": 1,\n          \"values\": [{\n            \"code\": \"4\",\n
+      \           \"name\": \"Computer Software\"\n          }]\n        },\n        \"name\":
+      \"FileMaker\",\n        \"specialties\": {\n          \"_total\": 10,\n          \"values\":
+      [\n            \"database\",\n            \"online database\",\n            \"easy
+      database\",\n            \"software\",\n            \"iphone software\",\n            \"iphone
+      database\",\n            \"organization\",\n            \"server\",\n            \"database
+      server\",\n            \"web database\"\n          ]\n        }\n      },\n
+      \     {\n        \"description\": \"GHA Technologies, Inc. is a nationally expanding
+      network, computer reseller and systems integrator with offices nationwide. GHA
+      is listed as the 196 on the national VAR 500 list and 32nd largest private corporation
+      in Arizona. \\r\\n\\r\\nWe sell Apple, HP, Dell, IBM, Lenovo, Sony, Fujitsu,
+      APC, Symantec, Panasonic, Microsoft, Vmware, Intel, Cisco, Premio and all the
+      hottest Internet, bandwidth, security, VoIP, wireless, video, identification
+      technologies and a vast offering of technology services. \\r\\n\\r\\nSome facts
+      about GHA Technologies, Inc.\\r\\n\\u2022 One of the largest, private providers
+      of technology solutions for corporate, government & education markets in America.\\r\\n\\u2022
+      Our vast access to coast-to-coast distribution network and warehouse facilities
+      support just-in-time delivery.\\r\\n\\u2022 Mission-critical delivery-Orders
+      placed by 9:00 p.m. EST (8:00 p.m. CST) can be received the next morning for
+      in-stock items.\\r\\n\\u2022 Secure, password-protected 24-hour access to your
+      own personal, customized website with special pricing on more than 1.1 million
+      products from more than 1,000 manufacturers.\\r\\n\\r\\nGHA Technologies, Inc.
+      has about 100 + employees with annual sales of approximately $80 million. Our
+      highly motivated and experienced sales professionals provide the highest level
+      of service to our customers. \\r\\n\\r\\nGHA Technologies, Inc. is currently
+      HIRING industry experienced technology sales professionals nationwide. Please
+      send your resume to resumes@gha-associates.com. We look forward to hearing from
+      you.\",\n        \"id\": 21482,\n        \"industries\": {\n          \"_total\":
+      1,\n          \"values\": [{\n            \"code\": \"96\",\n            \"name\":
+      \"Information Technology and Services\"\n          }]\n        },\n        \"name\":
+      \"GHA Technologies\",\n        \"specialties\": {\n          \"_total\": 5,\n
+      \         \"values\": [\n            \"Hardware, Software and Technology Components\",\n
+      \           \"Technology Services - Integration, Installation and Specialized\",\n
+      \           \"Corporate Commercial Business Clients\",\n            \"Non-profit
+      Organizations\",\n            \"Government and Educational Institutions\"\n
+      \         ]\n        }\n      },\n      {\n        \"description\": \"Apple
+      & Associates is an executive search firm that specializes in the Pharmaceutical,
+      Medical Device and Consumer Product Industries.  We provide extensive coverage
+      of these worldwide markets and have forged a solid reputation in the industry
+      as a competent, aggressive, and resource-rich recruiting firm.  We are a nation-wide
+      company with offices through-out the United States. \\r\\n\\r\\nApple & Associates
+      belongs to Intercity Personnel Associates (IPA) and the Top Echelon Network.
+      \ Through these worldwide recruiting networks, we share confidentially coded
+      information about available positions and receive qualified candidates within
+      a short period of time.  With one phone call you not only have rapid access
+      to our candidates, but also to qualified candidates from over 1,000 of the nation\\u2019s
+      other top recruiting firms.  Because our executive recruiters specialize in
+      different industry segments, we can give you the service you deserve in a fast,
+      focused, and efficient manner and provide you with quality industry specific
+      candidates.   \\r\\n\\r\\nWe realize the importance of hiring professionals
+      who understand and are able to assimilate with your company\\u2019s business
+      model, culture, process, equipment, and materials.  Our team has studied the
+      hiring decisions that make the firms in the Pharmaceutical and Medical Device
+      industries so successful.  Our candidates will meet the standard your company
+      demands, with the technical and industry background to match.\",\n        \"id\":
+      112136,\n        \"industries\": {\n          \"_total\": 1,\n          \"values\":
+      [{\n            \"code\": \"104\",\n            \"name\": \"Staffing and Recruiting\"\n
+      \         }]\n        },\n        \"name\": \"Apple & Associates\",\n        \"specialties\":
+      {\n          \"_total\": 20,\n          \"values\": [\n            \"Medical
+      Device\",\n            \"Pharmaceutical\",\n            \"Power\",\n            \"Energy\",\n
+      \           \"Consumer Products\",\n            \"Supply Chain\",\n            \"Purchasing\",\n
+      \           \"Engineering\",\n            \"Marketing\",\n            \"Sales\",\n
+      \           \"Human Resources\",\n            \"Science\",\n            \"Finance\",\n
+      \           \"Manufacturing\",\n            \"Operations\",\n            \"R&D\",\n
+      \           \"Six Sigma\",\n            \"IT\",\n            \"chemist\",\n
+      \           \"Executive Management\"\n          ]\n        }\n      },\n      {\n
+      \       \"description\": \"The Ultimate Computer Store - We empower customers
+      with computer and electronic solutions coupled with excellent customer service
+      that sets us apart from the rest.\\r\\n\\r\\nFounded in 1979 by two former Radio
+      Shack employees. The first Micro Center store was a 900 sq ft (84 m2). storefront
+      located in the Lane Avenue Shopping Center in Upper Arlington, Ohio. There are
+      currently 22 Micro Center stores nation-wide in California, Colorado, Georgia,
+      Illinois, Kansas, Massachussetts, Maryland, Michigan, Minnesota, Missouri, New
+      Jersey, New York, Ohio, Pennsylvania, Texas, and Virginia.  A 23rd store will
+      open in Yonkers, NY this spring.\",\n        \"id\": 15552,\n        \"industries\":
+      {\n          \"_total\": 1,\n          \"values\": [{\n            \"code\":
+      \"27\",\n            \"name\": \"Retail\"\n          }]\n        },\n        \"name\":
+      \"Micro Center\",\n        \"specialties\": {\n          \"_total\": 7,\n          \"values\":
+      [\n            \"computers\",\n            \"Apple\",\n            \"build your
+      own\",\n            \"iPod\",\n            \"GPS\",\n            \"TVs\",\n
+      \           \"service\"\n          ]\n        }\n      }\n    ]\n  },\n  \"numResults\":
+      5696\n}"
+    http_version: '1.1'

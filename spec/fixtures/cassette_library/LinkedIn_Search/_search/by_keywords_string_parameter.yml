@@ -1,92 +1,136 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
     uri: https://api.linkedin.com:443/v1/people-search?keywords=github
     body: 
-    headers: 
-      user-agent: 
+    headers:
+      user-agent:
       - OAuth gem v0.4.4
-      authorization: 
-      - OAuth oauth_consumer_key="C2UfeHxZrij1PyppziDLbdUQti6f4TLaL-N0dyiV_us4Pj18_vsHcjKIX0i69fSn", oauth_nonce="KenR6ArkWDl5wqulIJZyecJGRWPE7CEDy9COzkWQXR8", oauth_signature="aPgVcIv2aiTr74Wh3sujsTBD4%2B8%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1305061358", oauth_token="afb39322-be32-4b83-83a0-7e35e18d3082", oauth_version="1.0"
-      x-li-format: 
+      authorization:
+      - OAuth oauth_consumer_key="C2UfeHxZrij1PyppziDLbdUQti6f4TLaL-N0dyiV_us4Pj18_vsHcjKIX0i69fSn",
+        oauth_nonce="KenR6ArkWDl5wqulIJZyecJGRWPE7CEDy9COzkWQXR8", oauth_signature="aPgVcIv2aiTr74Wh3sujsTBD4%2B8%3D",
+        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1305061358", oauth_token="afb39322-be32-4b83-83a0-7e35e18d3082",
+        oauth_version="1.0"
+      x-li-format:
       - json
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
-    headers: 
-      content-type: 
+    headers:
+      content-type:
       - application/json;charset=UTF-8
-      server: 
+      server:
       - Apache-Coyote/1.1
-      date: 
+      date:
       - Tue, 10 May 2011 21:02:40 GMT
-      x-li-format: 
+      x-li-format:
       - json
-      vary: 
+      vary:
       - x-li-format,Accept-Encoding
-      transfer-encoding: 
+      transfer-encoding:
       - chunked
-    body: |-
-      {
-        "numResults": 905,
-        "people": {
-          "values": [
-            {
-              "id": "YkdnFl04s_",
-              "lastName": "Pires",
-              "firstName": "Giliardi"
-            },
-            {
-              "id": "5oELVyNfN3",
-              "lastName": "Alencar",
-              "firstName": "Ivan"
-            },
-            {
-              "id": "k-wxkgFDYL",
-              "lastName": "Private",
-              "firstName": ""
-            },
-            {
-              "id": "xT-OdnpncE",
-              "lastName": "Private",
-              "firstName": ""
-            },
-            {
-              "id": "GAG-lE3XVw",
-              "lastName": "Private",
-              "firstName": ""
-            },
-            {
-              "id": "z2XMcxa_dR",
-              "lastName": "M.",
-              "firstName": "Stephen"
-            },
-            {
-              "id": "cPANxsayPK",
-              "lastName": "Private",
-              "firstName": ""
-            },
-            {
-              "id": "SbMT09zllx",
-              "lastName": "L.",
-              "firstName": "Rodolfo"
-            },
-            {
-              "id": "GrH-5d4mH1",
-              "lastName": "Barnaba",
-              "firstName": "Marcello"
-            },
-            {
-              "id": "pdzrGpyP0h",
-              "lastName": "C.",
-              "firstName": "Pablo"
-            }
-          ],
-          "_count": 10,
-          "_start": 0,
-          "_total": 110
-        }
-      }
-    http_version: "1.1"
+    body: ! "{\n  \"numResults\": 905,\n  \"people\": {\n    \"values\": [\n      {\n
+      \       \"id\": \"YkdnFl04s_\",\n        \"lastName\": \"Pires\",\n        \"firstName\":
+      \"Giliardi\"\n      },\n      {\n        \"id\": \"5oELVyNfN3\",\n        \"lastName\":
+      \"Alencar\",\n        \"firstName\": \"Ivan\"\n      },\n      {\n        \"id\":
+      \"k-wxkgFDYL\",\n        \"lastName\": \"Private\",\n        \"firstName\":
+      \"\"\n      },\n      {\n        \"id\": \"xT-OdnpncE\",\n        \"lastName\":
+      \"Private\",\n        \"firstName\": \"\"\n      },\n      {\n        \"id\":
+      \"GAG-lE3XVw\",\n        \"lastName\": \"Private\",\n        \"firstName\":
+      \"\"\n      },\n      {\n        \"id\": \"z2XMcxa_dR\",\n        \"lastName\":
+      \"M.\",\n        \"firstName\": \"Stephen\"\n      },\n      {\n        \"id\":
+      \"cPANxsayPK\",\n        \"lastName\": \"Private\",\n        \"firstName\":
+      \"\"\n      },\n      {\n        \"id\": \"SbMT09zllx\",\n        \"lastName\":
+      \"L.\",\n        \"firstName\": \"Rodolfo\"\n      },\n      {\n        \"id\":
+      \"GrH-5d4mH1\",\n        \"lastName\": \"Barnaba\",\n        \"firstName\":
+      \"Marcello\"\n      },\n      {\n        \"id\": \"pdzrGpyP0h\",\n        \"lastName\":
+      \"C.\",\n        \"firstName\": \"Pablo\"\n      }\n    ],\n    \"_count\":
+      10,\n    \"_start\": 0,\n    \"_total\": 110\n  }\n}"
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :post
+    uri: https://api.linkedin.com:443/uas/oauth/requestToken
+    body: 
+    headers:
+      user-agent:
+      - OAuth gem v0.4.5
+      content-length:
+      - '0'
+      authorization:
+      - OAuth oauth_body_hash="2jmj7l5rSw0yVb%2FvlWAYkK%2FYBwk%3D", oauth_callback="oob",
+        oauth_consumer_key="a39e395e-bc38-4d5b-ae3b-52f840f821e9", oauth_nonce="PP414dguMZJe10RlUgLPWaLFhdu8pJ14NoYSKQ36mg",
+        oauth_signature="utkviYJALT93h%2BJ738IdgmWYQMg%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1329922222", oauth_version="1.0"
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 401
+      message: Unauthorized
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      www-authenticate:
+      - OAuth realm="https%3A%2F%2Fapi.linkedin.com", oauth_problem="consumer_key_unknown"
+      content-type:
+      - application/x-www-form-urlencoded;charset=UTF-8
+      content-length:
+      - '34'
+      vary:
+      - Accept-Encoding
+      date:
+      - Wed, 22 Feb 2012 14:50:24 GMT
+    body: oauth_problem=consumer_key_unknown
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://api.linkedin.com:443/v1people-search?keywords=github
+    body: 
+    headers:
+      x-li-format:
+      - json
+      user-agent:
+      - OAuth gem v0.4.5
+      authorization:
+      - OAuth oauth_consumer_key="n22cs9eyo36s", oauth_nonce="QLUmDted5J4dGxWyz5TxD2aLeQTSdUYgVF5LqzcaI",
+        oauth_signature="FQWcB4ad5NTQHoa%2FGiCHrYOnD2M%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1329991235", oauth_token="a39e395e-bc38-4d5b-ae3b-52f840f821e9",
+        oauth_version="1.0"
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 404
+      message: Not Found
+    headers:
+      content-type:
+      - text/html
+      content-length:
+      - '1888'
+      date:
+      - Thu, 23 Feb 2012 10:00:36 GMT
+      server:
+      - lighttpd
+    body: ! "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n        \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n
+      \ <title>404: Page Not Found</title>\n  <meta http-equiv=\"content-type\" content=\"text/html;
+      charset=UTF-8\">\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"/css/style.css\">\n</head>\n\n<body
+      class=\"errorpg\">\n\n<div id=\"header\">\n  <a href=\"/home\"><img src=\"/img/logos/logo.gif\"
+      width=\"129\" height=\"36\" alt=\"Linkedin\"></a>\n</div>\n\n<div id=\"main\"
+      class=\"error404\">\n  <h1>Page Not Found</h1>\n  <p>The page you requested
+      is no longer available, or cannot be found.</p>\n  <p class=\"bottom\">Please
+      double-check the URL (address) you used, or <a href=\"mailto:customer_service@linkedin.com\">contact
+      us</a> if you feel you have reached this page in error.</p>\n  <p class=\"top
+      helper\"><strong>Click the &#8220;Back&#8221; button on your browser or <a href=\"/home\">go
+      to the home page</a>.</strong></p>\n  \n  <br>\n  \n  <p><strong>Are you looking
+      for any of these LinkedIn features?</strong></p>\n  <ul>\n    <li><a href=\"/search\">Find
+      People</a></li>\n    <li><a href=\"/jobs\">Find Jobs</a></li>\n    <li><a href=\"/services\">Find
+      Services</a></li>\n    <li><a href=\"/reconnect?displayCategories=\">Reconnect
+      with Colleagues</a></li>\n  </ul>\n  \n  <ul>\n    <li><a href=\"/static?key=outlook_toolbar_download\">Outlook
+      Toolbar</a></li>\n    <li><a href=\"/static?key=firefox_companion_download\">Firefox
+      Companion</a></li>\n    <li><a href=\"/static?key=ie_toolbar_download\">Internet
+      Explorer Toolbar</a></li>\n    <li><a href=\"/static?key=groups_info\">LinkedIn
+      for Groups</a></li>\n  </ul>\n\n  <ul>\n    <li><a href=\"https://www.linkedin.com/secure/settings\">My
+      Account</a></li>\n    <li><a href=\"/profile\">My Profile</a></li>\n    <li><a
+      href=\"/connections\">My Connections</a></li>\n    <li><a href=\"/inviteMany\">Add
+      Connections</a></li>\n  </ul>\n  <div class=\"spacer\">&nbsp;</div>\n</div>\n\n</body>\n</html>"
+    http_version: '1.1'
