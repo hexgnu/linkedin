@@ -1,0 +1,71 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://api.linkedin.com:443/v1/company-search?keywords=apple
+    body: 
+    headers:
+      x-li-format:
+      - json
+      user-agent:
+      - OAuth gem v0.4.5
+      authorization:
+      - OAuth oauth_consumer_key="n22cs9eyo36s", oauth_nonce="ejdXp5uWJUyFyQOZKvwjvc3s3ircDxo0qmZPddXOQnQ",
+        oauth_signature="rUJEgmU4z6mKlIuB5lmkfVbcUYE%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1329991292", oauth_token="a39e395e-bc38-4d5b-ae3b-52f840f821e9",
+        oauth_version="1.0"
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      x-li-request-id:
+      - 3UFS93YLH8
+      vary:
+      - ! '*'
+      x-li-format:
+      - json
+      content-type:
+      - application/json;charset=UTF-8
+      transfer-encoding:
+      - chunked
+      date:
+      - Thu, 23 Feb 2012 10:01:33 GMT
+    body: ! "{\n  \"companies\": {\n    \"_count\": 10,\n    \"_start\": 0,\n    \"_total\":
+      5696,\n    \"values\": [\n      {\n        \"id\": 162479,\n        \"name\":
+      \"Apple\"\n      },\n      {\n        \"id\": 1276,\n        \"name\": \"Apple
+      Retail\"\n      },\n      {\n        \"id\": 1373,\n        \"name\": \"Xerox\"\n
+      \     },\n      {\n        \"id\": 165158,\n        \"name\": \"Netflix\"\n
+      \     },\n      {\n        \"id\": 7240,\n        \"name\": \"HCL Infosystems
+      Ltd\"\n      },\n      {\n        \"id\": 19271,\n        \"name\": \"Apple
+      Vacations\"\n      },\n      {\n        \"id\": 163801,\n        \"name\": \"FileMaker\"\n
+      \     },\n      {\n        \"id\": 21482,\n        \"name\": \"GHA Technologies\"\n
+      \     },\n      {\n        \"id\": 112136,\n        \"name\": \"Apple & Associates\"\n
+      \     },\n      {\n        \"id\": 15552,\n        \"name\": \"Micro Center\"\n
+      \     }\n    ]\n  },\n  \"facets\": {\n    \"_total\": 1,\n    \"values\": [{\n
+      \     \"buckets\": {\n        \"_total\": 10,\n        \"values\": [\n          {\n
+      \           \"code\": \"us:0\",\n            \"count\": 1836,\n            \"name\":
+      \"United States\",\n            \"selected\": false\n          },\n          {\n
+      \           \"code\": \"gb:0\",\n            \"count\": 491,\n            \"name\":
+      \"United Kingdom\",\n            \"selected\": false\n          },\n          {\n
+      \           \"code\": \"us:84\",\n            \"count\": 237,\n            \"name\":
+      \"San Francisco Bay Area\",\n            \"selected\": false\n          },\n
+      \         {\n            \"code\": \"nl:0\",\n            \"count\": 227,\n
+      \           \"name\": \"Netherlands\",\n            \"selected\": false\n          },\n
+      \         {\n            \"code\": \"us:70\",\n            \"count\": 208,\n
+      \           \"name\": \"Greater New York City Area\",\n            \"selected\":
+      false\n          },\n          {\n            \"code\": \"ca:0\",\n            \"count\":
+      199,\n            \"name\": \"Canada\",\n            \"selected\": false\n          },\n
+      \         {\n            \"code\": \"au:0\",\n            \"count\": 130,\n
+      \           \"name\": \"Australia\",\n            \"selected\": false\n          },\n
+      \         {\n            \"code\": \"us:49\",\n            \"count\": 130,\n
+      \           \"name\": \"Greater Los Angeles Area\",\n            \"selected\":
+      false\n          },\n          {\n            \"code\": \"in:0\",\n            \"count\":
+      121,\n            \"name\": \"India\",\n            \"selected\": false\n          },\n
+      \         {\n            \"code\": \"it:0\",\n            \"count\": 121,\n
+      \           \"name\": \"Italy\",\n            \"selected\": false\n          }\n
+      \       ]\n      },\n      \"code\": \"location\",\n      \"name\": \"Location\"\n
+      \   }]\n  },\n  \"numResults\": 5696\n}"
+    http_version: '1.1'
