@@ -1,45 +1,72 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
     uri: https://api.linkedin.com:443/v1/people-search:(people:(id,first-name,last-name,public-profile-url,picture-url),num-results)?first-name=Giliardi&last-name=Pires
     body: 
-    headers: 
-      user-agent: 
+    headers:
+      user-agent:
       - OAuth gem v0.4.4
-      authorization: 
-      - OAuth oauth_consumer_key="C2UfeHxZrij1PyppziDLbdUQti6f4TLaL-N0dyiV_us4Pj18_vsHcjKIX0i69fSn", oauth_nonce="p445iIZd1oQn2e1JL6M2ZbGEUi2nTMqacOQ4S1xeDY", oauth_signature="639UhE9asgiYLgUzBYUFrdIF%2BS8%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1305061366", oauth_token="afb39322-be32-4b83-83a0-7e35e18d3082", oauth_version="1.0"
-      x-li-format: 
+      authorization:
+      - OAuth oauth_consumer_key="C2UfeHxZrij1PyppziDLbdUQti6f4TLaL-N0dyiV_us4Pj18_vsHcjKIX0i69fSn",
+        oauth_nonce="p445iIZd1oQn2e1JL6M2ZbGEUi2nTMqacOQ4S1xeDY", oauth_signature="639UhE9asgiYLgUzBYUFrdIF%2BS8%3D",
+        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1305061366", oauth_token="afb39322-be32-4b83-83a0-7e35e18d3082",
+        oauth_version="1.0"
+      x-li-format:
       - json
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
-    headers: 
-      content-type: 
+    headers:
+      content-type:
       - application/json;charset=UTF-8
-      server: 
+      server:
       - Apache-Coyote/1.1
-      date: 
+      date:
       - Tue, 10 May 2011 21:02:47 GMT
-      x-li-format: 
+      x-li-format:
       - json
-      vary: 
+      vary:
       - x-li-format,Accept-Encoding
-      transfer-encoding: 
+      transfer-encoding:
       - chunked
-    body: |-
-      {
-        "numResults": 1,
-        "people": {
-          "values": [{
-            "id": "YkdnFl04s_",
-            "publicProfileUrl": "http://www.linkedin.com/in/gibanet",
-            "lastName": "Pires",
-            "pictureUrl": "http://media.linkedin.com/mpr/mprx/0_Oz05kn9xkWziAEOUKtOVkqzjXd8Clf7UyqIVkqchR2NtmwZRt1fWoN_aobhg-HmB09jUwPLKrAhU",
-            "firstName": "Giliardi"
-          }],
-          "_total": 1
-        }
-      }
-    http_version: "1.1"
+    body: ! "{\n  \"numResults\": 1,\n  \"people\": {\n    \"values\": [{\n      \"id\":
+      \"YkdnFl04s_\",\n      \"publicProfileUrl\": \"http://www.linkedin.com/in/gibanet\",\n
+      \     \"lastName\": \"Pires\",\n      \"pictureUrl\": \"http://media.linkedin.com/mpr/mprx/0_Oz05kn9xkWziAEOUKtOVkqzjXd8Clf7UyqIVkqchR2NtmwZRt1fWoN_aobhg-HmB09jUwPLKrAhU\",\n
+      \     \"firstName\": \"Giliardi\"\n    }],\n    \"_total\": 1\n  }\n}"
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :post
+    uri: https://api.linkedin.com:443/uas/oauth/requestToken
+    body: 
+    headers:
+      user-agent:
+      - OAuth gem v0.4.5
+      content-length:
+      - '0'
+      authorization:
+      - OAuth oauth_body_hash="2jmj7l5rSw0yVb%2FvlWAYkK%2FYBwk%3D", oauth_callback="oob",
+        oauth_consumer_key="a39e395e-bc38-4d5b-ae3b-52f840f821e9", oauth_nonce="bcBcCa4GrHRyxuMfyrnwxQahY2zkrQVUhRhpQDhfA",
+        oauth_signature="3d%2FocgY%2FpjVNVXL2Ud9aIAWyBCQ%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1329922227", oauth_version="1.0"
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 401
+      message: Unauthorized
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      www-authenticate:
+      - OAuth realm="https%3A%2F%2Fapi.linkedin.com", oauth_problem="consumer_key_unknown"
+      content-type:
+      - application/x-www-form-urlencoded;charset=UTF-8
+      content-length:
+      - '34'
+      vary:
+      - Accept-Encoding
+      date:
+      - Wed, 22 Feb 2012 14:50:29 GMT
+    body: oauth_problem=consumer_key_unknown
+    http_version: '1.1'

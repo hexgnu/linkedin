@@ -1,0 +1,111 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://api.linkedin.com:443/v1/company-search?facets=industry%20location&keywords=apple
+    body: 
+    headers:
+      x-li-format:
+      - json
+      user-agent:
+      - OAuth gem v0.4.5
+      authorization:
+      - OAuth oauth_consumer_key="n22cs9eyo36s", oauth_nonce="xcTeuTk5cLV7tNNj54FHtRznawbANOaFufpxhOzMoo",
+        oauth_signature="JoirhKilAS83lfN9j27EccA5EBw%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1329991294", oauth_token="a39e395e-bc38-4d5b-ae3b-52f840f821e9",
+        oauth_version="1.0"
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 400
+      message: Bad Request
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      x-li-request-id:
+      - KK2E56GW6H
+      date:
+      - Thu, 23 Feb 2012 10:01:34 GMT
+      vary:
+      - ! '*'
+      x-li-format:
+      - json
+      content-type:
+      - application/json;charset=UTF-8
+      content-length:
+      - '151'
+      nncoection:
+      - close
+    body: ! "{\n  \"errorCode\": 0,\n  \"message\": \"Unknown facet code {industry
+      location}\",\n  \"requestId\": \"KK2E56GW6H\",\n  \"status\": 400,\n  \"timestamp\":
+      1329991295101\n}"
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://api.linkedin.com:443/v1/company-search?facets=industry&keywords=apple
+    body: 
+    headers:
+      x-li-format:
+      - json
+      user-agent:
+      - OAuth gem v0.4.5
+      authorization:
+      - OAuth oauth_consumer_key="n22cs9eyo36s", oauth_nonce="irnhySxSqqJGyvqrhpTSLcNDzNZRjJlwEje7dkhgvg",
+        oauth_signature="5giHjjs15I5NzMA%2FEYoPejTl4BI%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1329991354", oauth_token="a39e395e-bc38-4d5b-ae3b-52f840f821e9",
+        oauth_version="1.0"
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      x-li-request-id:
+      - 0VNTJU19QA
+      vary:
+      - ! '*'
+      x-li-format:
+      - json
+      content-type:
+      - application/json;charset=UTF-8
+      transfer-encoding:
+      - chunked
+      date:
+      - Thu, 23 Feb 2012 10:02:36 GMT
+    body: ! "{\n  \"companies\": {\n    \"_count\": 10,\n    \"_start\": 0,\n    \"_total\":
+      5696,\n    \"values\": [\n      {\n        \"id\": 162479,\n        \"name\":
+      \"Apple\"\n      },\n      {\n        \"id\": 1276,\n        \"name\": \"Apple
+      Retail\"\n      },\n      {\n        \"id\": 1373,\n        \"name\": \"Xerox\"\n
+      \     },\n      {\n        \"id\": 165158,\n        \"name\": \"Netflix\"\n
+      \     },\n      {\n        \"id\": 7240,\n        \"name\": \"HCL Infosystems
+      Ltd\"\n      },\n      {\n        \"id\": 19271,\n        \"name\": \"Apple
+      Vacations\"\n      },\n      {\n        \"id\": 163801,\n        \"name\": \"FileMaker\"\n
+      \     },\n      {\n        \"id\": 21482,\n        \"name\": \"GHA Technologies\"\n
+      \     },\n      {\n        \"id\": 112136,\n        \"name\": \"Apple & Associates\"\n
+      \     },\n      {\n        \"id\": 15552,\n        \"name\": \"Micro Center\"\n
+      \     }\n    ]\n  },\n  \"facets\": {\n    \"_total\": 1,\n    \"values\": [{\n
+      \     \"buckets\": {\n        \"_total\": 10,\n        \"values\": [\n          {\n
+      \           \"code\": \"96\",\n            \"count\": 1386,\n            \"name\":
+      \"Information Technology and Services\",\n            \"selected\": false\n
+      \         },\n          {\n            \"code\": \"4\",\n            \"count\":
+      732,\n            \"name\": \"Computer Software\",\n            \"selected\":
+      false\n          },\n          {\n            \"code\": \"3\",\n            \"count\":
+      313,\n            \"name\": \"Computer Hardware\",\n            \"selected\":
+      false\n          },\n          {\n            \"code\": \"6\",\n            \"count\":
+      295,\n            \"name\": \"Internet\",\n            \"selected\": false\n
+      \         },\n          {\n            \"code\": \"80\",\n            \"count\":
+      219,\n            \"name\": \"Marketing and Advertising\",\n            \"selected\":
+      false\n          },\n          {\n            \"code\": \"24\",\n            \"count\":
+      166,\n            \"name\": \"Consumer Electronics\",\n            \"selected\":
+      false\n          },\n          {\n            \"code\": \"27\",\n            \"count\":
+      142,\n            \"name\": \"Retail\",\n            \"selected\": false\n          },\n
+      \         {\n            \"code\": \"109\",\n            \"count\": 123,\n            \"name\":
+      \"Computer Games\",\n            \"selected\": false\n          },\n          {\n
+      \           \"code\": \"126\",\n            \"count\": 120,\n            \"name\":
+      \"Media Production\",\n            \"selected\": false\n          },\n          {\n
+      \           \"code\": \"99\",\n            \"count\": 117,\n            \"name\":
+      \"Design\",\n            \"selected\": false\n          }\n        ]\n      },\n
+      \     \"code\": \"industry\",\n      \"name\": \"Industry\"\n    }]\n  },\n
+      \ \"numResults\": 5696\n}"
+    http_version: '1.1'

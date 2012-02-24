@@ -9,10 +9,89 @@ describe LinkedIn::Search do
     consumer_token  = ENV['LINKED_IN_CONSUMER_KEY'] || 'key'
     consumer_secret = ENV['LINKED_IN_CONSUMER_SECRET'] || 'secret'
     client = LinkedIn::Client.new(consumer_token, consumer_secret)
+
     auth_token      = ENV['LINKED_IN_AUTH_KEY'] || 'key'
     auth_secret     = ENV['LINKED_IN_AUTH_SECRET'] || 'secret'
     client.authorize_from_access(auth_token, auth_secret)
     client
+  end
+
+  describe "#search_company" do
+
+    describe "by keywords string parameter" do
+      use_vcr_cassette :record => :new_episodes
+
+      let(:results) do
+        client.search('apple', :company)
+      end
+
+      it "should perform a company search" do
+        results.companies.all.size.should == 10
+        results.companies.all.first.name.should == 'Apple'
+        results.companies.all.first.id.should == 162479
+      end
+    end
+
+    describe "by single keywords option" do
+      use_vcr_cassette :record => :new_episodes
+
+      let(:results) do
+        options = {:keywords => 'apple'}
+        client.search(options, :company)
+      end
+
+      it "should perform a company search" do
+        results.companies.all.size.should == 10
+        results.companies.all.first.name.should == 'Apple'
+        results.companies.all.first.id.should == 162479
+      end
+    end
+
+    describe "by single keywords option with facets to return" do
+      use_vcr_cassette :record => :new_episodes
+
+      let(:results) do
+        options = {:keywords => 'apple', facets: [:industry]}
+        client.search(options, :company)
+      end
+
+      it "should return a facet" do
+        results.facets.all.first.buckets.all.first.name.should == 'Information Technology and Services'
+      end
+    end
+
+    describe "by single keywords option with pagination" do
+      use_vcr_cassette :record => :new_episodes
+
+      let(:results) do
+        options = {:keywords => 'apple', :start => 5, :count => 5}
+        client.search(options, :company)
+      end
+
+      it "should perform a search" do
+        results.companies.all.size.should == 5
+        results.companies.all.first.name.should == 'Apple Vacations'
+        results.companies.all.first.id.should == 19271
+        results.companies.all.last.name.should == 'Micro Center'
+        results.companies.all.last.id.should == 15552
+      end
+    end
+
+    describe "by keywords options with fields" do
+      use_vcr_cassette :record => :new_episodes
+
+      let(:results) do
+        fields = [{:companies => [:id, :name, :industries, :description, :specialties]}, :num_results]
+        client.search({:keywords => 'apple', :fields => fields}, 'company')
+      end
+
+      it "should perform a search" do
+        results.companies.all.first.name.should == 'Apple'
+        results.companies.all.first.description.should == 'Apple designs Macs, the best personal computers in the world, along with Mac OS X, iLife, iWork, and professional software. Apple leads the digital music revolution with its iPods and iTunes online store. Apple is reinventing the mobile phone with its revolutionary iPhone and App Store, and has recently introduced its magical iPad which is defining the future of mobile media and computing devices.'
+        results.companies.all.first.id.should == 162479
+      end
+    end
+
   end
 
   describe "#search" do
