@@ -19,7 +19,7 @@ module LinkedIn
       end
 
       def company(options = {})
-        path   = company_path(options)
+        path = company_path(options)
         simple_query(path, options)
       end
 
@@ -29,9 +29,16 @@ module LinkedIn
           fields = options[:fields] || LinkedIn.default_profile_fields
 
           if options[:public]
-            path +=":public"
+            path += ":public"
           elsif fields
-            path +=":(#{fields.map{ |f| f.to_s.gsub("_","-") }.join(',')})"
+            path += ":(#{fields.map{ |f| f.to_s.gsub("_","-") }.join(',')})"
+          end
+
+          if options[:count] or options[:start]
+            path += "?"
+            path += "count=#{options[:count].to_i}" if options[:count]
+            path += "&" if options[:count] and options[:start]
+            path += "start=#{options[:start].to_i}" if options[:start]
           end
           headers = options[:headers] || {}
           Mash.from_json(get(path, headers))
