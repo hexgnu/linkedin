@@ -51,7 +51,7 @@ describe LinkedIn::Search do
       use_vcr_cassette :record => :new_episodes
 
       let(:results) do
-        options = {:keywords => 'apple', facets: [:industry]}
+        options = {:keywords => 'apple', :facets => [:industry]}
         client.search(options, :company)
       end
 
