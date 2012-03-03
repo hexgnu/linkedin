@@ -5,7 +5,7 @@ module LinkedIn
       DEFAULT_OAUTH_OPTIONS = {
         :request_token_path => "/uas/oauth/requestToken",
         :access_token_path  => "/uas/oauth/accessToken",
-        :authorize_path     => "/uas/oauth/authenticate"
+        :authorize_path     => "/uas/oauth/authenticate",
         :api_host           => "https://api.linkedin.com",
         :auth_host          => "https://www.linkedin.com"
       }
