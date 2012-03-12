@@ -33,6 +33,7 @@ module LinkedIn
           elsif fields
             path +=":(#{fields.map{ |f| f.to_s.gsub("_","-") }.join(',')})"
           end
+          path += "?" + options[:params].to_param if options[:params].present?
           headers = options[:headers] || {}
           Mash.from_json(get(path, headers))
         end
