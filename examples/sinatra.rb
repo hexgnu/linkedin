@@ -7,7 +7,7 @@ enable :sessions
 
 helpers do
   def login?
-    session[:atoken].nil?
+    !session[:atoken].nil?
   end
   
   def profile
