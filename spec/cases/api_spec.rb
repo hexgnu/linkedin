@@ -52,6 +52,14 @@ describe LinkedIn::Api do
     response.code.should == "201"
   end
 
+  it "should be able to send a message" do
+    stub_request(:post, "https://api.linkedin.com/v1/people/~/mailbox").to_return(:body => "", :status => 201)
+    response = client.send_message("subject", "body", ["recip1", "recip2"])
+    response.body.should == ""
+    response.code.should == "201"
+  end
+
+
   context "Company API" do
     use_vcr_cassette
 
