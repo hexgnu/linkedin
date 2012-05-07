@@ -33,12 +33,10 @@ module LinkedIn
             'body' => body,
             'recipients' => {
                 'values' => recipient_paths.map do |profile_path| 
-                  {'person' => {'_path' => "/people/#{profile_path}"}} 
+                  { 'person' => { '_path' => "/people/#{profile_path}" } } 
                 end
             }
         }
-        y message
-        puts message.to_json
         post(path, message.to_json, "Content-Type" => "application/json")
       end
       #
