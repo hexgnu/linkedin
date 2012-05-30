@@ -83,6 +83,23 @@ describe LinkedIn::Api do
     end
   end
 
+  context "Group API" do
+
+    it "should be able to list group memberships for a profile" do
+      stub_request(:get, "https://api.linkedin.com/v1/people/~/group-memberships").to_return(:body => "{}")
+      client.group_memberships.should be_an_instance_of(LinkedIn::Mash)
+    end
+
+    it "should be able to join a group" do
+      stub_request(:put, "https://api.linkedin.com/v1/people/~/group-memberships/123").to_return(:body => "", :status => 201)
+
+      response = client.join_group(123)
+      response.body.should == ""
+      response.code.should == "201"
+    end
+
+  end
+
   context "Errors" do
     it "should raise AccessDeniedError when LinkedIn returns 403 status code" do
       stub_request(:get, "https://api.linkedin.com/v1/people-search?first-name=Javan").to_return(:body => "{}", :status => 403)

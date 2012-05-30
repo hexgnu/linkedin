@@ -23,6 +23,11 @@ module LinkedIn
         simple_query(path, options)
       end
 
+      def group_memberships(options = {})
+        path = "#{person_path(options)}/group-memberships"
+        simple_query(path, options)
+      end
+
       private
 
         def simple_query(path, options={})
@@ -33,7 +38,7 @@ module LinkedIn
           elsif fields
             path +=":(#{fields.map{ |f| f.to_s.gsub("_","-") }.join(',')})"
           end
-          
+
           headers = options.delete(:headers) || {}
           params  = options.map { |k,v| "#{k}=#{v}" }.join("&")
           path   += "?#{params}" if not params.empty?
