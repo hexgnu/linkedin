@@ -9,6 +9,12 @@ module LinkedIn
         post(path, defaults.merge(share).to_json, "Content-Type" => "application/json")
       end
 
+      def join_group(group_id)
+        path = "/people/~/group-memberships/#{group_id}"
+        body = {'membership-state' => {'code' => 'member' }}
+        put(path, body.to_json, "Content-Type" => "application/json")
+      end
+
       # def share(options={})
       #   path = "/people/~/shares"
       #   defaults = { :visability => 'anyone' }
