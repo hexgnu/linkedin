@@ -32,7 +32,7 @@ LinkedIn's API uses Oauth for authentication. Luckily, the LinkedIn gem hides mo
     => ["OU812", "8675309"] # <= save these for future requests
 
     # or authorize from previously fetched access keys
-    c.authorize_from_access("OU812", "8675309")
+    client.authorize_from_access("OU812", "8675309")
 
     # you're now free to move about the cabin, call any API method
 
