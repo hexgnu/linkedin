@@ -27,6 +27,11 @@ module LinkedIn
         path = "#{person_path(options)}/group-memberships"
         simple_query(path, options)
       end
+      
+      def shares(options={})
+        path = "#{person_path(options)}/network/updates?type=SHAR&scope=self"
+        simple_query(path, options)
+      end
 
       private
 
