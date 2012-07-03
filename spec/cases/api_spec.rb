@@ -41,7 +41,8 @@ describe LinkedIn::Api do
   end
 
   it "should be able to search with an option and fetch specific fields" do
-    stub_request(:get, "https://api.linkedin.com/v1/people-search:(num-results,total)?first-name=Javan").to_return(:body => "{}")
+    stub_request(:get, "https://api.linkedin.com/v1/people-search:(num-results,total)?first-name=Javan").to_return(
+        :body => "{}")
     client.search(:first_name => "Javan", :fields => ["num_results", "total"]).should be_an_instance_of(LinkedIn::Mash)
   end
 
@@ -52,12 +53,21 @@ describe LinkedIn::Api do
     response.code.should == "201"
   end
 
+  it "should be able to comment on network update" do
+    stub_request(:post, "https://api.linkedin.com/v1/people/~/network/updates/key=SOMEKEY/update-comments").to_return(
+        :body => "", :status => 201)
+    response = client.update_comment('SOMEKEY', "Testing, 1, 2, 3")
+    response.body.should == ""
+    response.code.should == "201"
+  end
+
   it "should be able to send a message" do
     stub_request(:post, "https://api.linkedin.com/v1/people/~/mailbox").to_return(:body => "", :status => 201)
     response = client.send_message("subject", "body", ["recip1", "recip2"])
     response.body.should == ""
     response.code.should == "201"
   end
+
 
 
   context "Company API" do
