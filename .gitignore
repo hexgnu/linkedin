@@ -23,3 +23,6 @@ examples/wynn.rb
 
 ## Bundler
 Gemfile.lock
+
+## RVM
+.rvmrc
