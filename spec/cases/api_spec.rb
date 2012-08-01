@@ -108,6 +108,13 @@ describe LinkedIn::Api do
 
   end
 
+  context "Job API" do
+    it "should be able to view a job posting" do
+      stub_request(:get, "https://api.linkedin.com/v1/jobs/id=123").to_return(:body => "{}")
+      client.job(:id=>123).should be_an_instance_of(LinkedIn::Mash)
+    end
+  end
+
   context "Errors" do
     it "should raise AccessDeniedError when LinkedIn returns 403 status code" do
       stub_request(:get, "https://api.linkedin.com/v1/people-search?first-name=Javan").to_return(:body => "{}", :status => 403)

@@ -3,6 +3,11 @@ module LinkedIn
 
     module QueryMethods
 
+      def job(options={})
+        path = job_path(options)
+        simple_query(path, options)
+      end
+
       def profile(options={})
         path = person_path(options)
         simple_query(path, options)
@@ -30,6 +35,11 @@ module LinkedIn
       
       def shares(options={})
         path = "#{person_path(options)}/network/updates?type=SHAR&scope=self"
+        simple_query(path, options)
+      end
+
+      def job(options = {})
+        path = job_path(options)
         simple_query(path, options)
       end
 
@@ -74,6 +84,13 @@ module LinkedIn
             path += "email-domain=#{CGI.escape(domain)}"
           else
             path += "~"
+          end
+        end
+
+        def job_path(options)
+          path = "/jobs/"
+          if id = options.delete(:id)
+            path += "id=#{id}"
           end
         end
 
