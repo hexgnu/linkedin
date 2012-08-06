@@ -15,6 +15,13 @@ module LinkedIn
         put(path, body.to_json, "Content-Type" => "application/json")
       end
 
+      def update_status(comment, title)
+        path = "/people/~/shares"
+        defaults = {:visibility => {:code => "anyone"}}
+        body = {:comment => comment}
+        post(path, defaults.merge(body).to_json, "Content-Type" => "application/json")
+      end
+
       # def share(options={})
       #   path = "/people/~/shares"
       #   defaults = { :visability => 'anyone' }
