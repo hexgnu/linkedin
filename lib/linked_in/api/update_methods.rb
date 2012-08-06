@@ -21,16 +21,28 @@ module LinkedIn
       #   post(path, share_to_xml(defaults.merge(options)))
       # end
       #
-      # def update_comment(network_key, comment)
-      #   path = "/people/~/network/updates/key=#{network_key}/update-comments"
-      #   post(path, comment_to_xml(comment))
-      # end
+      def update_comment(network_key, comment)
+        path = "/people/~/network/updates/key=#{network_key}/update-comments"
+        body = {'comment' => comment}
+        post(path, body.to_json, "Content-Type" => "application/json")
+      end
       #
       # def update_network(message)
       #   path = "/people/~/person-activities"
       #   post(path, network_update_to_xml(message))
       # end
       #
+
+      def like_share(network_key)
+        path = "/people/~/network/updates/key=#{network_key}/is-liked"
+        put(path, 'true', "Content-Type" => "application/json")
+      end
+
+      def unlike_share(network_key)
+        path = "/people/~/network/updates/key=#{network_key}/is-liked"
+        put(path, 'false', "Content-Type" => "application/json")
+      end
+
       def send_message(subject, body, recipient_paths)
         path = "/people/~/mailbox"
       
