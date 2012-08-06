@@ -32,6 +32,17 @@ module LinkedIn
       #   post(path, network_update_to_xml(message))
       # end
       #
+
+      def like_share(network_key)
+        path = "/people/~/network/updates/key=#{network_key}/is-liked"
+        put(path, 'true', "Content-Type" => "application/json")
+      end
+
+      def unlike_share(network_key)
+        path = "/people/~/network/updates/key=#{network_key}/is-liked"
+        put(path, 'false', "Content-Type" => "application/json")
+      end
+
       def send_message(subject, body, recipient_paths)
         path = "/people/~/mailbox"
       
