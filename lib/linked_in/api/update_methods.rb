@@ -19,7 +19,7 @@ module LinkedIn
         path = "/people/~/shares"
         defaults = {:visibility => {:code => "anyone"}}
         body = {
-          :comment => share[:comment],
+          :comment => comment,
           :content => {
             "title" => content[:title],
             "submitted-url" => content[:submitted_url],
