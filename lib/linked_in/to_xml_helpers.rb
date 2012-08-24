@@ -17,10 +17,10 @@ module LinkedIn
     end
 
     def share_to_xml(options={})
-      doc = Nokogiri.XML('<share><comment/><content><title/><submitted-url/><submitted-image-url/></content><visibility><code/></visibility></share>')
+      doc = Nokogiri.XML('<share><comment/><content><title/><description/><submitted-url/><submitted-image-url/></content><visibility><code/></visibility></share>')
       doc.encoding = 'UTF-8'
 
-      {:comment => 'comment', :title => 'title', :url => 'submitted-url', :image_url => 'submitted-image-url'}.each do |key, name|
+      {:comment => 'comment', :title => 'title', :description => 'description', :url => 'submitted-url', :image_url => 'submitted-image-url'}.each do |key, name|
         doc.at_css(name).content = options[key] if options[key]
       end
 
