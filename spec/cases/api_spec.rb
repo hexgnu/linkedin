@@ -29,6 +29,16 @@ describe LinkedIn::Api do
     stub_request(:get, "https://api.linkedin.com/v1/people/~/network/updates").to_return(:body => "{}")
     client.network_updates.should be_an_instance_of(LinkedIn::Mash)
   end
+  
+  it "should be able to view network_update's comments" do
+    stub_request(:get, "https://api.linkedin.com/v1/people/~/network/updates/key=network_update_key/update-comments").to_return(:body => "{}")
+    client.share_comments("network_update_key").should be_an_instance_of(LinkedIn::Mash)
+  end
+  
+  it "should be able to view network_update's likes" do
+    stub_request(:get, "https://api.linkedin.com/v1/people/~/network/updates/key=network_update_key/likes").to_return(:body => "{}")
+    client.share_likes("network_update_key").should be_an_instance_of(LinkedIn::Mash)
+  end
 
   it "should be able to search with a keyword if given a String" do
     stub_request(:get, "https://api.linkedin.com/v1/people-search?keywords=business").to_return(:body => "{}")
@@ -41,7 +51,8 @@ describe LinkedIn::Api do
   end
 
   it "should be able to search with an option and fetch specific fields" do
-    stub_request(:get, "https://api.linkedin.com/v1/people-search:(num-results,total)?first-name=Javan").to_return(:body => "{}")
+    stub_request(:get, "https://api.linkedin.com/v1/people-search:(num-results,total)?first-name=Javan").to_return(
+        :body => "{}")
     client.search(:first_name => "Javan", :fields => ["num_results", "total"]).should be_an_instance_of(LinkedIn::Mash)
   end
 
@@ -52,13 +63,36 @@ describe LinkedIn::Api do
     response.code.should == "201"
   end
 
+  it "should be able to comment on network update" do
+    stub_request(:post, "https://api.linkedin.com/v1/people/~/network/updates/key=SOMEKEY/update-comments").to_return(
+        :body => "", :status => 201)
+    response = client.update_comment('SOMEKEY', "Testing, 1, 2, 3")
+    response.body.should == ""
+    response.code.should == "201"
+  end
+
   it "should be able to send a message" do
     stub_request(:post, "https://api.linkedin.com/v1/people/~/mailbox").to_return(:body => "", :status => 201)
     response = client.send_message("subject", "body", ["recip1", "recip2"])
     response.body.should == ""
     response.code.should == "201"
   end
-
+  
+  it "should be able to like a network update" do
+    stub_request(:put, "https://api.linkedin.com/v1/people/~/network/updates/key=SOMEKEY/is-liked").
+      with(:body => "true").to_return(:body => "", :status => 201)
+    response = client.like_share('SOMEKEY')
+    response.body.should == nil
+    response.code.should == "201"
+  end
+  
+  it "should be able to unlike a network update" do
+    stub_request(:put, "https://api.linkedin.com/v1/people/~/network/updates/key=SOMEKEY/is-liked").
+      with(:body => "false").to_return(:body => "", :status => 201)
+    response = client.unlike_share('SOMEKEY')
+    response.body.should == nil
+    response.code.should == "201"
+  end
 
   context "Company API" do
     use_vcr_cassette

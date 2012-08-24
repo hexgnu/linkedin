@@ -33,6 +33,16 @@ module LinkedIn
         simple_query(path, options)
       end
 
+      def share_comments(update_key, options={})
+        path = "#{person_path(options)}/network/updates/key=#{update_key}/update-comments"
+        simple_query(path, options)
+      end
+
+      def share_likes(update_key, options={})
+        path = "#{person_path(options)}/network/updates/key=#{update_key}/likes"
+        simple_query(path, options)
+      end
+
       private
 
         def simple_query(path, options={})
