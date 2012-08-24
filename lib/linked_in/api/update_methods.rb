@@ -9,10 +9,39 @@ module LinkedIn
         post(path, defaults.merge(share).to_json, "Content-Type" => "application/json")
       end
 
-      def join_group(group_id)
-        path = "/people/~/group-memberships/#{group_id}"
-        body = {'membership-state' => {'code' => 'member' }}
-        put(path, body.to_json, "Content-Type" => "application/json")
+      def join_group(group_id, options={})
+        if options.empty?
+          path = "/people/~/group-memberships/#{group_id}"
+          body = {'membership-state' => {'code' => 'member' }}
+          put(path, body.to_json, "Content-Type" => "application/json")
+        else
+          opts = {
+            :show_group_logo_in_profile => true,
+            :email_digest_frequency => 'none',
+            :email_announcements_from_managers => true,
+            :allow_messages_from_members => true,
+            :email_for_every_new_post => false
+          }.merge(options)
+          
+          path = '/people/~/group-memberships'
+          body = {
+            'group' => {
+              'id' => group_id
+            },
+            'show-group-logo-in-profile' => opts[:show_group_logo_in_profile],
+            'email-digest-frequency' => {
+              'code' => opts[:email_digest_frequency]
+            },
+            'email-announcements-from-managers' => opts[:email_announcements_from_managers],
+            'allow-messages-from-members' => opts[:allow_messages_from_members],
+            'email-for-every-new-post' => opts[:email_for_every_new_post],
+            'membership-state' => {
+              'code' => 'member'
+            }
+          }
+
+          post(path, body.to_json, 'Content-Type' => 'application/json')
+        end
       end
 
       # def share(options={})
