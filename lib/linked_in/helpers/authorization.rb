@@ -19,7 +19,7 @@ module LinkedIn
       # Options:
       #   :oauth_callback => String, url that LinkedIn should redirect to
       def request_token(options={})
-        @request_token ||= consumer.get_request_token(options)
+        @request_token ||= consumer.get_request_token(options, *arguments, &block)
       end
 
       # For web apps use params[:oauth_verifier], for desktop apps,
