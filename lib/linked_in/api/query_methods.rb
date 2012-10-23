@@ -55,7 +55,7 @@ module LinkedIn
           end
 
           headers = options.delete(:headers) || {}
-          params  = options.map { |k,v| "%s=%s" % [CGI.escape(k.to_s), CGI.escape(v.to_s)] }.join("&")
+          params  = to_query(options)
           path   += "?#{params}" if not params.empty?
 
           Mash.from_json(get(path, headers))
