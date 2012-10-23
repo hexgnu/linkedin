@@ -27,7 +27,7 @@ module LinkedIn
         path = "#{person_path(options)}/group-memberships"
         simple_query(path, options)
       end
-      
+
       def shares(options={})
         path = "#{person_path(options)}/network/updates?type=SHAR&scope=self"
         simple_query(path, options)
@@ -55,7 +55,7 @@ module LinkedIn
           end
 
           headers = options.delete(:headers) || {}
-          params  = options.map { |k,v| "#{k}=#{v}" }.join("&")
+          params  = options.map { |k,v| "%s=%s" % [CGI.escape(k.to_s), CGI.escape(v.to_s)] }.join("&")
           path   += "?#{params}" if not params.empty?
 
           Mash.from_json(get(path, headers))
