@@ -52,7 +52,7 @@ module LinkedIn
             'recipients' => {
                 'values' => recipient_paths.map do |profile_path| 
                   if profile_path.respond_to? :keys
-                    {'person' => { '_path' => profile_path[:path],
+                    {'person' => { '_path' => "/people/#{profile_path[:path]}",
                       :first_name => profile_path[:first_name],
                       :last_name => profile_path[:last_name]}
                     }
