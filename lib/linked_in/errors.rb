@@ -15,5 +15,9 @@ module LinkedIn
     class UnavailableError       < StandardError; end
     class InformLinkedInError    < StandardError; end
     class NotFoundError          < StandardError; end
+
+    class InvalidSignatureError  < LinkedInError; end
+    class UnknownVersionError    < LinkedInError; end
+    class MissingParameterError  < LinkedInError; end
   end
 end

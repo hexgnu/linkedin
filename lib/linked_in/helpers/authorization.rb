@@ -30,6 +30,39 @@ module LinkedIn
         @auth_token, @auth_secret = access_token.token, access_token.secret
       end
 
+      # Convert LinkedIn 30-minute JSAPI credentials to long-term OAuth tokens. Validates signature
+      # Takes a hash of the cookie or the cookie as a JSON-encoded string
+      def authorize_from_jsapi_cookie(jsapi_cookie)
+        cookie = (jsapi_cookie.class == Hash ? jsapi_cookie : JSON.parse(jsapi_cookie))
+        if cookie['signature_version'] == '1'
+          base_str = ''
+          cookie['signature_order'].each do |k|
+            if cookie[k]
+              base_str += cookie[k]
+            else
+              raise LinkedIn::Errors::MissingParameterError, "The JSAPI cookie signature could not be validated because a parameter is missing: #{k}"
+            end
+          end
+          signature = Base64.encode64(OpenSSL::HMAC.digest('sha1', @consumer_secret, base_str))
+
+          if signature.strip == cookie['signature'].strip
+            response = consumer.request(
+                :post,
+                full_oauth_url_for(:access_token, :api_host),
+                nil,
+                {},
+                {:xoauth_oauth2_access_token => cookie['access_token']}
+            ).body
+            access_token = CGI.parse(response)
+            @auth_token, @auth_secret = access_token['oauth_token'], access_token['oauth_token_secret']
+          else
+            raise LinkedIn::Errors::InvalidSignatureError, "The calculated JSAPI cookie signature did not match the actual signature"
+          end
+        else
+          raise LinkedIn::Errors::UnknownVersionError, "The JSAPI cookie signature version is unrecognized"
+        end
+      end
+
       def access_token
         @access_token ||= ::OAuth::AccessToken.new(consumer, @auth_token, @auth_secret)
       end
