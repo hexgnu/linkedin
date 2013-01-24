@@ -62,13 +62,17 @@ module LinkedIn
         end
 
         def person_path(options)
-          path = "/people/"
+          path = "/people"
           if id = options.delete(:id)
-            path += "id=#{id}"
+            if id.is_a? Array
+              path += "::(#{id.join(",")})"
+            else
+              path += "/id=#{id}"
+            end
           elsif url = options.delete(:url)
-            path += "url=#{CGI.escape(url)}"
+            path += "/url=#{CGI.escape(url)}"
           else
-            path += "~"
+            path += "/~"
           end
         end
 
