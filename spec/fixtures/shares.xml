@@ -3,6 +3,7 @@
   <comment>Testing out the LinkedIn API</comment>
   <content>
     <title>Share</title>
+    <description/>
     <submitted-url>http://www.linkedin.com</submitted-url>
     <submitted-image-url>http://www.linkedin.com/pretty_logo.jpg</submitted-image-url>
   </content>
