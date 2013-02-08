@@ -5,6 +5,7 @@ describe "LinkedIn::Client" do
   let(:client) do
     key    = ENV['LINKED_IN_CONSUMER_KEY'] || '1234'
     secret = ENV['LINKED_IN_CONSUMER_SECRET'] || '1234'
+    
     LinkedIn::Client.new(key, secret)
   end
 
@@ -110,6 +111,21 @@ describe "LinkedIn::Client" do
         request_token.authorize_url.should include("https://www.linkedin.com/uas/oauth/authorize?oauth_token=")
         request_token.callback_confirmed?.should == true
 
+        a_request(:post, "https://api.linkedin.com/uas/oauth/requestToken").should have_been_made.once
+      end
+    end
+
+    describe "with a custom parameter" do
+      use_vcr_cassette :record => :new_episodes
+    
+      it "should return a valid access token" do
+        request_token = client.request_token({:oauth_callback => 'http://www.josh.com'},
+          :scope => 'r_contactinfo r_network')
+    
+        request_token.should be_a_kind_of OAuth::RequestToken
+        request_token.authorize_url.should include("https://www.linkedin.com/uas/oauth/authorize?oauth_token=")
+        request_token.callback_confirmed?.should == true
+    
         a_request(:post, "https://api.linkedin.com/uas/oauth/requestToken").should have_been_made.once
       end
     end
