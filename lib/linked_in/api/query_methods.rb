@@ -28,6 +28,11 @@ module LinkedIn
         simple_query(path, options)
       end
 
+      def group_info(options = {})
+        path = "#{group_path(options)}"
+        simple_query(path, options)
+      end
+      
       def shares(options={})
         path = "#{person_path(options)}/network/updates?type=SHAR&scope=self"
         simple_query(path, options)
@@ -87,6 +92,13 @@ module LinkedIn
           end
         end
 
+        def group_path(options)
+          path = "/groups/"
+          if id = options.delete(:id)
+            path += id
+          end
+        end
+        
     end
 
   end
