@@ -89,5 +89,13 @@ module LinkedIn
     def patents
       @patents ||= Patents.new(@doc.xpath('//patents')).patents
     end
+
+    def provider_account_id
+      @doc.xpath('./person/primary-twitter-account/provider-account-id').text
+    end
+
+    def provider_account_name
+      @doc.xpath('./person/primary-twitter-account/provider-account-name').text
+    end
   end
 end
