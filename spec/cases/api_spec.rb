@@ -139,6 +139,11 @@ describe LinkedIn::Api do
       response.body.should == ""
       response.code.should == "201"
     end
+    
+    it "should be able to fetch group info" do
+      stub_request(:get, "https://api.linkedin.com/v1/groups/963527").to_return(:body => "{}")
+      client.group_info.should be_an_instance_of(LinkedIn::Mash)
+    end
 
   end
 
