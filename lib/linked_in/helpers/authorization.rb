@@ -11,15 +11,16 @@ module LinkedIn
         :auth_host          => "https://www.linkedin.com"
       }
 
-      def consumer
-        @consumer ||= ::OAuth::Consumer.new(@consumer_token, @consumer_secret, parse_oauth_options)
+      def consumer(options = {})
+        @consumer ||= ::OAuth::Consumer.new(@consumer_token, @consumer_secret, parse_oauth_options(options))
       end
 
       # Note: If using oauth with a web app, be sure to provide :oauth_callback.
       # Options:
-      #   :oauth_callback => String, url that LinkedIn should redirect to
+      #   :oauth_callback => String, url that LinkedIn should redirect 
+      #   :scope => String, estabish the scope of the token, example r_fullprofile
       def request_token(options={})
-        @request_token ||= consumer.get_request_token(options)
+        @request_token ||= consumer(options).get_request_token(options)
       end
 
       # For web apps use params[:oauth_verifier], for desktop apps,
@@ -43,21 +44,22 @@ module LinkedIn
         # since LinkedIn uses api.linkedin.com for request and access token exchanges,
         # but www.linkedin.com for authorize/authenticate, we have to take care
         # of the url creation ourselves.
-        def parse_oauth_options
+        def parse_oauth_options(options = {})
           {
-            :request_token_url => full_oauth_url_for(:request_token, :api_host),
+            :request_token_url => full_oauth_url_for(:request_token, :api_host,options[:scope]),
             :access_token_url  => full_oauth_url_for(:access_token,  :api_host),
             :authorize_url     => full_oauth_url_for(:authorize,     :auth_host),
             :site              => @consumer_options[:site] || @consumer_options[:api_host] || DEFAULT_OAUTH_OPTIONS[:api_host]
           }
         end
 
-        def full_oauth_url_for(url_type, host_type)
+        def full_oauth_url_for(url_type, host_type, scope=nil)
           if @consumer_options["#{url_type}_url".to_sym]
             @consumer_options["#{url_type}_url".to_sym]
           else
             host = @consumer_options[:site] || @consumer_options[host_type] || DEFAULT_OAUTH_OPTIONS[host_type]
             path = @consumer_options[:"#{url_type}_path".to_sym] || DEFAULT_OAUTH_OPTIONS["#{url_type}_path".to_sym]
+            path += "?scope=#{scope}" unless scope==nil
             "#{host}#{path}"
           end
         end
