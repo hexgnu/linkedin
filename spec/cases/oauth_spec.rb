@@ -20,6 +20,13 @@ describe "LinkedIn::Client" do
       end
     end
 
+    describe "request token with scope" do
+      let(:consumer) {client.consumer({:scope => "r_fullprofile"})}
+      it 'should return a request token with scope' do
+        consumer.request_token_url.should == 'https://api.linkedin.com/uas/oauth/requestToken?scope=r_fullprofile'
+      end
+    end
+
     describe "different api and auth hosts options" do
       let(:consumer) do
         LinkedIn::Client.new('1234', '1234', {
