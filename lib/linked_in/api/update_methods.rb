@@ -43,7 +43,7 @@ module LinkedIn
         put(path, 'false', "Content-Type" => "application/json")
       end
 
-      def send_message(subject, body, recipient_paths)
+      def send_message(subject, body, recipient_paths, options={})
         path = "/people/~/mailbox"
       
         message = {
@@ -51,10 +51,27 @@ module LinkedIn
             'body' => body,
             'recipients' => {
                 'values' => recipient_paths.map do |profile_path| 
-                  { 'person' => { '_path' => "/people/#{profile_path}" } } 
+                  if profile_path.respond_to? :keys
+                    {'person' => { '_path' => "/people/#{profile_path[:path]}",
+                      :first_name => profile_path[:first_name],
+                      :last_name => profile_path[:last_name]}
+                    }
+                  else
+                    { 'person' => { '_path' => "/people/#{profile_path}" } } 
+                  end
                 end
             }
         }
+        if options[:invitation_type]
+          inv = {
+            'item_content' => {
+              'invitation_request' => {
+                'connect_type' => options[:invitation_type]
+              }
+            }
+          }
+          message.merge! inv
+        end
         post(path, message.to_json, "Content-Type" => "application/json")
       end
       #

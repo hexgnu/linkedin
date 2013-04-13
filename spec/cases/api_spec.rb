@@ -77,6 +77,13 @@ describe LinkedIn::Api do
     response.body.should == nil
     response.code.should == "201"
   end
+
+  it "should be able to send an invitation" do
+    stub_request(:post, "https://api.linkedin.com/v1/people/~/mailbox").to_return(:body => "", :status => 201)
+    response = client.send_message("subject", "body", [{:path => '/people/email=blah@example.com', :first_name => 'Jimmy', :last_name => 'Jams'}], :invitation_type => 'friend')
+    response.body.should == ""
+    response.code.should == "201"
+  end
   
   it "should be able to like a network update" do
     stub_request(:put, "https://api.linkedin.com/v1/people/~/network/updates/key=SOMEKEY/is-liked").
