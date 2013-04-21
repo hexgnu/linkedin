@@ -27,7 +27,12 @@ module LinkedIn
         path = "#{person_path(options)}/group-memberships"
         simple_query(path, options)
       end
-      
+
+      def group_info(options = {})
+        path = "#{group_path(options)}"
+        simple_query(path, options)
+      end
+
       def shares(options={})
         path = "#{person_path(options)}/network/updates?type=SHAR&scope=self"
         simple_query(path, options)
@@ -55,7 +60,7 @@ module LinkedIn
           end
 
           headers = options.delete(:headers) || {}
-          params  = options.map { |k,v| "#{k}=#{v}" }.join("&")
+          params  = to_query(options)
           path   += "?#{params}" if not params.empty?
 
           Mash.from_json(get(path, headers))
@@ -84,6 +89,13 @@ module LinkedIn
             path += "email-domain=#{CGI.escape(domain)}"
           else
             path += "~"
+          end
+        end
+
+        def group_path(options)
+          path = "/groups/"
+          if id = options.delete(:id)
+            path += id
           end
         end
 
