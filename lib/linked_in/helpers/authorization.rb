@@ -48,7 +48,8 @@ module LinkedIn
             :request_token_url => full_oauth_url_for(:request_token, :api_host),
             :access_token_url  => full_oauth_url_for(:access_token,  :api_host),
             :authorize_url     => full_oauth_url_for(:authorize,     :auth_host),
-            :site              => @consumer_options[:site] || @consumer_options[:api_host] || DEFAULT_OAUTH_OPTIONS[:api_host]
+            :site              => @consumer_options[:site] || @consumer_options[:api_host] || DEFAULT_OAUTH_OPTIONS[:api_host],
+            :proxy             => @consumer_options.fetch(:proxy, nil)
           }
         end
 
