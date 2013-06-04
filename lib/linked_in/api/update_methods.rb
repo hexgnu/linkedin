@@ -14,6 +14,11 @@ module LinkedIn
         body = {'membership-state' => {'code' => 'member' }}
         put(path, body.to_json, "Content-Type" => "application/json")
       end
+      
+      def add_post_to_group(group_id, post)
+        path = "/groups/#{group_id}/posts"
+        post(path, post.to_json, "Content-Type" => "application/json")
+      end
 
       # def share(options={})
       #   path = "/people/~/shares"

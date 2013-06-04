@@ -1,0 +1,45 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :post
+    uri: https://api.linkedin.com:443/v1/groups/123/posts
+    body: ! '{"title":"Group title","summary":"Summary of discussion"}'
+    headers:
+      x-li-format:
+      - json
+      content-type:
+      - application/json
+      user-agent:
+      - OAuth gem v0.4.7
+      content-length:
+      - '57'
+      authorization:
+      - OAuth oauth_body_hash="6tds5si8LYlVNDPOkNdKK9ff2%2BU%3D", oauth_consumer_key="token",
+        oauth_nonce="05g9cXrvlqtpmhiSr3cC847Gr49HVYTGs34CGGDoxw", oauth_signature="kvIgPDKNBMyZct0r7Ybp19ox3uM%3D",
+        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1366045102", oauth_token="atoken",
+        oauth_version="1.0"
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 401
+      message: Unauthorized
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      x-li-request-id:
+      - C5BRDFWCDH
+      date:
+      - Mon, 15 Apr 2013 16:58:21 GMT
+      vary:
+      - ! '*'
+      x-li-format:
+      - json
+      x-li-r2-w-ic-2:
+      - com.linkedin.container.rpc.cluster.serviceInfo=PROD-ELA4%2Fauth%2F0.0.2000-RC1.26335%2Fela4-app1913%2Fi001
+      content-type:
+      - application/json;charset=UTF-8
+      content-length:
+      - '160'
+    body: ! "{\n  \"errorCode\": 0,\n  \"message\": \"[unauthorized]. No consumer
+      found for key token\",\n  \"requestId\": \"C5BRDFWCDH\",\n  \"status\": 401,\n
+      \ \"timestamp\": 1366045102279\n}"
+    http_version: '1.1'

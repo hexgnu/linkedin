@@ -150,6 +150,14 @@ describe LinkedIn::Api do
       response.body.should == nil
       response.code.should == "201"
     end
+    
+    it "should be able to post to group" do
+      stub_request(:post, "https://api.linkedin.com/v1/groups/123/posts").to_return(:body => "", :status => 201)
+      post = {:title => "Group title", :summary => "Summary of discussion"}
+      response = client.add_post_to_group(123, post)
+      response.body.should == nil
+      response.code.should == "201"
+    end
 
   end
 
