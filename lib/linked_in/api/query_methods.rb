@@ -23,6 +23,21 @@ module LinkedIn
         simple_query(path, options)
       end
 
+      def job(options = {})
+        path = jobs_path(options)
+        simple_query(path, options)
+      end
+
+      def job_bookmarks(options = {})
+        path = "#{person_path(options)}/job-bookmarks"
+        simple_query(path, options)
+      end
+
+      def job_suggestions(options = {})
+        path = "#{person_path(options)}/suggestions/job-suggestions"
+        simple_query(path, options)
+      end
+
       def group_memberships(options = {})
         path = "#{person_path(options)}/group-memberships"
         simple_query(path, options)
@@ -83,6 +98,15 @@ module LinkedIn
             path += "/url=#{CGI.escape(url)}"
           elsif name = options.delete(:name)
             path += "/universal-name=#{CGI.escape(name)}"
+          else
+            path += "/~"
+          end
+        end
+
+        def jobs_path(options)
+          path = "/jobs"
+          if id = options.delete(:id)
+            path += "/id=#{id}"
           else
             path += "/~"
           end
