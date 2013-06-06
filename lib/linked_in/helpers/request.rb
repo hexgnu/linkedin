@@ -64,7 +64,7 @@ module LinkedIn
         def to_query(params)
           params.map { |k, v|
             if v.class == Array
-              build_query(v.map { |x| [k, x] })
+              to_query(v.map { |x| [k, x] })
             else
               v.nil? ? escape(k) : "#{CGI.escape(k.to_s)}=#{CGI.escape(v.to_s)}"
             end
