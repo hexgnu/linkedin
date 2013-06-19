@@ -1,109 +1,93 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: https://api.linkedin.com:443/v1/people-search?company-name=linkedin
-    body: 
-    headers: 
-      user-agent: 
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.linkedin.com/v1/people-search?company-name=linkedin
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
       - OAuth gem v0.4.7
-      authorization: 
-      - OAuth oauth_consumer_key="mpibxdpwbwry", oauth_nonce="TkuTVt34MgzfuheowxiWtlQzdNdJBfGwh8uNqwcDrS4", oauth_signature="TQsnrPLgwq6hrw4G9VaPwJIKW8o%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1365631657", oauth_token="d9f69cd6-f3f3-4c26-9f2c-12cd8e228089", oauth_version="1.0"
-      x-li-format: 
+      Authorization:
+      - OAuth oauth_consumer_key="mpibxdpwbwry", oauth_nonce="TkuTVt34MgzfuheowxiWtlQzdNdJBfGwh8uNqwcDrS4",
+        oauth_signature="TQsnrPLgwq6hrw4G9VaPwJIKW8o%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1365631657", oauth_token="d9f69cd6-f3f3-4c26-9f2c-12cd8e228089",
+        oauth_version="1.0"
+      X-Li-Format:
       - json
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      x-li-request-id: 
+    headers:
+      X-Li-Request-Id:
       - 0UF1FY9HHN
-      vary: 
-      - "*"
-      transfer-encoding: 
+      Vary:
+      - ! '*'
+      Transfer-Encoding:
       - chunked
-      server: 
+      Server:
       - Apache-Coyote/1.1
-      content-type: 
+      Content-Type:
       - application/json;charset=UTF-8
-      date: 
+      Date:
       - Wed, 10 Apr 2013 22:07:36 GMT
-      x-li-format: 
+      X-Li-Format:
       - json
-    body: |-
-      {
-        "numResults": 0,
-        "people": {"_total": 0}
-      }
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: https://api.linkedin.com:443/v1/people-search?company-name=IBM
-    body: 
-    headers: 
-      user-agent: 
+    body:
+      encoding: UTF-8
+      string: ! "{\n  \"numResults\": 0,\n  \"people\": {\"_total\": 0}\n}"
+    http_version: '1.1'
+  recorded_at: Tue, 04 Jun 2013 03:42:37 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v1/people-search?company-name=IBM
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
       - OAuth gem v0.4.7
-      authorization: 
-      - OAuth oauth_consumer_key="mpibxdpwbwry", oauth_nonce="dixy4z5VMylJTypqa3abkuEnVrjFtb5V5hd9DpMKB0", oauth_signature="OOD9beldHTV5d9a6fVpPUqOB%2BPs%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1365631799", oauth_token="d9f69cd6-f3f3-4c26-9f2c-12cd8e228089", oauth_version="1.0"
-      x-li-format: 
+      Authorization:
+      - OAuth oauth_consumer_key="mpibxdpwbwry", oauth_nonce="dixy4z5VMylJTypqa3abkuEnVrjFtb5V5hd9DpMKB0",
+        oauth_signature="OOD9beldHTV5d9a6fVpPUqOB%2BPs%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1365631799", oauth_token="d9f69cd6-f3f3-4c26-9f2c-12cd8e228089",
+        oauth_version="1.0"
+      X-Li-Format:
       - json
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      x-li-request-id: 
+    headers:
+      X-Li-Request-Id:
       - L00YMW359U
-      vary: 
-      - "*"
-      transfer-encoding: 
+      Vary:
+      - ! '*'
+      Transfer-Encoding:
       - chunked
-      server: 
+      Server:
       - Apache-Coyote/1.1
-      date: 
+      Date:
       - Wed, 10 Apr 2013 22:09:58 GMT
-      x-li-format: 
+      X-Li-Format:
       - json
-      content-type: 
+      Content-Type:
       - application/json;charset=UTF-8
-    body: |-
-      {
-        "numResults": 6,
-        "people": {
-          "_total": 6,
-          "values": [
-            {
-              "firstName": "Ryan",
-              "id": "KHkgwBMaa-",
-              "lastName": "Sue"
-            },
-            {
-              "firstName": "Ben",
-              "id": "lljISRB-WQ",
-              "lastName": "Mejia"
-            },
-            {
-              "firstName": "James",
-              "id": "zLwxyfa2cv",
-              "lastName": "Stevenson"
-            },
-            {
-              "firstName": "Charles",
-              "id": "r5Kzi9Um-e",
-              "lastName": "Kafoglis"
-            },
-            {
-              "firstName": "Sauraj",
-              "id": "RLJu6NhdI2",
-              "lastName": "Goswami"
-            },
-            {
-              "firstName": "Jonathan",
-              "id": "NgAxaSCyZ3",
-              "lastName": "Hedstrom"
-            }
-          ]
-        }
-      }
-    http_version: "1.1"
+    body:
+      encoding: UTF-8
+      string: ! "{\n  \"numResults\": 6,\n  \"people\": {\n    \"_total\": 6,\n    \"values\":
+        [\n      {\n        \"firstName\": \"Ryan\",\n        \"id\": \"KHkgwBMaa-\",\n
+        \       \"lastName\": \"Sue\"\n      },\n      {\n        \"firstName\": \"Ben\",\n
+        \       \"id\": \"lljISRB-WQ\",\n        \"lastName\": \"Mejia\"\n      },\n
+        \     {\n        \"firstName\": \"James\",\n        \"id\": \"zLwxyfa2cv\",\n
+        \       \"lastName\": \"Stevenson\"\n      },\n      {\n        \"firstName\":
+        \"Charles\",\n        \"id\": \"r5Kzi9Um-e\",\n        \"lastName\": \"Kafoglis\"\n
+        \     },\n      {\n        \"firstName\": \"Sauraj\",\n        \"id\": \"RLJu6NhdI2\",\n
+        \       \"lastName\": \"Goswami\"\n      },\n      {\n        \"firstName\":
+        \"Jonathan\",\n        \"id\": \"NgAxaSCyZ3\",\n        \"lastName\": \"Hedstrom\"\n
+        \     }\n    ]\n  }\n}"
+    http_version: '1.1'
+  recorded_at: Tue, 04 Jun 2013 03:42:37 GMT
+recorded_with: VCR 2.5.0

@@ -1,72 +1,53 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: https://api.linkedin.com:443/v1/people-search?keywords=github
-    body: 
-    headers: 
-      x-li-format: 
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.linkedin.com/v1/people-search?keywords=github
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Li-Format:
       - json
-      authorization: 
-      - OAuth oauth_consumer_key="mpibxdpwbwry", oauth_nonce="DlBgAEJHkDYAnMMZwzFObsUNcCmRbzFldB4dV1yeE", oauth_signature="RLiPr%2FC1bq9Dv29W3mjezy1of54%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1365631655", oauth_token="d9f69cd6-f3f3-4c26-9f2c-12cd8e228089", oauth_version="1.0"
-      user-agent: 
+      Authorization:
+      - OAuth oauth_consumer_key="mpibxdpwbwry", oauth_nonce="DlBgAEJHkDYAnMMZwzFObsUNcCmRbzFldB4dV1yeE",
+        oauth_signature="RLiPr%2FC1bq9Dv29W3mjezy1of54%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1365631655", oauth_token="d9f69cd6-f3f3-4c26-9f2c-12cd8e228089",
+        oauth_version="1.0"
+      User-Agent:
       - OAuth gem v0.4.7
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      x-li-request-id: 
+    headers:
+      X-Li-Request-Id:
       - 5BE8O0G2CK
-      x-li-format: 
+      X-Li-Format:
       - json
-      date: 
+      Date:
       - Wed, 10 Apr 2013 22:07:35 GMT
-      vary: 
-      - "*"
-      server: 
+      Vary:
+      - ! '*'
+      Server:
       - Apache-Coyote/1.1
-      content-type: 
+      Content-Type:
       - application/json;charset=UTF-8
-      transfer-encoding: 
+      Transfer-Encoding:
       - chunked
-    body: |-
-      {
-        "numResults": 6,
-        "people": {
-          "_total": 6,
-          "values": [
-            {
-              "firstName": "Shay",
-              "id": "ucXjUw4M9J",
-              "lastName": "Frendt"
-            },
-            {
-              "firstName": "Scott",
-              "id": "t6mvVsY3df",
-              "lastName": "Smith"
-            },
-            {
-              "firstName": "Philip",
-              "id": "ZeSnXwtz6Y",
-              "lastName": "Corliss"
-            },
-            {
-              "firstName": "Jay",
-              "id": "i24wDA2GrH",
-              "lastName": "Beavers"
-            },
-            {
-              "firstName": "Chris",
-              "id": "SJBelisgHh",
-              "lastName": "Wiswell"
-            },
-            {
-              "firstName": "Satish",
-              "id": "V1FPuGot-I",
-              "lastName": "Talim"
-            }
-          ]
-        }
-      }
-    http_version: "1.1"
+    body:
+      encoding: UTF-8
+      string: ! "{\n  \"numResults\": 6,\n  \"people\": {\n    \"_total\": 6,\n    \"values\":
+        [\n      {\n        \"firstName\": \"Shay\",\n        \"id\": \"ucXjUw4M9J\",\n
+        \       \"lastName\": \"Frendt\"\n      },\n      {\n        \"firstName\":
+        \"Scott\",\n        \"id\": \"t6mvVsY3df\",\n        \"lastName\": \"Smith\"\n
+        \     },\n      {\n        \"firstName\": \"Philip\",\n        \"id\": \"ZeSnXwtz6Y\",\n
+        \       \"lastName\": \"Corliss\"\n      },\n      {\n        \"firstName\":
+        \"Jay\",\n        \"id\": \"i24wDA2GrH\",\n        \"lastName\": \"Beavers\"\n
+        \     },\n      {\n        \"firstName\": \"Chris\",\n        \"id\": \"SJBelisgHh\",\n
+        \       \"lastName\": \"Wiswell\"\n      },\n      {\n        \"firstName\":
+        \"Satish\",\n        \"id\": \"V1FPuGot-I\",\n        \"lastName\": \"Talim\"\n
+        \     }\n    ]\n  }\n}"
+    http_version: '1.1'
+  recorded_at: Tue, 04 Jun 2013 03:42:37 GMT
+recorded_with: VCR 2.5.0

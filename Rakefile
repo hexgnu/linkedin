@@ -8,6 +8,7 @@ RSpec::Core::RakeTask.new(:spec)
 
 task :test => :spec
 task :default => :spec
+load 'vcr/tasks/vcr.rake'
 
 require 'rdoc/task'
 require File.expand_path('../lib/linked_in/version', __FILE__)

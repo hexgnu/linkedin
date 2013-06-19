@@ -1,35 +1,232 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: https://api.linkedin.com:443/v1/company-search:(companies:(id,name,industries,description,specialties),num-results)?keywords=apple
-    body: 
-    headers: 
-      x-li-format: 
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.linkedin.com/v1/company-search:(companies:(id,name,industries,description,specialties),num-results)?keywords=apple
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Li-Format:
       - json
-      authorization: 
-      - OAuth oauth_consumer_key="mpibxdpwbwry", oauth_nonce="XIAUlVH3VfeqacvVEQzCvdLSyy9swruF3mouF9mtc", oauth_signature="ggZObnJ1w5zMIBixfluGoUYZVSg%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1365631654", oauth_token="d9f69cd6-f3f3-4c26-9f2c-12cd8e228089", oauth_version="1.0"
-      user-agent: 
+      Authorization:
+      - OAuth oauth_consumer_key="mpibxdpwbwry", oauth_nonce="XIAUlVH3VfeqacvVEQzCvdLSyy9swruF3mouF9mtc",
+        oauth_signature="ggZObnJ1w5zMIBixfluGoUYZVSg%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1365631654", oauth_token="d9f69cd6-f3f3-4c26-9f2c-12cd8e228089",
+        oauth_version="1.0"
+      User-Agent:
       - OAuth gem v0.4.7
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      x-li-request-id: 
+    headers:
+      X-Li-Request-Id:
       - 68RH2HSO61
-      x-li-format: 
+      X-Li-Format:
       - json
-      date: 
+      Date:
       - Wed, 10 Apr 2013 22:07:35 GMT
-      vary: 
-      - "*"
-      server: 
+      Vary:
+      - ! '*'
+      Server:
       - Apache-Coyote/1.1
-      content-type: 
+      Content-Type:
       - application/json;charset=UTF-8
-      transfer-encoding: 
+      Transfer-Encoding:
       - chunked
-    body: "{\n  \"companies\": {\n    \"_count\": 10,\n    \"_start\": 0,\n    \"_total\": 8450,\n    \"values\": [\n      {\n        \"description\": \"Apple designs Macs, the best personal computers in the world, along with OS X, iLife, iWork and professional software. Apple leads the digital music revolution with its iPods and iTunes online store. Apple has reinvented the mobile phone with its revolutionary iPhone and App Store, and is defining the future of mobile media and computing devices with iPad.\",\n        \"id\": 162479,\n        \"industries\": {\n          \"_total\": 1,\n          \"values\": [{\n            \"code\": \"24\",\n            \"name\": \"Consumer Electronics\"\n          }]\n        },\n        \"name\": \"Apple\",\n        \"specialties\": {\n          \"_total\": 4,\n          \"values\": [\n            \"Innovative product development\",\n            \"world class operations\",\n            \"Retail\",\n            \"Telephone Support\"\n          ]\n        }\n      },\n      {\n        \"description\": \"Experience the Difference.      \\r\\nFor over 40 years, Apple Vacations has provided the most value in vacations to millions of people. Throughout the years, we\\u2019ve provided what you want in a vacation \\u2013 great service, convenience, and value. We understand just how important your vacation is. We know because, like you, vacations are important to us too. \\r\\n \\r\\nApple Vacations is a company of energetic, hardworking employees with the same entrepreneurial attitudes as our founders. Headquartered just outside Philadelphia with regional offices in Chicago and Boston, the company is completely focused on providing quality vacations for our customers. Employees are empowered to make decisions that impact the quality of their customers\\u2019 vacations on a daily basis. Since our humble beginnings, Apple Vacations has created the ultimate \\u201cbeginning-to-end\\u201d vacation experience for customers. Apple Vacations employees will greet you at your departure airport in more than 20 cities; and will meet your flight in our charter destinations. Apple Vacations\\u2019 sister companies, flies customers to their destinations from more than 20 U.S. cities; and Amstar, is the destination management company in-resort with uniformed representatives, who will greet you upon arrival and assist you while you are at your resort. Unlike any other travel company, Apple Vacations truly provides the ultimate in a quality vacation experience.\",\n        \"id\": 19271,\n        \"industries\": {\n          \"_total\": 1,\n          \"values\": [{\n            \"code\": \"30\",\n            \"name\": \"Leisure & Travel\"\n          }]\n        },\n        \"name\": \"Apple Vacations\",\n        \"specialties\": {\n          \"_total\": 2,\n          \"values\": [\n            \"Leisure travel\",\n            \"all inclusive vacation packages\"\n          ]\n        }\n      },\n      {\n        \"description\": \"Big Apple International Realty has been listing, selling and managing Residential Real Estate in four counties of the Greater Orlando and Central Florida areas for over five years. Because our Property Management Division had grown substantially, and to fill the growing need for property management services in Central Florida, we founded Orlando Rental Store in 2008. In addition to providing \\\"Lease Only\\\" services at competitive prices, we currently manage close to 50 properties in the Greater Orlando Area.\",\n        \"id\": 778626,\n        \"industries\": {\n          \"_total\": 1,\n          \"values\": [{\n            \"code\": \"44\",\n            \"name\": \"Real Estate\"\n          }]\n        },\n        \"name\": \"Big Apple Holdings, Inc. dba Big Apple International Realty\"\n      },\n      {\n        \"description\": \"Apple & Associates is an executive search firm that specializes in the Pharmaceutical, Medical Device and Consumer Product Industries.  We provide extensive coverage of these worldwide markets and have forged a solid reputation in the industry as a competent, aggressive, and resource-rich recruiting firm.  We are a nation-wide company with offices through-out the United States. \\r\\n\\r\\nApple & Associates belongs to Intercity Personnel Associates (IPA) and the Top Echelon Network.  Through these worldwide recruiting networks, we share confidentially coded information about available positions and receive qualified candidates within a short period of time.  With one phone call you not only have rapid access to our candidates, but also to qualified candidates from over 1,000 of the nation\\u2019s other top recruiting firms.  Because our executive recruiters specialize in different industry segments, we can give you the service you deserve in a fast, focused, and efficient manner and provide you with quality industry specific candidates.   \\r\\n\\r\\nWe realize the importance of hiring professionals who understand and are able to assimilate with your company\\u2019s business model, culture, process, equipment, and materials.  Our team has studied the hiring decisions that make the firms in the Pharmaceutical and Medical Device industries so successful.  Our candidates will meet the standard your company demands, with the technical and industry background to match.\",\n        \"id\": 112136,\n        \"industries\": {\n          \"_total\": 1,\n          \"values\": [{\n            \"code\": \"104\",\n            \"name\": \"Staffing & Recruiting\"\n          }]\n        },\n        \"name\": \"Apple & Associates\",\n        \"specialties\": {\n          \"_total\": 20,\n          \"values\": [\n            \"Medical Device\",\n            \"Pharmaceutical\",\n            \"Power\",\n            \"Energy\",\n            \"Consumer Products\",\n            \"Supply Chain\",\n            \"Purchasing\",\n            \"Engineering\",\n            \"Marketing\",\n            \"Sales\",\n            \"Human Resources\",\n            \"Science\",\n            \"Finance\",\n            \"Manufacturing\",\n            \"Operations\",\n            \"R&D\",\n            \"Six Sigma\",\n            \"IT\",\n            \"chemist\",\n            \"Executive Management\"\n          ]\n        }\n      },\n      {\n        \"description\": \"Headquartered in Singapore and a presence in 9 countries globally, Stone Apple is a Specialized Consulting firm focused mainly on Business Intelligence & Analytics, Enterprise Resource Planning, Knowledge Management & Application Integration with a strong product portfolio, analytical applications, Proprietary Industry Solutions and strong services capability \\r\\n\\r\\nStone Apple has a strong offshore presence in SE Asia with development centers in Vietnam and Malaysia. The Company has a strong presence and networks in Asia Pacific, Europe and United States to support their rapidly growing MNC enterprise customer base \\r\\n\\r\\nStone Apple provides customized solutions to meet the changing needs of enterprises globally. From leading industry methodologies to in-house proven models, Stone Apple collaborates with their customers to deliver tangible business results that impact their bottom line.\",\n        \"id\": 772044,\n        \"industries\": {\n          \"_total\": 1,\n          \"values\": [{\n            \"code\": \"96\",\n            \"name\": \"Information Technology & Services\"\n          }]\n        },\n        \"name\": \"Stone Apple Solutions\"\n      },\n      {\n        \"description\": \"iSquare S.A. is the Apple Authorised Distributor of Greece and Cyprus since September 2010. iSquare is distributing Apple products but also plans, implements and provides intergrated solutions, based on the innovative Apple products and technology. iSquare's strategic goal is to increase the use of Apple products among the Greek consumers, but also to provide users the ultimate Apple experience.\\r\\n\\r\\niSquare creates and provides a complete ecosystem for Apple products and services, aiming to bring Greek customers closer to Apple's philosophy. In order to do that, iSquare:\\r\\n\\r\\n- Creates a wide network of POS (Points Of Sales) that spreads throughout Greece and Cyprus\\r\\n\\r\\n- Develops its relations with major retail chains in order to promote Apple products to a wide range of customers\\r\\n\\r\\n- Creates a unique network of stores exclusively for Apple products, always in line with the high standards of  \\r\\n  Apple Premium Reseller program\\r\\n\\r\\n- Invests on continuous and in depth training of the sales network in order to provide the best before and after sale \\r\\n  support, according to Apple's and iSquare's high standards\\r\\n\\r\\n- Focuses on the crucial sector of Education\\r\\n\\r\\n- Constantly works to improve the support of Apple products and solutions\\r\\n\\r\\n- Completes Apple's ecosystem as the distributor of software and peripherals from well known brands.\\r\\n\\r\\n\\r\\nWith a vision that derives from Apple's innovation, iSquare aspires to bring the Apple products at the stature they deserve within the Greek and Cypriot market.\",\n        \"id\": 2135525,\n        \"industries\": {\n          \"_total\": 1,\n          \"values\": [{\n            \"code\": \"24\",\n            \"name\": \"Consumer Electronics\"\n          }]\n        },\n        \"name\": \"iSquare - Apple Authorized Distributor in Greece & Cyprus\"\n      },\n      {\n        \"description\": \"Filex (Moj Apple Du\xC4\x87an i Servis) je autorizirani Apple partner za prodaju, servis i podr\xC5\xA1ku.\\r\\n\\r\\nFilex je osnovan 1992 godine te od tada u kontinuitetu razvijamo i unapre\xC4\x91ujemo prepoznatljivost Apple tehnologija prezentiraju\xC4\x87i upotrebnu vrijednost Apple rje\xC5\xA1enja, na doma\xC4\x87em i regionalnom tr\xC5\xBEi\xC5\xA1tu.\\r\\n\\r\\nNa\xC5\xA1 fokus nije isklju\xC4\x8Divo na tehnologijama ve\xC4\x87 kako te tehnologije podrediti potrebama korisnika. Sukladno tome, Filex nije samo jo\xC5\xA1 jedna u nizu trgovina u koju \xC4\x87ete do\xC4\x87i \\\"pokupiti\\\" svoj Apple ure\xC4\x91aj, ve\xC4\x87 mjesto na kojem \xC4\x87ete postavljati pitanja, razgovarati i diskutirati te na kraju iza\xC4\x87i sa rje\xC5\xA1enjem - ma kako god ono na kraju izgledalo!\\r\\n\\r\\nKontaktirajte nas preko na\xC5\xA1eg Internet Store-a (www.filex.hr), ili nam pi\xC5\xA1ite na prodaja@filx.hr ili servis@filex.hr.\\r\\nI svakako nam se pridru\xC5\xBEite na Facebook-u na http://www.facebook.com/pages/Filex-Moj-Apple-Du\xC4\x87an-i-Servis/131194173598671\\r\\n\\r\\nVa\xC5\xA1e zadovoljstvo na\xC5\xA1a je misija!\",\n        \"id\": 2303504,\n        \"industries\": {\n          \"_total\": 1,\n          \"values\": [{\n            \"code\": \"3\",\n            \"name\": \"Computer Hardware\"\n          }]\n        },\n        \"name\": \"Filex Apple Store & Support\",\n        \"specialties\": {\n          \"_total\": 4,\n          \"values\": [\n            \"Apple Store\",\n            \"Apple Podr\xC5\xA1ka i Servis\",\n            \"Apple Rje\xC5\xA1enja\",\n            \"Apple B2B\"\n          ]\n        }\n      },\n      {\n        \"description\": \"Als Apple een nieuwssite zou maken in Vlaanderen, dan was het AppleVlaanderen. AppleVlaanderen is gemaakt met dezelfde passie en aandacht voor detail als de producten van Apple zelf.\\r\\n\\r\\nWe behandelen de nieuwsfeiten over Apple met zorg en proberen u zo goed mogelijk in te lichten als Apple-Fan in Vlaanderen. Dagelijks circuleren er duizenden geruchten over Apple in het algemeen, onze taak is deze te bundelen en u mee te delen.\\r\\n\\r\\nDit doen we met veel liefde voor de verschillende producten en voor Apple in het algemeen. Onze medewerkers werken allemaal op vrijwillige basis en hebben voldoende kennis over de producten van Apple.\",\n        \"id\": 2419290,\n        \"industries\": {\n          \"_total\": 1,\n          \"values\": [{\n            \"code\": \"81\",\n            \"name\": \"Newspapers\"\n          }]\n        },\n        \"name\": \"Apple Nieuws Vlaanderen\",\n        \"specialties\": {\n          \"_total\": 4,\n          \"values\": [\n            \"apple\",\n            \"iPhone\",\n            \"iPad\",\n            \"mac\"\n          ]\n        }\n      },\n      {\n        \"description\": \"OGGO est une soci\xC3\xA9t\xC3\xA9 de conseils et solutions Apple Macintosh bas\xC3\xA9e \xC3\xA0 Gen\xC3\xA8ve, nous proposons notre savoir faire essentiellement aux PME et particuliers.\\r\\n\\r\\nNos services en un coup d'oeil :\\r\\n\\r\\n// R\xC3\xA9parations\\r\\n// Optimisations mat\xC3\xA9rielles\\r\\n// Contrats de maintenance\\r\\n// D\xC3\xA9pannage sur site\\r\\n// Interventions urgentes\\r\\n// Maintenance\\r\\n// Aide \xC3\xA0 l'achat\\r\\n// Formations\",\n        \"id\": 2260437,\n        \"industries\": {\n          \"_total\": 1,\n          \"values\": [{\n            \"code\": \"96\",\n            \"name\": \"Information Technology & Services\"\n          }]\n        },\n        \"name\": \"OGGO - Services Apple Macintosh\",\n        \"specialties\": {\n          \"_total\": 7,\n          \"values\": [\n            \"Consulting & conseils Apple Macintosh\",\n            \"Support Apple Macintosh\",\n            \"Maintenance Mac OS X Server\",\n            \"D\xC3\xA9pannage Mac OS X\",\n            \"Installation Mac OS X Server\",\n            \"Interventions Apple Macintosh\",\n            \"Formation Apple Macintosh\"\n          ]\n        }\n      },\n      {\n        \"description\": \"Apple-Crumble provides sound advice, sales and support for all apple mac products and related peripherals including external hard drives, printers, scanners and both apple and 3rd party software. Apple-Crumble are also experts in troubleshooting, repair and maintenance. Our staff are apple trained and certified with over 15 years experience.\\r\\n\\r\\nAll work is guaranteed and all enquiries are welcome.\\r\\n\\r\\nWe are obviously very \\u2018pro\\u2019 apple and firmly believe that once you go mac you never go back!\\r\\n\\r\\nFor your convenience Apple-Crumble have our own workshop and offices with free parking in Penzance, Cornwall so that you have the extra peace of mind knowing that your equipment is being serviced in a clean and safe environment. You may also view, demo and purchase new hardware or add-ons, as well as discussing tailor-made options for you and/or your business.\\r\\n\\r\\nApple-Crumble\\u2019s service extends to on-site visits for emergency or contract call-outs, as well as delivery and installation of new products and systems. We cover Penzance, Falmouth, Helston and the Lizard, St Ives, Hayle, Truro, Camborne, Redruth, and all surrounding areas including north Cornwall and Devon\\r\\n\\r\\nIn most cases it is safer and more cost effective to bring your hardware to us as we are geared up for any static or time delay issues, but it is very rare that we cannot provide a solution, wherever you may be!\",\n        \"id\": 1049054,\n        \"industries\": {\n          \"_total\": 1,\n          \"values\": [{\n            \"code\": \"3\",\n            \"name\": \"Computer Hardware\"\n          }]\n        },\n        \"name\": \"Apple Crumble\"\n      }\n    ]\n  },\n  \"numResults\": 8450\n\
-      }"
-    http_version: "1.1"
+    body:
+      encoding: UTF-8
+      string: ! "{\n  \"companies\": {\n    \"_count\": 10,\n    \"_start\": 0,\n
+        \   \"_total\": 8450,\n    \"values\": [\n      {\n        \"description\":
+        \"Apple designs Macs, the best personal computers in the world, along with
+        OS X, iLife, iWork and professional software. Apple leads the digital music
+        revolution with its iPods and iTunes online store. Apple has reinvented the
+        mobile phone with its revolutionary iPhone and App Store, and is defining
+        the future of mobile media and computing devices with iPad.\",\n        \"id\":
+        162479,\n        \"industries\": {\n          \"_total\": 1,\n          \"values\":
+        [{\n            \"code\": \"24\",\n            \"name\": \"Consumer Electronics\"\n
+        \         }]\n        },\n        \"name\": \"Apple\",\n        \"specialties\":
+        {\n          \"_total\": 4,\n          \"values\": [\n            \"Innovative
+        product development\",\n            \"world class operations\",\n            \"Retail\",\n
+        \           \"Telephone Support\"\n          ]\n        }\n      },\n      {\n
+        \       \"description\": \"Experience the Difference.      \\r\\nFor over
+        40 years, Apple Vacations has provided the most value in vacations to millions
+        of people. Throughout the years, we\\u2019ve provided what you want in a vacation
+        \\u2013 great service, convenience, and value. We understand just how important
+        your vacation is. We know because, like you, vacations are important to us
+        too. \\r\\n \\r\\nApple Vacations is a company of energetic, hardworking employees
+        with the same entrepreneurial attitudes as our founders. Headquartered just
+        outside Philadelphia with regional offices in Chicago and Boston, the company
+        is completely focused on providing quality vacations for our customers. Employees
+        are empowered to make decisions that impact the quality of their customers\\u2019
+        vacations on a daily basis. Since our humble beginnings, Apple Vacations has
+        created the ultimate \\u201cbeginning-to-end\\u201d vacation experience for
+        customers. Apple Vacations employees will greet you at your departure airport
+        in more than 20 cities; and will meet your flight in our charter destinations.
+        Apple Vacations\\u2019 sister companies, flies customers to their destinations
+        from more than 20 U.S. cities; and Amstar, is the destination management company
+        in-resort with uniformed representatives, who will greet you upon arrival
+        and assist you while you are at your resort. Unlike any other travel company,
+        Apple Vacations truly provides the ultimate in a quality vacation experience.\",\n
+        \       \"id\": 19271,\n        \"industries\": {\n          \"_total\": 1,\n
+        \         \"values\": [{\n            \"code\": \"30\",\n            \"name\":
+        \"Leisure & Travel\"\n          }]\n        },\n        \"name\": \"Apple
+        Vacations\",\n        \"specialties\": {\n          \"_total\": 2,\n          \"values\":
+        [\n            \"Leisure travel\",\n            \"all inclusive vacation packages\"\n
+        \         ]\n        }\n      },\n      {\n        \"description\": \"Big
+        Apple International Realty has been listing, selling and managing Residential
+        Real Estate in four counties of the Greater Orlando and Central Florida areas
+        for over five years. Because our Property Management Division had grown substantially,
+        and to fill the growing need for property management services in Central Florida,
+        we founded Orlando Rental Store in 2008. In addition to providing \\\"Lease
+        Only\\\" services at competitive prices, we currently manage close to 50 properties
+        in the Greater Orlando Area.\",\n        \"id\": 778626,\n        \"industries\":
+        {\n          \"_total\": 1,\n          \"values\": [{\n            \"code\":
+        \"44\",\n            \"name\": \"Real Estate\"\n          }]\n        },\n
+        \       \"name\": \"Big Apple Holdings, Inc. dba Big Apple International Realty\"\n
+        \     },\n      {\n        \"description\": \"Apple & Associates is an executive
+        search firm that specializes in the Pharmaceutical, Medical Device and Consumer
+        Product Industries.  We provide extensive coverage of these worldwide markets
+        and have forged a solid reputation in the industry as a competent, aggressive,
+        and resource-rich recruiting firm.  We are a nation-wide company with offices
+        through-out the United States. \\r\\n\\r\\nApple & Associates belongs to Intercity
+        Personnel Associates (IPA) and the Top Echelon Network.  Through these worldwide
+        recruiting networks, we share confidentially coded information about available
+        positions and receive qualified candidates within a short period of time.
+        \ With one phone call you not only have rapid access to our candidates, but
+        also to qualified candidates from over 1,000 of the nation\\u2019s other top
+        recruiting firms.  Because our executive recruiters specialize in different
+        industry segments, we can give you the service you deserve in a fast, focused,
+        and efficient manner and provide you with quality industry specific candidates.
+        \  \\r\\n\\r\\nWe realize the importance of hiring professionals who understand
+        and are able to assimilate with your company\\u2019s business model, culture,
+        process, equipment, and materials.  Our team has studied the hiring decisions
+        that make the firms in the Pharmaceutical and Medical Device industries so
+        successful.  Our candidates will meet the standard your company demands, with
+        the technical and industry background to match.\",\n        \"id\": 112136,\n
+        \       \"industries\": {\n          \"_total\": 1,\n          \"values\":
+        [{\n            \"code\": \"104\",\n            \"name\": \"Staffing & Recruiting\"\n
+        \         }]\n        },\n        \"name\": \"Apple & Associates\",\n        \"specialties\":
+        {\n          \"_total\": 20,\n          \"values\": [\n            \"Medical
+        Device\",\n            \"Pharmaceutical\",\n            \"Power\",\n            \"Energy\",\n
+        \           \"Consumer Products\",\n            \"Supply Chain\",\n            \"Purchasing\",\n
+        \           \"Engineering\",\n            \"Marketing\",\n            \"Sales\",\n
+        \           \"Human Resources\",\n            \"Science\",\n            \"Finance\",\n
+        \           \"Manufacturing\",\n            \"Operations\",\n            \"R&D\",\n
+        \           \"Six Sigma\",\n            \"IT\",\n            \"chemist\",\n
+        \           \"Executive Management\"\n          ]\n        }\n      },\n      {\n
+        \       \"description\": \"Headquartered in Singapore and a presence in 9
+        countries globally, Stone Apple is a Specialized Consulting firm focused mainly
+        on Business Intelligence & Analytics, Enterprise Resource Planning, Knowledge
+        Management & Application Integration with a strong product portfolio, analytical
+        applications, Proprietary Industry Solutions and strong services capability
+        \\r\\n\\r\\nStone Apple has a strong offshore presence in SE Asia with development
+        centers in Vietnam and Malaysia. The Company has a strong presence and networks
+        in Asia Pacific, Europe and United States to support their rapidly growing
+        MNC enterprise customer base \\r\\n\\r\\nStone Apple provides customized solutions
+        to meet the changing needs of enterprises globally. From leading industry
+        methodologies to in-house proven models, Stone Apple collaborates with their
+        customers to deliver tangible business results that impact their bottom line.\",\n
+        \       \"id\": 772044,\n        \"industries\": {\n          \"_total\":
+        1,\n          \"values\": [{\n            \"code\": \"96\",\n            \"name\":
+        \"Information Technology & Services\"\n          }]\n        },\n        \"name\":
+        \"Stone Apple Solutions\"\n      },\n      {\n        \"description\": \"iSquare
+        S.A. is the Apple Authorised Distributor of Greece and Cyprus since September
+        2010. iSquare is distributing Apple products but also plans, implements and
+        provides intergrated solutions, based on the innovative Apple products and
+        technology. iSquare's strategic goal is to increase the use of Apple products
+        among the Greek consumers, but also to provide users the ultimate Apple experience.\\r\\n\\r\\niSquare
+        creates and provides a complete ecosystem for Apple products and services,
+        aiming to bring Greek customers closer to Apple's philosophy. In order to
+        do that, iSquare:\\r\\n\\r\\n- Creates a wide network of POS (Points Of Sales)
+        that spreads throughout Greece and Cyprus\\r\\n\\r\\n- Develops its relations
+        with major retail chains in order to promote Apple products to a wide range
+        of customers\\r\\n\\r\\n- Creates a unique network of stores exclusively for
+        Apple products, always in line with the high standards of  \\r\\n  Apple Premium
+        Reseller program\\r\\n\\r\\n- Invests on continuous and in depth training
+        of the sales network in order to provide the best before and after sale \\r\\n
+        \ support, according to Apple's and iSquare's high standards\\r\\n\\r\\n-
+        Focuses on the crucial sector of Education\\r\\n\\r\\n- Constantly works to
+        improve the support of Apple products and solutions\\r\\n\\r\\n- Completes
+        Apple's ecosystem as the distributor of software and peripherals from well
+        known brands.\\r\\n\\r\\n\\r\\nWith a vision that derives from Apple's innovation,
+        iSquare aspires to bring the Apple products at the stature they deserve within
+        the Greek and Cypriot market.\",\n        \"id\": 2135525,\n        \"industries\":
+        {\n          \"_total\": 1,\n          \"values\": [{\n            \"code\":
+        \"24\",\n            \"name\": \"Consumer Electronics\"\n          }]\n        },\n
+        \       \"name\": \"iSquare - Apple Authorized Distributor in Greece & Cyprus\"\n
+        \     },\n      {\n        \"description\": \"Filex (Moj Apple DuÄ\x87an i
+        Servis) je autorizirani Apple partner za prodaju, servis i podrÅ¡ku.\\r\\n\\r\\nFilex
+        je osnovan 1992 godine te od tada u kontinuitetu razvijamo i unapreÄ\x91ujemo
+        prepoznatljivost Apple tehnologija prezentirajuÄ\x87i upotrebnu vrijednost
+        Apple rjeÅ¡enja, na domaÄ\x87em i regionalnom trÅ¾iÅ¡tu.\\r\\n\\r\\nNaÅ¡ fokus
+        nije iskljuÄ\x8Divo na tehnologijama veÄ\x87 kako te tehnologije podrediti
+        potrebama korisnika. Sukladno tome, Filex nije samo joÅ¡ jedna u nizu trgovina
+        u koju Ä\x87ete doÄ\x87i \\\"pokupiti\\\" svoj Apple ureÄ\x91aj, veÄ\x87 mjesto
+        na kojem Ä\x87ete postavljati pitanja, razgovarati i diskutirati te na kraju
+        izaÄ\x87i sa rjeÅ¡enjem - ma kako god ono na kraju izgledalo!\\r\\n\\r\\nKontaktirajte
+        nas preko naÅ¡eg Internet Store-a (www.filex.hr), ili nam piÅ¡ite na prodaja@filx.hr
+        ili servis@filex.hr.\\r\\nI svakako nam se pridruÅ¾ite na Facebook-u na http://www.facebook.com/pages/Filex-Moj-Apple-DuÄ\x87an-i-Servis/131194173598671\\r\\n\\r\\nVaÅ¡e
+        zadovoljstvo naÅ¡a je misija!\",\n        \"id\": 2303504,\n        \"industries\":
+        {\n          \"_total\": 1,\n          \"values\": [{\n            \"code\":
+        \"3\",\n            \"name\": \"Computer Hardware\"\n          }]\n        },\n
+        \       \"name\": \"Filex Apple Store & Support\",\n        \"specialties\":
+        {\n          \"_total\": 4,\n          \"values\": [\n            \"Apple
+        Store\",\n            \"Apple PodrÅ¡ka i Servis\",\n            \"Apple RjeÅ¡enja\",\n
+        \           \"Apple B2B\"\n          ]\n        }\n      },\n      {\n        \"description\":
+        \"Als Apple een nieuwssite zou maken in Vlaanderen, dan was het AppleVlaanderen.
+        AppleVlaanderen is gemaakt met dezelfde passie en aandacht voor detail als
+        de producten van Apple zelf.\\r\\n\\r\\nWe behandelen de nieuwsfeiten over
+        Apple met zorg en proberen u zo goed mogelijk in te lichten als Apple-Fan
+        in Vlaanderen. Dagelijks circuleren er duizenden geruchten over Apple in het
+        algemeen, onze taak is deze te bundelen en u mee te delen.\\r\\n\\r\\nDit
+        doen we met veel liefde voor de verschillende producten en voor Apple in het
+        algemeen. Onze medewerkers werken allemaal op vrijwillige basis en hebben
+        voldoende kennis over de producten van Apple.\",\n        \"id\": 2419290,\n
+        \       \"industries\": {\n          \"_total\": 1,\n          \"values\":
+        [{\n            \"code\": \"81\",\n            \"name\": \"Newspapers\"\n
+        \         }]\n        },\n        \"name\": \"Apple Nieuws Vlaanderen\",\n
+        \       \"specialties\": {\n          \"_total\": 4,\n          \"values\":
+        [\n            \"apple\",\n            \"iPhone\",\n            \"iPad\",\n
+        \           \"mac\"\n          ]\n        }\n      },\n      {\n        \"description\":
+        \"OGGO est une sociÃ©tÃ© de conseils et solutions Apple Macintosh basÃ©e Ã 
+        GenÃ¨ve, nous proposons notre savoir faire essentiellement aux PME et particuliers.\\r\\n\\r\\nNos
+        services en un coup d'oeil :\\r\\n\\r\\n// RÃ©parations\\r\\n// Optimisations
+        matÃ©rielles\\r\\n// Contrats de maintenance\\r\\n// DÃ©pannage sur site\\r\\n//
+        Interventions urgentes\\r\\n// Maintenance\\r\\n// Aide Ã  l'achat\\r\\n//
+        Formations\",\n        \"id\": 2260437,\n        \"industries\": {\n          \"_total\":
+        1,\n          \"values\": [{\n            \"code\": \"96\",\n            \"name\":
+        \"Information Technology & Services\"\n          }]\n        },\n        \"name\":
+        \"OGGO - Services Apple Macintosh\",\n        \"specialties\": {\n          \"_total\":
+        7,\n          \"values\": [\n            \"Consulting & conseils Apple Macintosh\",\n
+        \           \"Support Apple Macintosh\",\n            \"Maintenance Mac OS
+        X Server\",\n            \"DÃ©pannage Mac OS X\",\n            \"Installation
+        Mac OS X Server\",\n            \"Interventions Apple Macintosh\",\n            \"Formation
+        Apple Macintosh\"\n          ]\n        }\n      },\n      {\n        \"description\":
+        \"Apple-Crumble provides sound advice, sales and support for all apple mac
+        products and related peripherals including external hard drives, printers,
+        scanners and both apple and 3rd party software. Apple-Crumble are also experts
+        in troubleshooting, repair and maintenance. Our staff are apple trained and
+        certified with over 15 years experience.\\r\\n\\r\\nAll work is guaranteed
+        and all enquiries are welcome.\\r\\n\\r\\nWe are obviously very \\u2018pro\\u2019
+        apple and firmly believe that once you go mac you never go back!\\r\\n\\r\\nFor
+        your convenience Apple-Crumble have our own workshop and offices with free
+        parking in Penzance, Cornwall so that you have the extra peace of mind knowing
+        that your equipment is being serviced in a clean and safe environment. You
+        may also view, demo and purchase new hardware or add-ons, as well as discussing
+        tailor-made options for you and/or your business.\\r\\n\\r\\nApple-Crumble\\u2019s
+        service extends to on-site visits for emergency or contract call-outs, as
+        well as delivery and installation of new products and systems. We cover Penzance,
+        Falmouth, Helston and the Lizard, St Ives, Hayle, Truro, Camborne, Redruth,
+        and all surrounding areas including north Cornwall and Devon\\r\\n\\r\\nIn
+        most cases it is safer and more cost effective to bring your hardware to us
+        as we are geared up for any static or time delay issues, but it is very rare
+        that we cannot provide a solution, wherever you may be!\",\n        \"id\":
+        1049054,\n        \"industries\": {\n          \"_total\": 1,\n          \"values\":
+        [{\n            \"code\": \"3\",\n            \"name\": \"Computer Hardware\"\n
+        \         }]\n        },\n        \"name\": \"Apple Crumble\"\n      }\n    ]\n
+        \ },\n  \"numResults\": 8450\n}"
+    http_version: '1.1'
+  recorded_at: Tue, 04 Jun 2013 03:42:37 GMT
+recorded_with: VCR 2.5.0

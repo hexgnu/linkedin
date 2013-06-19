@@ -1,131 +1,100 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: https://api.linkedin.com:443/v1/people-search?first-name=Giliardi&last-name=Pires
-    body: 
-    headers: 
-      x-li-format: 
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.linkedin.com/v1/people-search?first-name=Giliardi&last-name=Pires
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Li-Format:
       - json
-      user-agent: 
+      User-Agent:
       - OAuth gem v0.4.7
-      authorization: 
-      - OAuth oauth_consumer_key="mpibxdpwbwry", oauth_nonce="eq8g0jFLe2FsDxO255PW6UqoZ8lwJAqiIJCm3qEKF8", oauth_signature="D1xMNnx7aOxDotnPt1mtEdbJPlU%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1365631656", oauth_token="d9f69cd6-f3f3-4c26-9f2c-12cd8e228089", oauth_version="1.0"
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+      Authorization:
+      - OAuth oauth_consumer_key="mpibxdpwbwry", oauth_nonce="eq8g0jFLe2FsDxO255PW6UqoZ8lwJAqiIJCm3qEKF8",
+        oauth_signature="D1xMNnx7aOxDotnPt1mtEdbJPlU%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1365631656", oauth_token="d9f69cd6-f3f3-4c26-9f2c-12cd8e228089",
+        oauth_version="1.0"
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      vary: 
-      - "*"
-      transfer-encoding: 
+    headers:
+      Vary:
+      - ! '*'
+      Transfer-Encoding:
       - chunked
-      server: 
+      Server:
       - Apache-Coyote/1.1
-      x-li-format: 
+      X-Li-Format:
       - json
-      x-li-request-id: 
+      X-Li-Request-Id:
       - CH30LTU9DW
-      date: 
+      Date:
       - Wed, 10 Apr 2013 22:07:36 GMT
-      content-type: 
+      Content-Type:
       - application/json;charset=UTF-8
-    body: |-
-      {
-        "numResults": 0,
-        "people": {"_total": 0}
-      }
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: https://api.linkedin.com:443/v1/people-search?first-name=Charles&last-name=Garcia
-    body: 
-    headers: 
-      x-li-format: 
+    body:
+      encoding: UTF-8
+      string: ! "{\n  \"numResults\": 0,\n  \"people\": {\"_total\": 0}\n}"
+    http_version: '1.1'
+  recorded_at: Tue, 04 Jun 2013 03:42:37 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v1/people-search?first-name=Charles&last-name=Garcia
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Li-Format:
       - json
-      user-agent: 
+      User-Agent:
       - OAuth gem v0.4.7
-      authorization: 
-      - OAuth oauth_consumer_key="mpibxdpwbwry", oauth_nonce="lTIll68hM4A1tc0I56h92w5znsrjFfJ4nDvKpSqDfg", oauth_signature="AhGLaPTVAJvv8pncUjz2j8C6%2B%2FA%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1365632102", oauth_token="d9f69cd6-f3f3-4c26-9f2c-12cd8e228089", oauth_version="1.0"
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+      Authorization:
+      - OAuth oauth_consumer_key="mpibxdpwbwry", oauth_nonce="lTIll68hM4A1tc0I56h92w5znsrjFfJ4nDvKpSqDfg",
+        oauth_signature="AhGLaPTVAJvv8pncUjz2j8C6%2B%2FA%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1365632102", oauth_token="d9f69cd6-f3f3-4c26-9f2c-12cd8e228089",
+        oauth_version="1.0"
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      vary: 
-      - "*"
-      transfer-encoding: 
+    headers:
+      Vary:
+      - ! '*'
+      Transfer-Encoding:
       - chunked
-      server: 
+      Server:
       - Apache-Coyote/1.1
-      x-li-request-id: 
+      X-Li-Request-Id:
       - 6AXWFPE8I6
-      x-li-format: 
+      X-Li-Format:
       - json
-      date: 
+      Date:
       - Wed, 10 Apr 2013 22:15:03 GMT
-      content-type: 
+      Content-Type:
       - application/json;charset=UTF-8
-    body: |-
-      {
-        "numResults": 308,
-        "people": {
-          "_count": 10,
-          "_start": 0,
-          "_total": 110,
-          "values": [
-            {
-              "firstName": "Charles",
-              "id": "2zk34r8TvA",
-              "lastName": "Garcia, CFA"
-            },
-            {
-              "firstName": "Charles R.",
-              "id": "NjwO1vU6P6",
-              "lastName": "Garcia Jr."
-            },
-            {
-              "firstName": "Charles",
-              "id": "j8ZczJo44W",
-              "lastName": "Garcia-Tobin"
-            },
-            {
-              "firstName": "Charles",
-              "id": "jYfrk5GM29",
-              "lastName": "Garcia"
-            },
-            {
-              "firstName": "Charles",
-              "id": "C-2ASm3SQ1",
-              "lastName": "Garcia"
-            },
-            {
-              "firstName": "Charles",
-              "id": "LG__MFCUTJ",
-              "lastName": "Garcia"
-            },
-            {
-              "firstName": "Charles",
-              "id": "wjopxKqYYM",
-              "lastName": "Garcia"
-            },
-            {
-              "firstName": "Charles",
-              "id": "AtFQt5Lf1V",
-              "lastName": "Garcia"
-            },
-            {
-              "firstName": "Charles",
-              "id": "MUXIZwfehE",
-              "lastName": "Garcia"
-            },
-            {
-              "firstName": "Charles",
-              "id": "koTmAyWE8J",
-              "lastName": "Schwalbe Garcia-Lago"
-            }
-          ]
-        }
-      }
-    http_version: "1.1"
+    body:
+      encoding: UTF-8
+      string: ! "{\n  \"numResults\": 308,\n  \"people\": {\n    \"_count\": 10,\n
+        \   \"_start\": 0,\n    \"_total\": 110,\n    \"values\": [\n      {\n        \"firstName\":
+        \"Charles\",\n        \"id\": \"2zk34r8TvA\",\n        \"lastName\": \"Garcia,
+        CFA\"\n      },\n      {\n        \"firstName\": \"Charles R.\",\n        \"id\":
+        \"NjwO1vU6P6\",\n        \"lastName\": \"Garcia Jr.\"\n      },\n      {\n
+        \       \"firstName\": \"Charles\",\n        \"id\": \"j8ZczJo44W\",\n        \"lastName\":
+        \"Garcia-Tobin\"\n      },\n      {\n        \"firstName\": \"Charles\",\n
+        \       \"id\": \"jYfrk5GM29\",\n        \"lastName\": \"Garcia\"\n      },\n
+        \     {\n        \"firstName\": \"Charles\",\n        \"id\": \"C-2ASm3SQ1\",\n
+        \       \"lastName\": \"Garcia\"\n      },\n      {\n        \"firstName\":
+        \"Charles\",\n        \"id\": \"LG__MFCUTJ\",\n        \"lastName\": \"Garcia\"\n
+        \     },\n      {\n        \"firstName\": \"Charles\",\n        \"id\": \"wjopxKqYYM\",\n
+        \       \"lastName\": \"Garcia\"\n      },\n      {\n        \"firstName\":
+        \"Charles\",\n        \"id\": \"AtFQt5Lf1V\",\n        \"lastName\": \"Garcia\"\n
+        \     },\n      {\n        \"firstName\": \"Charles\",\n        \"id\": \"MUXIZwfehE\",\n
+        \       \"lastName\": \"Garcia\"\n      },\n      {\n        \"firstName\":
+        \"Charles\",\n        \"id\": \"koTmAyWE8J\",\n        \"lastName\": \"Schwalbe
+        Garcia-Lago\"\n      }\n    ]\n  }\n}"
+    http_version: '1.1'
+  recorded_at: Tue, 04 Jun 2013 03:42:37 GMT
+recorded_with: VCR 2.5.0

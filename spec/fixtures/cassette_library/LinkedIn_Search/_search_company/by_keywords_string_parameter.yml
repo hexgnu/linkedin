@@ -1,156 +1,80 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: https://api.linkedin.com:443/v1/company-search?keywords=apple
-    body: 
-    headers: 
-      x-li-format: 
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.linkedin.com/v1/company-search?keywords=apple
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Li-Format:
       - json
-      authorization: 
-      - OAuth oauth_consumer_key="mpibxdpwbwry", oauth_nonce="xtc6RIIOpDj7AANJ9VyIXibv4YhcM3gxMUg6OewBSo", oauth_signature="8ShrnvC9fxh1tU3YNEjF4l%2Fhrho%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1365631653", oauth_token="d9f69cd6-f3f3-4c26-9f2c-12cd8e228089", oauth_version="1.0"
-      user-agent: 
+      Authorization:
+      - OAuth oauth_consumer_key="mpibxdpwbwry", oauth_nonce="xtc6RIIOpDj7AANJ9VyIXibv4YhcM3gxMUg6OewBSo",
+        oauth_signature="8ShrnvC9fxh1tU3YNEjF4l%2Fhrho%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1365631653", oauth_token="d9f69cd6-f3f3-4c26-9f2c-12cd8e228089",
+        oauth_version="1.0"
+      User-Agent:
       - OAuth gem v0.4.7
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      x-li-request-id: 
+    headers:
+      X-Li-Request-Id:
       - 5LR8OTP90S
-      x-li-format: 
+      X-Li-Format:
       - json
-      date: 
+      Date:
       - Wed, 10 Apr 2013 22:07:32 GMT
-      vary: 
-      - "*"
-      server: 
+      Vary:
+      - ! '*'
+      Server:
       - Apache-Coyote/1.1
-      content-type: 
+      Content-Type:
       - application/json;charset=UTF-8
-      transfer-encoding: 
+      Transfer-Encoding:
       - chunked
-    body: |-
-      {
-        "companies": {
-          "_count": 10,
-          "_start": 0,
-          "_total": 8450,
-          "values": [
-            {
-              "id": 162479,
-              "name": "Apple"
-            },
-            {
-              "id": 19271,
-              "name": "Apple Vacations"
-            },
-            {
-              "id": 778626,
-              "name": "Big Apple Holdings, Inc. dba Big Apple International Realty"
-            },
-            {
-              "id": 112136,
-              "name": "Apple & Associates"
-            },
-            {
-              "id": 772044,
-              "name": "Stone Apple Solutions"
-            },
-            {
-              "id": 2135525,
-              "name": "iSquare - Apple Authorized Distributor in Greece & Cyprus"
-            },
-            {
-              "id": 2303504,
-              "name": "Filex Apple Store & Support"
-            },
-            {
-              "id": 2419290,
-              "name": "Apple Nieuws Vlaanderen"
-            },
-            {
-              "id": 2260437,
-              "name": "OGGO - Services Apple Macintosh"
-            },
-            {
-              "id": 1049054,
-              "name": "Apple Crumble"
-            }
-          ]
-        },
-        "facets": {
-          "_total": 1,
-          "values": [{
-            "buckets": {
-              "_total": 10,
-              "values": [
-                {
-                  "code": "us:0",
-                  "count": 2511,
-                  "name": "United States",
-                  "selected": false
-                },
-                {
-                  "code": "gb:0",
-                  "count": 702,
-                  "name": "United Kingdom",
-                  "selected": false
-                },
-                {
-                  "code": "us:84",
-                  "count": 322,
-                  "name": "San Francisco Bay Area",
-                  "selected": false
-                },
-                {
-                  "code": "us:70",
-                  "count": 285,
-                  "name": "Greater New York City Area",
-                  "selected": false
-                },
-                {
-                  "code": "nl:0",
-                  "count": 284,
-                  "name": "Netherlands",
-                  "selected": false
-                },
-                {
-                  "code": "ca:0",
-                  "count": 266,
-                  "name": "Canada",
-                  "selected": false
-                },
-                {
-                  "code": "au:0",
-                  "count": 195,
-                  "name": "Australia",
-                  "selected": false
-                },
-                {
-                  "code": "in:0",
-                  "count": 186,
-                  "name": "India",
-                  "selected": false
-                },
-                {
-                  "code": "it:0",
-                  "count": 177,
-                  "name": "Italy",
-                  "selected": false
-                },
-                {
-                  "code": "us:49",
-                  "count": 173,
-                  "name": "Greater Los Angeles Area",
-                  "selected": false
-                }
-              ]
-            },
-            "code": "location",
-            "name": "Location"
-          }]
-        },
-        "numResults": 8450
-      }
-    http_version: "1.1"
+    body:
+      encoding: UTF-8
+      string: ! "{\n  \"companies\": {\n    \"_count\": 10,\n    \"_start\": 0,\n
+        \   \"_total\": 8450,\n    \"values\": [\n      {\n        \"id\": 162479,\n
+        \       \"name\": \"Apple\"\n      },\n      {\n        \"id\": 19271,\n        \"name\":
+        \"Apple Vacations\"\n      },\n      {\n        \"id\": 778626,\n        \"name\":
+        \"Big Apple Holdings, Inc. dba Big Apple International Realty\"\n      },\n
+        \     {\n        \"id\": 112136,\n        \"name\": \"Apple & Associates\"\n
+        \     },\n      {\n        \"id\": 772044,\n        \"name\": \"Stone Apple
+        Solutions\"\n      },\n      {\n        \"id\": 2135525,\n        \"name\":
+        \"iSquare - Apple Authorized Distributor in Greece & Cyprus\"\n      },\n
+        \     {\n        \"id\": 2303504,\n        \"name\": \"Filex Apple Store &
+        Support\"\n      },\n      {\n        \"id\": 2419290,\n        \"name\":
+        \"Apple Nieuws Vlaanderen\"\n      },\n      {\n        \"id\": 2260437,\n
+        \       \"name\": \"OGGO - Services Apple Macintosh\"\n      },\n      {\n
+        \       \"id\": 1049054,\n        \"name\": \"Apple Crumble\"\n      }\n    ]\n
+        \ },\n  \"facets\": {\n    \"_total\": 1,\n    \"values\": [{\n      \"buckets\":
+        {\n        \"_total\": 10,\n        \"values\": [\n          {\n            \"code\":
+        \"us:0\",\n            \"count\": 2511,\n            \"name\": \"United States\",\n
+        \           \"selected\": false\n          },\n          {\n            \"code\":
+        \"gb:0\",\n            \"count\": 702,\n            \"name\": \"United Kingdom\",\n
+        \           \"selected\": false\n          },\n          {\n            \"code\":
+        \"us:84\",\n            \"count\": 322,\n            \"name\": \"San Francisco
+        Bay Area\",\n            \"selected\": false\n          },\n          {\n
+        \           \"code\": \"us:70\",\n            \"count\": 285,\n            \"name\":
+        \"Greater New York City Area\",\n            \"selected\": false\n          },\n
+        \         {\n            \"code\": \"nl:0\",\n            \"count\": 284,\n
+        \           \"name\": \"Netherlands\",\n            \"selected\": false\n
+        \         },\n          {\n            \"code\": \"ca:0\",\n            \"count\":
+        266,\n            \"name\": \"Canada\",\n            \"selected\": false\n
+        \         },\n          {\n            \"code\": \"au:0\",\n            \"count\":
+        195,\n            \"name\": \"Australia\",\n            \"selected\": false\n
+        \         },\n          {\n            \"code\": \"in:0\",\n            \"count\":
+        186,\n            \"name\": \"India\",\n            \"selected\": false\n
+        \         },\n          {\n            \"code\": \"it:0\",\n            \"count\":
+        177,\n            \"name\": \"Italy\",\n            \"selected\": false\n
+        \         },\n          {\n            \"code\": \"us:49\",\n            \"count\":
+        173,\n            \"name\": \"Greater Los Angeles Area\",\n            \"selected\":
+        false\n          }\n        ]\n      },\n      \"code\": \"location\",\n      \"name\":
+        \"Location\"\n    }]\n  },\n  \"numResults\": 8450\n}"
+    http_version: '1.1'
+  recorded_at: Tue, 04 Jun 2013 03:42:37 GMT
+recorded_with: VCR 2.5.0

@@ -1,156 +1,80 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: https://api.linkedin.com:443/v1/company-search?facets=industry&keywords=apple
-    body: 
-    headers: 
-      x-li-format: 
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.linkedin.com/v1/company-search?facets=industry&keywords=apple
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Li-Format:
       - json
-      authorization: 
-      - OAuth oauth_consumer_key="mpibxdpwbwry", oauth_nonce="FU07WVy5LyepRG8O99eNUI0fqIxdghVO9gXhSQAOA", oauth_signature="51O%2BsP4hpjq93vwrFm2zrox0xfI%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1365631653", oauth_token="d9f69cd6-f3f3-4c26-9f2c-12cd8e228089", oauth_version="1.0"
-      user-agent: 
+      Authorization:
+      - OAuth oauth_consumer_key="mpibxdpwbwry", oauth_nonce="FU07WVy5LyepRG8O99eNUI0fqIxdghVO9gXhSQAOA",
+        oauth_signature="51O%2BsP4hpjq93vwrFm2zrox0xfI%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1365631653", oauth_token="d9f69cd6-f3f3-4c26-9f2c-12cd8e228089",
+        oauth_version="1.0"
+      User-Agent:
       - OAuth gem v0.4.7
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      x-li-request-id: 
+    headers:
+      X-Li-Request-Id:
       - G21FIZ5M8V
-      x-li-format: 
+      X-Li-Format:
       - json
-      date: 
+      Date:
       - Wed, 10 Apr 2013 22:07:33 GMT
-      vary: 
-      - "*"
-      server: 
+      Vary:
+      - ! '*'
+      Server:
       - Apache-Coyote/1.1
-      content-type: 
+      Content-Type:
       - application/json;charset=UTF-8
-      transfer-encoding: 
+      Transfer-Encoding:
       - chunked
-    body: |-
-      {
-        "companies": {
-          "_count": 10,
-          "_start": 0,
-          "_total": 8450,
-          "values": [
-            {
-              "id": 162479,
-              "name": "Apple"
-            },
-            {
-              "id": 19271,
-              "name": "Apple Vacations"
-            },
-            {
-              "id": 778626,
-              "name": "Big Apple Holdings, Inc. dba Big Apple International Realty"
-            },
-            {
-              "id": 112136,
-              "name": "Apple & Associates"
-            },
-            {
-              "id": 772044,
-              "name": "Stone Apple Solutions"
-            },
-            {
-              "id": 2135525,
-              "name": "iSquare - Apple Authorized Distributor in Greece & Cyprus"
-            },
-            {
-              "id": 2303504,
-              "name": "Filex Apple Store & Support"
-            },
-            {
-              "id": 2419290,
-              "name": "Apple Nieuws Vlaanderen"
-            },
-            {
-              "id": 2260437,
-              "name": "OGGO - Services Apple Macintosh"
-            },
-            {
-              "id": 1049054,
-              "name": "Apple Crumble"
-            }
-          ]
-        },
-        "facets": {
-          "_total": 1,
-          "values": [{
-            "buckets": {
-              "_total": 10,
-              "values": [
-                {
-                  "code": "96",
-                  "count": 2062,
-                  "name": "Information Technology and Services",
-                  "selected": false
-                },
-                {
-                  "code": "4",
-                  "count": 1031,
-                  "name": "Computer Software",
-                  "selected": false
-                },
-                {
-                  "code": "6",
-                  "count": 472,
-                  "name": "Internet",
-                  "selected": false
-                },
-                {
-                  "code": "3",
-                  "count": 415,
-                  "name": "Computer Hardware",
-                  "selected": false
-                },
-                {
-                  "code": "80",
-                  "count": 348,
-                  "name": "Marketing and Advertising",
-                  "selected": false
-                },
-                {
-                  "code": "24",
-                  "count": 312,
-                  "name": "Consumer Electronics",
-                  "selected": false
-                },
-                {
-                  "code": "27",
-                  "count": 206,
-                  "name": "Retail",
-                  "selected": false
-                },
-                {
-                  "code": "109",
-                  "count": 185,
-                  "name": "Computer Games",
-                  "selected": false
-                },
-                {
-                  "code": "8",
-                  "count": 171,
-                  "name": "Telecommunications",
-                  "selected": false
-                },
-                {
-                  "code": "126",
-                  "count": 164,
-                  "name": "Media Production",
-                  "selected": false
-                }
-              ]
-            },
-            "code": "industry",
-            "name": "Industry"
-          }]
-        },
-        "numResults": 8450
-      }
-    http_version: "1.1"
+    body:
+      encoding: UTF-8
+      string: ! "{\n  \"companies\": {\n    \"_count\": 10,\n    \"_start\": 0,\n
+        \   \"_total\": 8450,\n    \"values\": [\n      {\n        \"id\": 162479,\n
+        \       \"name\": \"Apple\"\n      },\n      {\n        \"id\": 19271,\n        \"name\":
+        \"Apple Vacations\"\n      },\n      {\n        \"id\": 778626,\n        \"name\":
+        \"Big Apple Holdings, Inc. dba Big Apple International Realty\"\n      },\n
+        \     {\n        \"id\": 112136,\n        \"name\": \"Apple & Associates\"\n
+        \     },\n      {\n        \"id\": 772044,\n        \"name\": \"Stone Apple
+        Solutions\"\n      },\n      {\n        \"id\": 2135525,\n        \"name\":
+        \"iSquare - Apple Authorized Distributor in Greece & Cyprus\"\n      },\n
+        \     {\n        \"id\": 2303504,\n        \"name\": \"Filex Apple Store &
+        Support\"\n      },\n      {\n        \"id\": 2419290,\n        \"name\":
+        \"Apple Nieuws Vlaanderen\"\n      },\n      {\n        \"id\": 2260437,\n
+        \       \"name\": \"OGGO - Services Apple Macintosh\"\n      },\n      {\n
+        \       \"id\": 1049054,\n        \"name\": \"Apple Crumble\"\n      }\n    ]\n
+        \ },\n  \"facets\": {\n    \"_total\": 1,\n    \"values\": [{\n      \"buckets\":
+        {\n        \"_total\": 10,\n        \"values\": [\n          {\n            \"code\":
+        \"96\",\n            \"count\": 2062,\n            \"name\": \"Information
+        Technology and Services\",\n            \"selected\": false\n          },\n
+        \         {\n            \"code\": \"4\",\n            \"count\": 1031,\n
+        \           \"name\": \"Computer Software\",\n            \"selected\": false\n
+        \         },\n          {\n            \"code\": \"6\",\n            \"count\":
+        472,\n            \"name\": \"Internet\",\n            \"selected\": false\n
+        \         },\n          {\n            \"code\": \"3\",\n            \"count\":
+        415,\n            \"name\": \"Computer Hardware\",\n            \"selected\":
+        false\n          },\n          {\n            \"code\": \"80\",\n            \"count\":
+        348,\n            \"name\": \"Marketing and Advertising\",\n            \"selected\":
+        false\n          },\n          {\n            \"code\": \"24\",\n            \"count\":
+        312,\n            \"name\": \"Consumer Electronics\",\n            \"selected\":
+        false\n          },\n          {\n            \"code\": \"27\",\n            \"count\":
+        206,\n            \"name\": \"Retail\",\n            \"selected\": false\n
+        \         },\n          {\n            \"code\": \"109\",\n            \"count\":
+        185,\n            \"name\": \"Computer Games\",\n            \"selected\":
+        false\n          },\n          {\n            \"code\": \"8\",\n            \"count\":
+        171,\n            \"name\": \"Telecommunications\",\n            \"selected\":
+        false\n          },\n          {\n            \"code\": \"126\",\n            \"count\":
+        164,\n            \"name\": \"Media Production\",\n            \"selected\":
+        false\n          }\n        ]\n      },\n      \"code\": \"industry\",\n      \"name\":
+        \"Industry\"\n    }]\n  },\n  \"numResults\": 8450\n}"
+    http_version: '1.1'
+  recorded_at: Tue, 04 Jun 2013 03:42:37 GMT
+recorded_with: VCR 2.5.0

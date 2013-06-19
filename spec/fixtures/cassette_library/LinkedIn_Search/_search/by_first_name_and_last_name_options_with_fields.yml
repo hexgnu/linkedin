@@ -1,147 +1,112 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: https://api.linkedin.com:443/v1/people-search:(people:(id,first-name,last-name,public-profile-url,picture-url),num-results)?first-name=Giliardi&last-name=Pires
-    body: 
-    headers: 
-      user-agent: 
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.linkedin.com/v1/people-search:(people:(id,first-name,last-name,public-profile-url,picture-url),num-results)?first-name=Giliardi&last-name=Pires
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
       - OAuth gem v0.4.7
-      authorization: 
-      - OAuth oauth_consumer_key="mpibxdpwbwry", oauth_nonce="XxYZ3yqoTFr792YTu6TmJPFCrrkZejwXkORldtyZGI", oauth_signature="cBkWRwhVxBDozgn5sCXBwGIoer4%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1365631657", oauth_token="d9f69cd6-f3f3-4c26-9f2c-12cd8e228089", oauth_version="1.0"
-      x-li-format: 
+      Authorization:
+      - OAuth oauth_consumer_key="mpibxdpwbwry", oauth_nonce="XxYZ3yqoTFr792YTu6TmJPFCrrkZejwXkORldtyZGI",
+        oauth_signature="cBkWRwhVxBDozgn5sCXBwGIoer4%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1365631657", oauth_token="d9f69cd6-f3f3-4c26-9f2c-12cd8e228089",
+        oauth_version="1.0"
+      X-Li-Format:
       - json
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      server: 
+    headers:
+      Server:
       - Apache-Coyote/1.1
-      transfer-encoding: 
+      Transfer-Encoding:
       - chunked
-      vary: 
-      - "*"
-      content-type: 
+      Vary:
+      - ! '*'
+      Content-Type:
       - application/json;charset=UTF-8
-      x-li-request-id: 
+      X-Li-Request-Id:
       - G0J3Z1XF1E
-      date: 
+      Date:
       - Wed, 10 Apr 2013 22:07:36 GMT
-      x-li-format: 
+      X-Li-Format:
       - json
-    body: |-
-      {
-        "numResults": 0,
-        "people": {"_total": 0}
-      }
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: https://api.linkedin.com:443/v1/people-search:(people:(id,first-name,last-name,public-profile-url,picture-url),num-results)?first-name=Charles&last-name=Garcia
-    body: 
-    headers: 
-      user-agent: 
+    body:
+      encoding: UTF-8
+      string: ! "{\n  \"numResults\": 0,\n  \"people\": {\"_total\": 0}\n}"
+    http_version: '1.1'
+  recorded_at: Tue, 04 Jun 2013 03:42:37 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v1/people-search:(people:(id,first-name,last-name,public-profile-url,picture-url),num-results)?first-name=Charles&last-name=Garcia
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
       - OAuth gem v0.4.7
-      authorization: 
-      - OAuth oauth_consumer_key="mpibxdpwbwry", oauth_nonce="apcqck1ATxZYGou1ynnfBm6OgZFBz4TXKeuPo160NU", oauth_signature="zB0MtadBiOOL2rAX%2FdHn71fZyOA%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1365631934", oauth_token="d9f69cd6-f3f3-4c26-9f2c-12cd8e228089", oauth_version="1.0"
-      x-li-format: 
+      Authorization:
+      - OAuth oauth_consumer_key="mpibxdpwbwry", oauth_nonce="apcqck1ATxZYGou1ynnfBm6OgZFBz4TXKeuPo160NU",
+        oauth_signature="zB0MtadBiOOL2rAX%2FdHn71fZyOA%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1365631934", oauth_token="d9f69cd6-f3f3-4c26-9f2c-12cd8e228089",
+        oauth_version="1.0"
+      X-Li-Format:
       - json
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      server: 
+    headers:
+      Server:
       - Apache-Coyote/1.1
-      transfer-encoding: 
+      Transfer-Encoding:
       - chunked
-      vary: 
-      - "*"
-      content-type: 
+      Vary:
+      - ! '*'
+      Content-Type:
       - application/json;charset=UTF-8
-      x-li-request-id: 
+      X-Li-Request-Id:
       - 7A7TZHN5V9
-      date: 
+      Date:
       - Wed, 10 Apr 2013 22:12:14 GMT
-      x-li-format: 
+      X-Li-Format:
       - json
-    body: |-
-      {
-        "numResults": 308,
-        "people": {
-          "_count": 10,
-          "_start": 0,
-          "_total": 110,
-          "values": [
-            {
-              "firstName": "Charles",
-              "id": "2zk34r8TvA",
-              "lastName": "Garcia, CFA",
-              "publicProfileUrl": "http://www.linkedin.com/in/charlesgarcia"
-            },
-            {
-              "firstName": "Charles R.",
-              "id": "NjwO1vU6P6",
-              "lastName": "Garcia Jr.",
-              "pictureUrl": "http://m3.licdn.com/mpr/mprx/0_eyd5KukV6r4QDft-oYwsKfzsXqyWSdi-oUjVKaLVRAeMtSqtXsJWOmlqospnaaGOWxIUxWUUfdKb",
-              "publicProfileUrl": "http://www.linkedin.com/in/knightwealthmanagement"
-            },
-            {
-              "firstName": "Charles",
-              "id": "j8ZczJo44W",
-              "lastName": "Garcia-Tobin",
-              "publicProfileUrl": "http://www.linkedin.com/pub/charles-garcia-tobin/1/407/37"
-            },
-            {
-              "firstName": "Charles",
-              "id": "jYfrk5GM29",
-              "lastName": "Garcia",
-              "pictureUrl": "http://m3.licdn.com/mpr/mprx/0_oCf8Sdu0zOpQN_tEeLaPSwVjvZHIq5CEH6R0SEw2EOpRI3voQk0uio0GUveqBC_QITDYCDz2KP6m",
-              "publicProfileUrl": "http://www.linkedin.com/in/charleshgarcia"
-            },
-            {
-              "firstName": "Charles",
-              "id": "C-2ASm3SQ1",
-              "lastName": "Garcia",
-              "pictureUrl": "http://m3.licdn.com/mpr/mprx/0_eyd5KuNsktdHTE1-6RasKacFXqyWSdi-oUjVKaLVRAeMtSqtXsJWOmlqospnaaGOWxIUxWRzo_ib",
-              "publicProfileUrl": "http://www.linkedin.com/pub/charles-garcia/26/1b2/b28"
-            },
-            {
-              "firstName": "Charles",
-              "id": "LG__MFCUTJ",
-              "lastName": "Garcia",
-              "publicProfileUrl": "http://www.linkedin.com/pub/charles-garcia/5/465/b00"
-            },
-            {
-              "firstName": "Charles",
-              "id": "wjopxKqYYM",
-              "lastName": "Garcia",
-              "pictureUrl": "http://m3.licdn.com/mpr/mprx/0_ePvupanfrtgopBCiEBzPpuFir-Zdp-tioNT1pSkPfNuJin5_Xv58tDrgO049xzPfWKBt1o9wYUsb",
-              "publicProfileUrl": "http://www.linkedin.com/pub/charles-garcia/8/152/3ab"
-            },
-            {
-              "firstName": "Charles",
-              "id": "AtFQt5Lf1V",
-              "lastName": "Garcia",
-              "pictureUrl": "http://m3.licdn.com/mpr/mprx/0_uuv-7sRI0s_EdtBWuecS7Jf9jM5owt6WaSTS7Jd9GylVN9AdhE5O3Mg41cLzHvF5S7B28YBarPYq",
-              "publicProfileUrl": "http://www.linkedin.com/in/chasgarcia"
-            },
-            {
-              "firstName": "Charles",
-              "id": "MUXIZwfehE",
-              "lastName": "Garcia",
-              "publicProfileUrl": "http://www.linkedin.com/pub/charles-garcia/14/6a7/81"
-            },
-            {
-              "firstName": "Charles",
-              "id": "koTmAyWE8J",
-              "lastName": "Schwalbe Garcia-Lago",
-              "pictureUrl": "http://m3.licdn.com/mpr/mprx/0_q6hJ9GyYDCe0NRJ1sGCQ9TSySTY-nZZ1nFqQ9TyatkEGWp7PZhrzZ3Hh_fODzxM0zLGFJ6CC9gBb",
-              "publicProfileUrl": "http://www.linkedin.com/in/charlesschwalbe"
-            }
-          ]
-        }
-      }
-    http_version: "1.1"
+    body:
+      encoding: UTF-8
+      string: ! "{\n  \"numResults\": 308,\n  \"people\": {\n    \"_count\": 10,\n
+        \   \"_start\": 0,\n    \"_total\": 110,\n    \"values\": [\n      {\n        \"firstName\":
+        \"Charles\",\n        \"id\": \"2zk34r8TvA\",\n        \"lastName\": \"Garcia,
+        CFA\",\n        \"publicProfileUrl\": \"http://www.linkedin.com/in/charlesgarcia\"\n
+        \     },\n      {\n        \"firstName\": \"Charles R.\",\n        \"id\":
+        \"NjwO1vU6P6\",\n        \"lastName\": \"Garcia Jr.\",\n        \"pictureUrl\":
+        \"http://m3.licdn.com/mpr/mprx/0_eyd5KukV6r4QDft-oYwsKfzsXqyWSdi-oUjVKaLVRAeMtSqtXsJWOmlqospnaaGOWxIUxWUUfdKb\",\n
+        \       \"publicProfileUrl\": \"http://www.linkedin.com/in/knightwealthmanagement\"\n
+        \     },\n      {\n        \"firstName\": \"Charles\",\n        \"id\": \"j8ZczJo44W\",\n
+        \       \"lastName\": \"Garcia-Tobin\",\n        \"publicProfileUrl\": \"http://www.linkedin.com/pub/charles-garcia-tobin/1/407/37\"\n
+        \     },\n      {\n        \"firstName\": \"Charles\",\n        \"id\": \"jYfrk5GM29\",\n
+        \       \"lastName\": \"Garcia\",\n        \"pictureUrl\": \"http://m3.licdn.com/mpr/mprx/0_oCf8Sdu0zOpQN_tEeLaPSwVjvZHIq5CEH6R0SEw2EOpRI3voQk0uio0GUveqBC_QITDYCDz2KP6m\",\n
+        \       \"publicProfileUrl\": \"http://www.linkedin.com/in/charleshgarcia\"\n
+        \     },\n      {\n        \"firstName\": \"Charles\",\n        \"id\": \"C-2ASm3SQ1\",\n
+        \       \"lastName\": \"Garcia\",\n        \"pictureUrl\": \"http://m3.licdn.com/mpr/mprx/0_eyd5KuNsktdHTE1-6RasKacFXqyWSdi-oUjVKaLVRAeMtSqtXsJWOmlqospnaaGOWxIUxWRzo_ib\",\n
+        \       \"publicProfileUrl\": \"http://www.linkedin.com/pub/charles-garcia/26/1b2/b28\"\n
+        \     },\n      {\n        \"firstName\": \"Charles\",\n        \"id\": \"LG__MFCUTJ\",\n
+        \       \"lastName\": \"Garcia\",\n        \"publicProfileUrl\": \"http://www.linkedin.com/pub/charles-garcia/5/465/b00\"\n
+        \     },\n      {\n        \"firstName\": \"Charles\",\n        \"id\": \"wjopxKqYYM\",\n
+        \       \"lastName\": \"Garcia\",\n        \"pictureUrl\": \"http://m3.licdn.com/mpr/mprx/0_ePvupanfrtgopBCiEBzPpuFir-Zdp-tioNT1pSkPfNuJin5_Xv58tDrgO049xzPfWKBt1o9wYUsb\",\n
+        \       \"publicProfileUrl\": \"http://www.linkedin.com/pub/charles-garcia/8/152/3ab\"\n
+        \     },\n      {\n        \"firstName\": \"Charles\",\n        \"id\": \"AtFQt5Lf1V\",\n
+        \       \"lastName\": \"Garcia\",\n        \"pictureUrl\": \"http://m3.licdn.com/mpr/mprx/0_uuv-7sRI0s_EdtBWuecS7Jf9jM5owt6WaSTS7Jd9GylVN9AdhE5O3Mg41cLzHvF5S7B28YBarPYq\",\n
+        \       \"publicProfileUrl\": \"http://www.linkedin.com/in/chasgarcia\"\n
+        \     },\n      {\n        \"firstName\": \"Charles\",\n        \"id\": \"MUXIZwfehE\",\n
+        \       \"lastName\": \"Garcia\",\n        \"publicProfileUrl\": \"http://www.linkedin.com/pub/charles-garcia/14/6a7/81\"\n
+        \     },\n      {\n        \"firstName\": \"Charles\",\n        \"id\": \"koTmAyWE8J\",\n
+        \       \"lastName\": \"Schwalbe Garcia-Lago\",\n        \"pictureUrl\": \"http://m3.licdn.com/mpr/mprx/0_q6hJ9GyYDCe0NRJ1sGCQ9TSySTY-nZZ1nFqQ9TyatkEGWp7PZhrzZ3Hh_fODzxM0zLGFJ6CC9gBb\",\n
+        \       \"publicProfileUrl\": \"http://www.linkedin.com/in/charlesschwalbe\"\n
+        \     }\n    ]\n  }\n}"
+    http_version: '1.1'
+  recorded_at: Tue, 04 Jun 2013 03:42:37 GMT
+recorded_with: VCR 2.5.0
