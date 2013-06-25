@@ -58,6 +58,16 @@ module LinkedIn
         simple_query(path, options)
       end
 
+      def group_profile(options)
+        path = group_path(options)
+        simple_query(path, options)
+      end
+
+      def group_posts(options)
+        path = "#{group_path(options)}/posts"
+        simple_query(path, options)
+      end
+
       private
 
         def simple_query(path, options={})
@@ -100,6 +110,13 @@ module LinkedIn
             path += "/universal-name=#{CGI.escape(name)}"
           else
             path += "/~"
+          end
+        end
+
+        def group_path(options)
+          path = "/groups"
+          if id = options.delete(:id)
+            path += "/id=#{id}"
           end
         end
 
