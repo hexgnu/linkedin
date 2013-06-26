@@ -43,8 +43,8 @@ module LinkedIn
         simple_query(path, options)
       end
 
-      def shares(options={})
-        path = "#{person_path(options)}/network/updates?type=SHAR&scope=self"
+      def shares(options={},count,since_time)
+        path = "#{person_path(options)}/network/updates?type=SHAR&&scope=self&&count=#{count}&&after=#{since_time}"
         simple_query(path, options)
       end
 
