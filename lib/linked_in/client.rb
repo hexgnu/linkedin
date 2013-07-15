@@ -9,14 +9,21 @@ module LinkedIn
     include Api::UpdateMethods
     include Search
 
-    attr_reader :client_id, :client_secret, :access_token
+    attr_reader :client_id, :client_secret
 
     def initialize(client_id=LinkedIn.client_id,
                    client_secret=LinkedIn.client_secret,
-                   access_token=nil)
+                   initial_access_token=nil,
+                   options={})
       @client_id     = client_id
       @client_secret = client_secret
-      @access_token  = access_token
+      if initial_access_token.is_a? Hash
+        @access_token  = nil
+        @client_options = initial_access_token
+      else
+        @access_token  = initial_access_token
+        @client_options = options
+      end
     end
   end
 

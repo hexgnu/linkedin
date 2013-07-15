@@ -86,9 +86,16 @@ If you want to play with the LinkedIn api without using the gem, have a look at 
 * In OAuth 1.0 there is both an `auth token` and an `auth secret`. OAuth 2.0 combines these into a single `access token`.
 * The terms `auth token`, `auth key`, `auth secret`, `access secret`, `access token`, or `access key` have all been collapsed and are now referred to as the **`access token`**.
 * `require` `linkedin-oauth2` instead of `linkedin`
+* Removed proxy options
 
 ### Gem api changes
 * In general, any place that said "consumer" now says "client"
+* The `authorize_from_request` method has been deprecated. Instead
+  navigate to the url from `authorize_url` then enter the returned code
+  into the `get_token` method.
+* The `authorize_from_access` method has been deprecated. Instead
+  initialize the `LinkedIn::Client.new` with the `access_token`.
+  `client = Linkedin::Client.new(client_id, client_secret, access_token)`
 
 
 ## Note on Patches/Pull Requests

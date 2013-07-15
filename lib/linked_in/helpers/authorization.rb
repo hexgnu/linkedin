@@ -10,6 +10,9 @@
 # deprecate `authorize_from_request`
 # deprecate `authorize_from_access`
 #
+# cleanup bottom
+# deprecate `oauth_callback`
+#
 # DONE 
 # `consumer_token renamed to `client_id`
 # `consumer_secret renamed to `client_secret`
@@ -31,10 +34,10 @@ module LinkedIn
         auth_host: "https://www.linkedin.com"
       }
 
-      def client
-        @client ||= ::OAuth2::Client.new(@client_id,
-                                         @client_secret,
-                                         parse_oauth2_options)
+      def oauth2_client
+        @oauth2_client ||= ::OAuth2::Client.new(@client_id,
+                                                @client_secret,
+                                                parse_oauth2_options)
       end
 
       # A way to fetch the authorize_url
@@ -47,7 +50,9 @@ module LinkedIn
         # client_id param included automatically by the OAuth 2.0 gem
         params[:state] ||= state
         params[:redirect_uri] ||= "http://localhost"
-        client.auth_code.authorize_url(params)
+        oauth2_client.auth_code.authorize_url(params)
+      rescue OAuth2::Error => e
+        raise LinkedIn::Errors::UnauthorizedError.new(e.code), e.description
       end
 
       # Fetches the access_token given the auth_code fetched by
@@ -56,7 +61,23 @@ module LinkedIn
       # fetched the token.
       def get_token(code, params={})
         params[:redirect_uri] ||= "http://localhost"
-        @access_token ||= client.auth_code.get_token(code, params)
+        @access_token ||= oauth2_client.auth_code.get_token(code, params)
+      rescue OAuth2::Error => e
+        raise LinkedIn::Errors::UnauthorizedError.new(e.code), e.description
+      end
+
+      # Fetches the current access token or initializes if it doesn't
+      # exist
+      def access_token(code=nil, params={})
+        if @access_token.is_a? OAuth2::AccessToken
+          @access_token
+        elsif @access_token.is_a? String
+          @access_token = OAuth2::AccessToken.new oauth2_client, @access_token
+        elsif code
+          @access_token = self.get_token(code, params)
+        else
+          @access_token = nil
+        end
       end
 
       def state
@@ -69,9 +90,10 @@ module LinkedIn
         # The keys of this hash are designed to match the OAuth2
         # initialize spec.
         def parse_oauth2_options
-          { token_url: full_oauth_url_for(:access_token, :auth_host),
-            authorize_url:    full_oauth_url_for(:authorize, :auth_host),
-            site:             DEFAULT_OAUTH2_OPTIONS[:api_host] }
+          default = {site: DEFAULT_OAUTH2_OPTIONS[:api_host],
+                     token_url: full_oauth_url_for(:access_token, :auth_host),
+                     authorize_url: full_oauth_url_for(:authorize, :auth_host)}
+          return default.merge(@client_options)
         end
 
         def full_oauth_url_for(url_type, host_type)

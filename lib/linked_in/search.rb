@@ -2,7 +2,6 @@ module LinkedIn
 
   module Search
     def search(options={}, type='people')
-
       path = "/#{type.to_s}-search"
 
       if options.is_a?(Hash)
