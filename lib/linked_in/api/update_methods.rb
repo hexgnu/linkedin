@@ -15,6 +15,12 @@ module LinkedIn
         put(path, body.to_json, "Content-Type" => "application/json")
       end
 
+      def add_job_bookmark(bookmark)
+        path = "/people/~/job-bookmarks"
+        body = {'job' => {'id' => bookmark}}
+        post(path, body.to_json, "Content-Type" => "application/json")
+      end
+
       # def share(options={})
       #   path = "/people/~/shares"
       #   defaults = { :visability => 'anyone' }

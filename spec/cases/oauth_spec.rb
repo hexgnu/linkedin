@@ -20,6 +20,19 @@ describe "LinkedIn::Client" do
       end
     end
 
+    describe "proxy oauth options" do
+      let(:proxy) { "http://dummy.proxy" }
+      let(:consumer) do
+        LinkedIn::Client.new('1234', '1234', {
+          :proxy => proxy,
+        }).consumer
+      end
+
+      it "should send requests though proxy" do
+        consumer.proxy.should eq proxy
+      end
+    end
+
     describe "different api and auth hosts options" do
       let(:consumer) do
         LinkedIn::Client.new('1234', '1234', {

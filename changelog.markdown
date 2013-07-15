@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.4.0 - May 30, 2013
+
+* Add capability to ask for desired permissions from linked in api
+* Add option to specify a proxy
+* Bump hashie version
+* fix the permission param passing
+* fix to be able to pass the permission scope  
+* Manipulating comments/likes for network_updates ('shares')
+* Methods to work with comments/likes for share  
+* Added a method to get a user's shares
+* Added current user's shares as an option (client.shares)
+* Readme Typos
+
+
+
 ##  0.2.x - March x, 2010
 
 * Removed Crack as a dependency, Nokogiri FTW

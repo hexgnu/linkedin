@@ -18,8 +18,8 @@ module LinkedIn
       # Note: If using oauth with a web app, be sure to provide :oauth_callback.
       # Options:
       #   :oauth_callback => String, url that LinkedIn should redirect to
-      def request_token(options={})
-        @request_token ||= consumer.get_request_token(options)
+      def request_token(options={}, *arguments, &block)
+        @request_token ||= consumer.get_request_token(options, *arguments, &block)
       end
 
       # For web apps use params[:oauth_verifier], for desktop apps,
@@ -48,7 +48,8 @@ module LinkedIn
             :request_token_url => full_oauth_url_for(:request_token, :api_host),
             :access_token_url  => full_oauth_url_for(:access_token,  :api_host),
             :authorize_url     => full_oauth_url_for(:authorize,     :auth_host),
-            :site              => @consumer_options[:site] || @consumer_options[:api_host] || DEFAULT_OAUTH_OPTIONS[:api_host]
+            :site              => @consumer_options[:site] || @consumer_options[:api_host] || DEFAULT_OAUTH_OPTIONS[:api_host],
+            :proxy             => @consumer_options.fetch(:proxy, nil)
           }
         end
 

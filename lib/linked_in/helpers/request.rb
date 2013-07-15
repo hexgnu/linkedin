@@ -59,11 +59,16 @@ module LinkedIn
           end
         end
 
-        def to_query(options)
-          options.inject([]) do |collection, opt|
-            collection << "#{opt[0]}=#{opt[1]}"
-            collection
-          end * '&'
+
+        # Stolen from Rack::Util.build_query
+        def to_query(params)
+          params.map { |k, v|
+            if v.class == Array
+              to_query(v.map { |x| [k, x] })
+            else
+              v.nil? ? escape(k) : "#{CGI.escape(k.to_s)}=#{CGI.escape(v.to_s)}"
+            end
+          }.join("&")
         end
 
         def to_uri(path, options)

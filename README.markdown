@@ -14,39 +14,41 @@ Travis CI : [![Build Status](https://secure.travis-ci.org/emorikawa/linkedin-oau
 
 LinkedIn's API uses Oauth for authentication. Luckily, the LinkedIn gem hides most of the gory details from you.
 
-    require 'rubygems'
-    require 'linkedin-oauth2'
+```ruby
+require 'rubygems'
+require 'linkedin-oauth2'
 
-    # get your api keys at https://www.linkedin.com/secure/developer
-    client = LinkedIn::Client.new('your_consumer_key', 'your_consumer_secret')
-    rtoken = client.request_token.token
-    rsecret = client.request_token.secret
+# get your api keys at https://www.linkedin.com/secure/developer
+client = LinkedIn::Client.new('your_consumer_key', 'your_consumer_secret')
+rtoken = client.request_token.token
+rsecret = client.request_token.secret
 
-    # to test from your desktop, open the following url in your browser
-    # and record the pin it gives you
-    client.request_token.authorize_url
-    => "https://api.linkedin.com/uas/oauth/authorize?oauth_token=<generated_token>"
+# to test from your desktop, open the following url in your browser
+# and record the pin it gives you
+client.request_token.authorize_url
+=> "https://api.linkedin.com/uas/oauth/authorize?oauth_token=<generated_token>"
 
-    # then fetch your access keys
-    client.authorize_from_request(rtoken, rsecret, pin)
-    => ["OU812", "8675309"] # <= save these for future requests
+# then fetch your access keys
+client.authorize_from_request(rtoken, rsecret, pin)
+=> ["OU812", "8675309"] # <= save these for future requests
 
-    # or authorize from previously fetched access keys
-    client.authorize_from_access("OU812", "8675309")
+# or authorize from previously fetched access keys
+client.authorize_from_access("OU812", "8675309")
 
-    # you're now free to move about the cabin, call any API method
+# you're now free to move about the cabin, call any API method
+```
 
 ### Profile examples
+```ruby
+# get the profile for the authenticated user
+client.profile
 
-    # get the profile for the authenticated user
-    client.profile
+# get a profile for someone found in network via ID
+client.profile(:id => 'gNma67_AdI')
 
-    # get a profile for someone found in network via ID
-    client.profile(:id => 'gNma67_AdI')
-
-    # get a profile for someone via their public profile url
-    client.profile(:url => 'http://www.linkedin.com/in/netherland')
-
+# get a profile for someone via their public profile url
+client.profile(:url => 'http://www.linkedin.com/in/netherland')
+```
 
 
 More examples in the [examples folder](http://github.com/pengwynn/linkedin/blob/master/examples).
