@@ -23,7 +23,7 @@ require 'rubygems'
 require 'linkedin-oauth2'
 
 # get your api keys at https://www.linkedin.com/secure/developer
-client = LinkedIn::Client.new('your_consumer_key', 'your_consumer_secret')
+client = LinkedIn::Client.new('your_client_id', 'your_client_secret')
 rtoken = client.request_token.token
 rsecret = client.request_token.secret
 
@@ -79,6 +79,9 @@ If you want to play with the LinkedIn api without using the gem, have a look at 
    bump version in a commit by itself I can ignore when I pull)
 * Send me a pull request. Bonus points for topic branches.
 
+## Testing
+Run `bundle install`
+
 ## Copyright
 
-Copyright (c) 2009-11 [Wynn Netherland](http://wynnnetherland.com). See LICENSE for details.
+Copyright (c) 2013 [Evan Morikawa](https://twitter.com/E0M). See LICENSE for details.
