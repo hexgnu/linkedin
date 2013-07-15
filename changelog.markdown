@@ -2,7 +2,7 @@
 
 # OAuth 2.0 Versions
 
-## 0.0.1 - July 15, 2013
+## 0.1.0 - July 15, 2013
 
 * Migrated API over to use Linkedin's OAuth 2.0
 

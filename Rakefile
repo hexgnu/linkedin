@@ -6,6 +6,11 @@ Bundler::GemHelper.install_tasks
 require 'rspec/core/rake_task'
 RSpec::Core::RakeTask.new(:spec)
 
+spec_compile = Rspec::Core::RakeTask['spec']
+spec_compile.enhance do
+  `gem build linkedin-oauth2.gemspec && gem install ./linkedin-oauth2*.gem`
+end
+
 task :test => :spec
 task :default => :spec
 
