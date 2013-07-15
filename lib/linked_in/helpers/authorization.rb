@@ -1,69 +1,126 @@
+
+# TODO
+# `consumer` renamed to `client`
+#
+# rename OAuth to OAuth2
+#
+# deprecate `request_token`
+# deprecate `access_token`
+#
+# deprecate `authorize_from_request`
+# deprecate `authorize_from_access`
+#
+# DONE 
+# `consumer_token renamed to `client_id`
+# `consumer_secret renamed to `client_secret`
+# request_token_url is deprecated. Replaced with token_url
+# access_token_url is deprecated. Replaced with token_url
+# request_token_path is deprecated
+# access_token_path has changed
+# authorize_path has been deprecated
+
 module LinkedIn
   module Helpers
 
     module Authorization
 
-      DEFAULT_OAUTH_OPTIONS = {
-        :request_token_path => "/uas/oauth/requestToken",
-        :access_token_path  => "/uas/oauth/accessToken",
-        :authorize_path     => "/uas/oauth/authorize",
-        :api_host           => "https://api.linkedin.com",
-        :auth_host          => "https://www.linkedin.com"
+      DEFAULT_OAUTH2_OPTIONS = {
+        authorize_path: "/uas/oauth2/authorization",
+        access_token_path: "/uas/oauth2/accessToken",
+        api_host: "https://api.linkedin.com",
+        auth_host: "https://www.linkedin.com"
       }
 
-      def consumer
-        @consumer ||= ::OAuth::Consumer.new(@consumer_token, @consumer_secret, parse_oauth_options)
+      def client
+        @client ||= ::OAuth2::Client.new(@client_id,
+                                         @client_secret,
+                                         parse_oauth2_options)
       end
 
-      # Note: If using oauth with a web app, be sure to provide :oauth_callback.
-      # Options:
-      #   :oauth_callback => String, url that LinkedIn should redirect to
-      def request_token(options={}, *arguments, &block)
-        @request_token ||= consumer.get_request_token(options, *arguments, &block)
+      # A way to fetch the authorize_url
+      # @param :redirect_uri - Where you want it to redirect to after
+      # @param :scope - A list of member permissions you would like to
+      # request.
+      def authorize_url(params={})
+        # response_type param included by default by using the OAuth 2.0
+        # auth_code strategy
+        # client_id param included automatically by the OAuth 2.0 gem
+        params[:state] ||= state
+        params[:redirect_uri] ||= "http://localhost"
+        client.auth_code.authorize_url(params)
       end
 
-      # For web apps use params[:oauth_verifier], for desktop apps,
-      # use the verifier is the pin that LinkedIn gives users.
-      def authorize_from_request(request_token, request_secret, verifier_or_pin)
-        request_token = ::OAuth::RequestToken.new(consumer, request_token, request_secret)
-        access_token  = request_token.get_access_token(:oauth_verifier => verifier_or_pin)
-        @auth_token, @auth_secret = access_token.token, access_token.secret
+      # Fetches the access_token given the auth_code fetched by
+      # navigating to `authorize_url`
+      # @param :redirect_uri - Where you want to redirect after you have
+      # fetched the token.
+      def get_token(code, params={})
+        params[:redirect_uri] ||= "http://localhost"
+        @access_token ||= client.auth_code.get_token(code, params)
       end
 
-      def access_token
-        @access_token ||= ::OAuth::AccessToken.new(consumer, @auth_token, @auth_secret)
-      end
-
-      def authorize_from_access(atoken, asecret)
-        @auth_token, @auth_secret = atoken, asecret
+      def state
+        o = [('a'..'z'),('A'..'Z')].map{|i| i.to_a}.flatten
+        @state ||= (0...50).map{ o[rand(o.length)] }.join
       end
 
       private
 
-        # since LinkedIn uses api.linkedin.com for request and access token exchanges,
-        # but www.linkedin.com for authorize/authenticate, we have to take care
-        # of the url creation ourselves.
-        def parse_oauth_options
-          {
-            :request_token_url => full_oauth_url_for(:request_token, :api_host),
-            :access_token_url  => full_oauth_url_for(:access_token,  :api_host),
-            :authorize_url     => full_oauth_url_for(:authorize,     :auth_host),
-            :site              => @consumer_options[:site] || @consumer_options[:api_host] || DEFAULT_OAUTH_OPTIONS[:api_host],
-            :proxy             => @consumer_options.fetch(:proxy, nil)
-          }
+        # The keys of this hash are designed to match the OAuth2
+        # initialize spec.
+        def parse_oauth2_options
+          { token_url: full_oauth_url_for(:access_token, :auth_host),
+            authorize_url:    full_oauth_url_for(:authorize, :auth_host),
+            site:             DEFAULT_OAUTH2_OPTIONS[:api_host] }
         end
 
         def full_oauth_url_for(url_type, host_type)
-          if @consumer_options["#{url_type}_url".to_sym]
-            @consumer_options["#{url_type}_url".to_sym]
-          else
-            host = @consumer_options[:site] || @consumer_options[host_type] || DEFAULT_OAUTH_OPTIONS[host_type]
-            path = @consumer_options[:"#{url_type}_path".to_sym] || DEFAULT_OAUTH_OPTIONS["#{url_type}_path".to_sym]
-            "#{host}#{path}"
-          end
+          host = DEFAULT_OAUTH2_OPTIONS[host_type]
+          path = DEFAULT_OAUTH2_OPTIONS["#{url_type}_path".to_sym]
+          "#{host}#{path}"
         end
 
     end
-
   end
 end
+
+
+
+
+
+
+      # Note: If using oauth with a web app, be sure to provide :oauth_callback.
+      # Options:
+      #   :oauth_callback => String, url that LinkedIn should redirect to
+      # def request_token(options={}, *arguments, &block)
+      #   @request_token ||= client.get_request_token(options, *arguments, &block)
+      # end
+
+      # For web apps use params[:oauth_verifier], for desktop apps,
+      # use the verifier is the pin that LinkedIn gives users.
+      # def authorize_from_request(request_token, request_secret, verifier_or_pin)
+      #   request_token = ::OAuth::RequestToken.new(client, request_token, request_secret)
+      #   access_token  = request_token.get_access_token(:oauth_verifier => verifier_or_pin)
+      #   @auth_token, @auth_secret = access_token.token, access_token.secret
+      # end
+
+      # def access_token
+      #   @access_token ||= ::OAuth::AccessToken.new(client, @auth_token, @auth_secret)
+      # end
+
+      # def authorize_from_access(atoken, asecret)
+      #   @auth_token, @auth_secret = atoken, asecret
+      # end
+
+## Testing on console:
+# access_token = "AQXVEivgcVl4_-Q1rz9HQ_669ANbwYJC5flWY8FBcEpkUVzSpewO_bt1amTUffzxhKA_9haRC5-FdbyrCb8y05hwa_mz0ykdRdsiD4uo6f3uTdvQrKfdKmyF5pN3Ilrf5mpC5ds0D2Bhb1d7yOLK-PPpWZoGTYD3FvlpzedPBm9qeTrs3-I"
+# 
+# client_id = "1et24u1DIAxiRNH2jyJSeJKVX5H_c590P9GBVO-5nNDDywd2QAQg9OecPg-QwxzG"
+# client_secret = "3Ve2dmMnLuobeWVdwecN4No5XgxrJelbAwFPJcDQFTDo8kjoAO4UR5XsvNGOQk6u"
+# site = "https://www.linkedin.com"
+# token_url = "https://www.linkedin.com/uas/oauth2/accessToken"
+# authorize_url = "https://www.linkedin.com/uas/oauth2/authorization"
+# 
+# client = OAuth2::Client.new(client_id, client_secret, site: site, token_url: token_url, authorize_url: authorize_url)
+# 
+# http://localhost/?code=AQSHqSGgooSk7_jLkg6ri37PfgGv5lQdJwxLgq2xOAS4Xa7rgUw2FxqzKj3UY8qaz5X31G6CRCayQt3o3zz1gRkN5ixAojIAFT3G16VZKFyMmXcNMqI&state=wIvwRflFjMSjrwlUMeBcvTbgfKkOidOBqphcUKjlLYjBBJJevX

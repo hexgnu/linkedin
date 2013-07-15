@@ -6,9 +6,9 @@ describe LinkedIn::Search do
   # tokens and secrets to regenerate them
   #
   let(:client) do
-    consumer_token  = ENV['LINKED_IN_CONSUMER_KEY'] || 'key'
-    consumer_secret = ENV['LINKED_IN_CONSUMER_SECRET'] || 'secret'
-    client = LinkedIn::Client.new(consumer_token, consumer_secret)
+    client_id  = ENV['LINKED_IN_CLIENT_ID'] || 'key'
+    client_secret = ENV['LINKED_IN_CLIENT_SECRET'] || 'secret'
+    client = LinkedIn::Client.new(client_id, client_secret)
 
     auth_token      = ENV['LINKED_IN_AUTH_KEY'] || 'key'
     auth_secret     = ENV['LINKED_IN_AUTH_SECRET'] || 'secret'

@@ -1,6 +1,6 @@
 # LinkedIn
 
-Oauth 2.0 Ruby wrapper for the [LinkedIn API](http://developer.linkedin.com). Designed to drop into [pengwynn/linkedin](https://github.com/pengwynn/linkedin)'s Oauth 1.0 Linkedin API interface. Also heavily inspired by [John Nunemaker's](http://github.com/jnunemaker) [Twitter gem](http://github.com/jnunemaker/twitter)
+Oauth 2.0 Ruby wrapper for the [LinkedIn API](http://developer.linkedin.com). Heavily inspired by [pengwynn/linkedin](https://github.com/pengwynn/linkedin)'s Oauth 1.0 Linkedin API interface. Most methods are the same as pengwynn/linkedin's gem, but major terminology changes make this incompatible.
 
 Travis CI : [![Build Status](https://secure.travis-ci.org/emorikawa/linkedin-oauth2.png)](http://travis-ci.org/emorikawa/linkedin-oauth2)
 
@@ -10,7 +10,7 @@ Travis CI : [![Build Status](https://secure.travis-ci.org/emorikawa/linkedin-oau
 
 ## Usage
 
-### Authenticate
+### Authenticate Overview
 
 LinkedIn's API uses OAuth 2.0 for authentication. Luckily, this gem hides most of the gory details from you.
 
@@ -18,29 +18,46 @@ The gory details can be found [here](https://developer.linkedin.com/documents/au
 
 For legacy support of LinkedIn's OAuth 1.0a api, refer to the [pengwynn/linkedin](https://github.com/pengwynn/linkedin) gem.
 
-```ruby
-require 'rubygems'
-require 'linkedin-oauth2'
+Basically, you need 3 things to start using LinkedIn's API:
 
-# get your api keys at https://www.linkedin.com/secure/developer
-client = LinkedIn::Client.new('your_client_id', 'your_client_secret')
-rtoken = client.request_token.token
-rsecret = client.request_token.secret
+1. Your application's `client_id` aka **API Key**
+1. Your application's `client_secret` aka **Secret Key**
+1. An `access_token` from a user who authorized your app.
 
-# to test from your desktop, open the following url in your browser
-# and record the pin it gives you
-client.request_token.authorize_url
-=> "https://api.linkedin.com/uas/oauth/authorize?oauth_token=<generated_token>"
+### If you already have a user's `access_token`
+Then you have already authenticated! Encoded within that access token are
+all of the permissions you have on a given user. Assuming you requested
+the appropriate permissions, you can read their profile, grab connections,
+etc.
 
-# then fetch your access keys
-client.authorize_from_request(rtoken, rsecret, pin)
-=> ["OU812", "8675309"] # <= save these for future requests
+    client = LinkedIn::Client.new("<your client_id>",
+                                  "<your client_secret>",
+                                  "<user access_token>")
+    client.profile
 
-# or authorize from previously fetched access keys
-client.authorize_from_access("OU812", "8675309")
+### If you need to fetch an `access_token` for a user.
+There are 4 steps:
 
-# you're now free to move about the cabin, call any API method
-```
+1. Setup a client using your application's `client_id` and `client_secret`
+
+    client = LinkedIn::Client.new('your_client_id', 'your_client_secret')
+
+2. Get the `authorize_url` to bring up the page that will ask a user
+   to verify permissions & grant you access.
+
+    authorize_url = client.authorize_url
+
+3. Once a user signs in to your OAuth 2.0 box, you will get an
+   `auth_code` aka **code**. (Check in url you were directed to after a
+   successful auth). Use this **auth code** to request the
+   **access token**.
+
+    access_token = client.get_token("<auth_code from last step>")
+
+4. Once you have an `access_token`, you can request profile information or
+   anything else you have permissions for.
+
+    client.profile
 
 ### Profile examples
 ```ruby
@@ -62,10 +79,16 @@ For a nice example on using this in a [Rails App](http://pivotallabs.com/users/w
 If you want to play with the LinkedIn api without using the gem, have a look at the [apigee LinkedIn console](http://app.apigee.com/console/linkedin).
 
 ## Migration from OAuth 1.0a to OAuth 2.0
+### Overall changes
+* The term `consumer` is now referred to as the `client`
 * The terms `token`, `consumer token`, or `consumer key` in OAuth 1.0 are now referred to as **`client_id`** in OAuth 2.0
 * The terms `secret`, or `consumer secret` in OAuth 1.0 are now referred to as **`client_secret`** in OAuth 2.0
 * In OAuth 1.0 there is both an `auth token` and an `auth secret`. OAuth 2.0 combines these into a single `access token`.
 * The terms `auth token`, `auth key`, `auth secret`, `access secret`, `access token`, or `access key` have all been collapsed and are now referred to as the **`access token`**.
+* `require` `linkedin-oauth2` instead of `linkedin`
+
+### Gem api changes
+* In general, any place that said "consumer" now says "client"
 
 
 ## Note on Patches/Pull Requests

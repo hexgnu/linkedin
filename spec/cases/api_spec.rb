@@ -94,15 +94,14 @@ describe LinkedIn::Api do
     response.code.should == "201"
   end
 
-  it "should be able to pass down the additional arguments to OAuth's get_request_token" do
-    consumer.should_receive(:get_request_token).with(
-      {:oauth_callback => "http://localhost:3000/auth/callback"},  :scope => "rw_nus").and_return("request_token")
+  it "should be able to pass down the additional arguments to OAuth's get_token" do
+    consumer.auth_code.should_receive(:get_token).with(
+      {:redirect_uri => "http://localhost:3000/auth/callback"}).and_return("access_token")
 
-    request_token = client.request_token(
-      {:oauth_callback => "http://localhost:3000/auth/callback"},  :scope => "rw_nus"
-    )
+    access_token = client.token(
+      {:oauth_callback => "http://localhost:3000/auth/callback"})
 
-    request_token.should == "request_token"
+    access_token.should == "access_token"
   end
 
   context "Company API" do

@@ -39,11 +39,8 @@ end
 
 get "/auth" do
   client = LinkedIn::Client.new(settings.api, settings.secret)
-  request_token = client.request_token(:oauth_callback => "http://#{request.host}:#{request.port}/auth/callback")
-  session[:rtoken] = request_token.token
-  session[:rsecret] = request_token.secret
-
-  redirect client.request_token.authorize_url
+  authorize_url = client.authorize_url(redirect_uri: "http://#{request.host}:#{request.port}/auth/callback")
+redirect authorize_url
 end
 
 get "/auth/logout" do
@@ -53,12 +50,8 @@ end
 
 get "/auth/callback" do
   client = LinkedIn::Client.new(settings.api, settings.secret)
-  if session[:atoken].nil?
-    pin = params[:oauth_verifier]
-    atoken, asecret = client.authorize_from_request(session[:rtoken], session[:rsecret], pin)
-    session[:atoken] = atoken
-    session[:asecret] = asecret    
-  end
+  code = params[:code]
+  session[:atoken] = client.get_token(code, redirect_uri: "/")
   redirect "/"
 end
 
