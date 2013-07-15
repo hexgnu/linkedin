@@ -12,7 +12,11 @@ Travis CI : [![Build Status](https://secure.travis-ci.org/emorikawa/linkedin-oau
 
 ### Authenticate
 
-LinkedIn's API uses Oauth for authentication. Luckily, the LinkedIn gem hides most of the gory details from you.
+LinkedIn's API uses OAuth 2.0 for authentication. Luckily, this gem hides most of the gory details from you.
+
+The gory details can be found [here](https://developer.linkedin.com/documents/authentication)
+
+For legacy support of LinkedIn's OAuth 1.0a api, refer to the [pengwynn/linkedin](https://github.com/pengwynn/linkedin) gem.
 
 ```ruby
 require 'rubygems'
@@ -57,12 +61,12 @@ For a nice example on using this in a [Rails App](http://pivotallabs.com/users/w
 
 If you want to play with the LinkedIn api without using the gem, have a look at the [apigee LinkedIn console](http://app.apigee.com/console/linkedin).
 
-## TODO
+## Migration from OAuth 1.0a to OAuth 2.0
+* The terms `token`, `consumer token`, or `consumer key` in OAuth 1.0 are now referred to as **`client_id`** in OAuth 2.0
+* The terms `secret`, or `consumer secret` in OAuth 1.0 are now referred to as **`client_secret`** in OAuth 2.0
+* In OAuth 1.0 there is both an `auth token` and an `auth secret`. OAuth 2.0 combines these into a single `access token`.
+* The terms `auth token`, `auth key`, `auth secret`, `access secret`, `access token`, or `access key` have all been collapsed and are now referred to as the **`access token`**.
 
-* Change to json api
-* Update and correct test suite
-* Change to Faraday for authentication
-* Implement Messaging APIs
 
 ## Note on Patches/Pull Requests
 

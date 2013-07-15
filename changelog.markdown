@@ -1,5 +1,13 @@
 # Changelog
 
+# OAuth 2.0 Versions
+
+## 0.0.1 - July 15, 2013
+
+* Migrated API over to use Linkedin's OAuth 2.0
+
+# OAuth 1.0 Legacy Versions Via pengwynn/linkedin
+
 ## 0.4.0 - May 30, 2013
 
 * Add capability to ask for desired permissions from linked in api
