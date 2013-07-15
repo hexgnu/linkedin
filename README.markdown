@@ -1,12 +1,12 @@
 # LinkedIn
 
-Ruby wrapper for the [LinkedIn API](http://developer.linkedin.com). Heavily inspired by [John Nunemaker's](http://github.com/jnunemaker) [Twitter gem](http://github.com/jnunemaker/twitter), the LinkedIn gem provides an easy-to-use wrapper for LinkedIn's Oauth/XML APIs.
+Oauth 2.0 Ruby wrapper for the [LinkedIn API](http://developer.linkedin.com). Designed to drop into [pengwynn/linkedin](https://github.com/pengwynn/linkedin)'s Oauth 1.0 Linkedin API interface. Also heavily inspired by [John Nunemaker's](http://github.com/jnunemaker) [Twitter gem](http://github.com/jnunemaker/twitter)
 
-Travis CI : [![Build Status](https://secure.travis-ci.org/pengwynn/linkedin.png)](http://travis-ci.org/pengwynn/linkedin)
+Travis CI : [![Build Status](https://secure.travis-ci.org/emorikawa/linkedin-oauth2.png)](http://travis-ci.org/emorikawa/linkedin-oauth2)
 
 ## Installation
 
-    [sudo] gem install linkedin
+    [sudo] gem install linkedin-oauth2
 
 ## Usage
 
@@ -15,7 +15,7 @@ Travis CI : [![Build Status](https://secure.travis-ci.org/pengwynn/linkedin.png)
 LinkedIn's API uses Oauth for authentication. Luckily, the LinkedIn gem hides most of the gory details from you.
 
     require 'rubygems'
-    require 'linkedin'
+    require 'linkedin-oauth2'
 
     # get your api keys at https://www.linkedin.com/secure/developer
     client = LinkedIn::Client.new('your_consumer_key', 'your_consumer_secret')
