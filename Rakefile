@@ -9,6 +9,13 @@ RSpec::Core::RakeTask.new(:spec)
 task :test => :spec
 task :default => :spec
 
+task :compile_and_test do
+  puts "Compiling"
+  puts `gem build linkedin-oauth2.gemspec && gem install ./linkedin-oauth2*.gem`
+  puts "Testing"
+  Rake::Task["test"].invoke
+end
+
 require 'rdoc/task'
 require File.expand_path('../lib/linked_in/version', __FILE__)
 RDoc::Task.new do |rdoc|

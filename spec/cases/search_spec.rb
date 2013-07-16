@@ -6,20 +6,16 @@ describe LinkedIn::Search do
   # tokens and secrets to regenerate them
   #
   let(:client) do
-    consumer_token  = ENV['LINKED_IN_CONSUMER_KEY'] || 'key'
-    consumer_secret = ENV['LINKED_IN_CONSUMER_SECRET'] || 'secret'
-    client = LinkedIn::Client.new(consumer_token, consumer_secret)
-
-    auth_token      = ENV['LINKED_IN_AUTH_KEY'] || 'key'
-    auth_secret     = ENV['LINKED_IN_AUTH_SECRET'] || 'secret'
-    client.authorize_from_access(auth_token, auth_secret)
-    client
+    client_id  = ENV['LINKED_IN_CLIENT_ID'] || 'stub_client_id'
+    client_secret = ENV['LINKED_IN_CLIENT_SECRET'] || 'stub_client_secret'
+    access_token = ENV['LINKED_IN_ACCESS_TOKEN'] || 'stub_access_token'
+    LinkedIn::Client.new(client_id, client_secret, access_token)
   end
 
   describe "#search_company" do
+    use_vcr_cassette record: :none
 
     describe "by keywords string parameter" do
-      use_vcr_cassette :record => :new_episodes
 
       let(:results) do
         client.search('apple', :company)
@@ -33,7 +29,6 @@ describe LinkedIn::Search do
     end
 
     describe "by single keywords option" do
-      use_vcr_cassette :record => :new_episodes
 
       let(:results) do
         options = {:keywords => 'apple'}
@@ -48,7 +43,6 @@ describe LinkedIn::Search do
     end
 
     describe "by single keywords option with facets to return" do
-      use_vcr_cassette :record => :new_episodes
 
       let(:results) do
         options = {:keywords => 'apple', :facets => [:industry]}
@@ -61,7 +55,6 @@ describe LinkedIn::Search do
     end
 
     describe "by single keywords option with pagination" do
-      use_vcr_cassette :record => :new_episodes
 
       let(:results) do
         options = {:keywords => 'apple', :start => 5, :count => 5}
@@ -78,7 +71,6 @@ describe LinkedIn::Search do
     end
 
     describe "by keywords options with fields" do
-      use_vcr_cassette :record => :new_episodes
 
       let(:results) do
         fields = [{:companies => [:id, :name, :industries, :description, :specialties]}, :num_results]
@@ -97,7 +89,6 @@ describe LinkedIn::Search do
   describe "#search" do
 
     describe "by keywords string parameter" do
-      use_vcr_cassette :record => :new_episodes
 
       let(:results) do
         client.search('github')
@@ -112,7 +103,6 @@ describe LinkedIn::Search do
     end
 
     describe "by single keywords option" do
-      use_vcr_cassette :record => :new_episodes
 
       let(:results) do
         client.search(:keywords => 'github')
@@ -127,7 +117,6 @@ describe LinkedIn::Search do
     end
 
     describe "by single keywords option with pagination" do
-      use_vcr_cassette :record => :new_episodes
 
       let(:results) do
         client.search(:keywords => 'github', :start => 5, :count => 5)
@@ -142,7 +131,6 @@ describe LinkedIn::Search do
     end
 
     describe "by first_name and last_name options" do
-      use_vcr_cassette :record => :new_episodes
 
       let(:results) do
         client.search(:first_name => 'Charles', :last_name => 'Garcia')
@@ -157,7 +145,6 @@ describe LinkedIn::Search do
     end
 
     describe "by first_name and last_name options with fields" do
-      use_vcr_cassette :record => :new_episodes
 
       let(:results) do
         fields = [{:people => [:id, :first_name, :last_name, :public_profile_url, :picture_url]}, :num_results]
@@ -176,7 +163,6 @@ describe LinkedIn::Search do
     end
 
     describe "by company_name option" do
-      use_vcr_cassette :record => :new_episodes
 
       let(:results) do
         client.search(:company_name => 'IBM')

@@ -12,35 +12,43 @@ module LinkedIn
       protected
 
         def get(path, options={})
-          response = access_token.get("#{API_PATH}#{path}", DEFAULT_HEADERS.merge(options))
+          response = access_token.get("#{API_PATH}#{path}", headers: DEFAULT_HEADERS.merge(options))
           raise_errors(response)
           response.body
+        rescue OAuth2::Error => e
+          raise LinkedIn::Errors::AccessDeniedError.new(e.code), e.description
         end
 
         def post(path, body='', options={})
-          response = access_token.post("#{API_PATH}#{path}", body, DEFAULT_HEADERS.merge(options))
+          response = access_token.post("#{API_PATH}#{path}", body: body, headers: DEFAULT_HEADERS.merge(options))
           raise_errors(response)
           response
+        rescue OAuth2::Error => e
+          raise LinkedIn::Errors::AccessDeniedError.new(e.code), e.description
         end
 
         def put(path, body, options={})
-          response = access_token.put("#{API_PATH}#{path}", body, DEFAULT_HEADERS.merge(options))
+          response = access_token.put("#{API_PATH}#{path}", body: body, headers: DEFAULT_HEADERS.merge(options))
           raise_errors(response)
           response
+        rescue OAuth2::Error => e
+          raise LinkedIn::Errors::AccessDeniedError.new(e.code), e.description
         end
 
         def delete(path, options={})
-          response = access_token.delete("#{API_PATH}#{path}", DEFAULT_HEADERS.merge(options))
+          response = access_token.delete("#{API_PATH}#{path}", headers: DEFAULT_HEADERS.merge(options))
           raise_errors(response)
           response
+        rescue OAuth2::Error => e
+          raise LinkedIn::Errors::AccessDeniedError.new(e.code), e.description
         end
 
       private
 
         def raise_errors(response)
-          # Even if the json answer contains the HTTP status code, LinkedIn also sets this code
+          # Even if the json answer contains the HTTP status code, LinkedIn also sets this status
           # in the HTTP answer (thankfully).
-          case response.code.to_i
+          case response.status.to_i
           when 401
             data = Mash.from_json(response.body)
             raise LinkedIn::Errors::UnauthorizedError.new(data), "(#{data.status}): #{data.message}"
@@ -51,11 +59,11 @@ module LinkedIn
             data = Mash.from_json(response.body)
             raise LinkedIn::Errors::AccessDeniedError.new(data), "(#{data.status}): #{data.message}"
           when 404
-            raise LinkedIn::Errors::NotFoundError, "(#{response.code}): #{response.message}"
+            raise LinkedIn::Errors::NotFoundError, "(#{response.status}): #{response.message}"
           when 500
-            raise LinkedIn::Errors::InformLinkedInError, "LinkedIn had an internal error. Please let them know in the forum. (#{response.code}): #{response.message}"
+            raise LinkedIn::Errors::InformLinkedInError, "LinkedIn had an internal error. Please let them know in the forum. (#{response.status}): #{response.message}"
           when 502..503
-            raise LinkedIn::Errors::UnavailableError, "(#{response.code}): #{response.message}"
+            raise LinkedIn::Errors::UnavailableError, "(#{response.status}): #{response.message}"
           end
         end
 

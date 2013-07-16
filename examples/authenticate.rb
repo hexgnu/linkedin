@@ -2,20 +2,15 @@ require 'rubygems'
 require 'linkedin'
 
 # get your api keys at https://www.linkedin.com/secure/developer
-client = LinkedIn::Client.new('your_consumer_key', 'your_consumer_secret')
-rtoken = client.request_token.token
-rsecret = client.request_token.secret
+client = LinkedIn::Client.new('your_client_id', 'your_client_secret')
 
-# to test from your desktop, open the following url in your browser
-# and record the pin it gives you
-client.request_token.authorize_url
-=> "https://api.linkedin.com/uas/oauth/authorize?oauth_token=<generated_token>"
+# Get a url that you can enter into the browser to connect a user's
+# account to your client_id and client_secret.
+authorize_url = client.authorize_url
 
-# then fetch your access keys
-client.authorize_from_request(rtoken, rsecret, pin)
-=> ["OU812", "8675309"] # <= save these for future requests
+# Record the 'code' param (check the url bar) then use it to request the
+# access_token.
+access_token = client.request_access_token("<auth_code from last step>")
 
-# or authorize from previously fetched access keys
-c.authorize_from_access("OU812", "8675309")
-
-# you're now free to move about the cabin, call any API method
+# Once you've initialized the access_token, you can call any api method
+client.profile

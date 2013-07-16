@@ -3,176 +3,127 @@ require 'helper'
 describe "LinkedIn::Client" do
 
   let(:client) do
-    key    = ENV['LINKED_IN_CONSUMER_KEY'] || '1234'
-    secret = ENV['LINKED_IN_CONSUMER_SECRET'] || '1234'
-    LinkedIn::Client.new(key, secret)
+    client_id    = ENV['LINKED_IN_CLIENT_KEY'] || 'stub_client_id'
+    client_secret = ENV['LINKED_IN_CLIENT_SECRET'] || 'stub_client_secret'
+    LinkedIn::Client.new(client_id, client_secret)
   end
 
-  describe "#consumer" do
+  let(:authed_client) do
+    client_id    = ENV['LINKED_IN_CLIENT_KEY'] || 'stub_client_id'
+    client_secret = ENV['LINKED_IN_CLIENT_SECRET'] || 'stub_client_secret'
+    access_token = ENV['LINKED_IN_ACCESS_TOKEN'] || 'stub_access_token'
+    LinkedIn::Client.new(client_id, client_secret, access_token)
+  end
+
+  describe "#oauth2_client" do
     describe "default oauth options" do
-      let(:consumer) { client.consumer }
+      let(:oauth2_client) { client.oauth2_client }
 
-      it "should return a configured OAuth consumer" do
-        consumer.site.should == 'https://api.linkedin.com'
-        consumer.request_token_url.should == 'https://api.linkedin.com/uas/oauth/requestToken'
-        consumer.access_token_url.should == 'https://api.linkedin.com/uas/oauth/accessToken'
-        consumer.authorize_url.should == 'https://www.linkedin.com/uas/oauth/authorize'
-      end
-    end
-
-    describe "proxy oauth options" do
-      let(:proxy) { "http://dummy.proxy" }
-      let(:consumer) do
-        LinkedIn::Client.new('1234', '1234', {
-          :proxy => proxy,
-        }).consumer
-      end
-
-      it "should send requests though proxy" do
-        consumer.proxy.should eq proxy
+      it "should return a configured OAuth oauth2_client" do
+        oauth2_client.site.should == 'https://api.linkedin.com'
+        oauth2_client.token_url.should == "https://www.linkedin.com/uas/oauth2/accessToken"
+        oauth2_client.authorize_url.should == "https://www.linkedin.com/uas/oauth2/authorization"
       end
     end
 
     describe "different api and auth hosts options" do
-      let(:consumer) do
+      let(:oauth2_client) do
         LinkedIn::Client.new('1234', '1234', {
-          :api_host => 'https://api.josh.com',
-          :auth_host => 'https://www.josh.com'
-        }).consumer
+          :token_url => 'https://token-url.com',
+          :authorize_url => 'https://authorize-url.com',
+          :site => "https://foo.com"
+        }).oauth2_client
       end
 
-      it "should return a configured OAuth consumer" do
-        consumer.site.should == 'https://api.josh.com'
-        consumer.request_token_url.should == 'https://api.josh.com/uas/oauth/requestToken'
-        consumer.access_token_url.should == 'https://api.josh.com/uas/oauth/accessToken'
-        consumer.authorize_url.should == 'https://www.josh.com/uas/oauth/authorize'
+      it "should return a configured OAuth oauth2_client" do
+        oauth2_client.site.should == 'https://foo.com'
+        oauth2_client.token_url.should == "https://token-url.com"
+        oauth2_client.authorize_url.should == "https://authorize-url.com"
       end
     end
 
     describe "different oauth paths" do
-      let(:consumer) do
+      let(:oauth2_client) do
         LinkedIn::Client.new('1234', '1234', {
-          :request_token_path => "/secure/oauth/requestToken",
-          :access_token_path  => "/secure/oauth/accessToken",
           :authorize_path     => "/secure/oauth/authorize",
-        }).consumer
+          :access_token_path  => "/secure/oauth/accessToken",
+        }).oauth2_client
       end
 
-      it "should return a configured OAuth consumer" do
-        consumer.site.should == 'https://api.linkedin.com'
-        consumer.request_token_url.should == 'https://api.linkedin.com/secure/oauth/requestToken'
-        consumer.access_token_url.should == 'https://api.linkedin.com/secure/oauth/accessToken'
-        consumer.authorize_url.should == 'https://www.linkedin.com/secure/oauth/authorize'
+      it "should return a configured OAuth oauth2_client" do
+        oauth2_client.site.should == 'https://api.linkedin.com'
+        oauth2_client.token_url.should == "https://www.linkedin.com/uas/oauth2/accessToken"
+        oauth2_client.authorize_url.should == "https://www.linkedin.com/uas/oauth2/authorization"
       end
     end
 
     describe "specify oauth urls" do
-      let(:consumer) do
+      let(:oauth2_client) do
         LinkedIn::Client.new('1234', '1234', {
-          :request_token_url => "https://api.josh.com/secure/oauth/requestToken",
-          :access_token_url  => "https://api.josh.com/secure/oauth/accessToken",
-          :authorize_url     => "https://www.josh.com/secure/oauth/authorize",
-        }).consumer
+          :token_url => "https://api.josh.com/secure/oauth/requestToken",
+          :authorize_url  => "https://api.josh.com/secure/oauth/accessToken",
+        }).oauth2_client
       end
 
-      it "should return a configured OAuth consumer" do
-        consumer.site.should == 'https://api.linkedin.com'
-        consumer.request_token_url.should == 'https://api.josh.com/secure/oauth/requestToken'
-        consumer.access_token_url.should == 'https://api.josh.com/secure/oauth/accessToken'
-        consumer.authorize_url.should == 'https://www.josh.com/secure/oauth/authorize'
+      it "should return a configured OAuth oauth2_client" do
+        oauth2_client.site.should == 'https://api.linkedin.com'
+        oauth2_client.token_url.should == "https://api.josh.com/secure/oauth/requestToken"
+        # oauth2_client.authorize_url.should == "https://www.linkedin.com/uas/oauth2/authorization"
       end
     end
 
     describe "use the :site option to specify the host of all oauth urls" do
-      let(:consumer) do
+      let(:oauth2_client) do
         LinkedIn::Client.new('1234', '1234', {
           :site => "https://api.josh.com"
-        }).consumer
+        }).oauth2_client
       end
 
-      it "should return a configured OAuth consumer" do
-        consumer.site.should == 'https://api.josh.com'
-        consumer.request_token_url.should == 'https://api.josh.com/uas/oauth/requestToken'
-        consumer.access_token_url.should == 'https://api.josh.com/uas/oauth/accessToken'
-        consumer.authorize_url.should == 'https://api.josh.com/uas/oauth/authorize'
-      end
-    end
-  end
-
-  describe "#request_token" do
-    describe "with default options" do
-      use_vcr_cassette :record => :new_episodes
-
-      it "should return a valid request token" do
-        request_token = client.request_token
-
-        request_token.should be_a_kind_of OAuth::RequestToken
-        request_token.authorize_url.should include("https://www.linkedin.com/uas/oauth/authorize?oauth_token=")
-
-        a_request(:post, "https://api.linkedin.com/uas/oauth/requestToken").should have_been_made.once
-      end
-    end
-
-    describe "with a callback url" do
-      use_vcr_cassette :record => :new_episodes
-
-      it "should return a valid access token" do
-        request_token = client.request_token(:oauth_callback => 'http://www.josh.com')
-
-        request_token.should be_a_kind_of OAuth::RequestToken
-        request_token.authorize_url.should include("https://www.linkedin.com/uas/oauth/authorize?oauth_token=")
-        request_token.callback_confirmed?.should == true
-
-        a_request(:post, "https://api.linkedin.com/uas/oauth/requestToken").should have_been_made.once
+      it "should return a configured OAuth oauth2_client" do
+        oauth2_client.site.should == 'https://api.josh.com'
+        oauth2_client.token_url.should == "https://www.linkedin.com/uas/oauth2/accessToken"
+        # oauth2_client.authorize_url.should == "https://www.linkedin.com/uas/oauth2/authorization"
       end
     end
   end
 
-  describe "#authorize_from_request" do
-    let(:access_token) do
-      # if you remove the related casssette you will need to do the following
-      # authorize_from_request request manually
-      #
-      # request_token = client.request_token
-      # puts "token    : #{request_token.token} - secret #{request_token.secret}"
-      # puts "auth url : #{request_token.authorize_url}"
-      # raise 'keep note of the token and secret'
-      #
-      client.authorize_from_request('dummy-token', 'dummy-secret', 'dummy-pin')
-    end
+  # describe "#request_access_token" do
+  #   before(:each) do
+  #     stub_request(:post, "https://www.linkedin.com/uas/oauth/accessToken?oauth2_access_token=#{client.access_token.token}").to_return(body: {access_token: "stub_access_token"})
+  #   end
 
-    use_vcr_cassette :record => :new_episodes, :match_requests_on => [:uri, :method]
+  #   describe "with default options" do
+  #     use_vcr_cassette :record => :new_episodes
 
-    it "should return a valid access token" do
-      access_token.should be_a_kind_of Array
-      access_token[0].should be_a_kind_of String
-      access_token[1].should be_a_kind_of String
+  #     it "should return a valid request token" do
+  #       access_token = client.request_access_token("stub_code")
+  #       a_request(:post, "https://www.linkedin.com/uas/oauth/accessToken").should have_been_made.once
+  #       access_token.should be_a_kind_of OAuth2::AccessToken
+  #     end
+  #   end
 
-      a_request(:post, "https://api.linkedin.com/uas/oauth/accessToken").should have_been_made.once
-    end
-  end
+  #   describe "with a callback url" do
+  #     use_vcr_cassette :record => :new_episodes
+
+  #     it "should return a valid access token" do
+  #       access_token = client.request_access_token("stub_code", redirect_uri: 'http://www.josh.com')
+  #       a_request(:post, "https://www.linkedin.com/uas/oauth/accessToken").should have_been_made.once
+  #       access_token.should be_a_kind_of OAuth2::RequestToken
+
+  #       access_token.callback_confirmed?.should == true
+
+  #     end
+  #   end
+  # end
 
   describe "#access_token" do
     let(:access_token) do
-      client.authorize_from_access('dummy-token', 'dummy-secret')
-      client.access_token
+      authed_client.access_token
     end
 
     it "should return a valid auth token" do
-      access_token.should be_a_kind_of OAuth::AccessToken
+      access_token.should be_a_kind_of OAuth2::AccessToken
       access_token.token.should be_a_kind_of String
-    end
-  end
-
-  describe "#authorize_from_access" do
-    let(:auth_token) do
-      client.authorize_from_access('dummy-token', 'dummy-secret')
-    end
-
-    it "should return a valid auth token" do
-      auth_token.should be_a_kind_of Array
-      auth_token[0].should be_a_kind_of String
-      auth_token[1].should be_a_kind_of String
     end
   end
 

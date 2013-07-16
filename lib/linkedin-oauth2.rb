@@ -1,15 +1,15 @@
-require 'oauth'
+require 'oauth2'
 
 module LinkedIn
 
   class << self
-    attr_accessor :token, :secret, :default_profile_fields
+    attr_accessor :client_id, :client_secret, :default_profile_fields
 
     # config/initializers/linkedin.rb (for instance)
     #
     # LinkedIn.configure do |config|
-    #   config.token = 'consumer_token'
-    #   config.secret = 'consumer_secret'
+    #   config.client_id = 'client_id'
+    #   config.client_secret = 'client_secret'
     #   config.default_profile_fields = ['education', 'positions']
     # end
     #
