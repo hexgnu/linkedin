@@ -10,7 +10,7 @@ authorize_url = client.authorize_url
 
 # Record the 'code' param (check the url bar) then use it to request the
 # access_token.
-access_token = client.get_token("<auth_code from last step>")
+access_token = client.request_access_token("<auth_code from last step>")
 
 # Once you've initialized the access_token, you can call any api method
 client.profile

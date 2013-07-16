@@ -87,16 +87,16 @@ describe "LinkedIn::Client" do
     end
   end
 
-  # describe "#get_token" do
+  # describe "#request_access_token" do
   #   before(:each) do
-  #     stub_request(:post, "https://www.linkedin.com/uas/oauth/accessToken").to_return(body: {access_token: "stub_access_token"})
+  #     stub_request(:post, "https://www.linkedin.com/uas/oauth/accessToken?oauth2_access_token=#{client.access_token.token}").to_return(body: {access_token: "stub_access_token"})
   #   end
 
   #   describe "with default options" do
   #     use_vcr_cassette :record => :new_episodes
 
   #     it "should return a valid request token" do
-  #       access_token = client.get_token("stub_code")
+  #       access_token = client.request_access_token("stub_code")
   #       a_request(:post, "https://www.linkedin.com/uas/oauth/accessToken").should have_been_made.once
   #       access_token.should be_a_kind_of OAuth2::AccessToken
   #     end
@@ -106,7 +106,7 @@ describe "LinkedIn::Client" do
   #     use_vcr_cassette :record => :new_episodes
 
   #     it "should return a valid access token" do
-  #       access_token = client.get_token("stub_code", redirect_uri: 'http://www.josh.com')
+  #       access_token = client.request_access_token("stub_code", redirect_uri: 'http://www.josh.com')
   #       a_request(:post, "https://www.linkedin.com/uas/oauth/accessToken").should have_been_made.once
   #       access_token.should be_a_kind_of OAuth2::RequestToken
 

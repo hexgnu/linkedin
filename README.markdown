@@ -35,6 +35,10 @@ etc.
                                   "<user access_token>")
     client.profile
 
+You may also use the `set_access_token` method.
+
+    client.set_access_token("<user access_token>", options)
+
 ### If you need to fetch an `access_token` for a user.
 There are 4 steps:
 
@@ -52,7 +56,7 @@ There are 4 steps:
    successful auth). Use this **auth code** to request the
    **access token**.
 
-    access_token = client.get_token("<auth_code from last step>")
+    access_token = client.request_access_token("<auth_code from last step>")
 
 4. Once you have an `access_token`, you can request profile information or
    anything else you have permissions for.
@@ -92,7 +96,7 @@ If you want to play with the LinkedIn api without using the gem, have a look at 
 * In general, any place that said "consumer" now says "client"
 * The `authorize_from_request` method has been deprecated. Instead
   navigate to the url from `authorize_url` then enter the returned code
-  into the `get_token` method.
+  into the `request_access_token` method.
 * The `authorize_from_access` method has been deprecated. Instead
   initialize the `LinkedIn::Client.new` with the `access_token`.
   `client = Linkedin::Client.new(client_id, client_secret, access_token)`

@@ -50,7 +50,7 @@ end
 get "/auth/callback" do
   client = LinkedIn::Client.new(settings.api, settings.secret)
   code = params[:code]
-  session[:atoken] = client.get_token(code, redirect_uri: "/")
+  session[:atoken] = client.request_access_token(code, redirect_uri: "/")
   redirect "/"
 end
 

@@ -59,31 +59,26 @@ module LinkedIn
       # navigating to `authorize_url`
       # @param :redirect_uri - Where you want to redirect after you have
       # fetched the token.
-      def get_token(code, params={})
+      def request_access_token(code, params={})
         params[:redirect_uri] ||= "http://localhost"
-        @access_token ||= oauth2_client.auth_code.get_token(code, params)
+        opts = {}
+        opts[:mode] = :query
+        opts[:param_name] = "oauth2_access_token"
+        @access_token = oauth2_client.auth_code.get_token(code, params, opts)
       rescue OAuth2::Error => e
         raise LinkedIn::Errors::UnauthorizedError.new(e.code), e.description
       end
 
-      # Fetches the current access token or initializes if it doesn't
-      # exist
-      def access_token(code=nil, params={})
-        if @access_token.is_a? OAuth2::AccessToken
-          @access_token
-        elsif @access_token.is_a? String
-          @access_token = OAuth2::AccessToken.new oauth2_client, @access_token
-        elsif code
-          @access_token = self.get_token(code, params)
-        else
-          @access_token = nil
-        end
+      # If one already has an access_token string, it can be set here and
+      # turned into an OAuth2::AccessToken object.
+      def set_access_token(token, options={})
+        options[:access_token] = token
+        options[:mode] = :query
+        options[:param_name] = "oauth2_access_token"
+        @access_token = OAuth2::AccessToken.from_hash oauth2_client, options
       end
 
-      def state
-        o = [('a'..'z'),('A'..'Z')].map{|i| i.to_a}.flatten
-        @state ||= (0...50).map{ o[rand(o.length)] }.join
-      end
+      # NOTE: There is an attr_reader for :access_token.
 
       private
 
@@ -102,14 +97,13 @@ module LinkedIn
           "#{host}#{path}"
         end
 
+        def state
+          o = [('a'..'z'),('A'..'Z')].map{|i| i.to_a}.flatten
+          @state ||= (0...50).map{ o[rand(o.length)] }.join
+        end
     end
   end
 end
-
-
-
-
-
 
       # Note: If using oauth with a web app, be sure to provide :oauth_callback.
       # Options:
@@ -135,10 +129,7 @@ end
       # end
 
 ## Testing on console:
-# access_token = "AQXVEivgcVl4_-Q1rz9HQ_669ANbwYJC5flWY8FBcEpkUVzSpewO_bt1amTUffzxhKA_9haRC5-FdbyrCb8y05hwa_mz0ykdRdsiD4uo6f3uTdvQrKfdKmyF5pN3Ilrf5mpC5ds0D2Bhb1d7yOLK-PPpWZoGTYD3FvlpzedPBm9qeTrs3-I"
-# 
-# client_id = "1et24u1DIAxiRNH2jyJSeJKVX5H_c590P9GBVO-5nNDDywd2QAQg9OecPg-QwxzG"
-# client_secret = "3Ve2dmMnLuobeWVdwecN4No5XgxrJelbAwFPJcDQFTDo8kjoAO4UR5XsvNGOQk6u"
+# require 'linkedin-oauth2'; access_token = "AQXVEivgcVl4_-Q1rz9HQ_669ANbwYJC5flWY8FBcEpkUVzSpewO_bt1amTUffzxhKA_9haRC5-FdbyrCb8y05hwa_mz0ykdRdsiD4uo6f3uTdvQrKfdKmyF5pN3Ilrf5mpC5ds0D2Bhb1d7yOLK-PPpWZoGTYD3FvlpzedPBm9qeTrs3-I"; client_id = "1et24u1DIAxiRNH2jyJSeJKVX5H_c590P9GBVO-5nNDDywd2QAQg9OecPg-QwxzG"; client_secret = "3Ve2dmMnLuobeWVdwecN4No5XgxrJelbAwFPJcDQFTDo8kjoAO4UR5XsvNGOQk6u"
 # site = "https://www.linkedin.com"
 # token_url = "https://www.linkedin.com/uas/oauth2/accessToken"
 # authorize_url = "https://www.linkedin.com/uas/oauth2/authorization"
@@ -146,3 +137,5 @@ end
 # client = OAuth2::Client.new(client_id, client_secret, site: site, token_url: token_url, authorize_url: authorize_url)
 # 
 # http://localhost/?code=AQSHqSGgooSk7_jLkg6ri37PfgGv5lQdJwxLgq2xOAS4Xa7rgUw2FxqzKj3UY8qaz5X31G6CRCayQt3o3zz1gRkN5ixAojIAFT3G16VZKFyMmXcNMqI&state=wIvwRflFjMSjrwlUMeBcvTbgfKkOidOBqphcUKjlLYjBBJJevX
+#
+# http://localhost/?code=AQTrN6b198VVKiHIl7GWQN0B-7wlBAE7pTDHkZwITPW0CTi_wQTW2aKy8elbYVaffAvV5NPDXct2KFHkNNIu8pOC-MRd1cR5q9JRNIEaagu3N9eCrJ4&state=XWBaBXixTRmyeIijapUDpOEdMeMjovNckGOrSABVIYduzbJZmr

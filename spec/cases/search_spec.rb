@@ -13,9 +13,9 @@ describe LinkedIn::Search do
   end
 
   describe "#search_company" do
+    use_vcr_cassette record: :none
 
     describe "by keywords string parameter" do
-      use_vcr_cassette :record => :new_episodes
 
       let(:results) do
         client.search('apple', :company)
@@ -29,7 +29,6 @@ describe LinkedIn::Search do
     end
 
     describe "by single keywords option" do
-      use_vcr_cassette :record => :new_episodes
 
       let(:results) do
         options = {:keywords => 'apple'}
@@ -44,7 +43,6 @@ describe LinkedIn::Search do
     end
 
     describe "by single keywords option with facets to return" do
-      use_vcr_cassette :record => :new_episodes
 
       let(:results) do
         options = {:keywords => 'apple', :facets => [:industry]}
@@ -57,7 +55,6 @@ describe LinkedIn::Search do
     end
 
     describe "by single keywords option with pagination" do
-      use_vcr_cassette :record => :new_episodes
 
       let(:results) do
         options = {:keywords => 'apple', :start => 5, :count => 5}
@@ -74,7 +71,6 @@ describe LinkedIn::Search do
     end
 
     describe "by keywords options with fields" do
-      use_vcr_cassette :record => :new_episodes
 
       let(:results) do
         fields = [{:companies => [:id, :name, :industries, :description, :specialties]}, :num_results]
@@ -93,7 +89,6 @@ describe LinkedIn::Search do
   describe "#search" do
 
     describe "by keywords string parameter" do
-      use_vcr_cassette :record => :new_episodes
 
       let(:results) do
         client.search('github')
@@ -108,7 +103,6 @@ describe LinkedIn::Search do
     end
 
     describe "by single keywords option" do
-      use_vcr_cassette :record => :new_episodes
 
       let(:results) do
         client.search(:keywords => 'github')
@@ -123,7 +117,6 @@ describe LinkedIn::Search do
     end
 
     describe "by single keywords option with pagination" do
-      use_vcr_cassette :record => :new_episodes
 
       let(:results) do
         client.search(:keywords => 'github', :start => 5, :count => 5)
@@ -138,7 +131,6 @@ describe LinkedIn::Search do
     end
 
     describe "by first_name and last_name options" do
-      use_vcr_cassette :record => :new_episodes
 
       let(:results) do
         client.search(:first_name => 'Charles', :last_name => 'Garcia')
@@ -153,7 +145,6 @@ describe LinkedIn::Search do
     end
 
     describe "by first_name and last_name options with fields" do
-      use_vcr_cassette :record => :new_episodes
 
       let(:results) do
         fields = [{:people => [:id, :first_name, :last_name, :public_profile_url, :picture_url]}, :num_results]
@@ -172,7 +163,6 @@ describe LinkedIn::Search do
     end
 
     describe "by company_name option" do
-      use_vcr_cassette :record => :new_episodes
 
       let(:results) do
         client.search(:company_name => 'IBM')

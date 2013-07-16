@@ -70,6 +70,7 @@ module LinkedIn
           end
 
           headers = options.delete(:headers) || {}
+
           params  = to_query(options)
           path   += "?#{params}" if !params.empty?
 
@@ -93,7 +94,7 @@ module LinkedIn
 
         def company_path(options)
           path = "/companies"
-          
+
           if domain = options.delete(:domain)
             path += "?email-domain=#{CGI.escape(domain)}"
           elsif id = options.delete(:id)
