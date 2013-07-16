@@ -104,38 +104,3 @@ module LinkedIn
     end
   end
 end
-
-      # Note: If using oauth with a web app, be sure to provide :oauth_callback.
-      # Options:
-      #   :oauth_callback => String, url that LinkedIn should redirect to
-      # def request_token(options={}, *arguments, &block)
-      #   @request_token ||= client.get_request_token(options, *arguments, &block)
-      # end
-
-      # For web apps use params[:oauth_verifier], for desktop apps,
-      # use the verifier is the pin that LinkedIn gives users.
-      # def authorize_from_request(request_token, request_secret, verifier_or_pin)
-      #   request_token = ::OAuth::RequestToken.new(client, request_token, request_secret)
-      #   access_token  = request_token.get_access_token(:oauth_verifier => verifier_or_pin)
-      #   @auth_token, @auth_secret = access_token.token, access_token.secret
-      # end
-
-      # def access_token
-      #   @access_token ||= ::OAuth::AccessToken.new(client, @auth_token, @auth_secret)
-      # end
-
-      # def authorize_from_access(atoken, asecret)
-      #   @auth_token, @auth_secret = atoken, asecret
-      # end
-
-## Testing on console:
-# require 'linkedin-oauth2'; access_token = "AQXVEivgcVl4_-Q1rz9HQ_669ANbwYJC5flWY8FBcEpkUVzSpewO_bt1amTUffzxhKA_9haRC5-FdbyrCb8y05hwa_mz0ykdRdsiD4uo6f3uTdvQrKfdKmyF5pN3Ilrf5mpC5ds0D2Bhb1d7yOLK-PPpWZoGTYD3FvlpzedPBm9qeTrs3-I"; client_id = "1et24u1DIAxiRNH2jyJSeJKVX5H_c590P9GBVO-5nNDDywd2QAQg9OecPg-QwxzG"; client_secret = "3Ve2dmMnLuobeWVdwecN4No5XgxrJelbAwFPJcDQFTDo8kjoAO4UR5XsvNGOQk6u"
-# site = "https://www.linkedin.com"
-# token_url = "https://www.linkedin.com/uas/oauth2/accessToken"
-# authorize_url = "https://www.linkedin.com/uas/oauth2/authorization"
-# 
-# client = OAuth2::Client.new(client_id, client_secret, site: site, token_url: token_url, authorize_url: authorize_url)
-# 
-# http://localhost/?code=AQSHqSGgooSk7_jLkg6ri37PfgGv5lQdJwxLgq2xOAS4Xa7rgUw2FxqzKj3UY8qaz5X31G6CRCayQt3o3zz1gRkN5ixAojIAFT3G16VZKFyMmXcNMqI&state=wIvwRflFjMSjrwlUMeBcvTbgfKkOidOBqphcUKjlLYjBBJJevX
-#
-# http://localhost/?code=AQTrN6b198VVKiHIl7GWQN0B-7wlBAE7pTDHkZwITPW0CTi_wQTW2aKy8elbYVaffAvV5NPDXct2KFHkNNIu8pOC-MRd1cR5q9JRNIEaagu3N9eCrJ4&state=XWBaBXixTRmyeIijapUDpOEdMeMjovNckGOrSABVIYduzbJZmr

@@ -15,24 +15,32 @@ module LinkedIn
           response = access_token.get("#{API_PATH}#{path}", headers: DEFAULT_HEADERS.merge(options))
           raise_errors(response)
           response.body
+        rescue OAuth2::Error => e
+          raise LinkedIn::Errors::AccessDeniedError.new(e.code), e.description
         end
 
         def post(path, body='', options={})
           response = access_token.post("#{API_PATH}#{path}", body: body, headers: DEFAULT_HEADERS.merge(options))
           raise_errors(response)
           response
+        rescue OAuth2::Error => e
+          raise LinkedIn::Errors::AccessDeniedError.new(e.code), e.description
         end
 
         def put(path, body, options={})
           response = access_token.put("#{API_PATH}#{path}", body: body, headers: DEFAULT_HEADERS.merge(options))
           raise_errors(response)
           response
+        rescue OAuth2::Error => e
+          raise LinkedIn::Errors::AccessDeniedError.new(e.code), e.description
         end
 
         def delete(path, options={})
           response = access_token.delete("#{API_PATH}#{path}", headers: DEFAULT_HEADERS.merge(options))
           raise_errors(response)
           response
+        rescue OAuth2::Error => e
+          raise LinkedIn::Errors::AccessDeniedError.new(e.code), e.description
         end
 
       private

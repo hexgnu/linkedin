@@ -129,8 +129,6 @@ describe LinkedIn::Api do
     it "should load correct company data" do
       client.company(:id => 1586).name.should == "Amazon"
 
-      stub_request(:get, "https://api.linkedin.com/v1/companies/id=1586?oauth2_access_token=stub_access_token").to_return(body: "{}")
-
       data = client.company(:id => 1586, :fields => %w{ id name industry locations:(address:(city state country-code) is-headquarters) employee-count-range })
       data.id.should == 1586
       data.name.should == "Amazon"
@@ -186,7 +184,8 @@ describe LinkedIn::Api do
 
   context "errors" do
     it "should raise access denied error when linkedin returns 403 status code" do
-      stub_request(:get, "https://api.linkedin.com/v1/people-search?first-name=javan?oauth2_access_token=#{client.access_token.token}").to_return(:body => "{}", :status => 403)
+      stub_request(:get, "https://api.linkedin.com/v1/people-search?first-name=javan&oauth2_access_token=#{client.access_token.token}").to_return(:body => "{}", :status => 403)
+
       expect{ client.search(:first_name => "javan") }.to raise_error(LinkedIn::Errors::AccessDeniedError)
     end
   end
