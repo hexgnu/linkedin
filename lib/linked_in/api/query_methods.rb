@@ -22,6 +22,11 @@ module LinkedIn
         path   = company_path(options)
         simple_query(path, options)
       end
+      
+      def company_shares(options = {})
+        path   = "#{company_path(options)}/updates"
+        simple_query(path, options)
+      end
 
       def job(options = {})
         path = jobs_path(options)
