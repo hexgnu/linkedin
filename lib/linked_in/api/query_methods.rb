@@ -23,6 +23,26 @@ module LinkedIn
         simple_query(path, options)
       end
 
+      def company_updates(options={})
+        path = "#{company_path(options)}/updates"
+        simple_query(path, options)
+      end
+
+      def company_statistics(options={})
+        path = "#{company_path(options)}/company-statistics"
+        simple_query(path, options)
+      end
+
+      def company_updates_comments(update_key, options={})
+        path = "#{company_path(options)}/updates/key=#{update_key}/update-comments"
+        simple_query(path, options)
+      end
+
+      def company_updates_likes(update_key, options={})
+        path = "#{company_path(options)}/updates/key=#{update_key}/likes"
+        simple_query(path, options)
+      end
+
       def job(options = {})
         path = jobs_path(options)
         simple_query(path, options)
@@ -89,7 +109,7 @@ module LinkedIn
 
         def company_path(options)
           path = "/companies"
-          
+
           if domain = options.delete(:domain)
             path += "?email-domain=#{CGI.escape(domain)}"
           elsif id = options.delete(:id)

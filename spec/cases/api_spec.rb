@@ -134,6 +134,26 @@ describe LinkedIn::Api do
       data.locations.all[0].address.city.should == "Seattle"
       data.locations.all[0].is_headquarters.should == true
     end
+
+    it "should be able to view company_updates" do
+      stub_request(:get, "https://api.linkedin.com/v1/companies/id=1586/updates").to_return(:body => "{}")
+      client.company_updates(:id => 1586).should be_an_instance_of(LinkedIn::Mash)
+    end
+
+    it "should be able to view company_statistic" do
+      stub_request(:get, "https://api.linkedin.com/v1/companies/id=1586/company-statistics").to_return(:body => "{}")
+      client.company_statistics(:id => 1586).should be_an_instance_of(LinkedIn::Mash)
+    end
+
+    it "should be able to view company updates comments" do
+      stub_request(:get, "https://api.linkedin.com/v1/companies/id=1586/updates/key=company_update_key/update-comments").to_return(:body => "{}")
+      client.company_updates_comments("company_update_key", :id => 1586).should be_an_instance_of(LinkedIn::Mash)
+    end
+
+    it "should be able to view company updates likes" do
+      stub_request(:get, "https://api.linkedin.com/v1/companies/id=1586/updates/key=company_update_key/likes").to_return(:body => "{}")
+      client.company_updates_likes("company_update_key", :id => 1586).should be_an_instance_of(LinkedIn::Mash)
+    end
   end
 
   context "Job API" do
