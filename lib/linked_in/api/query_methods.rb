@@ -44,8 +44,8 @@ module LinkedIn
       end
 
       def shares(options={})
-        path = "#{person_path(options)}/network/updates?type=SHAR&scope=self"
-        simple_query(path, options)
+        path = "#{person_path(options)}/network/updates"
+        simple_query(path, {:type => "SHAR", :scope => "self"}.merge(options))
       end
 
       def share_comments(update_key, options={})
@@ -89,7 +89,7 @@ module LinkedIn
 
         def company_path(options)
           path = "/companies"
-          
+
           if domain = options.delete(:domain)
             path += "?email-domain=#{CGI.escape(domain)}"
           elsif id = options.delete(:id)

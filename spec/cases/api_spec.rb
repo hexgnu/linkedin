@@ -63,6 +63,12 @@ describe LinkedIn::Api do
     response.code.should == "201"
   end
 
+  it "returns the shares for a person" do
+    stub_request(:get, "https://api.linkedin.com/v1/people/~/network/updates?type=SHAR&scope=self&after=1234&count=35").to_return(
+      :body => "{}")
+    client.shares(:after => 1234, :count => 35)
+  end
+
   it "should be able to comment on network update" do
     stub_request(:post, "https://api.linkedin.com/v1/people/~/network/updates/key=SOMEKEY/update-comments").to_return(
         :body => "", :status => 201)
