@@ -134,6 +134,11 @@ describe LinkedIn::Api do
       data.locations.all[0].address.city.should == "Seattle"
       data.locations.all[0].is_headquarters.should == true
     end
+    
+    it "should be able to get a company's shares by id" do
+      stub_request(:get, "https://api.linkedin.com/v1/companies/1586/updates").to_return(:body => "{}")
+      client.company_shares(:id => 1586).should be_an_instance_of(LinkedIn::Mash)
+    end
   end
 
   context "Job API" do
