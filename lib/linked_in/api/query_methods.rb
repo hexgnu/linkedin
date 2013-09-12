@@ -43,6 +43,11 @@ module LinkedIn
         simple_query(path, options)
       end
 
+      def group(options = {})
+        path = "#{group_path(options)}"
+        simple_query(path, options)
+      end
+
       def shares(options={})
         path = "#{person_path(options)}/network/updates"
         simple_query(path, {:type => "SHAR", :scope => "self"}.merge(options))
@@ -66,7 +71,7 @@ module LinkedIn
           if options.delete(:public)
             path +=":public"
           elsif fields
-            path +=":(#{fields.map{ |f| f.to_s.gsub("_","-") }.join(',')})"
+            path +=":(#{build_fields_params(fields)})"
           end
 
           headers = options.delete(:headers) || {}
@@ -76,10 +81,33 @@ module LinkedIn
           Mash.from_json(get(path, headers))
         end
 
+        def build_fields_params(fields)
+          if fields.is_a?(Hash) && fields.present?
+            hash_array = []
+            fields.each do |index, value|
+              hash_array << "#{index}:(#{build_fields_params(value)})"
+            end
+            hash_array.join(',')
+          else
+            fields.map{ |f| f.is_a?(Hash) ? build_fields_params(f) : f.to_s.gsub("_","-") }.join(',')
+          end
+        end
+
         def person_path(options)
           path = "/people/"
           if id = options.delete(:id)
             path += "id=#{id}"
+          elsif url = options.delete(:url)
+            path += "url=#{CGI.escape(url)}"
+          else
+            path += "~"
+          end
+        end
+
+        def group_path(options)
+          path = "/groups/"
+          if id = options.delete(:id)
+            path += id
           elsif url = options.delete(:url)
             path += "url=#{CGI.escape(url)}"
           else

@@ -9,6 +9,11 @@ module LinkedIn
         post(path, defaults.merge(share).to_json, "Content-Type" => "application/json")
       end
 
+      def group_share(group_id, share)
+        path = "/groups/#{group_id}/posts"
+        post(path, share.to_json, "Content-Type" => "application/json")
+      end
+
       def join_group(group_id)
         path = "/people/~/group-memberships/#{group_id}"
         body = {'membership-state' => {'code' => 'member' }}
@@ -51,13 +56,13 @@ module LinkedIn
 
       def send_message(subject, body, recipient_paths)
         path = "/people/~/mailbox"
-      
+
         message = {
-            'subject' => subject, 
+            'subject' => subject,
             'body' => body,
             'recipients' => {
-                'values' => recipient_paths.map do |profile_path| 
-                  { 'person' => { '_path' => "/people/#{profile_path}" } } 
+                'values' => recipient_paths.map do |profile_path|
+                  { 'person' => { '_path' => "/people/#{profile_path}" } }
                 end
             }
         }
