@@ -183,6 +183,28 @@ describe LinkedIn::Api do
       response.code.should == "201"
     end
 
+    it "should be able to list a group profile" do
+      stub_request(:get, "https://api.linkedin.com/v1/groups/123").to_return(:body => "{}")
+      response = client.group_profile(:id => 123)
+      response.id.should be_an_instance_of(LinkedIn::Mash)
+    end
+
+    it "should be able to list group posts" do
+      stub_request(:get, "https://api.linkedin.com/v1/groups/123/posts").to_return(:body => "{}")
+      response = client.group_posts(:id => 123)
+      response.id.should be_an_instance_of(LinkedIn::Mash)
+    end
+
+    it 'should be able to post a discussion to a group' do
+      stub_request(:post, "https://api.linkedin.com/v1/groups/123/posts").to_return(:body => "", :status => 201)
+      response = client.post_group_discussion(123, {'title' => 'New Discussion', 'summary' => 'New Summary'})
+      response.body.should == nil
+      response.code.should == 201
+    end
+
+    it 'should be able to view a list of discussions from the group' do
+    end
+
   end
 
   context "Errors" do
