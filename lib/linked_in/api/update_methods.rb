@@ -21,23 +21,11 @@ module LinkedIn
         post(path, body.to_json, "Content-Type" => "application/json")
       end
 
-      # def share(options={})
-      #   path = "/people/~/shares"
-      #   defaults = { :visability => 'anyone' }
-      #   post(path, share_to_xml(defaults.merge(options)))
-      # end
-      #
       def update_comment(network_key, comment)
         path = "/people/~/network/updates/key=#{network_key}/update-comments"
         body = {'comment' => comment}
         post(path, body.to_json, "Content-Type" => "application/json")
       end
-      #
-      # def update_network(message)
-      #   path = "/people/~/person-activities"
-      #   post(path, network_update_to_xml(message))
-      # end
-      #
 
       def like_share(network_key)
         path = "/people/~/network/updates/key=#{network_key}/is-liked"
@@ -51,24 +39,29 @@ module LinkedIn
 
       def send_message(subject, body, recipient_paths)
         path = "/people/~/mailbox"
-      
+
         message = {
-            'subject' => subject, 
+            'subject' => subject,
             'body' => body,
             'recipients' => {
-                'values' => recipient_paths.map do |profile_path| 
-                  { 'person' => { '_path' => "/people/#{profile_path}" } } 
+                'values' => recipient_paths.map do |profile_path|
+                  { 'person' => { '_path' => "/people/#{profile_path}" } }
                 end
             }
         }
         post(path, message.to_json, "Content-Type" => "application/json")
       end
-      #
-      # def clear_status
-      #   path = "/people/~/current-status"
-      #   delete(path).code
-      # end
-      #
+
+      def post_group_discussion(group_id, discussion)
+        path = "/groups/#{group_id}/posts"
+
+        discussion_post = {
+          'title' => discussion['title'],
+          'summary' => discussion['summary']
+        }
+
+        post(path, discussion_post.to_json, "Content-Type" => "application/json")
+      end
 
     end
 
