@@ -140,6 +140,22 @@ describe LinkedIn::Api do
       data.locations.all[0].address.city.should == "Seattle"
       data.locations.all[0].is_headquarters.should == true
     end
+
+    it "should be able to post a company share" do
+      stub_request(:post, "https://api.linkedin.com/v1/companies/1/shares").to_return(:body => "", :status => 201)
+      company_share = {
+        "comment" => "Testing a full company share!",
+        "content" => {
+          "submitted-url" => "http =>//www.example.com/content.html",
+          "title" => "Test Share with Content",
+          "description" => "content description",
+          "submitted-image-url" => "http://www.example.com/image.jpg"
+        }
+      }
+      response = client.post_company_share(1, company_share)
+      response.body.should == nil
+      response.code.should == "201"
+    end
   end
 
   context "Job API" do
