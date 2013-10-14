@@ -17,7 +17,7 @@ module LinkedIn
 
       def follow_company(company_id)
         path = "/people/~/following/companies"
-        body = {:company => {:id =>company_id}}
+        body = {:id => company_id }
         post(path, body.to_json, "Content-Type" => "application/json")
       end
 
