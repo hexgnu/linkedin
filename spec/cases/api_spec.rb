@@ -63,6 +63,13 @@ describe LinkedIn::Api do
     response.code.should == "201"
   end
 
+  it "should be able to share a new company status" do
+    stub_request(:post, "https://api.linkedin.com/v1/companies/123456/shares").to_return(:body => "", :status => 201)
+    response = client.add_company_share("123456", { :comment => "Testing, 1, 2, 3" })
+    response.body.should == nil
+    response.code.should == "201"
+  end
+
   it "returns the shares for a person" do
     stub_request(:get, "https://api.linkedin.com/v1/people/~/network/updates?type=SHAR&scope=self&after=1234&count=35").to_return(
       :body => "{}")
@@ -129,6 +136,11 @@ describe LinkedIn::Api do
       client.company(:domain => 'acme.com').should be_an_instance_of(LinkedIn::Mash)
     end
 
+    it "should be able to view a user's company pages" do
+      stub_request(:get, "https://api.linkedin.com/v1/companies?is-company-admin=true").to_return(:body => "{}")
+      client.company(:is_admin => 'true').should be_an_instance_of(LinkedIn::Mash)
+    end
+
     it "should load correct company data" do
       client.company(:id => 1586).name.should == "Amazon"
 
@@ -160,6 +172,23 @@ describe LinkedIn::Api do
       stub_request(:get, "https://api.linkedin.com/v1/companies/id=1586/updates/key=company_update_key/likes").to_return(:body => "{}")
       client.company_updates_likes("company_update_key", :id => 1586).should be_an_instance_of(LinkedIn::Mash)
     end
+
+    it "should be able to follow a company" do
+      stub_request(:post, "https://api.linkedin.com/v1/people/~/following/companies").to_return(:body => "", :status => 201)
+
+      response = client.follow_company(1586)
+      response.body.should == nil
+      response.code.should == "201"
+    end
+
+    it "should be able to unfollow a company" do
+      stub_request(:delete, "https://api.linkedin.com/v1/people/~/following/companies/id=1586").to_return(:body => "", :status => 201)
+
+      response = client.unfollow_company(1586)
+      response.body.should == nil
+      response.code.should == "201"
+    end
+
   end
 
   context "Job API" do
