@@ -135,6 +135,8 @@ module LinkedIn
           path += "/url=#{CGI.escape(url)}"
         elsif name = options.delete(:name)
           path += "/universal-name=#{CGI.escape(name)}"
+        elsif is_admin = options.delete(:is_admin)
+          path += "?is-company-admin=#{CGI.escape(is_admin)}"
         else
           path += "/~"
         end
