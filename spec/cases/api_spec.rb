@@ -141,6 +141,11 @@ describe LinkedIn::Api do
       client.company(:is_admin => 'true').should be_an_instance_of(LinkedIn::Mash)
     end
 
+    it "should be able to page a user's company pages" do
+      stub_request(:get, "https://api.linkedin.com/v1/companies?is-company-admin=true&count=10&start=0").to_return(:body => "{}")
+      client.company(:is_admin => 'true', :count => 10, :start => 0).should be_an_instance_of(LinkedIn::Mash)
+    end
+
     it "should load correct company data" do
       client.company(:id => 1586).name.should == "Amazon"
 

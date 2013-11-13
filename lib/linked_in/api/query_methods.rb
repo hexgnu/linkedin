@@ -108,7 +108,7 @@ module LinkedIn
 
         headers = options.delete(:headers) || {}
         params  = to_query(options)
-        path   += "?#{params}" if !params.empty?
+        path   += "#{path.include?("?") ? "&" : "?"}#{params}" if !params.empty?
 
         Mash.from_json(get(path, headers))
       end
