@@ -80,9 +80,18 @@ describe LinkedIn::Search do
     describe "by keywords options with fields" do
       use_vcr_cassette :record => :new_episodes
 
+      let(:fields) { [{:companies => [:id, :name, :industries, :description, :specialties]}, :num_results] }
+      let(:options) { {:keywords => 'apple', :fields => fields} }
+
       let(:results) do
-        fields = [{:companies => [:id, :name, :industries, :description, :specialties]}, :num_results]
-        client.search({:keywords => 'apple', :fields => fields}, 'company')
+        client.search(options, 'company')
+      end
+
+      it "doesn't change the original options" do
+        original_options = options.dup
+        client.search(options, 'company')
+
+        options.should == original_options
       end
 
       it "should perform a search" do
