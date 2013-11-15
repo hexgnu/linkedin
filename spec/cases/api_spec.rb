@@ -250,8 +250,16 @@ describe LinkedIn::Api do
     end
 
     it 'should be able to post a discussion to a group' do
-      stub_request(:post, "https://api.linkedin.com/v1/groups/123/posts").to_return(:body => "", :status => 201)
-      response = client.post_group_discussion(123, {'title' => 'New Discussion', 'summary' => 'New Summary'})
+      expected = {
+        'title' => 'New Discussion',
+        'summary' => 'New Summary',
+        'content' => {
+          "submitted-url" => "http://www.google.com"
+        }
+      }
+
+      stub_request(:post, "https://api.linkedin.com/v1/groups/123/posts").with(:body => expected).to_return(:body => "", :status => 201)
+      response = client.post_group_discussion(123, expected)
       response.body.should == nil
       response.code.should == '201'
     end
