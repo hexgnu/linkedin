@@ -59,7 +59,6 @@ module LinkedIn
           end
         end
 
-
         # Stolen from Rack::Util.build_query
         def to_query(params)
           params.map { |k, v|
