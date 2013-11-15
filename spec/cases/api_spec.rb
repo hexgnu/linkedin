@@ -250,10 +250,25 @@ describe LinkedIn::Api do
       response.status.should == 201
     end
 
-    it "should be able to list a group profile" do
-      stub_request(:get, "https://api.linkedin.com/v1/groups/123").to_return(:body => '{"id": "123"}')
-      response = client.group_profile(:id => 123)
-      response.id.should == '123'
+    context '#group_profile' do
+      let(:options) do
+        {:id => 123}
+      end
+
+      before do
+        stub_request(:get, "https://api.linkedin.com/v1/groups/123").to_return(:body => '{"id": "123"}')
+      end
+
+      it "doesn't mangle the options hash with group_profile" do
+        original_options = options.dup
+        client.group_profile(options)
+        options.should == original_options
+      end
+
+      it "lists a group profile" do
+        response = client.group_profile(options)
+        response.id.should == options.fetch(:id).to_s
+      end
     end
 
     it "should be able to list group posts" do
