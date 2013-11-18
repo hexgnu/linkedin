@@ -71,13 +71,7 @@ module LinkedIn
 
       def post_group_discussion(group_id, discussion)
         path = "/groups/#{group_id}/posts"
-
-        discussion_post = {
-          'title' => discussion['title'],
-          'summary' => discussion['summary']
-        }
-
-        post(path, discussion_post.to_json, "Content-Type" => "application/json")
+        post(path, discussion.to_json, "Content-Type" => "application/json")
       end
 
     end
