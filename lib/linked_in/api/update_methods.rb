@@ -76,9 +76,9 @@ module LinkedIn
           'subject' => "Join my network on LinkedIn",
           'body' => "I'd like to add you to my professional network on LinkedIn.",
           'recipients' => {
-            'values' => {
+            'values' => [{
               'person' => { '_path' => "/people/email=#{email}" }
-             }
+             }]
           }
         }
         post(path, message.to_json, "Content-Type" => "application/json")
