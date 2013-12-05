@@ -79,6 +79,11 @@ module LinkedIn
             'values' => [{
               'person' => { '_path' => "/people/email=#{email}" }
              }]
+          },
+          'item-content' => {
+            'invitation-request' => {
+              'connect-type' => 'friend'
+            }
           }
         }
         post(path, message.to_json, "Content-Type" => "application/json")
