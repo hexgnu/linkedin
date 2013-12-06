@@ -69,6 +69,27 @@ module LinkedIn
         post(path, message.to_json, "Content-Type" => "application/json")
       end
 
+      def invite_by_email(email)
+        require 'uri'
+        path = "/people/~/mailbox"
+        safe_email = URI.escape(email)
+        message = {
+          'subject' => "Join my network on LinkedIn",
+          'body' => "I'd like to add you to my professional network on LinkedIn.",
+          'recipients' => {
+            'values' => [{
+              'person' => { '_path' => "/people/email=#{safe_email}" }
+             }]
+          },
+          'item-content' => {
+            'invitation-request' => {
+              'connect-type' => 'friend'
+            }
+          }
+        }
+        post(path, message.to_json, "Content-Type" => "application/json")
+      end
+
       def post_group_discussion(group_id, discussion)
         path = "/groups/#{group_id}/posts"
         post(path, discussion.to_json, "Content-Type" => "application/json")
