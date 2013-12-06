@@ -89,13 +89,6 @@ describe LinkedIn::Api do
     response.code.should == "201"
   end
 
-  it "should be able to send a message" do
-    stub_request(:post, "https://api.linkedin.com/v1/people/~/mailbox").to_return(:body => "", :status => 201)
-    response = client.send_message("subject", "body", ["recip1", "recip2"])
-    response.body.should == nil
-    response.code.should == "201"
-  end
-
   it "should be able to like a network update" do
     stub_request(:put, "https://api.linkedin.com/v1/people/~/network/updates/key=SOMEKEY/is-liked").
       with(:body => "true").to_return(:body => "", :status => 201)
@@ -267,6 +260,15 @@ describe LinkedIn::Api do
       response = client.post_group_discussion(123, expected)
       response.body.should == nil
       response.code.should == '201'
+    end
+  end
+
+  context "Communication API" do
+    it "should be able to send a message" do
+      stub_request(:post, "https://api.linkedin.com/v1/people/~/mailbox").to_return(:body => "", :status => 201)
+      response = client.send_message("subject", "body", ["recip1", "recip2"])
+      response.body.should == nil
+      response.code.should == "201"
     end
   end
 
