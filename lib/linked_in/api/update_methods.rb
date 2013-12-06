@@ -69,15 +69,16 @@ module LinkedIn
         post(path, message.to_json, "Content-Type" => "application/json")
       end
 
-      def connect_by_email(email)
+      def invite_by_email(email)
+        require 'uri'
         path = "/people/~/mailbox"
-
+        safe_email = URI.escape(email)
         message = {
           'subject' => "Join my network on LinkedIn",
           'body' => "I'd like to add you to my professional network on LinkedIn.",
           'recipients' => {
             'values' => [{
-              'person' => { '_path' => "/people/email=#{email}" }
+              'person' => { '_path' => "/people/email=#{safe_email}" }
              }]
           },
           'item-content' => {
