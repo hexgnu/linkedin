@@ -1,5 +1,6 @@
 require 'hashie'
 require 'multi_json'
+require 'multi_xml'
 
 module LinkedIn
   class Mash < ::Hashie::Mash
@@ -8,6 +9,22 @@ module LinkedIn
     def self.from_json(json_string)
       result_hash = ::MultiJson.decode(json_string)
       new(result_hash)
+    end
+
+    # a simple helper to convert an xml string to a Mash
+    def self.from_xml(xml_string)
+      result_hash = ::MultiXml.parse(xml_string)
+
+      # Drop off the root element
+      new(result_hash[result_hash.keys.first])
+    end
+
+    def self.from_response(response)
+      if response['x-li-format'] == 'xml' or /\bxml\b/.match response['Content-Type']
+        from_xml(response.body)
+      else
+        from_json(response.body)
+      end
     end
 
     # returns a Date if we have year, month and day, and no conflicting key

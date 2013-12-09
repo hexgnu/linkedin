@@ -42,13 +42,13 @@ module LinkedIn
           # in the HTTP answer (thankfully).
           case response.code.to_i
           when 401
-            data = Mash.from_json(response.body)
+            data = Mash.from_response(response)
             raise LinkedIn::Errors::UnauthorizedError.new(data), "(#{data.status}): #{data.message}"
           when 400
-            data = Mash.from_json(response.body)
+            data = Mash.from_response(response)
             raise LinkedIn::Errors::GeneralError.new(data), "(#{data.status}): #{data.message}"
           when 403
-            data = Mash.from_json(response.body)
+            data = Mash.from_response(response)
             raise LinkedIn::Errors::AccessDeniedError.new(data), "(#{data.status}): #{data.message}"
           when 404
             raise LinkedIn::Errors::NotFoundError, "(#{response.code}): #{response.message}"

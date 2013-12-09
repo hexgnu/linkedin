@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<share>
+  <visibility>
+    <code><%=h visibility.code%></code>
+  </visibility>
+  <% if comment %>
+  <comment><%= h comment %></comment>
+  <% end %>
+  <% if content %>
+  <content>
+    <% if content["title"] %><title><%= h content["title"] %></title><% end %>
+    <submitted-url><%= h content["submitted-url"] %></submitted-url>
+    <% if content["description"] %><description><%= h content["description"] %></description><% end %>
+    <% if content["submitted-image-url"] %><submitted-image-url><%= h content["submitted-image-url"] %></submitted-image-url><% end %>
+  </content>
+  <% end %>
+  <% if targets %>
+  <share-target-reach>
+    <share-targets>
+    <% targets.each do |key, values| %>
+      <share-target>
+        <code><%= h key %></code>
+        <tvalues>
+          <% values.each do |value| %>
+          <tvalue><%= h value %></tvalue>
+          <% end %>
+        </tvalues>
+      </share-target>
+    <% end %>
+    </share-targets>
+  </share-target-reach>
+  <% end %>
+</share>

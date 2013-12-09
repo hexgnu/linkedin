@@ -68,13 +68,6 @@ describe LinkedIn::Api do
     response.code.should == "201"
   end
 
-  it "should be able to share a new company status" do
-    stub_request(:post, "https://api.linkedin.com/v1/companies/123456/shares").to_return(:body => "", :status => 201)
-    response = client.add_company_share("123456", { :comment => "Testing, 1, 2, 3" })
-    response.body.should == nil
-    response.code.should == "201"
-  end
-
   it "returns the shares for a person" do
     stub_request(:get, "https://api.linkedin.com/v1/people/~/network/updates?type=SHAR&scope=self&after=1234&count=35").to_return(
       :body => "{}")
@@ -189,6 +182,44 @@ describe LinkedIn::Api do
 
       response = client.unfollow_company(1586)
       response.body.should == nil
+      response.code.should == "201"
+    end
+
+    it "should be able to share a new company status" do
+      stub_request(:post, "https://api.linkedin.com/v1/companies/2414183/shares").with(:headers => { 'Content-Type' => 'application/xml' }).to_return(:headers => {'Content-Type' => 'application/xml'}, :body => '<?xml version="1.0" encoding="UTF-8"?><update><update-key>UNIU-c2414183-5811244423991812096-SHARE</update-key><update-url>http://www.linkedin.com/company/2414183/comments?topic=5811244423991812096&amp;type=U&amp;scope=2414183&amp;stype=C&amp;a=FlWW</update-url></update>', :status => 201)
+      response = client.add_company_share("2414183", { :comment => "Testing, 1, 2, 3" })
+      response.body.update_key.should == 'UNIU-c2414183-5811244423991812096-SHARE'
+      response.body.update_url.should == 'http://www.linkedin.com/company/2414183/comments?topic=5811244423991812096&type=U&scope=2414183&stype=C&a=FlWW'
+      response.code.should == "201"
+    end
+
+    it "should be able to handle an error" do
+      stub_request(:post, "https://api.linkedin.com/v1/companies/2414183/shares").with(:headers => { 'Content-Type' => 'application/xml' }).to_return(:headers => {'Content-Type' => 'application/xml'}, :body => '<?xml version="1.0" encoding="UTF-8" standalone="yes"?> <error>   <status>403</status>   <timestamp>1386620304843</timestamp>   <request-id>ZIBEJ5MXJ2</request-id>   <error-code>0</error-code>   <message>Member 172914333 cannot post updates on behalf of company 2414183 due to too few targeted followers</message> </error>', :status => 403)
+
+      expect {
+        client.add_company_share("2414183", { :comment => "Testing, 1, 2, 3" })
+      }.to raise_error(LinkedIn::Errors::AccessDeniedError){ |error|
+        error.data.message.should_not be_nil
+      }
+    end
+
+    it "should be able to target a new company status" do
+      stub_request(:post, "https://api.linkedin.com/v1/companies/2414183/shares").with(:headers => { 'Content-Type' => 'application/xml' }).to_return(:headers => {'Content-Type' => 'application/xml'}, :body => '<?xml version="1.0" encoding="UTF-8"?><update><update-key>UNIU-c2414183-5811244423991812096-SHARE</update-key><update-url>http://www.linkedin.com/company/2414183/comments?topic=5811244423991812096&amp;type=U&amp;scope=2414183&amp;stype=C&amp;a=FlWW</update-url></update>', :status => 201)
+      response = client.add_company_share("2414183", {
+        :comment => "Testing, 1, 2, 3",
+        :content => {
+          :"submitted-url" => "http://www.example.com/content.html",
+          :title => "Test Share with Content",
+          :description => "content description",
+          :"submitted-image-url" => "http://www.example.com/image.jpg"
+        },
+        :targets => {
+          :geos => ['as', 'eu'],
+          :jobFunc => ['acct', 'bd']
+        }
+      })
+      response.body.update_key.should == 'UNIU-c2414183-5811244423991812096-SHARE'
+      response.body.update_url.should == 'http://www.linkedin.com/company/2414183/comments?topic=5811244423991812096&type=U&scope=2414183&stype=C&a=FlWW'
       response.code.should == "201"
     end
 
