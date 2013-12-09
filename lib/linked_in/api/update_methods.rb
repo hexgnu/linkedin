@@ -15,6 +15,11 @@ module LinkedIn
         post(path, defaults.merge(share).to_json, "Content-Type" => "application/json")
       end
 
+      def add_group_share(group_id, share)
+        path = "/groups/#{group_id}/posts"
+        post(path, share.to_json, "Content-Type" => "application/json")
+      end
+
       def follow_company(company_id)
         path = "/people/~/following/companies"
         body = {:id => company_id }
@@ -30,11 +35,6 @@ module LinkedIn
         path = "/people/~/group-memberships/#{group_id}"
         body = {'membership-state' => {'code' => 'member' }}
         put(path, body.to_json, "Content-Type" => "application/json")
-      end
-
-      def group_share(group_id, share)
-        path = "/groups/#{group_id}/posts"
-        post(path, share.to_json, "Content-Type" => "application/json")
       end
 
       def add_job_bookmark(bookmark)

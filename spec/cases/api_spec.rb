@@ -269,7 +269,7 @@ describe LinkedIn::Api do
 
     it "should be able to share a new group status" do
       stub_request(:post, "https://api.linkedin.com/v1/groups/1/posts").to_return(:body => "", :status => 201)
-      response = client.group_share(1, :comment => "Testing, 1, 2, 3")
+      response = client.add_group_share(1, :comment => "Testing, 1, 2, 3")
       response.body.should == nil
       response.code.should == "201"
     end
