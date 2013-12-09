@@ -109,7 +109,6 @@ module LinkedIn
         if options.delete(:public)
           path +=":public"
         elsif fields
-          # path +=":(#{fields.map{ |f| f.to_s.gsub("_","-") }.join(',')})"
           path +=":(#{build_fields_params(fields)})"
         end
 
