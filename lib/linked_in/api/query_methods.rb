@@ -87,7 +87,7 @@ module LinkedIn
         path = "#{person_path(options)}/network/updates/key=#{update_key}/likes"
         simple_query(path, options)
       end
-      
+
       def picture_urls(options={})
         picture_size = options.delete(:picture_size) || 'original'
         path = "#{picture_urls_path(options)}::(#{picture_size})"
@@ -109,7 +109,8 @@ module LinkedIn
         if options.delete(:public)
           path +=":public"
         elsif fields
-          path +=":(#{fields.map{ |f| f.to_s.gsub("_","-") }.join(',')})"
+          # path +=":(#{fields.map{ |f| f.to_s.gsub("_","-") }.join(',')})"
+          path +=":(#{build_fields_params(fields)})"
         end
 
         headers = options.delete(:headers) || {}
@@ -117,6 +118,18 @@ module LinkedIn
         path   += "#{path.include?("?") ? "&" : "?"}#{params}" if !params.empty?
 
         Mash.from_json(get(path, headers))
+      end
+
+      def build_fields_params(fields)
+        if fields.is_a?(Hash) && fields.present?
+          hash_array = []
+          fields.each do |index, value|
+            hash_array << "#{index}:(#{build_fields_params(value)})"
+          end
+          hash_array.join(',')
+        else
+          fields.map{ |f| f.is_a?(Hash) ? build_fields_params(f) : f.to_s.gsub("_","-") }.join(',')
+        end
       end
 
       def person_path(options)
