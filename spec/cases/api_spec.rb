@@ -19,7 +19,7 @@ describe LinkedIn::Api do
     stub_request(:get, "https://api.linkedin.com/v1/people/id=123").to_return(:body => "{}")
     client.profile(:id => 123).should be_an_instance_of(LinkedIn::Mash)
   end
-  
+
   it "should be able to view the picture urls" do
     stub_request(:get, "https://api.linkedin.com/v1/people/~/picture-urls::(original)").to_return(:body => "{}")
     client.picture_urls.should be_an_instance_of(LinkedIn::Mash)
@@ -227,6 +227,11 @@ describe LinkedIn::Api do
       client.group_memberships.should be_an_instance_of(LinkedIn::Mash)
     end
 
+    it "should be able to parse nested fields" do
+      stub_request(:get, "https://api.linkedin.com/v1/people/~/group-memberships:(group:(id,name,small-logo-url,short-description))").to_return(:body => "{}")
+      client.group_memberships(fields: [{group: ['id', 'name', 'small-logo-url', 'short-description']}]).should be_an_instance_of(LinkedIn::Mash)
+    end
+
     it "should be able to join a group" do
       stub_request(:put, "https://api.linkedin.com/v1/people/~/group-memberships/123").to_return(:body => "", :status => 201)
 
@@ -260,6 +265,13 @@ describe LinkedIn::Api do
       response = client.post_group_discussion(123, expected)
       response.body.should == nil
       response.code.should == '201'
+    end
+
+    it "should be able to share a new group status" do
+      stub_request(:post, "https://api.linkedin.com/v1/groups/1/posts").to_return(:body => "", :status => 201)
+      response = client.group_share(1, :comment => "Testing, 1, 2, 3")
+      response.body.should == nil
+      response.code.should == "201"
     end
   end
 

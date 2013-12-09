@@ -121,12 +121,8 @@ module LinkedIn
       end
 
       def build_fields_params(fields)
-        if fields.is_a?(Hash) && fields.present?
-          hash_array = []
-          fields.each do |index, value|
-            hash_array << "#{index}:(#{build_fields_params(value)})"
-          end
-          hash_array.join(',')
+        if fields.is_a?(Hash) && !fields.empty?
+          fields.map{ |index,value| "#{index}:(#{build_fields_params(value)})" }.join(',')
         else
           fields.map{ |f| f.is_a?(Hash) ? build_fields_params(f) : f.to_s.gsub("_","-") }.join(',')
         end
