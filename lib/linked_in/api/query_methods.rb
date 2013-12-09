@@ -23,6 +23,26 @@ module LinkedIn
         simple_query(path, options)
       end
 
+      def company_updates(options={})
+        path = "#{company_path(options)}/updates"
+        simple_query(path, options)
+      end
+
+      def company_statistics(options={})
+        path = "#{company_path(options)}/company-statistics"
+        simple_query(path, options)
+      end
+
+      def company_updates_comments(update_key, options={})
+        path = "#{company_path(options)}/updates/key=#{update_key}/update-comments"
+        simple_query(path, options)
+      end
+
+      def company_updates_likes(update_key, options={})
+        path = "#{company_path(options)}/updates/key=#{update_key}/likes"
+        simple_query(path, options)
+      end
+
       def job(options = {})
         path = jobs_path(options)
         simple_query(path, options)
@@ -43,8 +63,13 @@ module LinkedIn
         simple_query(path, options)
       end
 
-      def group(options = {})
-        path = "#{group_path(options)}"
+      def group_profile(options)
+        path = group_path(options)
+        simple_query(path, options)
+      end
+
+      def group_posts(options)
+        path = "#{group_path(options)}/posts"
         simple_query(path, options)
       end
 
@@ -62,85 +87,80 @@ module LinkedIn
         path = "#{person_path(options)}/network/updates/key=#{update_key}/likes"
         simple_query(path, options)
       end
+      
+      def picture_urls(options={})
+        picture_size = options.delete(:picture_size) || 'original'
+        path = "#{picture_urls_path(options)}::(#{picture_size})"
+        simple_query(path, options)
+      end
 
       private
 
-        def simple_query(path, options={})
-          fields = options.delete(:fields) || LinkedIn.default_profile_fields
+      def group_path(options)
+        path = "/groups"
+        if id = options.delete(:id)
+          path += "/#{id}"
+        end
+      end
 
-          if options.delete(:public)
-            path +=":public"
-          elsif fields
-            path +=":(#{build_fields_params(fields)})"
-          end
+      def simple_query(path, options={})
+        fields = options.delete(:fields) || LinkedIn.default_profile_fields
 
-          headers = options.delete(:headers) || {}
-          params  = to_query(options)
-          path   += "?#{params}" if !params.empty?
-
-          Mash.from_json(get(path, headers))
+        if options.delete(:public)
+          path +=":public"
+        elsif fields
+          path +=":(#{fields.map{ |f| f.to_s.gsub("_","-") }.join(',')})"
         end
 
-        def build_fields_params(fields)
-          if fields.is_a?(Hash) && fields.present?
-            hash_array = []
-            fields.each do |index, value|
-              hash_array << "#{index}:(#{build_fields_params(value)})"
-            end
-            hash_array.join(',')
-          else
-            fields.map{ |f| f.is_a?(Hash) ? build_fields_params(f) : f.to_s.gsub("_","-") }.join(',')
-          end
+        headers = options.delete(:headers) || {}
+        params  = to_query(options)
+        path   += "#{path.include?("?") ? "&" : "?"}#{params}" if !params.empty?
+
+        Mash.from_json(get(path, headers))
+      end
+
+      def person_path(options)
+        path = "/people/"
+        if id = options.delete(:id)
+          path += "id=#{id}"
+        elsif url = options.delete(:url)
+          path += "url=#{CGI.escape(url)}"
+        else
+          path += "~"
         end
+      end
 
-        def person_path(options)
-          path = "/people/"
-          if id = options.delete(:id)
-            path += "id=#{id}"
-          elsif url = options.delete(:url)
-            path += "url=#{CGI.escape(url)}"
-          else
-            path += "~"
-          end
+      def company_path(options)
+        path = "/companies"
+
+        if domain = options.delete(:domain)
+          path += "?email-domain=#{CGI.escape(domain)}"
+        elsif id = options.delete(:id)
+          path += "/id=#{id}"
+        elsif url = options.delete(:url)
+          path += "/url=#{CGI.escape(url)}"
+        elsif name = options.delete(:name)
+          path += "/universal-name=#{CGI.escape(name)}"
+        elsif is_admin = options.delete(:is_admin)
+          path += "?is-company-admin=#{CGI.escape(is_admin)}"
+        else
+          path += "/~"
         end
+      end
 
-        def group_path(options)
-          path = "/groups/"
-          if id = options.delete(:id)
-            path += id
-          elsif url = options.delete(:url)
-            path += "url=#{CGI.escape(url)}"
-          else
-            path += "~"
-          end
+      def picture_urls_path(options)
+        path = person_path(options)
+        path += "/picture-urls"
+      end
+
+      def jobs_path(options)
+        path = "/jobs"
+        if id = options.delete(:id)
+          path += "/id=#{id}"
+        else
+          path += "/~"
         end
-
-        def company_path(options)
-          path = "/companies"
-
-          if domain = options.delete(:domain)
-            path += "?email-domain=#{CGI.escape(domain)}"
-          elsif id = options.delete(:id)
-            path += "/id=#{id}"
-          elsif url = options.delete(:url)
-            path += "/url=#{CGI.escape(url)}"
-          elsif name = options.delete(:name)
-            path += "/universal-name=#{CGI.escape(name)}"
-          else
-            path += "/~"
-          end
-        end
-
-        def jobs_path(options)
-          path = "/jobs"
-          if id = options.delete(:id)
-            path += "/id=#{id}"
-          else
-            path += "/~"
-          end
-        end
-
+      end
     end
-
   end
 end
