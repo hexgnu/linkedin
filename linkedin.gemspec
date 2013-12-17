@@ -12,11 +12,11 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'simplecov', '~> 0.7'
   gem.add_development_dependency 'vcr', '~> 2.5'
   gem.add_development_dependency 'webmock', '~> 1.11'
-  gem.authors = ["Wynn Netherland", "Josh Kalderimis"]
-  gem.description = %q{Ruby wrapper for the LinkedIn API}
-  gem.email = ['wynn.netherland@gmail.com', 'josh.kalderimis@gmail.com']
+  gem.authors = ['Matthew Kirk', 'Wynn Netherland', 'Josh Kalderimis']
+  gem.description = 'Ruby wrapper for the LinkedIn API'
+  gem.email = ['meteor.kirk@gmail.com', 'wynn.netherland@gmail.com', 'josh.kalderimis@gmail.com']
   gem.files = `git ls-files`.split("\n")
-  gem.homepage = 'http://github.com/pengwynn/linkedin'
+  gem.homepage = 'http://github.com/hexgnu/linkedin'
   gem.name = 'linkedin'
   gem.require_paths = ['lib']
   gem.summary = gem.description
