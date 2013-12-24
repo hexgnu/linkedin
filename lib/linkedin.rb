@@ -3,7 +3,7 @@ require 'oauth'
 module LinkedIn
 
   class << self
-    attr_accessor :token, :secret, :default_profile_fields
+    attr_accessor :token, :secret, :default_profile_fields, :templates
 
     # config/initializers/linkedin.rb (for instance)
     #
@@ -22,6 +22,8 @@ module LinkedIn
     end
   end
 
+  @templates = File.join(File.expand_path(File.dirname(__FILE__)), 'linked_in', 'templates')
+
   autoload :Api,     "linked_in/api"
   autoload :Client,  "linked_in/client"
   autoload :Mash,    "linked_in/mash"
@@ -29,4 +31,5 @@ module LinkedIn
   autoload :Helpers, "linked_in/helpers"
   autoload :Search,  "linked_in/search"
   autoload :Version, "linked_in/version"
+  autoload :Template, "linked_in/template"
 end
