@@ -44,7 +44,7 @@ module LinkedIn
       end
       
       def companies(options={})
-        path = companies_path
+        path = companies_path(options)
         simple_query(path)
       end
 
