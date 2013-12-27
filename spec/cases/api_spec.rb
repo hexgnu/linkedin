@@ -175,7 +175,7 @@ describe LinkedIn::Api do
       stub_request(:get, "https://api.linkedin.com/v1/companies/id=1586/updates/key=company_update_key/likes").to_return(:body => "{}")
       client.company_updates_likes("company_update_key", :id => 1586).should be_an_instance_of(LinkedIn::Mash)
     end
-
+    
     it "should be able to follow a company" do
       stub_request(:post, "https://api.linkedin.com/v1/people/~/following/companies").to_return(:body => "", :status => 201)
 
@@ -191,7 +191,16 @@ describe LinkedIn::Api do
       response.body.should == nil
       response.code.should == "201"
     end
+    
+    it "should be able to retrive list of companies user currently following" do
+      stub_request(:get, "https://api.linkedin.com/v1/people/~/following/companies").to_return(:body => "{}")
+      client.companies.should be_an_instance_of(LinkedIn::Mash)
+    end
 
+    it "should be able to retrive list of suggested companies to follow" do
+      stub_request(:get, "https://api.linkedin.com/v1/people/~/suggestions/to-follow/companies").to_return(:body => "{}")
+      client.companies(suggetions: true).should be_an_instance_of(LinkedIn::Mash)
+    end
   end
 
   context "Job API" do
