@@ -43,9 +43,12 @@ module LinkedIn
         simple_query(path, options)
       end
       
-      def companies(options={})
-        path = companies_path(options)
-        simple_query(path)
+      def suggested_companies
+        simple_query('/people/~/suggestions/to-follow/companies')
+      end
+
+      def followed_companies
+        simple_query('/people/~/following/companies')
       end
 
       def job(options = {})
@@ -150,15 +153,6 @@ module LinkedIn
           path += "?is-company-admin=#{CGI.escape(is_admin)}"
         else
           path += "/~"
-        end
-      end
-
-      def companies_path(options)
-        path = "/people/~"
-        if options[:suggetions]
-          path += "/suggestions/to-follow/companies"
-        else
-          path += "/following/companies"
         end
       end
 

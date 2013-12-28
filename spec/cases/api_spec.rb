@@ -194,12 +194,12 @@ describe LinkedIn::Api do
     
     it "should be able to retrive list of companies user currently following" do
       stub_request(:get, "https://api.linkedin.com/v1/people/~/following/companies").to_return(:body => "{}")
-      client.companies.should be_an_instance_of(LinkedIn::Mash)
+      client.followed_companies.should be_an_instance_of(LinkedIn::Mash)
     end
 
     it "should be able to retrive list of suggested companies to follow" do
       stub_request(:get, "https://api.linkedin.com/v1/people/~/suggestions/to-follow/companies").to_return(:body => "{}")
-      client.companies(suggetions: true).should be_an_instance_of(LinkedIn::Mash)
+      client.suggested_companies.should be_an_instance_of(LinkedIn::Mash)
     end
   end
 
