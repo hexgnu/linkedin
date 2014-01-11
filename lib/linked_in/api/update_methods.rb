@@ -15,6 +15,11 @@ module LinkedIn
         post(path, defaults.merge(share).to_json, "Content-Type" => "application/json")
       end
 
+      def add_group_share(group_id, share)
+        path = "/groups/#{group_id}/posts"
+        post(path, share.to_json, "Content-Type" => "application/json")
+      end
+
       def follow_company(company_id)
         path = "/people/~/following/companies"
         body = {:id => company_id }
