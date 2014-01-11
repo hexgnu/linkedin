@@ -18,8 +18,9 @@ Gem::Specification.new do |gem|
   gem.files = `git ls-files`.split("\n")
   gem.homepage = 'http://github.com/hexgnu/linkedin'
   gem.name = 'linkedin'
+  gem.licenses = %w[MIT]
   gem.require_paths = ['lib']
-  gem.summary = gem.description
+  gem.summary = 'This gem interfaces with the Linkedin XML and JSON APis'
   gem.test_files = `git ls-files -- {test,spec,features}/*`.split("\n")
   gem.version = LinkedIn::VERSION::STRING
 end
