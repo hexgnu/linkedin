@@ -135,6 +135,8 @@ module LinkedIn
           path += "id=#{id}"
         elsif url = options.delete(:url)
           path += "url=#{CGI.escape(url)}"
+        elsif email = options.delete(:email)
+          path += "::(email=#{email})"
         else
           path += "~"
         end
