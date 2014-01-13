@@ -161,19 +161,34 @@ describe LinkedIn::Search do
 
       let(:results) do
         fields = ['id']
-        client.profile(:email => 'yy@zz.com', :fields => fields)
+        client.profile(:email => 'email=yy@zz.com', :fields => fields)
       end
 
       it "should perform a people search" do
         results._total.should == 1
         output = results["values"]
         output.each do |record|
-          puts record._key
           record.id.should == '96GVfLeWjU'
           record._key.should == 'email=yy@zz.com'
         end
       end
+
     end
+
+    describe "by_multiple_email_address" do
+      use_vcr_cassette :record => :new_episodes
+      let(:results) do
+        fields = ['id']
+        client.profile(:email => 'email=yy@zz.com,email=xx@yy.com', :fields => fields)
+      end
+
+      it "should perform a multi-email search" do
+        results._total.should == 2
+        output = results["values"]
+        output.count.should == 2
+      end
+    end
+
 
     describe "by first_name and last_name options with fields" do
       use_vcr_cassette :record => :new_episodes

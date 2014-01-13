@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.linkedin.com/v1/people/::(email=yy@zz.com):(id)
+    uri: https://api.linkedin.com/v1/people/::(email=yy@zz.com,email=xx@yy.com):(id)
     body:
       encoding: US-ASCII
       string: ''
@@ -16,9 +16,10 @@ http_interactions:
       User-Agent:
       - OAuth gem v0.4.7
       Authorization:
-      - OAuth oauth_consumer_key="key", oauth_nonce="KkLqrO8OnlnRKJFUnwnHvyDpmT5lzyVuPPU38MHKXE",
-        oauth_signature="kR6yrOhUD3SUay3k2bP2YdxwB6U%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1389649903", oauth_token="key", oauth_version="1.0"
+      - OAuth oauth_consumer_key="mpibxdpwbwry", oauth_nonce="eq8g0jFLe2FsDxO255PW6UqoZ8lwJAqiIJCm3qEKF8",
+        oauth_signature="D1xMNnx7aOxDotnPt1mtEdbJPlU%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1365631656", oauth_token="d9f69cd6-f3f3-4c26-9f2c-12cd8e228089",
+        oauth_version="1.0"
   response:
     status:
       code: 200
@@ -27,9 +28,9 @@ http_interactions:
       Server:
       - Apache-Coyote/1.1
       X-Li-Request-Id:
-      - 4506AHDFV4
+      - QG386P3UQ9
       Date:
-      - Mon, 13 Jan 2014 21:51:43 GMT
+      - Mon, 13 Jan 2014 21:33:51 GMT
       Vary:
       - '*'
       X-Li-Format:
@@ -45,20 +46,23 @@ http_interactions:
       X-Li-Pop:
       - PROD-ELA4
       X-Li-Uuid:
-      - SCj2pjkHSRPw0yJYdCsAAA==
+      - gNIS8z8GSRNwtDkbISsAAA==
       Set-Cookie:
-      - lidc="b=LB34:g=45:u=1:i=1389649904:t=1389650504:s=2677822921"; Expires=Mon,
-        13 Jan 2014 22:01:44 GMT; domain=.linkedin.com; Path=/
+      - lidc="b=LB33:g=40:u=1:i=1389648831:t=1389649431:s=2943015068"; Expires=Mon,
+        13 Jan 2014 21:43:51 GMT; domain=.linkedin.com; Path=/
     body:
       encoding: UTF-8
       string: |-
         {
-          "_total": 1,
+          "_total": 2,
           "values": [{
             "_key": "email=yy@zz.com",
             "id": "96GVfLeWjU"
+          },
+          {
+            "_key": "email=xx@yy.com",
+            "id": "10CGfLfLhI"
           }]
         }
-    http_version: 
-  recorded_at: Mon, 13 Jan 2014 21:51:44 GMT
-recorded_with: VCR 2.8.0
+    http_version:
+  recorded_at: Mon, 13 Jan 2014 21:33:51 GMT
