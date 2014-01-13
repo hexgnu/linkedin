@@ -16,3 +16,6 @@ user = client.profile(:fields => %w(positions))
 companies = user.positions.all.map{|t| t.company}
 # Example: most recent company can be accessed via companies[0]
 
+# Example of a multi-email search against the special email search API
+account_exists = client.profile(:email => 'email=yy@zz.com,email=xx@yy.com', :fields => ['id'])
+
