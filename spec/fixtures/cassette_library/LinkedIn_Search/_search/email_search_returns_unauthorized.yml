@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.linkedin.com/v1/people/::(email=aa@bb.com):(id)
+    uri: https://api.linkedin.com/v1/people::(email=aa@bb.com):(id)
     body:
       encoding: US-ASCII
       string: ''
@@ -54,11 +54,10 @@ http_interactions:
       string: |-
         {
           "errorCode": 0,
-          "message": "[unauthorized]. No consumer found for key key",
-          "requestId": "X1OTF3POH3",
-          "status": 401,
-          "timestamp": 1389716458976
+          "message": "Access to member by email address denied",
+          "requestId": "BRSUSQTPPW",
+          "status": 403,
+          "timestamp": 1389727130475
         }
     http_version: 
   recorded_at: Tue, 14 Jan 2014 16:21:01 GMT
-recorded_with: VCR 2.8.0

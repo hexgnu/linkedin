@@ -130,15 +130,15 @@ module LinkedIn
       end
 
       def person_path(options)
-        path = "/people/"
+        path = "/people"
         if id = options.delete(:id)
-          path += "id=#{id}"
+          path += "/id=#{id}"
         elsif url = options.delete(:url)
-          path += "url=#{CGI.escape(url)}"
+          path += "/url=#{CGI.escape(url)}"
         elsif email = options.delete(:email)
           path += "::(#{email})"
         else
-          path += "~"
+          path += "/~"
         end
       end
 
