@@ -156,7 +156,7 @@ describe LinkedIn::Search do
       end
     end
 
-    describe "by_email_address" do
+    describe "by email address" do
       use_vcr_cassette :record => :new_episodes
 
       let(:results) do
@@ -174,7 +174,7 @@ describe LinkedIn::Search do
       end
     end
 
-    describe "by_multiple_email_address" do
+    describe "by multiple email address" do
       use_vcr_cassette :record => :new_episodes
       let(:results) do
         fields = ['id']
@@ -188,7 +188,7 @@ describe LinkedIn::Search do
       end
     end
 
-    describe "email_search_returns_unauthorized" do
+    describe "email search returns unauthorized" do
       use_vcr_cassette :record => :new_episodes
 
       it "should raise an unauthorized error" do
