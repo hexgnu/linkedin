@@ -172,7 +172,6 @@ describe LinkedIn::Search do
           record._key.should == 'email=yy@zz.com'
         end
       end
-
     end
 
     describe "by_multiple_email_address" do
