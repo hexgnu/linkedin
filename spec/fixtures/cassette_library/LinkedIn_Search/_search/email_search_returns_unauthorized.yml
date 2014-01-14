@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.linkedin.com/v1/people/::(email=aa@bb.com):(id)
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Li-Format:
+      - json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - OAuth gem v0.4.7
+      Authorization:
+      - OAuth oauth_consumer_key="key", oauth_nonce="Ny9c0n0y0Eg7cnVjVbUlDPeQap8qjzhdPNY3sAi5K8",
+        oauth_signature="vd%2Fd5TC906HXqp50%2BRUT3ZeHC2E%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1389716461", oauth_token="key", oauth_version="1.0"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Li-Request-Id:
+      - X1OTF3POH3
+      Date:
+      - Tue, 14 Jan 2014 16:20:58 GMT
+      Vary:
+      - '*'
+      X-Li-Format:
+      - json
+      Content-Type:
+      - application/json;charset=UTF-8
+      X-Li-Fabric:
+      - PROD-ELA4
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - PROD-ELA4
+      X-Li-Uuid:
+      - iD/VocFDSROQ7fHxASsAAA==
+      Set-Cookie:
+      - lidc="b=LB37:g=42:u=1:i=1389716458:t=1389717058:s=1572779068"; Expires=Tue,
+        14 Jan 2014 16:30:58 GMT; domain=.linkedin.com; Path=/
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "errorCode": 0,
+          "message": "[unauthorized]. No consumer found for key key",
+          "requestId": "X1OTF3POH3",
+          "status": 401,
+          "timestamp": 1389716458976
+        }
+    http_version: 
+  recorded_at: Tue, 14 Jan 2014 16:21:01 GMT
+recorded_with: VCR 2.8.0

@@ -46,7 +46,6 @@ describe LinkedIn::Mash do
     it "should convert the key numResults to total_results" do
       mash.should have_key('total_results')
     end
-
   end
 
   describe '#timestamp' do

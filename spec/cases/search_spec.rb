@@ -189,6 +189,14 @@ describe LinkedIn::Search do
       end
     end
 
+    describe "email_search_returns_unauthorized" do
+      use_vcr_cassette :record => :new_episodes
+      let(:results) do
+        fields = ['id']
+        expect {client.profile(:email => 'email=aa@bb.com', :fields => fields)}.to raise_error()
+      end
+    end
+
 
     describe "by first_name and last_name options with fields" do
       use_vcr_cassette :record => :new_episodes
