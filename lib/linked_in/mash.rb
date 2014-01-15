@@ -37,6 +37,10 @@ module LinkedIn
       end
     end
 
+    def all
+      super || []
+    end
+
     protected
 
       def contains_date_fields?
