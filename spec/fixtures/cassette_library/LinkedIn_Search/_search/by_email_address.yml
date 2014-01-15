@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.linkedin.com/v1/people::(email=yy@zz.com):(id)
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Li-Format:
+      - json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - OAuth gem v0.4.7
+      Authorization:
+      - OAuth oauth_consumer_key="key", oauth_nonce="KkLqrO8OnlnRKJFUnwnHvyDpmT5lzyVuPPU38MHKXE",
+        oauth_signature="kR6yrOhUD3SUay3k2bP2YdxwB6U%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1389649903", oauth_token="key", oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: ok
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Li-Request-Id:
+      - 4506AHDFV4
+      Date:
+      - Mon, 13 Jan 2014 21:51:43 GMT
+      Vary:
+      - '*'
+      X-Li-Format:
+      - json
+      Content-Type:
+      - application/json;charset=UTF-8
+      X-Li-Fabric:
+      - PROD-ELA4
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - PROD-ELA4
+      X-Li-Uuid:
+      - SCj2pjkHSRPw0yJYdCsAAA==
+      Set-Cookie:
+      - lidc="b=LB34:g=45:u=1:i=1389649904:t=1389650504:s=2677822921"; Expires=Mon,
+        13 Jan 2014 22:01:44 GMT; domain=.linkedin.com; Path=/
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "_total": 1,
+          "values": [{
+            "_key": "email=yy@zz.com",
+            "id": "96GVfLeWjU"
+          }]
+        }
+    http_version: 
+  recorded_at: Mon, 13 Jan 2014 21:51:44 GMT

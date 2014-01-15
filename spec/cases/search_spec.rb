@@ -156,6 +156,48 @@ describe LinkedIn::Search do
       end
     end
 
+    describe "by email address" do
+      use_vcr_cassette :record => :new_episodes
+
+      let(:results) do
+        fields = ['id']
+        client.profile(:email => 'email=yy@zz.com', :fields => fields)
+      end
+
+      it "should perform a people search" do
+        results._total.should == 1
+        output = results["values"]
+        output.each do |record|
+          record.id.should == '96GVfLeWjU'
+          record._key.should == 'email=yy@zz.com'
+        end
+      end
+    end
+
+    describe "by multiple email address" do
+      use_vcr_cassette :record => :new_episodes
+      
+      let(:results) do
+        fields = ['id']
+        client.profile(:email => 'email=yy@zz.com,email=xx@yy.com', :fields => fields)
+      end
+
+      it "should perform a multi-email search" do
+        results._total.should == 2
+        output = results["values"]
+        output.count.should == 2
+      end
+    end
+
+    describe "email search returns unauthorized" do
+      use_vcr_cassette :record => :new_episodes
+
+      it "should raise an unauthorized error" do
+        fields = ['id']
+        expect {client.profile(:email => 'email=aa@bb.com', :fields => fields)}.to raise_error(LinkedIn::Errors::UnauthorizedError)
+      end
+    end
+
     describe "by first_name and last_name options with fields" do
       use_vcr_cassette :record => :new_episodes
 

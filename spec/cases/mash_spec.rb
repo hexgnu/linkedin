@@ -29,9 +29,11 @@ describe LinkedIn::Mash do
       mash.should have_key('last_name')
     end
 
-    it "should convert the key _key to id" do
-      mash.should have_key('id')
-    end
+
+    # this breaks data coming back from linkedIn
+    #it "should convert the key _key to id" do
+    #  mash.should have_key('id')
+    #end
 
     it "should convert the key _total to total" do
       mash.should have_key('total')
