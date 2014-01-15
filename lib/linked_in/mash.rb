@@ -19,6 +19,14 @@ module LinkedIn
       end
     end
 
+    def id
+      if self['id']
+        self['id']
+      else
+        self['_key']
+      end
+    end
+
     def timestamp
       value = self['timestamp']
       if value.kind_of? Integer
@@ -39,10 +47,6 @@ module LinkedIn
       # keys are made a little more ruby-ish
       def convert_key(key)
         case key.to_s
-
-        # Dont' convert the id column on return results from linkedIn.  Throwing away valuable data
-        #when '_key'
-        #  'id'
         when '_total'
           'total'
         when 'values'

@@ -18,6 +18,7 @@ describe LinkedIn::Mash do
         'firstName' => 'Josh',
         'LastName' => 'Kalderimis',
         '_key' => 1234,
+        'id' => 1345,
         '_total' => 1234,
         'values' => {},
         'numResults' => 'total_results'
@@ -29,11 +30,24 @@ describe LinkedIn::Mash do
       mash.should have_key('last_name')
     end
 
-
     # this breaks data coming back from linkedIn
-    #it "should convert the key _key to id" do
-    #  mash.should have_key('id')
-    #end
+    it "converts _key to id if there is an id column" do
+      mash._key.should == 1234
+      mash.id.should == 1345
+    end
+
+    context 'no collision' do
+      let(:mash) {
+        LinkedIn::Mash.new({
+          '_key' => 1234
+        })
+
+      }
+      it 'converts _key to id if there is no collision' do
+        mash.id.should == 1234
+        mash._key.should == 1234
+      end
+    end
 
     it "should convert the key _total to total" do
       mash.should have_key('total')
