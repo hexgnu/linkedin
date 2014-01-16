@@ -1,0 +1,6 @@
+--no-private
+--markup markdown
+-
+README.md
+CHANGELOG.md
+LICENSE
