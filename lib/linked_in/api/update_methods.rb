@@ -15,6 +15,11 @@ module LinkedIn
         post(path, defaults.merge(share).to_json, "Content-Type" => "application/json")
       end
 
+      def post_group_discussion(group_id, discussion)
+        warn 'Use add_group_share over post_group_discussion. This will be taken out in future versions'
+        add_group_share(group_id, discussion)
+      end
+
       def add_group_share(group_id, share)
         path = "/groups/#{group_id}/posts"
         post(path, share.to_json, "Content-Type" => "application/json")
@@ -72,11 +77,6 @@ module LinkedIn
             }
         }
         post(path, message.to_json, "Content-Type" => "application/json")
-      end
-
-      def post_group_discussion(group_id, discussion)
-        path = "/groups/#{group_id}/posts"
-        post(path, discussion.to_json, "Content-Type" => "application/json")
       end
 
     end
