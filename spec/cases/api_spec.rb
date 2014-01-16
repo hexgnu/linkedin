@@ -227,6 +227,12 @@ describe LinkedIn::Api do
       client.group_memberships.should be_an_instance_of(LinkedIn::Mash)
     end
 
+    it "should be able to list suggested groups for a profile" do
+      stub_request(:get, "https://api.linkedin.com/v1/people/~/suggestions/groups").to_return(:body => '{"id": "123"}')
+      response = client.group_suggestions
+      response.id.should == '123'
+    end
+
     it "should be able to parse nested fields" do
       stub_request(:get, "https://api.linkedin.com/v1/people/~/group-memberships:(group:(id,name,small-logo-url,short-description))").to_return(:body => "{}")
       client.group_memberships(fields: [{group: ['id', 'name', 'small-logo-url', 'short-description']}]).should be_an_instance_of(LinkedIn::Mash)
