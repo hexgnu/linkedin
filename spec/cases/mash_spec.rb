@@ -98,4 +98,16 @@ describe LinkedIn::Mash do
     end
   end
 
+  describe "#all" do
+    let(:all_mash) do
+      LinkedIn::Mash.new({
+        :values => nil
+      })
+    end
+
+    it "should return an empty array if values is nil due to no results being found for a query" do
+      all_mash.all.should == []
+    end
+  end
+
 end
