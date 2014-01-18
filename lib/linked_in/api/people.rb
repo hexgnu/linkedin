@@ -36,6 +36,23 @@ module LinkedIn
         simple_query(path, options)
       end
 
+      # Retrieve a list of the latest set of 1st degree connections for a
+      # user
+      #
+      # Permissions: r_network
+      #
+      # @see http://developer.linkedin.com/documents/connections-api
+      #
+      # @param [String] modified_since timestamp indicating since when
+      #   you want to retrieve new connections
+      # @macro person_path_options
+      # @return [LinkedIn::Mash]
+      def new_connections(modified_since, options={})
+        options.merge!('modified' => 'new', 'modified-since' => modified_since)
+        path = "#{person_path(options)}/connections"
+        simple_query(path, options)
+      end
+
       # TODO can't find this method in the REST API documentation and it
       # doesn't seem to work when I tried it out from the command line
       def picture_urls(options={})

@@ -30,6 +30,12 @@ describe LinkedIn::Api do
     client.connections.should be_an_instance_of(LinkedIn::Mash)
   end
 
+  it "should be able to view new connections" do
+    modified_since = Time.now.to_i * 1000
+    stub_request(:get, "https://api.linkedin.com/v1/people/~/connections?modified=new&modified-since=#{modified_since}").to_return(:body => "{}")
+    client.new_connections(modified_since).should be_an_instance_of(LinkedIn::Mash)
+  end
+
   it "should be able to view network_updates" do
     stub_request(:get, "https://api.linkedin.com/v1/people/~/network/updates").to_return(:body => "{}")
     client.network_updates.should be_an_instance_of(LinkedIn::Mash)
