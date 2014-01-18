@@ -8,6 +8,10 @@ Travis CI : [![Build Status](https://secure.travis-ci.org/hexgnu/linkedin.png)](
 
     gem install linkedin
 
+## Documentation
+
+Documented with yard. To view documentation locally, run: `yard server`
+
 ## Usage
 
 ### Authenticate
@@ -60,9 +64,17 @@ For a nice example on using this in a [Rails App](http://pivotallabs.com/users/w
 
 If you want to play with the LinkedIn api without using the gem, have a look at the [apigee LinkedIn console](http://app.apigee.com/console/linkedin).
 
+## Examples
+
+More examples are in the [examples folder](http://github.com/hexgnu/linkedin/blob/master/examples).
+
+
+## Changelog
+
+[View the Changelog](CHANGELOG.md)
+
 ## TODO
 
-* Change to json api
 * Update and correct test suite
 * Change to Faraday for authentication
 * Implement Messaging APIs
