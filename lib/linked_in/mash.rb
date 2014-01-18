@@ -2,15 +2,23 @@ require 'hashie'
 require 'multi_json'
 
 module LinkedIn
+
+  # The generalized pseudo-object that is returned for all query
+  # requests.
   class Mash < ::Hashie::Mash
 
-    # a simple helper to convert a json string to a Mash
+    # Convert a json string to a Mash
+    #
+    # @param [String] json_string
+    # @return [LinkedIn::Mash]
     def self.from_json(json_string)
       result_hash = ::MultiJson.decode(json_string)
       new(result_hash)
     end
 
-    # returns a Date if we have year, month and day, and no conflicting key
+    # Returns a Date if we have year, month and day, and no conflicting key
+    #
+    # @return [Date]
     def to_date
       if !self.has_key?('to_date') && contains_date_fields?
         Date.civil(self.year, self.month, self.day)
@@ -19,6 +27,9 @@ module LinkedIn
       end
     end
 
+    # Returns the id of the object from LinkedIn
+    #
+    # @return [String]
     def id
       if self['id']
         self['id']
@@ -27,6 +38,9 @@ module LinkedIn
       end
     end
 
+    # Convert the 'timestamp' field from a string to a Time object
+    #
+    # @return [Time]
     def timestamp
       value = self['timestamp']
       if value.kind_of? Integer
@@ -37,6 +51,9 @@ module LinkedIn
       end
     end
 
+    # Return the results array from the query
+    #
+    # @return [Array]
     def all
       super || []
     end
