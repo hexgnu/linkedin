@@ -52,11 +52,11 @@ module LinkedIn
       #
       # @see http://developer.linkedin.com/documents/job-bookmarks-and-suggestions
       #
-      # @param [String] bookmark Job ID
+      # @param [String] job_id Job ID
       # @return [void]
-      def add_job_bookmark(bookmark)
+      def add_job_bookmark(job_id)
         path = "/people/~/job-bookmarks"
-        body = {'job' => {'id' => bookmark}}
+        body = {'job' => {'id' => job_id}}
         post(path, body.to_json, "Content-Type" => "application/json")
       end
     end

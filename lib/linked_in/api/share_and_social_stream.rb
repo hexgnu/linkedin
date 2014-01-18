@@ -94,12 +94,12 @@ module LinkedIn
       #
       # @see http://developer.linkedin.com/documents/commenting-reading-comments-and-likes-network-updates
       #
-      # @param [String] network_key a update/update-key representing a
+      # @param [String] update_key a update/update-key representing a
       #   particular network update
       # @param [String] comment The text of the comment
       # @return [void]
-      def update_comment(network_key, comment)
-        path = "/people/~/network/updates/key=#{network_key}/update-comments"
+      def update_comment(update_key, comment)
+        path = "/people/~/network/updates/key=#{update_key}/update-comments"
         body = {'comment' => comment}
         post(path, body.to_json, "Content-Type" => "application/json")
       end
@@ -108,11 +108,11 @@ module LinkedIn
       #
       # @see http://developer.linkedin.com/documents/commenting-reading-comments-and-likes-network-updates
       #
-      # @param [String] network_key a update/update-key representing a
+      # @param [String] update_key a update/update-key representing a
       #   particular network update
       # @return [void]
-      def like_share(network_key)
-        path = "/people/~/network/updates/key=#{network_key}/is-liked"
+      def like_share(update_key)
+        path = "/people/~/network/updates/key=#{update_key}/is-liked"
         put(path, 'true', "Content-Type" => "application/json")
       end
 
@@ -121,11 +121,11 @@ module LinkedIn
       #
       # @see http://developer.linkedin.com/documents/commenting-reading-comments-and-likes-network-updates
       #
-      # @param [String] network_key a update/update-key representing a
+      # @param [String] update_key a update/update-key representing a
       #   particular network update
       # @return [void]
-      def unlike_share(network_key)
-        path = "/people/~/network/updates/key=#{network_key}/is-liked"
+      def unlike_share(update_key)
+        path = "/people/~/network/updates/key=#{update_key}/is-liked"
         put(path, 'false', "Content-Type" => "application/json")
       end
     end
