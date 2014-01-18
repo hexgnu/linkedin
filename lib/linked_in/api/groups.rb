@@ -50,7 +50,7 @@ module LinkedIn
 
       # Retrieve the profile of a group
       #
-      # Permissions: rw_groups TODO
+      # Permissions: rw_groups
       #
       # @see http://developer.linkedin.com/documents/groups-api
       #
@@ -64,7 +64,7 @@ module LinkedIn
 
       # Retrieve the posts in a group
       #
-      # Permissions: rw_groups TODO
+      # Permissions: rw_groups
       #
       # @see http://developer.linkedin.com/documents/groups-api
       #

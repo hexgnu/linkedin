@@ -17,9 +17,10 @@ module LinkedIn
 
       # Retrieve the authenticated users network updates
       #
-      # TODO Permissions?
+      # Permissions: rw_nus
       #
       # @see http://developer.linkedin.com/documents/get-network-updates-and-statistics-api
+      # @see http://developer.linkedin.com/documents/network-update-types Network Update Types
       #
       # @macro person_path_options
       # @option options [String] :scope
@@ -45,7 +46,7 @@ module LinkedIn
       #
       # @note The first 5 comments are included in the response to #network_updates
       #
-      # TODO Permissions? rw_nus?
+      # Permissions: rw_nus
       #
       # @see http://developer.linkedin.com/documents/commenting-reading-comments-and-likes-network-updates
       #
@@ -62,7 +63,7 @@ module LinkedIn
       #
       # @note Some likes are included in the response to #network_updates
       #
-      # TODO Permissions? rw_nus?
+      # Permissions: rw_nus
       #
       # @see http://developer.linkedin.com/documents/commenting-reading-comments-and-likes-network-updates
       #

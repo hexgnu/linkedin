@@ -36,7 +36,7 @@ module LinkedIn
       # @see http://developer.linkedin.com/reading-company-shares
       #
       # @macro company_path_options
-      # @option options [String] :event_type
+      # @option options [String] :event-type
       # @option options [String] :count
       # @option options [String] :start
       # @return [LinkedIn::Mash]
@@ -90,6 +90,7 @@ module LinkedIn
       # Permissions: rw_company_admin
       #
       # @see http://developer.linkedin.com/creating-company-shares
+      # @see http://developer.linkedin.com/documents/targeting-company-shares Targeting Company Shares
       #
       # @param [String] company_id Company ID
       # @macro share_input_fields

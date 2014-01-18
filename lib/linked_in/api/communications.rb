@@ -12,6 +12,7 @@ module LinkedIn
       # Permissions: w_messages
       #
       # @see http://developer.linkedin.com/documents/messaging-between-connections-api
+      # @see http://developer.linkedin.com/documents/invitation-api Invitation API
       #
       # @example
       #   client.send_message("subject", "body", ["person_1_id", "person_2_id"])

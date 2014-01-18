@@ -6,6 +6,7 @@ module LinkedIn
     # @see http://developer.linkedin.com/documents/people People API
     # @see http://developer.linkedin.com/documents/profile-fields Profile Fields
     # @see http://developer.linkedin.com/documents/field-selectors Field Selectors
+    # @see http://developer.linkedin.com/documents/accessing-out-network-profiles Accessing Out of Network Profiles
     module People
 
       # Retrieve a member's LinkedIn profile.
@@ -14,6 +15,7 @@ module LinkedIn
       #
       # @see http://developer.linkedin.com/documents/profile-api
       # @macro person_path_options
+      # @option options [string] :secure-urls if 'true' URLs in responses will be HTTPS
       # @return [LinkedIn::Mash]
       def profile(options={})
         path = person_path(options)
