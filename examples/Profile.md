@@ -1,3 +1,8 @@
+# Profile
+
+Here are some examples of accessing a user's profile
+
+```ruby
 # AUTHENTICATE FIRST found in examples/authenticate.rb
 
 # client is a LinkedIn::Client
@@ -18,4 +23,4 @@ companies = user.positions.all.map{|t| t.company}
 
 # Example of a multi-email search against the special email search API
 account_exists = client.profile(:email => 'email=yy@zz.com,email=xx@yy.com', :fields => ['id'])
-
+```

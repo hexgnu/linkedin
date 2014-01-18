@@ -1,3 +1,8 @@
+# Authenticate
+
+Here's an example of authenticating with the LinkedIn API
+
+```ruby
 require 'rubygems'
 require 'linkedin'
 
@@ -24,3 +29,4 @@ client.authorize_from_request(rtoken, rsecret, pin)
 c.authorize_from_access("OU812", "8675309")
 
 # you're now free to move about the cabin, call any API method
+```

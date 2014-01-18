@@ -1,3 +1,9 @@
+# Sinatra Example
+
+Here's an example sinatra application that performs authentication,
+after which some info about the authenticated user can be retrieved.
+
+```ruby
 require "rubygems"
 require "haml"
 require "sinatra"
@@ -75,3 +81,4 @@ __END__
     %div= "#{c.first_name} #{c.last_name} - #{c.headline}"
 -else
   %a{:href => "/auth"} Login using LinkedIn
+```

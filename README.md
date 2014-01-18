@@ -58,8 +58,6 @@ client.profile(:id => 'gNma67_AdI')
 client.profile(:url => 'http://www.linkedin.com/in/netherland')
 ```
 
-More examples in the [examples folder](http://github.com/pengwynn/linkedin/blob/master/examples).
-
 For a nice example on using this in a [Rails App](http://pivotallabs.com/users/will/blog/articles/1096-linkedin-gem-for-a-web-app).
 
 If you want to play with the LinkedIn api without using the gem, have a look at the [apigee LinkedIn console](http://app.apigee.com/console/linkedin).
@@ -67,7 +65,6 @@ If you want to play with the LinkedIn api without using the gem, have a look at 
 ## Examples
 
 More examples are in the [examples folder](http://github.com/hexgnu/linkedin/blob/master/examples).
-
 
 ## Changelog
 

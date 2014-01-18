@@ -1,3 +1,9 @@
+# Network
+
+Here are some examples of accessing network updates and connections of
+the authenticated user
+
+``` ruby
 # AUTHENTICATE FIRST found in examples/authenticate.rb
 
 # client is a LinkedIn::Client
@@ -10,3 +16,4 @@ client.network_updates(:type => 'PICT')
 
 # view connections for the currently authenticated user
 client.connections
+```
