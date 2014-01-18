@@ -26,7 +26,12 @@ module LinkedIn
     #  @option share [String] :visibility
     #  @option share [String] :code
 
-    autoload :QueryMethods,  "linked_in/api/query_methods"
-    autoload :UpdateMethods, "linked_in/api/update_methods"
+    autoload :QueryHelpers,  "linked_in/api/query_helpers"
+    autoload :People,  "linked_in/api/people"
+    autoload :Groups,  "linked_in/api/groups"
+    autoload :Companies,  "linked_in/api/companies"
+    autoload :Jobs,  "linked_in/api/jobs"
+    autoload :ShareAndSocialStream,  "linked_in/api/share_and_social_stream"
+    autoload :Communications, "linked_in/api/communications"
   end
 end
