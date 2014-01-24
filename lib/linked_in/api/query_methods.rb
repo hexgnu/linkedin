@@ -42,6 +42,14 @@ module LinkedIn
         path = "#{company_path(options)}/updates/key=#{update_key}/likes"
         simple_query(path, options)
       end
+      
+      def suggested_companies
+        simple_query('/people/~/suggestions/to-follow/companies')
+      end
+
+      def followed_companies
+        simple_query('/people/~/following/companies')
+      end
 
       def job(options = {})
         path = jobs_path(options)
