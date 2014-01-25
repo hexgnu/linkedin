@@ -10,7 +10,7 @@ Travis CI : [![Build Status](https://secure.travis-ci.org/hexgnu/linkedin.png)](
 
 ## Documentation
 
-Documented with yard. To view documentation locally, run: `yard server`
+[http://rdoc.info/gems/linkedin](http://rdoc.info/gems/linkedin)
 
 ## Usage
 
