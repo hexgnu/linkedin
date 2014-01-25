@@ -1,6 +1,6 @@
 # LinkedIn
 
-Ruby wrapper for the [LinkedIn API](http://developer.linkedin.com). The LinkedIn gem provides an easy-to-use wrapper for LinkedIn's Oauth/XML APIs.
+Ruby wrapper for the [LinkedIn API](http://developer.linkedin.com). The LinkedIn gem provides an easy-to-use wrapper for LinkedIn's REST APIs.
 
 Travis CI : [![Build Status](https://secure.travis-ci.org/hexgnu/linkedin.png)](http://travis-ci.org/hexgnu/linkedin)
 
