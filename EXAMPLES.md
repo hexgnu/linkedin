@@ -28,7 +28,7 @@ client.authorize_from_request(rtoken, rsecret, pin)
 => ["OU812", "8675309"] # <= save these for future requests
 
 # or authorize from previously fetched access keys
-c.authorize_from_access("OU812", "8675309")
+client.authorize_from_access("OU812", "8675309")
 
 # you're now free to move about the cabin, call any API method
 ```
