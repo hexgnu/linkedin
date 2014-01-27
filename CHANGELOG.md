@@ -1,5 +1,9 @@
 # Changelog
 
+* Document all methods
+* Re-organize modules under Api to match organization in LinkedIn's REST
+  API documentation
+
 ## 0.4.4 - Jan 11, 2014
 
 * Group share add

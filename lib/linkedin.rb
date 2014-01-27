@@ -7,15 +7,18 @@ module LinkedIn
 
     # config/initializers/linkedin.rb (for instance)
     #
+    # ```ruby
     # LinkedIn.configure do |config|
     #   config.token = 'consumer_token'
     #   config.secret = 'consumer_secret'
     #   config.default_profile_fields = ['educations', 'positions']
     # end
-    #
+    # ```
     # elsewhere
     #
+    # ```ruby
     # client = LinkedIn::Client.new
+    # ```
     def configure
       yield self
       true

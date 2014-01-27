@@ -1,6 +1,21 @@
 module LinkedIn
 
   module Search
+
+    # Retrieve search results of the given object type
+    #
+    # Permissions: (for people search only) r_network
+    #
+    # @note People Search API is a part of the Vetted API Access Program. You
+    #   must apply and get approval before using this API
+    #
+    # @see http://developer.linkedin.com/documents/people-search-api People Search
+    # @see http://developer.linkedin.com/documents/job-search-api Job Search
+    # @see http://developer.linkedin.com/documents/company-search Company Search
+    #
+    # @param [Hash] options search input fields
+    # @param [String] type type of object to return ('people', 'job' or 'company')
+    # @return [LinkedIn::Mash]
     def search(options={}, type='people')
 
       path = "/#{type.to_s}-search"
