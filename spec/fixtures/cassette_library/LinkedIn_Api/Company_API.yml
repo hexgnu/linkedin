@@ -72,8 +72,8 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ! "{\n  \"employeeCountRange\": {\n    \"code\": \"I\",\n    \"name\":
-        \"10001+\"\n },\n  \"id\": 1586,\n  \"industry\": \"Internet\",\n  \"locations\":
-        {\n    \"_total\": 1,\n    \"values\": [{\n      \"address\": {\n        \"city\":
+        \"10001+\"\n },\n  \"id\": 1586,\n  \"industry\": \"Internet\",\n  \"locations\":{\n
+        \"_total\": 1,\n    \"values\": [{\n      \"address\": {\n        \"city\":
         \"Seattle\",\n \"countryCode\": \"us\",\n        \"state\": \"WA\"\n      },\n
         \"isHeadquarters\": true\n    }]\n  },\n  \"name\": \"Amazon\"\n}"
     http_version: '1.1'

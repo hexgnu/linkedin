@@ -46,8 +46,8 @@ http_interactions:
         the future of mobile media and computing devices with iPad.\",\n        \"id\":
         162479,\n        \"industries\": {\n          \"_total\": 1,\n          \"values\":
         [{\n            \"code\": \"24\",\n            \"name\": \"Consumer Electronics\"\n
-        \         }]\n        },\n        \"name\": \"Apple\",\n        \"specialties\":
-        {\n          \"_total\": 4,\n          \"values\": [\n            \"Innovative
+        \         }]\n        },\n        \"name\": \"Apple\",\n        \"specialties\":{\n
+        \"_total\": 4,\n          \"values\": [\n            \"Innovative
         product development\",\n            \"world class operations\",\n            \"Retail\",\n
         \"Telephone Support\"\n          ]\n        }\n      },\n      {\n
         \"description\": \"Experience the Difference.      \\r\\nFor over
@@ -81,8 +81,8 @@ http_interactions:
         and to fill the growing need for property management services in Central Florida,
         we founded Orlando Rental Store in 2008. In addition to providing \\\"Lease
         Only\\\" services at competitive prices, we currently manage close to 50 properties
-        in the Greater Orlando Area.\",\n        \"id\": 778626,\n        \"industries\":
-        {\n          \"_total\": 1,\n          \"values\": [{\n            \"code\":
+        in the Greater Orlando Area.\",\n        \"id\": 778626,\n        \"industries\":{\n
+        \"_total\": 1,\n          \"values\": [{\n            \"code\":
         \"44\",\n            \"name\": \"Real Estate\"\n          }]\n        },\n
         \"name\": \"Big Apple Holdings, Inc. dba Big Apple International Realty\"\n
         \     },\n      {\n        \"description\": \"Apple & Associates is an executive
@@ -107,8 +107,8 @@ http_interactions:
         the technical and industry background to match.\",\n        \"id\": 112136,\n
         \"industries\": {\n          \"_total\": 1,\n          \"values\":
         [{\n            \"code\": \"104\",\n            \"name\": \"Staffing & Recruiting\"\n
-        \         }]\n        },\n        \"name\": \"Apple & Associates\",\n        \"specialties\":
-        {\n          \"_total\": 20,\n          \"values\": [\n            \"Medical
+        \         }]\n        },\n        \"name\": \"Apple & Associates\",\n        \"specialties\":{\n
+        \"_total\": 20,\n          \"values\": [\n            \"Medical
         Device\",\n            \"Pharmaceutical\",\n            \"Power\",\n            \"Energy\",\n
         \"Consumer Products\",\n            \"Supply Chain\",\n            \"Purchasing\",\n
         \"Engineering\",\n            \"Marketing\",\n            \"Sales\",\n
@@ -152,8 +152,8 @@ http_interactions:
         Apple's ecosystem as the distributor of software and peripherals from well
         known brands.\\r\\n\\r\\n\\r\\nWith a vision that derives from Apple's innovation,
         iSquare aspires to bring the Apple products at the stature they deserve within
-        the Greek and Cypriot market.\",\n        \"id\": 2135525,\n        \"industries\":
-        {\n          \"_total\": 1,\n          \"values\": [{\n            \"code\":
+        the Greek and Cypriot market.\",\n        \"id\": 2135525,\n        \"industries\":{\n
+        \"_total\": 1,\n          \"values\": [{\n            \"code\":
         \"24\",\n            \"name\": \"Consumer Electronics\"\n          }]\n        },\n
         \"name\": \"iSquare - Apple Authorized Distributor in Greece & Cyprus\"\n
         \     },\n      {\n        \"description\": \"Filex (Moj Apple DuÄ\x87an i
@@ -168,11 +168,11 @@ http_interactions:
         izaÄ\x87i sa rjeÅ¡enjem - ma kako god ono na kraju izgledalo!\\r\\n\\r\\nKontaktirajte
         nas preko naÅ¡eg Internet Store-a (www.filex.hr), ili nam piÅ¡ite na prodaja@filx.hr
         ili servis@filex.hr.\\r\\nI svakako nam se pridruÅ¾ite na Facebook-u na http://www.facebook.com/pages/Filex-Moj-Apple-DuÄ\x87an-i-Servis/131194173598671\\r\\n\\r\\nVaÅ¡e
-        zadovoljstvo naÅ¡a je misija!\",\n        \"id\": 2303504,\n        \"industries\":
-        {\n          \"_total\": 1,\n          \"values\": [{\n            \"code\":
+        zadovoljstvo naÅ¡a je misija!\",\n        \"id\": 2303504,\n        \"industries\":{\n
+        \"_total\": 1,\n          \"values\": [{\n            \"code\":
         \"3\",\n            \"name\": \"Computer Hardware\"\n          }]\n        },\n
-        \"name\": \"Filex Apple Store & Support\",\n        \"specialties\":
-        {\n          \"_total\": 4,\n          \"values\": [\n            \"Apple
+        \"name\": \"Filex Apple Store & Support\",\n        \"specialties\":{\n
+        \"_total\": 4,\n          \"values\": [\n            \"Apple
         Store\",\n            \"Apple PodrÅ¡ka i Servis\",\n            \"Apple RjeÅ¡enja\",\n
         \"Apple B2B\"\n          ]\n        }\n      },\n      {\n        \"description\":
         \"Als Apple een nieuwssite zou maken in Vlaanderen, dan was het AppleVlaanderen.

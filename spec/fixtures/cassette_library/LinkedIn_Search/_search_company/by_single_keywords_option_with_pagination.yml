@@ -45,8 +45,8 @@ http_interactions:
         \"Apple Nieuws Vlaanderen\"\n      },\n      {\n        \"id\": 2260437,\n
         \"name\": \"OGGO - Services Apple Macintosh\"\n      },\n      {\n
         \"id\": 1049054,\n        \"name\": \"Apple Crumble\"\n      }\n    ]\n
-        \ },\n  \"facets\": {\n    \"_total\": 1,\n    \"values\": [{\n      \"buckets\":
-        {\n        \"_total\": 10,\n        \"values\": [\n          {\n            \"code\":
+        \ },\n  \"facets\": {\n    \"_total\": 1,\n    \"values\": [{\n      \"buckets\":{\n
+        \"_total\": 10,\n        \"values\": [\n          {\n            \"code\":
         \"us:0\",\n            \"count\": 2511,\n            \"name\": \"United States\",\n
         \"selected\": false\n          },\n          {\n            \"code\":
         \"gb:0\",\n            \"count\": 702,\n            \"name\": \"United Kingdom\",\n
