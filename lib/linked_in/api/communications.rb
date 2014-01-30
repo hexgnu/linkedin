@@ -35,7 +35,7 @@ module LinkedIn
                 end
             }
         }
-        post(path, message.to_json, "Content-Type" => "application/json")
+        post(path, MultiJson.dump(message), "Content-Type" => "application/json")
       end
 
     end

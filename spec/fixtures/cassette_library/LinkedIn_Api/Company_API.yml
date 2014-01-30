@@ -75,7 +75,7 @@ http_interactions:
         \"10001+\"\n },\n  \"id\": 1586,\n  \"industry\": \"Internet\",\n  \"locations\":
         {\n    \"_total\": 1,\n    \"values\": [{\n      \"address\": {\n        \"city\":
         \"Seattle\",\n \"countryCode\": \"us\",\n        \"state\": \"WA\"\n      },\n
-        \     \"isHeadquarters\": true\n    }]\n  },\n  \"name\": \"Amazon\"\n}"
+        \"isHeadquarters\": true\n    }]\n  },\n  \"name\": \"Amazon\"\n}"
     http_version: '1.1'
   recorded_at: Wed, 10 Apr 2013 22:06:51 GMT
 recorded_with: VCR 2.5.0

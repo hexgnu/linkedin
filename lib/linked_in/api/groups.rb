@@ -96,7 +96,7 @@ module LinkedIn
       # @return [void]
       def add_group_share(group_id, share)
         path = "/groups/#{group_id}/posts"
-        post(path, share.to_json, "Content-Type" => "application/json")
+        post(path, MultiJson.dump(share), "Content-Type" => "application/json")
       end
 
       # (Update) User joins, or requests to join, a group
@@ -108,7 +108,7 @@ module LinkedIn
       def join_group(group_id)
         path = "/people/~/group-memberships/#{group_id}"
         body = {'membership-state' => {'code' => 'member' }}
-        put(path, body.to_json, "Content-Type" => "application/json")
+        put(path, MultiJson.dump(body), "Content-Type" => "application/json")
       end
     end
   end

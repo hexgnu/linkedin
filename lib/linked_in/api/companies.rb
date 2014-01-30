@@ -98,7 +98,7 @@ module LinkedIn
       def add_company_share(company_id, share)
         path = "/companies/#{company_id}/shares"
         defaults = {:visibility => {:code => "anyone"}}
-        post(path, defaults.merge(share).to_json, "Content-Type" => "application/json")
+        post(path, MultiJson.dump(defaults.merge(share)), "Content-Type" => "application/json")
       end
 
       # (Create) authenticated user starts following a company
@@ -110,7 +110,7 @@ module LinkedIn
       def follow_company(company_id)
         path = "/people/~/following/companies"
         body = {:id => company_id }
-        post(path, body.to_json, "Content-Type" => "application/json")
+        post(path, MultiJson.dump(body), "Content-Type" => "application/json")
       end
 
       # (Destroy) authenticated user stops following a company

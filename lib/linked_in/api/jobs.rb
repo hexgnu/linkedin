@@ -57,7 +57,7 @@ module LinkedIn
       def add_job_bookmark(job_id)
         path = "/people/~/job-bookmarks"
         body = {'job' => {'id' => job_id}}
-        post(path, body.to_json, "Content-Type" => "application/json")
+        post(path, MultiJson.dump(body), "Content-Type" => "application/json")
       end
     end
   end

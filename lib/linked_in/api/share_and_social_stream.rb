@@ -87,7 +87,7 @@ module LinkedIn
       def add_share(share)
         path = "/people/~/shares"
         defaults = {:visibility => {:code => "anyone"}}
-        post(path, defaults.merge(share).to_json, "Content-Type" => "application/json")
+        post(path, MultiJson.dump(defaults.merge(share)), "Content-Type" => "application/json")
       end
 
       # Create a comment on an update from the authenticated user
@@ -101,7 +101,7 @@ module LinkedIn
       def update_comment(update_key, comment)
         path = "/people/~/network/updates/key=#{update_key}/update-comments"
         body = {'comment' => comment}
-        post(path, body.to_json, "Content-Type" => "application/json")
+        post(path, MultiJson.dump(body), "Content-Type" => "application/json")
       end
 
       # (Update) like an update as the authenticated user
