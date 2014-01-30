@@ -5,16 +5,16 @@ module LinkedIn
   module Connection
     private
     def connection_options
-      {
+      faraday_options.merge({
         :headers => {
           'Accept' => "application/#{format}",
           'User-Agent' => user_agent,
           'x-li-format' => 'json'
         },
         :proxy => proxy,
-        :ssl => {:verity => false},
+        :ssl => {:verify => false},
         :url => api_endpoint
-      }
+      })
     end
 
     def connection
