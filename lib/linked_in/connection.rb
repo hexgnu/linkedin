@@ -18,7 +18,7 @@ module LinkedIn
     end
 
     def connection
-      Faraday.new(connection_options) do |builder|
+      @connection ||= Faraday.new(connection_options) do |builder|
         builder.use Faraday::Request::OAuth, authentication
         builder.use Faraday::Request::UrlEncoded
         builder.use Faraday::Response::ParseJson
