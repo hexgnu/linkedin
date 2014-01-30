@@ -38,8 +38,8 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ! "{\n  \"companies\": {\n    \"_count\": 10,\n    \"_start\": 0,\n
-        \   \"_total\": 8450,\n    \"values\": [\n      {\n        \"id\": 162479,\n
-        \       \"name\": \"Apple\"\n      },\n      {\n        \"id\": 19271,\n        \"name\":
+        \"_total\": 8450,\n    \"values\": [\n      {\n        \"id\": 162479,\n
+        \"name\": \"Apple\"\n      },\n      {\n        \"id\": 19271,\n        \"name\":
         \"Apple Vacations\"\n      },\n      {\n        \"id\": 778626,\n        \"name\":
         \"Big Apple Holdings, Inc. dba Big Apple International Realty\"\n      },\n
         \     {\n        \"id\": 112136,\n        \"name\": \"Apple & Associates\"\n
