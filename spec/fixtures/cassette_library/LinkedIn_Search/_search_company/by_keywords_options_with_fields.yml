@@ -38,7 +38,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ! "{\n  \"companies\": {\n    \"_count\": 10,\n    \"_start\": 0,\n
-        \   \"_total\": 8450,\n    \"values\": [\n      {\n        \"description\":
+        \"_total\": 8450,\n    \"values\": [\n      {\n        \"description\":
         \"Apple designs Macs, the best personal computers in the world, along with
         OS X, iLife, iWork and professional software. Apple leads the digital music
         revolution with its iPods and iTunes online store. Apple has reinvented the
@@ -49,8 +49,8 @@ http_interactions:
         \         }]\n        },\n        \"name\": \"Apple\",\n        \"specialties\":
         {\n          \"_total\": 4,\n          \"values\": [\n            \"Innovative
         product development\",\n            \"world class operations\",\n            \"Retail\",\n
-        \           \"Telephone Support\"\n          ]\n        }\n      },\n      {\n
-        \       \"description\": \"Experience the Difference.      \\r\\nFor over
+        \"Telephone Support\"\n          ]\n        }\n      },\n      {\n
+        \"description\": \"Experience the Difference.      \\r\\nFor over
         40 years, Apple Vacations has provided the most value in vacations to millions
         of people. Throughout the years, we\\u2019ve provided what you want in a vacation
         \\u2013 great service, convenience, and value. We understand just how important
@@ -69,8 +69,8 @@ http_interactions:
         in-resort with uniformed representatives, who will greet you upon arrival
         and assist you while you are at your resort. Unlike any other travel company,
         Apple Vacations truly provides the ultimate in a quality vacation experience.\",\n
-        \       \"id\": 19271,\n        \"industries\": {\n          \"_total\": 1,\n
-        \         \"values\": [{\n            \"code\": \"30\",\n            \"name\":
+        \"id\": 19271,\n        \"industries\": {\n          \"_total\": 1,\n
+        \"values\": [{\n            \"code\": \"30\",\n            \"name\":
         \"Leisure & Travel\"\n          }]\n        },\n        \"name\": \"Apple
         Vacations\",\n        \"specialties\": {\n          \"_total\": 2,\n          \"values\":
         [\n            \"Leisure travel\",\n            \"all inclusive vacation packages\"\n
@@ -84,7 +84,7 @@ http_interactions:
         in the Greater Orlando Area.\",\n        \"id\": 778626,\n        \"industries\":
         {\n          \"_total\": 1,\n          \"values\": [{\n            \"code\":
         \"44\",\n            \"name\": \"Real Estate\"\n          }]\n        },\n
-        \       \"name\": \"Big Apple Holdings, Inc. dba Big Apple International Realty\"\n
+        \"name\": \"Big Apple Holdings, Inc. dba Big Apple International Realty\"\n
         \     },\n      {\n        \"description\": \"Apple & Associates is an executive
         search firm that specializes in the Pharmaceutical, Medical Device and Consumer
         Product Industries.  We provide extensive coverage of these worldwide markets
@@ -99,24 +99,24 @@ http_interactions:
         recruiting firms.  Because our executive recruiters specialize in different
         industry segments, we can give you the service you deserve in a fast, focused,
         and efficient manner and provide you with quality industry specific candidates.
-        \  \\r\\n\\r\\nWe realize the importance of hiring professionals who understand
+        \\r\\n\\r\\nWe realize the importance of hiring professionals who understand
         and are able to assimilate with your company\\u2019s business model, culture,
         process, equipment, and materials.  Our team has studied the hiring decisions
         that make the firms in the Pharmaceutical and Medical Device industries so
         successful.  Our candidates will meet the standard your company demands, with
         the technical and industry background to match.\",\n        \"id\": 112136,\n
-        \       \"industries\": {\n          \"_total\": 1,\n          \"values\":
+        \"industries\": {\n          \"_total\": 1,\n          \"values\":
         [{\n            \"code\": \"104\",\n            \"name\": \"Staffing & Recruiting\"\n
         \         }]\n        },\n        \"name\": \"Apple & Associates\",\n        \"specialties\":
         {\n          \"_total\": 20,\n          \"values\": [\n            \"Medical
         Device\",\n            \"Pharmaceutical\",\n            \"Power\",\n            \"Energy\",\n
-        \           \"Consumer Products\",\n            \"Supply Chain\",\n            \"Purchasing\",\n
-        \           \"Engineering\",\n            \"Marketing\",\n            \"Sales\",\n
-        \           \"Human Resources\",\n            \"Science\",\n            \"Finance\",\n
-        \           \"Manufacturing\",\n            \"Operations\",\n            \"R&D\",\n
-        \           \"Six Sigma\",\n            \"IT\",\n            \"chemist\",\n
-        \           \"Executive Management\"\n          ]\n        }\n      },\n      {\n
-        \       \"description\": \"Headquartered in Singapore and a presence in 9
+        \"Consumer Products\",\n            \"Supply Chain\",\n            \"Purchasing\",\n
+        \"Engineering\",\n            \"Marketing\",\n            \"Sales\",\n
+        \"Human Resources\",\n            \"Science\",\n            \"Finance\",\n
+        \"Manufacturing\",\n            \"Operations\",\n            \"R&D\",\n
+        \"Six Sigma\",\n            \"IT\",\n            \"chemist\",\n
+        \"Executive Management\"\n          ]\n        }\n      },\n      {\n
+        \"description\": \"Headquartered in Singapore and a presence in 9
         countries globally, Stone Apple is a Specialized Consulting firm focused mainly
         on Business Intelligence & Analytics, Enterprise Resource Planning, Knowledge
         Management & Application Integration with a strong product portfolio, analytical
@@ -128,7 +128,7 @@ http_interactions:
         to meet the changing needs of enterprises globally. From leading industry
         methodologies to in-house proven models, Stone Apple collaborates with their
         customers to deliver tangible business results that impact their bottom line.\",\n
-        \       \"id\": 772044,\n        \"industries\": {\n          \"_total\":
+        \"id\": 772044,\n        \"industries\": {\n          \"_total\":
         1,\n          \"values\": [{\n            \"code\": \"96\",\n            \"name\":
         \"Information Technology & Services\"\n          }]\n        },\n        \"name\":
         \"Stone Apple Solutions\"\n      },\n      {\n        \"description\": \"iSquare
@@ -155,7 +155,7 @@ http_interactions:
         the Greek and Cypriot market.\",\n        \"id\": 2135525,\n        \"industries\":
         {\n          \"_total\": 1,\n          \"values\": [{\n            \"code\":
         \"24\",\n            \"name\": \"Consumer Electronics\"\n          }]\n        },\n
-        \       \"name\": \"iSquare - Apple Authorized Distributor in Greece & Cyprus\"\n
+        \"name\": \"iSquare - Apple Authorized Distributor in Greece & Cyprus\"\n
         \     },\n      {\n        \"description\": \"Filex (Moj Apple DuÄ\x87an i
         Servis) je autorizirani Apple partner za prodaju, servis i podrÅ¡ku.\\r\\n\\r\\nFilex
         je osnovan 1992 godine te od tada u kontinuitetu razvijamo i unapreÄ\x91ujemo
@@ -171,10 +171,10 @@ http_interactions:
         zadovoljstvo naÅ¡a je misija!\",\n        \"id\": 2303504,\n        \"industries\":
         {\n          \"_total\": 1,\n          \"values\": [{\n            \"code\":
         \"3\",\n            \"name\": \"Computer Hardware\"\n          }]\n        },\n
-        \       \"name\": \"Filex Apple Store & Support\",\n        \"specialties\":
+        \"name\": \"Filex Apple Store & Support\",\n        \"specialties\":
         {\n          \"_total\": 4,\n          \"values\": [\n            \"Apple
         Store\",\n            \"Apple PodrÅ¡ka i Servis\",\n            \"Apple RjeÅ¡enja\",\n
-        \           \"Apple B2B\"\n          ]\n        }\n      },\n      {\n        \"description\":
+        \"Apple B2B\"\n          ]\n        }\n      },\n      {\n        \"description\":
         \"Als Apple een nieuwssite zou maken in Vlaanderen, dan was het AppleVlaanderen.
         AppleVlaanderen is gemaakt met dezelfde passie en aandacht voor detail als
         de producten van Apple zelf.\\r\\n\\r\\nWe behandelen de nieuwsfeiten over
@@ -184,12 +184,12 @@ http_interactions:
         doen we met veel liefde voor de verschillende producten en voor Apple in het
         algemeen. Onze medewerkers werken allemaal op vrijwillige basis en hebben
         voldoende kennis over de producten van Apple.\",\n        \"id\": 2419290,\n
-        \       \"industries\": {\n          \"_total\": 1,\n          \"values\":
+        \"industries\": {\n          \"_total\": 1,\n          \"values\":
         [{\n            \"code\": \"81\",\n            \"name\": \"Newspapers\"\n
         \         }]\n        },\n        \"name\": \"Apple Nieuws Vlaanderen\",\n
-        \       \"specialties\": {\n          \"_total\": 4,\n          \"values\":
+        \"specialties\": {\n          \"_total\": 4,\n          \"values\":
         [\n            \"apple\",\n            \"iPhone\",\n            \"iPad\",\n
-        \           \"mac\"\n          ]\n        }\n      },\n      {\n        \"description\":
+        \"mac\"\n          ]\n        }\n      },\n      {\n        \"description\":
         \"OGGO est une sociÃ©tÃ© de conseils et solutions Apple Macintosh basÃ©e Ã 
         GenÃ¨ve, nous proposons notre savoir faire essentiellement aux PME et particuliers.\\r\\n\\r\\nNos
         services en un coup d'oeil :\\r\\n\\r\\n// RÃ©parations\\r\\n// Optimisations
@@ -200,7 +200,7 @@ http_interactions:
         \"Information Technology & Services\"\n          }]\n        },\n        \"name\":
         \"OGGO - Services Apple Macintosh\",\n        \"specialties\": {\n          \"_total\":
         7,\n          \"values\": [\n            \"Consulting & conseils Apple Macintosh\",\n
-        \           \"Support Apple Macintosh\",\n            \"Maintenance Mac OS
+        \"Support Apple Macintosh\",\n            \"Maintenance Mac OS
         X Server\",\n            \"DÃ©pannage Mac OS X\",\n            \"Installation
         Mac OS X Server\",\n            \"Interventions Apple Macintosh\",\n            \"Formation
         Apple Macintosh\"\n          ]\n        }\n      },\n      {\n        \"description\":

@@ -49,14 +49,14 @@ http_interactions:
         \     {\n        \"id\": 2303504,\n        \"name\": \"Filex Apple Store &
         Support\"\n      },\n      {\n        \"id\": 2419290,\n        \"name\":
         \"Apple Nieuws Vlaanderen\"\n      },\n      {\n        \"id\": 2260437,\n
-        \       \"name\": \"OGGO - Services Apple Macintosh\"\n      },\n      {\n
-        \       \"id\": 1049054,\n        \"name\": \"Apple Crumble\"\n      }\n    ]\n
+        \"name\": \"OGGO - Services Apple Macintosh\"\n      },\n      {\n
+        \"id\": 1049054,\n        \"name\": \"Apple Crumble\"\n      }\n    ]\n
         \ },\n  \"facets\": {\n    \"_total\": 1,\n    \"values\": [{\n      \"buckets\":
         {\n        \"_total\": 10,\n        \"values\": [\n          {\n            \"code\":
         \"96\",\n            \"count\": 2062,\n            \"name\": \"Information
         Technology and Services\",\n            \"selected\": false\n          },\n
         \         {\n            \"code\": \"4\",\n            \"count\": 1031,\n
-        \           \"name\": \"Computer Software\",\n            \"selected\": false\n
+        \"name\": \"Computer Software\",\n            \"selected\": false\n
         \         },\n          {\n            \"code\": \"6\",\n            \"count\":
         472,\n            \"name\": \"Internet\",\n            \"selected\": false\n
         \         },\n          {\n            \"code\": \"3\",\n            \"count\":

@@ -43,20 +43,20 @@ http_interactions:
         \     {\n        \"id\": 2303504,\n        \"name\": \"Filex Apple Store &
         Support\"\n      },\n      {\n        \"id\": 2419290,\n        \"name\":
         \"Apple Nieuws Vlaanderen\"\n      },\n      {\n        \"id\": 2260437,\n
-        \       \"name\": \"OGGO - Services Apple Macintosh\"\n      },\n      {\n
-        \       \"id\": 1049054,\n        \"name\": \"Apple Crumble\"\n      }\n    ]\n
+        \"name\": \"OGGO - Services Apple Macintosh\"\n      },\n      {\n
+        \"id\": 1049054,\n        \"name\": \"Apple Crumble\"\n      }\n    ]\n
         \ },\n  \"facets\": {\n    \"_total\": 1,\n    \"values\": [{\n      \"buckets\":
         {\n        \"_total\": 10,\n        \"values\": [\n          {\n            \"code\":
         \"us:0\",\n            \"count\": 2511,\n            \"name\": \"United States\",\n
-        \           \"selected\": false\n          },\n          {\n            \"code\":
+        \"selected\": false\n          },\n          {\n            \"code\":
         \"gb:0\",\n            \"count\": 702,\n            \"name\": \"United Kingdom\",\n
-        \           \"selected\": false\n          },\n          {\n            \"code\":
+        \"selected\": false\n          },\n          {\n            \"code\":
         \"us:84\",\n            \"count\": 322,\n            \"name\": \"San Francisco
         Bay Area\",\n            \"selected\": false\n          },\n          {\n
-        \           \"code\": \"us:70\",\n            \"count\": 285,\n            \"name\":
+        \"code\": \"us:70\",\n            \"count\": 285,\n            \"name\":
         \"Greater New York City Area\",\n            \"selected\": false\n          },\n
         \         {\n            \"code\": \"nl:0\",\n            \"count\": 284,\n
-        \           \"name\": \"Netherlands\",\n            \"selected\": false\n
+        \"name\": \"Netherlands\",\n            \"selected\": false\n
         \         },\n          {\n            \"code\": \"ca:0\",\n            \"count\":
         266,\n            \"name\": \"Canada\",\n            \"selected\": false\n
         \         },\n          {\n            \"code\": \"au:0\",\n            \"count\":

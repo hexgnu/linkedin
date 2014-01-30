@@ -79,13 +79,13 @@ http_interactions:
       encoding: UTF-8
       string: ! "{\n  \"numResults\": 6,\n  \"people\": {\n    \"_total\": 6,\n    \"values\":
         [\n      {\n        \"firstName\": \"Ryan\",\n        \"id\": \"KHkgwBMaa-\",\n
-        \       \"lastName\": \"Sue\"\n      },\n      {\n        \"firstName\": \"Ben\",\n
-        \       \"id\": \"lljISRB-WQ\",\n        \"lastName\": \"Mejia\"\n      },\n
+        \"lastName\": \"Sue\"\n      },\n      {\n        \"firstName\": \"Ben\",\n
+        \"id\": \"lljISRB-WQ\",\n        \"lastName\": \"Mejia\"\n      },\n
         \     {\n        \"firstName\": \"James\",\n        \"id\": \"zLwxyfa2cv\",\n
-        \       \"lastName\": \"Stevenson\"\n      },\n      {\n        \"firstName\":
+        \"lastName\": \"Stevenson\"\n      },\n      {\n        \"firstName\":
         \"Charles\",\n        \"id\": \"r5Kzi9Um-e\",\n        \"lastName\": \"Kafoglis\"\n
         \     },\n      {\n        \"firstName\": \"Sauraj\",\n        \"id\": \"RLJu6NhdI2\",\n
-        \       \"lastName\": \"Goswami\"\n      },\n      {\n        \"firstName\":
+        \"lastName\": \"Goswami\"\n      },\n      {\n        \"firstName\":
         \"Jonathan\",\n        \"id\": \"NgAxaSCyZ3\",\n        \"lastName\": \"Hedstrom\"\n
         \     }\n    ]\n  }\n}"
     http_version: '1.1'
