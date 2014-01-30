@@ -1,7 +1,10 @@
 $:.unshift File.expand_path('..', __FILE__)
 $:.unshift File.expand_path('../../lib', __FILE__)
-require 'simplecov'
-SimpleCov.start
+if ENV['COVERAGE'] == 't'
+  require 'simplecov'
+  SimpleCov.start
+end
+
 require 'linkedin'
 require 'rspec'
 require 'webmock/rspec'
