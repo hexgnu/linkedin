@@ -79,34 +79,36 @@ http_interactions:
       encoding: UTF-8
       string: ! "{\n  \"numResults\": 308,\n  \"people\": {\n    \"_count\": 10,\n
         \"_start\": 0,\n    \"_total\": 110,\n    \"values\": [\n      {\n        \"firstName\":
-        \"Charles\",\n        \"id\": \"2zk34r8TvA\",\n        \"lastName\": \"Garcia,
-        CFA\",\n        \"publicProfileUrl\": \"http://www.linkedin.com/in/charlesgarcia\"\n
-        \     },\n      {\n        \"firstName\": \"Charles R.\",\n        \"id\":
+        \"Charles\",\n        \"id\": \"2zk34r8TvA\",\n        \"lastName\": \"Garcia, CFA\",\n
+        \"publicProfileUrl\": \"http://www.linkedin.com/in/charlesgarcia\"\n},\n      {\n
+        \"firstName\": \"Charles R.\",\n        \"id\":
         \"NjwO1vU6P6\",\n        \"lastName\": \"Garcia Jr.\",\n        \"pictureUrl\":
         \"http://m3.licdn.com/mpr/mprx/0_eyd5KukV6r4QDft-oYwsKfzsXqyWSdi-oUjVKaLVRAeMtSqtXsJWOmlqospnaaGOWxIUxWUUfdKb\",\n
-        \"publicProfileUrl\": \"http://www.linkedin.com/in/knightwealthmanagement\"\n
-        \     },\n      {\n        \"firstName\": \"Charles\",\n        \"id\": \"j8ZczJo44W\",\n
-        \"lastName\": \"Garcia-Tobin\",\n        \"publicProfileUrl\": \"http://www.linkedin.com/pub/charles-garcia-tobin/1/407/37\"\n
-        \     },\n      {\n        \"firstName\": \"Charles\",\n        \"id\": \"jYfrk5GM29\",\n
+        \"publicProfileUrl\": \"http://www.linkedin.com/in/knightwealthmanagement\"\n},\n      {\n
+        \"firstName\": \"Charles\",\n        \"id\": \"j8ZczJo44W\",\n
+        \"lastName\": \"Garcia-Tobin\",\n        \"publicProfileUrl\":
+        \"http://www.linkedin.com/pub/charles-garcia-tobin/1/407/37\"\n },\n      {\n
+        \"firstName\": \"Charles\",\n        \"id\": \"jYfrk5GM29\",\n
         \"lastName\": \"Garcia\",\n        \"pictureUrl\": \"http://m3.licdn.com/mpr/mprx/0_oCf8Sdu0zOpQN_tEeLaPSwVjvZHIq5CEH6R0SEw2EOpRI3voQk0uio0GUveqBC_QITDYCDz2KP6m\",\n
-        \"publicProfileUrl\": \"http://www.linkedin.com/in/charleshgarcia\"\n
-        \     },\n      {\n        \"firstName\": \"Charles\",\n        \"id\": \"C-2ASm3SQ1\",\n
+        \"publicProfileUrl\": \"http://www.linkedin.com/in/charleshgarcia\"\n },\n      {\n
+        \"firstName\": \"Charles\",\n        \"id\": \"C-2ASm3SQ1\",\n
         \"lastName\": \"Garcia\",\n        \"pictureUrl\": \"http://m3.licdn.com/mpr/mprx/0_eyd5KuNsktdHTE1-6RasKacFXqyWSdi-oUjVKaLVRAeMtSqtXsJWOmlqospnaaGOWxIUxWRzo_ib\",\n
-        \"publicProfileUrl\": \"http://www.linkedin.com/pub/charles-garcia/26/1b2/b28\"\n
-        \     },\n      {\n        \"firstName\": \"Charles\",\n        \"id\": \"LG__MFCUTJ\",\n
-        \"lastName\": \"Garcia\",\n        \"publicProfileUrl\": \"http://www.linkedin.com/pub/charles-garcia/5/465/b00\"\n
-        \     },\n      {\n        \"firstName\": \"Charles\",\n        \"id\": \"wjopxKqYYM\",\n
+        \"publicProfileUrl\": \"http://www.linkedin.com/pub/charles-garcia/26/1b2/b28\"\n},\n      {\n
+        \"firstName\": \"Charles\",\n        \"id\": \"LG__MFCUTJ\",\n
+        \"lastName\": \"Garcia\",\n        \"publicProfileUrl\":
+        \"http://www.linkedin.com/pub/charles-garcia/5/465/b00\"\n},\n      {\n
+        \"firstName\": \"Charles\",\n        \"id\": \"wjopxKqYYM\",\n
         \"lastName\": \"Garcia\",\n        \"pictureUrl\": \"http://m3.licdn.com/mpr/mprx/0_ePvupanfrtgopBCiEBzPpuFir-Zdp-tioNT1pSkPfNuJin5_Xv58tDrgO049xzPfWKBt1o9wYUsb\",\n
-        \"publicProfileUrl\": \"http://www.linkedin.com/pub/charles-garcia/8/152/3ab\"\n
-        \     },\n      {\n        \"firstName\": \"Charles\",\n        \"id\": \"AtFQt5Lf1V\",\n
+        \"publicProfileUrl\": \"http://www.linkedin.com/pub/charles-garcia/8/152/3ab\"\n},\n      {\n
+        \"firstName\": \"Charles\",\n        \"id\": \"AtFQt5Lf1V\",\n
         \"lastName\": \"Garcia\",\n        \"pictureUrl\": \"http://m3.licdn.com/mpr/mprx/0_uuv-7sRI0s_EdtBWuecS7Jf9jM5owt6WaSTS7Jd9GylVN9AdhE5O3Mg41cLzHvF5S7B28YBarPYq\",\n
-        \"publicProfileUrl\": \"http://www.linkedin.com/in/chasgarcia\"\n
-        \     },\n      {\n        \"firstName\": \"Charles\",\n        \"id\": \"MUXIZwfehE\",\n
-        \"lastName\": \"Garcia\",\n        \"publicProfileUrl\": \"http://www.linkedin.com/pub/charles-garcia/14/6a7/81\"\n
-        \     },\n      {\n        \"firstName\": \"Charles\",\n        \"id\": \"koTmAyWE8J\",\n
+        \"publicProfileUrl\": \"http://www.linkedin.com/in/chasgarcia\"\n},\n      {\n
+        \"firstName\": \"Charles\",\n        \"id\": \"MUXIZwfehE\",\n
+        \"lastName\": \"Garcia\",\n        \"publicProfileUrl\":
+        \"http://www.linkedin.com/pub/charles-garcia/14/6a7/81\"\n},\n      {\n
+        \"firstName\": \"Charles\",\n        \"id\": \"koTmAyWE8J\",\n
         \"lastName\": \"Schwalbe Garcia-Lago\",\n        \"pictureUrl\": \"http://m3.licdn.com/mpr/mprx/0_q6hJ9GyYDCe0NRJ1sGCQ9TSySTY-nZZ1nFqQ9TyatkEGWp7PZhrzZ3Hh_fODzxM0zLGFJ6CC9gBb\",\n
-        \"publicProfileUrl\": \"http://www.linkedin.com/in/charlesschwalbe\"\n
-        \     }\n    ]\n  }\n}"
+        \"publicProfileUrl\": \"http://www.linkedin.com/in/charlesschwalbe\"\n }\n    ]\n  }\n}"
     http_version: '1.1'
   recorded_at: Tue, 04 Jun 2013 03:42:37 GMT
 recorded_with: VCR 2.5.0
