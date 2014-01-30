@@ -37,9 +37,7 @@ http_interactions:
       - chunked
     body:
       encoding: UTF-8
-      string: ! "{\n  \"numResults\": 6,\n  \"people\": {\n    \"_count\": 1,\n    \"_start\":
-        5,\n    \"_total\": 6,\n    \"values\": [{\n      \"firstName\": \"Satish\",\n
-        \"id\": \"V1FPuGot-I\",\n      \"lastName\": \"Talim\"\n    }]\n  }\n}"
+      string: ! "{\n  \"numResults\": 6,\n  \"people\": {\n    \"_count\": 1,\n    \"_start\":5,\n    \"_total\": 6,\n    \"values\": [{\n      \"firstName\": \"Satish\",\n\"id\": \"V1FPuGot-I\",\n      \"lastName\": \"Talim\"\n    }]\n  }\n}"
     http_version: '1.1'
   recorded_at: Tue, 04 Jun 2013 03:42:37 GMT
 recorded_with: VCR 2.5.0

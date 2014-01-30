@@ -40,14 +40,13 @@ http_interactions:
       string: ! "{\n  \"numResults\": 6,\n  \"people\": {\n    \"_total\": 6,\n    \"values\":
         [\n      {\n        \"firstName\": \"Shay\",\n        \"id\": \"ucXjUw4M9J\",\n
         \"lastName\": \"Frendt\"\n      },\n      {\n        \"firstName\":
-        \"Scott\",\n        \"id\": \"t6mvVsY3df\",\n        \"lastName\": \"Smith\"\n
-        \     },\n      {\n        \"firstName\": \"Philip\",\n        \"id\": \"ZeSnXwtz6Y\",\n
+        \"Scott\",\n        \"id\": \"t6mvVsY3df\",\n        \"lastName\": \"Smith\"\n     },\n      {\n
+        \"firstName\": \"Philip\",\n        \"id\": \"ZeSnXwtz6Y\",\n
         \"lastName\": \"Corliss\"\n      },\n      {\n        \"firstName\":
-        \"Jay\",\n        \"id\": \"i24wDA2GrH\",\n        \"lastName\": \"Beavers\"\n
-        \     },\n      {\n        \"firstName\": \"Chris\",\n        \"id\": \"SJBelisgHh\",\n
+        \"Jay\",\n        \"id\": \"i24wDA2GrH\",\n        \"lastName\": \"Beavers\"\n},\n      {\n
+        \"firstName\": \"Chris\",\n        \"id\": \"SJBelisgHh\",\n
         \"lastName\": \"Wiswell\"\n      },\n      {\n        \"firstName\":
-        \"Satish\",\n        \"id\": \"V1FPuGot-I\",\n        \"lastName\": \"Talim\"\n
-        \     }\n    ]\n  }\n}"
+        \"Satish\",\n        \"id\": \"V1FPuGot-I\",\n        \"lastName\": \"Talim\"\n}\n    ]\n  }\n}"
     http_version: '1.1'
   recorded_at: Tue, 04 Jun 2013 03:42:37 GMT
 recorded_with: VCR 2.5.0
