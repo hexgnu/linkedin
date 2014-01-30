@@ -52,17 +52,8 @@ http_interactions:
         13 Jan 2014 21:43:51 GMT; domain=.linkedin.com; Path=/
     body:
       encoding: UTF-8
-      string: |-
-        {
-          "_total": 2,
-          "values": [{
-            "_key": "email=yy@zz.com",
-            "id": "96GVfLeWjU"
-          },
-          {
-            "_key": "email=xx@yy.com",
-            "id": "10CGfLfLhI"
-          }]
-        }
-    http_version: 
+      string: ! "{\"_total\": 2,\"values\": [{
+          \"_key\": \"email=yy@zz.com\",\"id\": \"96GVfLeWjU\"},{
+          \"_key\": \"email=xx@yy.com\",\"id\": \"10CGfLfLhI\"}]}"
+    http_version:
   recorded_at: Mon, 13 Jan 2014 21:33:51 GMT

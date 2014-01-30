@@ -51,13 +51,9 @@ http_interactions:
         14 Jan 2014 16:30:58 GMT; domain=.linkedin.com; Path=/
     body:
       encoding: UTF-8
-      string: |-
-        {
-          "errorCode": 0,
-          "message": "Access to member by email address denied",
-          "requestId": "BRSUSQTPPW",
-          "status": 403,
-          "timestamp": 1389727130475
-        }
+      string: ! "{\"errorCode\": 0,\"message\": \"Access to member by email address denied\",
+          \"requestId\": \"BRSUSQTPPW\",
+          \"status\": 403,
+          \"timestamp\": 1389727130475}"
     http_version:
   recorded_at: Tue, 14 Jan 2014 16:21:01 GMT
