@@ -51,7 +51,7 @@ http_interactions:
         \"Apple Nieuws Vlaanderen\"\n      },\n      {\n        \"id\": 2260437,\n
         \"name\": \"OGGO - Services Apple Macintosh\"\n      },\n      {\n
         \"id\": 1049054,\n        \"name\": \"Apple Crumble\"\n      }\n    ]\n
-        \ },\n  \"facets\": {\n    \"_total\": 1,\n    \"values\": [{\n      \"buckets\":{\n
+        },\n  \"facets\": {\n    \"_total\": 1,\n    \"values\": [{\n      \"buckets\":{\n
         \"_total\": 10,\n        \"values\": [\n          {\n            \"code\":
         \"96\",\n            \"count\": 2062,\n            \"name\": \"Information
         Technology and Services\",\n            \"selected\": false\n          },\n
