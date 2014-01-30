@@ -79,22 +79,22 @@ http_interactions:
       encoding: UTF-8
       string: ! "{\n  \"numResults\": 308,\n  \"people\": {\n    \"_count\": 10,\n
         \"_start\": 0,\n    \"_total\": 110,\n    \"values\": [\n      {\n        \"firstName\":
-        \"Charles\",\n        \"id\": \"2zk34r8TvA\",\n        \"lastName\": \"Garcia,
-        CFA\"\n      },\n      {\n        \"firstName\": \"Charles R.\",\n        \"id\":
+        \"Charles\",\n        \"id\": \"2zk34r8TvA\",\n        \"lastName\": \"Garcia, CFA\"\n},\n{\n
+        \"firstName\": \"Charles R.\",\n        \"id\":
         \"NjwO1vU6P6\",\n        \"lastName\": \"Garcia Jr.\"\n      },\n      {\n
         \"firstName\": \"Charles\",\n        \"id\": \"j8ZczJo44W\",\n        \"lastName\":
         \"Garcia-Tobin\"\n      },\n      {\n        \"firstName\": \"Charles\",\n
-        \"id\": \"jYfrk5GM29\",\n        \"lastName\": \"Garcia\"\n      },\n
-        \     {\n        \"firstName\": \"Charles\",\n        \"id\": \"C-2ASm3SQ1\",\n
+        \"id\": \"jYfrk5GM29\",\n        \"lastName\": \"Garcia\"\n      },\n{\n
+        \"firstName\": \"Charles\",\n        \"id\": \"C-2ASm3SQ1\",\n
         \"lastName\": \"Garcia\"\n      },\n      {\n        \"firstName\":
-        \"Charles\",\n        \"id\": \"LG__MFCUTJ\",\n        \"lastName\": \"Garcia\"\n
-        \     },\n      {\n        \"firstName\": \"Charles\",\n        \"id\": \"wjopxKqYYM\",\n
+        \"Charles\",\n        \"id\": \"LG__MFCUTJ\",\n        \"lastName\": \"Garcia\"\n},\n      {\n
+        \"firstName\": \"Charles\",\n        \"id\": \"wjopxKqYYM\",\n
         \"lastName\": \"Garcia\"\n      },\n      {\n        \"firstName\":
-        \"Charles\",\n        \"id\": \"AtFQt5Lf1V\",\n        \"lastName\": \"Garcia\"\n
-        \     },\n      {\n        \"firstName\": \"Charles\",\n        \"id\": \"MUXIZwfehE\",\n
+        \"Charles\",\n        \"id\": \"AtFQt5Lf1V\",\n        \"lastName\": \"Garcia\"\n},\n      {\n
+        \"firstName\": \"Charles\",\n        \"id\": \"MUXIZwfehE\",\n
         \"lastName\": \"Garcia\"\n      },\n      {\n        \"firstName\":
-        \"Charles\",\n        \"id\": \"koTmAyWE8J\",\n        \"lastName\": \"Schwalbe
-        Garcia-Lago\"\n      }\n    ]\n  }\n}"
+        \"Charles\",\n        \"id\": \"koTmAyWE8J\",\n        \"lastName\":
+        \"Schwalbe Garcia-Lago\"\n      }\n    ]\n  }\n}"
     http_version: '1.1'
   recorded_at: Tue, 04 Jun 2013 03:42:37 GMT
 recorded_with: VCR 2.5.0
