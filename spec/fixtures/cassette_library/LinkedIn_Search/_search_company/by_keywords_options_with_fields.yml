@@ -46,7 +46,7 @@ http_interactions:
         the future of mobile media and computing devices with iPad.\",\n        \"id\":
         162479,\n        \"industries\": {\n          \"_total\": 1,\n          \"values\":
         [{\n            \"code\": \"24\",\n            \"name\": \"Consumer Electronics\"\n
-        \         }]\n        },\n        \"name\": \"Apple\",\n        \"specialties\":{\n
+        }]\n        },\n        \"name\": \"Apple\",\n        \"specialties\":{\n
         \"_total\": 4,\n          \"values\": [\n            \"Innovative
         product development\",\n            \"world class operations\",\n            \"Retail\",\n
         \"Telephone Support\"\n          ]\n        }\n      },\n      {\n
@@ -74,7 +74,7 @@ http_interactions:
         \"Leisure & Travel\"\n          }]\n        },\n        \"name\": \"Apple
         Vacations\",\n        \"specialties\": {\n          \"_total\": 2,\n          \"values\":
         [\n            \"Leisure travel\",\n            \"all inclusive vacation packages\"\n
-        \         ]\n        }\n      },\n      {\n        \"description\": \"Big
+        ]\n        }\n      },\n      {\n        \"description\": \"Big
         Apple International Realty has been listing, selling and managing Residential
         Real Estate in four counties of the Greater Orlando and Central Florida areas
         for over five years. Because our Property Management Division had grown substantially,
@@ -85,7 +85,7 @@ http_interactions:
         \"_total\": 1,\n          \"values\": [{\n            \"code\":
         \"44\",\n            \"name\": \"Real Estate\"\n          }]\n        },\n
         \"name\": \"Big Apple Holdings, Inc. dba Big Apple International Realty\"\n
-        \     },\n      {\n        \"description\": \"Apple & Associates is an executive
+        },\n      {\n        \"description\": \"Apple & Associates is an executive
         search firm that specializes in the Pharmaceutical, Medical Device and Consumer
         Product Industries.  We provide extensive coverage of these worldwide markets
         and have forged a solid reputation in the industry as a competent, aggressive,
@@ -107,7 +107,7 @@ http_interactions:
         the technical and industry background to match.\",\n        \"id\": 112136,\n
         \"industries\": {\n          \"_total\": 1,\n          \"values\":
         [{\n            \"code\": \"104\",\n            \"name\": \"Staffing & Recruiting\"\n
-        \         }]\n        },\n        \"name\": \"Apple & Associates\",\n        \"specialties\":{\n
+        }]\n        },\n        \"name\": \"Apple & Associates\",\n        \"specialties\":{\n
         \"_total\": 20,\n          \"values\": [\n            \"Medical
         Device\",\n            \"Pharmaceutical\",\n            \"Power\",\n            \"Energy\",\n
         \"Consumer Products\",\n            \"Supply Chain\",\n            \"Purchasing\",\n
@@ -156,7 +156,7 @@ http_interactions:
         \"_total\": 1,\n          \"values\": [{\n            \"code\":
         \"24\",\n            \"name\": \"Consumer Electronics\"\n          }]\n        },\n
         \"name\": \"iSquare - Apple Authorized Distributor in Greece & Cyprus\"\n
-        \     },\n      {\n        \"description\": \"Filex (Moj Apple DuÄ\x87an i
+        },\n      {\n        \"description\": \"Filex (Moj Apple DuÄ\x87an i
         Servis) je autorizirani Apple partner za prodaju, servis i podrÅ¡ku.\\r\\n\\r\\nFilex
         je osnovan 1992 godine te od tada u kontinuitetu razvijamo i unapreÄ\x91ujemo
         prepoznatljivost Apple tehnologija prezentirajuÄ\x87i upotrebnu vrijednost
@@ -186,7 +186,7 @@ http_interactions:
         voldoende kennis over de producten van Apple.\",\n        \"id\": 2419290,\n
         \"industries\": {\n          \"_total\": 1,\n          \"values\":
         [{\n            \"code\": \"81\",\n            \"name\": \"Newspapers\"\n
-        \         }]\n        },\n        \"name\": \"Apple Nieuws Vlaanderen\",\n
+        }]\n        },\n        \"name\": \"Apple Nieuws Vlaanderen\",\n
         \"specialties\": {\n          \"_total\": 4,\n          \"values\":
         [\n            \"apple\",\n            \"iPhone\",\n            \"iPad\",\n
         \"mac\"\n          ]\n        }\n      },\n      {\n        \"description\":
@@ -225,8 +225,8 @@ http_interactions:
         that we cannot provide a solution, wherever you may be!\",\n        \"id\":
         1049054,\n        \"industries\": {\n          \"_total\": 1,\n          \"values\":
         [{\n            \"code\": \"3\",\n            \"name\": \"Computer Hardware\"\n
-        \         }]\n        },\n        \"name\": \"Apple Crumble\"\n      }\n    ]\n
-        \ },\n  \"numResults\": 8450\n}"
+        }]\n        },\n        \"name\": \"Apple Crumble\"\n      }\n    ]\n
+        },\n  \"numResults\": 8450\n}"
     http_version: '1.1'
   recorded_at: Tue, 04 Jun 2013 03:42:37 GMT
 recorded_with: VCR 2.5.0

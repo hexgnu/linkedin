@@ -42,11 +42,11 @@ http_interactions:
         \"name\": \"Apple\"\n      },\n      {\n        \"id\": 19271,\n        \"name\":
         \"Apple Vacations\"\n      },\n      {\n        \"id\": 778626,\n        \"name\":
         \"Big Apple Holdings, Inc. dba Big Apple International Realty\"\n      },\n
-        \     {\n        \"id\": 112136,\n        \"name\": \"Apple & Associates\"\n
-        \     },\n      {\n        \"id\": 772044,\n        \"name\": \"Stone Apple
+        {\n        \"id\": 112136,\n        \"name\": \"Apple & Associates\"\n
+        },\n      {\n        \"id\": 772044,\n        \"name\": \"Stone Apple
         Solutions\"\n      },\n      {\n        \"id\": 2135525,\n        \"name\":
         \"iSquare - Apple Authorized Distributor in Greece & Cyprus\"\n      },\n
-        \     {\n        \"id\": 2303504,\n        \"name\": \"Filex Apple Store &
+        {\n        \"id\": 2303504,\n        \"name\": \"Filex Apple Store &
         Support\"\n      },\n      {\n        \"id\": 2419290,\n        \"name\":
         \"Apple Nieuws Vlaanderen\"\n      },\n      {\n        \"id\": 2260437,\n
         \"name\": \"OGGO - Services Apple Macintosh\"\n      },\n      {\n
@@ -55,11 +55,11 @@ http_interactions:
         \"_total\": 10,\n        \"values\": [\n          {\n            \"code\":
         \"96\",\n            \"count\": 2062,\n            \"name\": \"Information
         Technology and Services\",\n            \"selected\": false\n          },\n
-        \         {\n            \"code\": \"4\",\n            \"count\": 1031,\n
+        {\n            \"code\": \"4\",\n            \"count\": 1031,\n
         \"name\": \"Computer Software\",\n            \"selected\": false\n
-        \         },\n          {\n            \"code\": \"6\",\n            \"count\":
+        },\n          {\n            \"code\": \"6\",\n            \"count\":
         472,\n            \"name\": \"Internet\",\n            \"selected\": false\n
-        \         },\n          {\n            \"code\": \"3\",\n            \"count\":
+        },\n          {\n            \"code\": \"3\",\n            \"count\":
         415,\n            \"name\": \"Computer Hardware\",\n            \"selected\":
         false\n          },\n          {\n            \"code\": \"80\",\n            \"count\":
         348,\n            \"name\": \"Marketing and Advertising\",\n            \"selected\":
@@ -67,7 +67,7 @@ http_interactions:
         312,\n            \"name\": \"Consumer Electronics\",\n            \"selected\":
         false\n          },\n          {\n            \"code\": \"27\",\n            \"count\":
         206,\n            \"name\": \"Retail\",\n            \"selected\": false\n
-        \         },\n          {\n            \"code\": \"109\",\n            \"count\":
+        },\n          {\n            \"code\": \"109\",\n            \"count\":
         185,\n            \"name\": \"Computer Games\",\n            \"selected\":
         false\n          },\n          {\n            \"code\": \"8\",\n            \"count\":
         171,\n            \"name\": \"Telecommunications\",\n            \"selected\":
