@@ -85,7 +85,7 @@ module LinkedIn
       # @macro share_input_fields
       # @return [void]
       def add_share(share)
-        path = "/people/~/shares"
+        path = "people/~/shares"
         defaults = {:visibility => {:code => "anyone"}}
         post(path, MultiJson.dump(defaults.merge(share)), "Content-Type" => "application/json")
       end
@@ -99,7 +99,7 @@ module LinkedIn
       # @param [String] comment The text of the comment
       # @return [void]
       def update_comment(update_key, comment)
-        path = "/people/~/network/updates/key=#{update_key}/update-comments"
+        path = "people/~/network/updates/key=#{update_key}/update-comments"
         body = {'comment' => comment}
         post(path, MultiJson.dump(body), "Content-Type" => "application/json")
       end
@@ -112,7 +112,7 @@ module LinkedIn
       #   particular network update
       # @return [void]
       def like_share(update_key)
-        path = "/people/~/network/updates/key=#{update_key}/is-liked"
+        path = "people/~/network/updates/key=#{update_key}/is-liked"
         put(path, 'true', "Content-Type" => "application/json")
       end
 
@@ -125,7 +125,7 @@ module LinkedIn
       #   particular network update
       # @return [void]
       def unlike_share(update_key)
-        path = "/people/~/network/updates/key=#{update_key}/is-liked"
+        path = "people/~/network/updates/key=#{update_key}/is-liked"
         put(path, 'false', "Content-Type" => "application/json")
       end
     end

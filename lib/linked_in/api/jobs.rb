@@ -55,7 +55,7 @@ module LinkedIn
       # @param [String] job_id Job ID
       # @return [void]
       def add_job_bookmark(job_id)
-        path = "/people/~/job-bookmarks"
+        path = "people/~/job-bookmarks"
         body = {'job' => {'id' => job_id}}
         post(path, MultiJson.dump(body), "Content-Type" => "application/json")
       end

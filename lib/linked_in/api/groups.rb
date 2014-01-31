@@ -95,7 +95,7 @@ module LinkedIn
       # @macro share_input_fields
       # @return [void]
       def add_group_share(group_id, share)
-        path = "/groups/#{group_id}/posts"
+        path = "groups/#{group_id}/posts"
         post(path, MultiJson.dump(share), "Content-Type" => "application/json")
       end
 
@@ -106,7 +106,7 @@ module LinkedIn
       # @param [String] group_id Group ID
       # @return [void]
       def join_group(group_id)
-        path = "/people/~/group-memberships/#{group_id}"
+        path = "people/~/group-memberships/#{group_id}"
         body = {'membership-state' => {'code' => 'member' }}
         put(path, MultiJson.dump(body), "Content-Type" => "application/json")
       end
