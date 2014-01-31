@@ -34,15 +34,15 @@ module LinkedIn
         def raise_errors(response)
           # Even if the json answer contains the HTTP status code, LinkedIn also sets this code
           # in the HTTP answer (thankfully).
-          case response.code.to_i
+          case response.status.to_i
           when 401
-            data = Mash.from_json(response.body)
+            data = Mash.new(response.body)
             raise LinkedIn::Errors::UnauthorizedError.new(data), "(#{data.status}): #{data.message}"
           when 400
-            data = Mash.from_json(response.body)
+            data = Mash.new(response.body)
             raise LinkedIn::Errors::GeneralError.new(data), "(#{data.status}): #{data.message}"
           when 403
-            data = Mash.from_json(response.body)
+            data = Mash.new(response.body)
             raise LinkedIn::Errors::AccessDeniedError.new(data), "(#{data.status}): #{data.message}"
           when 404
             raise LinkedIn::Errors::NotFoundError, "(#{response.code}): #{response.message}"

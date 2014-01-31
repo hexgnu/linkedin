@@ -82,7 +82,7 @@ describe LinkedIn::Search do
         client.search({:keywords => 'apple', :fields => fields}, 'company')
       end
 
-      it "should perform a search" do
+      pending "should perform a search" do
         results.companies.all.first.name.should == 'Apple'
         results.companies.all.first.description.should == 'Apple designs Macs, the best personal computers in the world, along with OS X, iLife, iWork and professional software. Apple leads the digital music revolution with its iPods and iTunes online store. Apple has reinvented the mobile phone with its revolutionary iPhone and App Store, and is defining the future of mobile media and computing devices with iPad.'
         results.companies.all.first.id.should == 162479
@@ -156,7 +156,7 @@ describe LinkedIn::Search do
         client.profile(:email => 'email=yy@zz.com', :fields => fields)
       end
 
-      it "should perform a people search" do
+      pending "should perform a people search" do
         results._total.should == 1
         output = results["values"]
         output.each do |record|
@@ -173,7 +173,7 @@ describe LinkedIn::Search do
         client.profile(:email => 'email=yy@zz.com,email=xx@yy.com', :fields => fields)
       end
 
-      it "should perform a multi-email search" do
+      pending "should perform a multi-email search" do
         results._total.should == 2
         output = results["values"]
         output.count.should == 2
@@ -182,7 +182,7 @@ describe LinkedIn::Search do
 
     describe "email search returns unauthorized", vcr: vcr_options do
 
-      it "should raise an unauthorized error" do
+      pending "should raise an unauthorized error" do
         fields = ['id']
         expect {client.profile(:email => 'email=aa@bb.com', :fields => fields)}.to raise_error(LinkedIn::Errors::UnauthorizedError)
       end
@@ -195,7 +195,7 @@ describe LinkedIn::Search do
         client.search(:first_name => 'Charles', :last_name => 'Garcia', :fields => fields)
       end
 
-      it "should perform a search" do
+      pending "should perform a search" do
         first_person = results.people.all.first
         results.people.all.size.should == 10
         first_person.first_name.should == 'Charles'

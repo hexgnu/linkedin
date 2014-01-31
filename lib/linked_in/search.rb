@@ -18,7 +18,7 @@ module LinkedIn
     # @return [LinkedIn::Mash]
     def search(options={}, type='people')
 
-      path = "/#{type.to_s}-search"
+      path = "#{type.to_s}-search"
 
       if options.is_a?(Hash)
         fields = options.delete(:fields)
@@ -27,10 +27,9 @@ module LinkedIn
 
       options = { :keywords => options } if options.is_a?(String)
       options = format_options_for_query(options)
-
-      result_json = get(to_uri(path, options))
-
-      Mash.from_json(result_json)
+      puts options.inspect
+      puts path.inspect
+      Mash.new(get(path, options))
     end
 
     private
