@@ -1,4 +1,6 @@
 require 'cgi'
+require 'faraday'
+require 'faraday_middleware'
 
 module LinkedIn
 
@@ -21,26 +23,42 @@ module LinkedIn
       @consumer_secret  = csecret
       @consumer_options = options
     end
+    private
+
+    def authentication
+      {
+        :consumer_key => consumer_token,
+        :consumer_secret => consumer_secret,
+        :token => @auth_token,
+        :token_secret => @auth_secret
+      }
+    end
+
+    def authenticated?
+      authentication.values.all?
+    end
 
     def connection_options
-      faraday_options.merge({
+      LinkedIn.faraday_options.merge({
         :headers => {
-          'Accept' => "application/#{format}",
-          'User-Agent' => user_agent,
+          'Accept' => "application/#{LinkedIn.format}",
+          'User-Agent' => LinkedIn.user_agent,
           'x-li-format' => 'json'
         },
-        :proxy => proxy,
+        :proxy => LinkedIn.proxy,
         :ssl => {:verify => false},
-        :url => api_endpoint
+        :url => LinkedIn.endpoint
       })
     end
 
     def connection
+      raise "Please authenticate first" unless authenticated?
+
       @connection ||= Faraday.new(connection_options) do |builder|
         builder.use Faraday::Request::OAuth, authentication
         builder.use Faraday::Request::UrlEncoded
         builder.use Faraday::Response::ParseJson
-        builder.adapter(adapter)
+        builder.adapter(LinkedIn.adapter)
       end
     end
 
