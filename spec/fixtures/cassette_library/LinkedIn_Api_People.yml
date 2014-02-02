@@ -1,0 +1,498 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.linkedin.com/v1/people/~
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Li-Format:
+      - json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - OAuth gem v0.4.7
+      Authorization:
+      - OAuth oauth_consumer_key="<API_KEY>", oauth_nonce="fFAhuOIimE2N1qVopGG6shmnjlJ5Bm8zE5IfsC2xPgc",
+        oauth_signature="29ai1Oa5I3qTN%2Fq%2FjCXog1kFWNY%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1391374409", oauth_token="<OAUTH_USER_TOKEN>", oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Li-Request-Id:
+      - 556I1DQZNI
+      Vary:
+      - '*'
+      X-Li-Format:
+      - json
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Sun, 02 Feb 2014 20:53:29 GMT
+      X-Li-Fabric:
+      - prod-lva1
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - PROD-ELA4
+      X-Li-Uuid:
+      - 6IH/bqcnTxOQj0KQ8CoAAA==
+      Set-Cookie:
+      - lidc="b=VB89:g=61:u=3:i=1391372036:t=1391458436:s=3522985814"; Expires=Mon,
+        03 Feb 2014 20:13:56 GMT; domain=.linkedin.com; Path=/
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "firstName": "Test",
+          "headline": "The Boss at Test, Inc",
+          "lastName": "Account",
+          "siteStandardProfileRequest": {"url": "http://www.linkedin.com/profile/view?id=211758589&authType=name&authToken=Jeo0&trk=api*a3158963*s3233293*"}
+        }
+    http_version: 
+  recorded_at: Sun, 02 Feb 2014 20:53:30 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v1/people/~
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Li-Format:
+      - json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - OAuth gem v0.4.7
+      Authorization:
+      - OAuth oauth_consumer_key="<API_KEY>", oauth_nonce="athjZhSLoMBb3efirVgw4YkEOHqO0rihiqPI20VNWo",
+        oauth_signature="D7B9PQ6TofGtx%2B4IS93Mxfw5DM4%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1391374570", oauth_token="<OAUTH_USER_TOKEN>", oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Li-Request-Id:
+      - 9W799PSO9I
+      Vary:
+      - '*'
+      X-Li-Format:
+      - json
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Sun, 02 Feb 2014 20:56:10 GMT
+      X-Li-Fabric:
+      - prod-lva1
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - PROD-ELA4
+      X-Li-Uuid:
+      - ONYR1MwnTxPQHouQ8CoAAA==
+      Set-Cookie:
+      - lidc="b=VB89:g=61:u=3:i=1391372036:t=1391458436:s=3522985814"; Expires=Mon,
+        03 Feb 2014 20:13:56 GMT; domain=.linkedin.com; Path=/
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "firstName": "Test",
+          "headline": "The Boss at Test, Inc",
+          "lastName": "Account",
+          "siteStandardProfileRequest": {"url": "http://www.linkedin.com/profile/view?id=211758589&authType=name&authToken=Jeo0&trk=api*a3158963*s3233293*"}
+        }
+    http_version: 
+  recorded_at: Sun, 02 Feb 2014 20:56:10 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v1/people/~/connections
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Li-Format:
+      - json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - OAuth gem v0.4.7
+      Authorization:
+      - OAuth oauth_consumer_key="<API_KEY>", oauth_nonce="PGLy352IS1enFUe0LPTvMZeJGNXnLqNLuS1p428277s",
+        oauth_signature="6HsomTWrjS9cnYX2t1VAa3hLSUI%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1391374623", oauth_token="<OAUTH_USER_TOKEN>", oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Li-Request-Id:
+      - OLPSBP1ZCP
+      Vary:
+      - '*'
+      X-Li-Format:
+      - json
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Sun, 02 Feb 2014 20:57:03 GMT
+      X-Li-Fabric:
+      - prod-lva1
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - PROD-ELA4
+      X-Li-Uuid:
+      - sFiwKdknTxMwdo+0aCsAAA==
+      Set-Cookie:
+      - lidc="b=VB89:g=61:u=3:i=1391372036:t=1391458436:s=3522985814"; Expires=Mon,
+        03 Feb 2014 20:13:56 GMT; domain=.linkedin.com; Path=/
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "_total": 1,
+          "values": [{
+            "apiStandardProfileRequest": {
+              "headers": {
+                "_total": 1,
+                "values": [{
+                  "name": "x-li-auth-token",
+                  "value": "name:QChZ"
+                }]
+              },
+              "url": "http://api.linkedin.com/v1/people/BRZCVE0TI5"
+            },
+            "firstName": "Test",
+            "headline": "Sales Manager at Vertacorp",
+            "id": "BRZCVE0TI5",
+            "industry": "Airlines/Aviation",
+            "lastName": "Accounts2",
+            "location": {
+              "country": {"code": "us"},
+              "name": "Greater Boston Area"
+            },
+            "siteStandardProfileRequest": {"url": "http://www.linkedin.com/profile/view?id=314532019&authType=name&authToken=QChZ&trk=api*a3158963*s3233293*"}
+          }]
+        }
+    http_version: 
+  recorded_at: Sun, 02 Feb 2014 20:57:03 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v1/people/id=22330283
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Li-Format:
+      - json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - OAuth gem v0.4.7
+      Authorization:
+      - OAuth oauth_consumer_key="<API_KEY>", oauth_nonce="lSoozH3SXNYIa83F4NVB7b8V5g9Kh3EGx5QvPrXMrM",
+        oauth_signature="9Wl4GohRHYFren8geKl7QoYKUUw%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1391375150", oauth_token="<OAUTH_USER_TOKEN>", oauth_version="1.0"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Li-Request-Id:
+      - K2HKCHA216
+      Date:
+      - Sun, 02 Feb 2014 21:05:51 GMT
+      Vary:
+      - '*'
+      X-Li-Format:
+      - json
+      Content-Type:
+      - application/json;charset=UTF-8
+      X-Li-Fabric:
+      - prod-lva1
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - PROD-ELA4
+      X-Li-Uuid:
+      - 4MGiDlQoTxMwGP3QHisAAA==
+      Set-Cookie:
+      - lidc="b=VB89:g=61:u=3:i=1391372036:t=1391458436:s=3522985814"; Expires=Mon,
+        03 Feb 2014 20:13:56 GMT; domain=.linkedin.com; Path=/
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "errorCode": 0,
+          "message": "Invalid member id {22330283}",
+          "requestId": "K2HKCHA216",
+          "status": 404,
+          "timestamp": 1391375151446
+        }
+    http_version: 
+  recorded_at: Sun, 02 Feb 2014 21:05:51 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v1/people/url=http:%2F%2Fwww.linkedin.com%2Fin%2Fjeffweiner08
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Li-Format:
+      - json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - OAuth gem v0.4.7
+      Authorization:
+      - OAuth oauth_consumer_key="<API_KEY>", oauth_nonce="DrnXARIe5CgbF992yYXWZtpibVBUfXqwW3MieOA4",
+        oauth_signature="LXVG72jdmRRy1odM4qMQWz0dGng%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1391375306", oauth_token="<OAUTH_USER_TOKEN>", oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Li-Request-Id:
+      - T14H74TM0Y
+      Vary:
+      - '*'
+      X-Li-Format:
+      - json
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Sun, 02 Feb 2014 21:08:26 GMT
+      X-Li-Fabric:
+      - prod-lva1
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - PROD-ELA4
+      X-Li-Uuid:
+      - WFLCSXgoTxPwXfaY8CoAAA==
+      Set-Cookie:
+      - lidc="b=VB89:g=61:u=3:i=1391372036:t=1391458436:s=3522985814"; Expires=Mon,
+        03 Feb 2014 20:13:56 GMT; domain=.linkedin.com; Path=/
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "firstName": "Jeff",
+          "headline": "CEO at LinkedIn",
+          "lastName": "Weiner",
+          "siteStandardProfileRequest": {"url": "http://www.linkedin.com/profile/view?id=22330283&authType=name&authToken=XTo9&trk=api*a3158963*s3233293*"}
+        }
+    http_version: 
+  recorded_at: Sun, 02 Feb 2014 21:08:27 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v1/people/id=211758589
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Li-Format:
+      - json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - OAuth gem v0.4.7
+      Authorization:
+      - OAuth oauth_consumer_key="<API_KEY>", oauth_nonce="vdWMQ7wUEBM91KbybOEir0N4ZwZjxgZJn64eze1onj8",
+        oauth_signature="Scm2crgzxSepTtP6b%2FgcA3iHFGg%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1391375414", oauth_token="<OAUTH_USER_TOKEN>", oauth_version="1.0"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Li-Request-Id:
+      - MMAG23JATY
+      Date:
+      - Sun, 02 Feb 2014 21:10:13 GMT
+      Vary:
+      - '*'
+      X-Li-Format:
+      - json
+      Content-Type:
+      - application/json;charset=UTF-8
+      X-Li-Fabric:
+      - prod-lva1
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - PROD-ELA4
+      X-Li-Uuid:
+      - wDfqYJEoTxPw/KAQJCsAAA==
+      Set-Cookie:
+      - lidc="b=VB89:g=61:u=3:i=1391372036:t=1391458436:s=3522985814"; Expires=Mon,
+        03 Feb 2014 20:13:56 GMT; domain=.linkedin.com; Path=/
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "errorCode": 0,
+          "message": "Invalid member id {211758589}",
+          "requestId": "MMAG23JATY",
+          "status": 404,
+          "timestamp": 1391375414797
+        }
+    http_version: 
+  recorded_at: Sun, 02 Feb 2014 21:10:14 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v1/people/id=BRZCVE0TI5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Li-Format:
+      - json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - OAuth gem v0.4.7
+      Authorization:
+      - OAuth oauth_consumer_key="<API_KEY>", oauth_nonce="2WNiRzrskA2q655KmmS1Zqfjq2yJCpwLLncRfkrSMw",
+        oauth_signature="WeNwStpEj5IyD%2BkzFTrAac%2B3tuo%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1391375498", oauth_token="<OAUTH_USER_TOKEN>", oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Li-Request-Id:
+      - RWJ89SDTBE
+      Vary:
+      - '*'
+      X-Li-Format:
+      - json
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Sun, 02 Feb 2014 21:11:38 GMT
+      X-Li-Fabric:
+      - prod-lva1
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - PROD-ELA4
+      X-Li-Uuid:
+      - 6A1k/aQoTxPQhcEQJCsAAA==
+      Set-Cookie:
+      - lidc="b=VB89:g=61:u=3:i=1391372036:t=1391458436:s=3522985814"; Expires=Mon,
+        03 Feb 2014 20:13:56 GMT; domain=.linkedin.com; Path=/
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "firstName": "Test",
+          "headline": "Sales Manager at Vertacorp",
+          "lastName": "Accounts2",
+          "siteStandardProfileRequest": {"url": "http://www.linkedin.com/profile/view?id=314532019&authType=name&authToken=QChZ&trk=api*a3158963*s3233293*"}
+        }
+    http_version: 
+  recorded_at: Sun, 02 Feb 2014 21:11:39 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v1/people/~/connections?modified=new&modified-since=1391317200000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Li-Format:
+      - json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - OAuth gem v0.4.7
+      Authorization:
+      - OAuth oauth_consumer_key="<API_KEY>", oauth_nonce="l3pF7akVYqxhvkNwhZ0fW4UPhoVrE9JNyzrgRGR0",
+        oauth_signature="w9P2NH5DQLdjBy8hwcCECmZnHKk%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1391375638", oauth_token="<OAUTH_USER_TOKEN>", oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Li-Request-Id:
+      - BRL7P7RO42
+      Vary:
+      - '*'
+      X-Li-Format:
+      - json
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Sun, 02 Feb 2014 21:13:58 GMT
+      X-Li-Fabric:
+      - prod-lva1
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - PROD-ELA4
+      X-Li-Uuid:
+      - qDeekMUoTxMQiqyA6SoAAA==
+      Set-Cookie:
+      - lidc="b=VB89:g=61:u=3:i=1391372036:t=1391458436:s=3522985814"; Expires=Mon,
+        03 Feb 2014 20:13:56 GMT; domain=.linkedin.com; Path=/
+    body:
+      encoding: UTF-8
+      string: '{"_total": 0}'
+    http_version: 
+  recorded_at: Sun, 02 Feb 2014 21:13:59 GMT
+recorded_with: VCR 2.8.0
