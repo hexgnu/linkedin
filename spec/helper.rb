@@ -40,3 +40,9 @@ def expect_post(url, body, result = nil)
     :headers => { :content_type => 'application/xml' }
   }).should have_been_made.once
 end
+
+RSpec::Matchers.define :have_attribute do |expected|
+  match do |actual|
+    actual.respond_to?(expected) && !actual.send(expected).nil?
+  end
+end
