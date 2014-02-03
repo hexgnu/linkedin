@@ -21,10 +21,10 @@ module LinkedIn
         end
 
         headers = options.delete(:headers) || {}
-        params  = to_query(options)
-        path   += "#{path.include?("?") ? "&" : "?"}#{params}" if !params.empty?
+        # params  = to_query(options)
+        # path   += "#{path.include?("?") ? "&" : "?"}#{params}" if !params.empty?
 
-        Mash.new(get(path, headers))
+        Mash.new(get(path, options, headers))
       end
 
       def build_fields_params(fields)
