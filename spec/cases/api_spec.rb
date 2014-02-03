@@ -61,7 +61,7 @@ describe LinkedIn::Api do
     client.search(:first_name => "Javan").should be_an_instance_of(LinkedIn::Mash)
   end
 
-  pending "should be able to search with an option and fetch specific fields" do
+  it "should be able to search with an option and fetch specific fields" do
     stub_request(:get, "https://api.linkedin.com/v1/people-search:(num-results,total)?first-name=Javan").to_return(
         :body => "{}")
     client.search(:first_name => "Javan", :fields => ["num_results", "total"]).should be_an_instance_of(LinkedIn::Mash)

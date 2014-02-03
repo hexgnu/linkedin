@@ -6,25 +6,25 @@ module LinkedIn
       protected
 
         def get(path, options={})
-          response = connection.get(path, options)
+          response = connection.get('v1/' + path, options)
           raise_errors(response)
           response.body
         end
 
         def post(path, body='', options={})
-          response = connection.post(path, body, options)
+          response = connection.post('v1/' + path, body, options)
           raise_errors(response)
           response
         end
 
         def put(path, body, options={})
-          response = connection.put(path, body, options)
+          response = connection.put('v1/' + path, body, options)
           raise_errors(response)
           response
         end
 
         def delete(path, options={})
-          response = connection.delete(path, options)
+          response = connection.delete('v1/' + path, options)
           raise_errors(response)
           response
         end
@@ -52,7 +52,6 @@ module LinkedIn
             raise LinkedIn::Errors::UnavailableError, "(#{response.code}): #{response.message}"
           end
         end
-
 
         # Stolen from Rack::Util.build_query
         def to_query(params)
