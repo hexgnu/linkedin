@@ -1,12 +1,6 @@
 module LinkedIn
   module Errors
-    class LinkedInError < StandardError
-      attr_reader :data
-      def initialize(data)
-        @data = data
-        super
-      end
-    end
+    class LinkedInError < StandardError; end
 
     # Raised when a 401 response status code is received
     class UnauthorizedError      < LinkedInError; end
