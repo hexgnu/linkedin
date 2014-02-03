@@ -1,4 +1,6 @@
 require 'linked_in/version'
+require 'faraday'
+require 'faraday_middleware'
 
 module LinkedIn
   # Defines constants and methods related to configuration
@@ -16,7 +18,8 @@ module LinkedIn
       :oauth_token_secret,
       :proxy,
       :user_agent,
-      :faraday_options].freeze
+      :faraday_options,
+      :middleware].freeze
 
     # The adapter that will be used to connect if none is set
     DEFAULT_ADAPTER = :net_http
@@ -55,6 +58,11 @@ module LinkedIn
 
     DEFAULT_FARADAY_OPTIONS = {}.freeze
 
+    DEFAULT_MIDDLEWARE = [
+      ::Faraday::Request::UrlEncoded,
+      ::Faraday::Response::ParseJson
+    ]
+
     # @private
     attr_accessor *VALID_OPTIONS_KEYS
 
@@ -89,6 +97,7 @@ module LinkedIn
       self.user_agent             = DEFAULT_USER_AGENT
       self.gateway                = DEFAULT_GATEWAY
       self.faraday_options        = DEFAULT_FARADAY_OPTIONS
+      self.middleware             = DEFAULT_MIDDLEWARE
       self
     end
   end
