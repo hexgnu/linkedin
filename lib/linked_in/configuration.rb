@@ -60,8 +60,6 @@ module LinkedIn
     DEFAULT_FARADAY_OPTIONS = {}.freeze
 
     DEFAULT_MIDDLEWARE = [
-      ::Faraday::Request::UrlEncoded,
-      ::Faraday::Response::ParseJson,
       ::LinkedIn::ErrorReporter
     ]
 

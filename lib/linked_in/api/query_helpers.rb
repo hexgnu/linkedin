@@ -24,7 +24,7 @@ module LinkedIn
         # params  = to_query(options)
         # path   += "#{path.include?("?") ? "&" : "?"}#{params}" if !params.empty?
 
-        Mash.new(get(path, options, headers))
+        get(path, options, headers)
       end
 
       def build_fields_params(fields)
