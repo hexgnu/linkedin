@@ -27,8 +27,6 @@ module LinkedIn
 
       options = { :keywords => options } if options.is_a?(String)
       options = format_options_for_query(options)
-      puts options.inspect
-      puts path.inspect
       Mash.new(get(path, options))
     end
 
