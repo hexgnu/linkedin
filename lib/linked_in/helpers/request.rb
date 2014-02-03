@@ -5,8 +5,8 @@ module LinkedIn
 
       protected
 
-        def get(path, options={})
-          response = connection.get('v1/' + path, options)
+        def get(path, query_params, headers = {})
+          response = connection.get('v1/' + path, query_params, headers)
           raise_errors(response)
           response.body
         end
@@ -51,26 +51,6 @@ module LinkedIn
           when 502..503
             raise LinkedIn::Errors::UnavailableError, "(#{response.code}): #{response.message}"
           end
-        end
-
-        # Stolen from Rack::Util.build_query
-        def to_query(params)
-          params.map { |k, v|
-            if v.class == Array
-              to_query(v.map { |x| [k, x] })
-            else
-              v.nil? ? escape(k) : "#{CGI.escape(k.to_s)}=#{CGI.escape(v.to_s)}"
-            end
-          }.join("&")
-        end
-
-        def to_uri(path, options)
-          uri = URI.parse(path)
-
-          if options && options != {}
-            uri.query = to_query(options)
-          end
-          uri.to_s
         end
     end
 
