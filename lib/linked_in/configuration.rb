@@ -1,6 +1,7 @@
 require 'linked_in/version'
 require 'faraday'
 require 'faraday_middleware'
+require 'linked_in/middleware/error_reporter'
 
 module LinkedIn
   # Defines constants and methods related to configuration
@@ -60,7 +61,8 @@ module LinkedIn
 
     DEFAULT_MIDDLEWARE = [
       ::Faraday::Request::UrlEncoded,
-      ::Faraday::Response::ParseJson
+      ::Faraday::Response::ParseJson,
+      ::LinkedIn::ErrorReporter
     ]
 
     # @private
