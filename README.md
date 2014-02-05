@@ -14,11 +14,11 @@ Travis CI : [![Build Status](https://secure.travis-ci.org/hexgnu/linkedin.png)](
 
 ## Usage
 
-[View the Examples](file.EXAMPLES.html)
+[View the Examples](EXAMPLES.md)
 
 ## Changelog
 
-[View the Changelog](file.CHANGELOG.html)
+[View the Changelog](CHANGELOG.md)
 
 ## TODO
 
