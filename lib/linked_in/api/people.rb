@@ -53,8 +53,15 @@ module LinkedIn
         simple_query(path, options)
       end
 
-      # TODO can't find this method in the REST API documentation and it
-      # doesn't seem to work when I tried it out from the command line
+      # Retrieve the picture url
+      # http://api.linkedin.com/v1/people/~/picture-urls::(original)
+      #
+      # Permissions: r_network
+      #
+      # @options [String] :id, the id of the person for whom you want the profile picture
+      # @options [String] :picture_size, default: 'original'
+      #
+      # example for use in code: client.picture_urls(:id => 'id_of_connection')
       def picture_urls(options={})
         picture_size = options.delete(:picture_size) || 'original'
         path = "#{picture_urls_path(options)}::(#{picture_size})"
