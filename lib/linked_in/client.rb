@@ -1,4 +1,6 @@
 require 'cgi'
+require 'faraday'
+require 'faraday_middleware'
 
 module LinkedIn
 
@@ -21,30 +23,50 @@ module LinkedIn
       @consumer_secret  = csecret
       @consumer_options = options
     end
+    private
 
-    #
-    # def current_status
-    #   path = "/people/~/current-status"
-    #   Crack::XML.parse(get(path))['current_status']
-    # end
-    #
-    # def network_statuses(options={})
-    #   options[:type] = 'STAT'
-    #   network_updates(options)
-    # end
-    #
-    # def network_updates(options={})
-    #   path = "/people/~/network"
-    #   Network.from_xml(get(to_uri(path, options)))
-    # end
-    #
-    # # helpful in making authenticated calls and writing the
-    # # raw xml to a fixture file
-    # def write_fixture(path, filename)
-    #   file = File.new("test/fixtures/#{filename}", "w")
-    #   file.puts(access_token.get(path).body)
-    #   file.close
-    # end
+    def authentication
+      {
+        :consumer_key => consumer_token,
+        :consumer_secret => consumer_secret,
+        :token => @auth_token,
+        :token_secret => @auth_secret
+      }
+    end
+
+    def authenticated?
+      authentication.values.all?
+    end
+
+    def connection_options
+      LinkedIn.faraday_options.merge({
+        :headers => {
+          'Accept' => "application/#{LinkedIn.format}",
+          'User-Agent' => LinkedIn.user_agent,
+          'x-li-format' => 'json'
+        },
+        :proxy => LinkedIn.proxy,
+        :ssl => {:verify => false},
+        :url => LinkedIn.endpoint
+      })
+    end
+
+    def connection
+      raise "Please authenticate first" unless authenticated?
+
+      @connection ||= Faraday.new(connection_options) do |builder|
+        builder.use ::Faraday::Request::OAuth, authentication
+        builder.use ::Faraday::Request::UrlEncoded
+        builder.use ::FaradayMiddleware::Mashify, :mash_class => LinkedIn::Mash
+        builder.use ::Faraday::Response::ParseJson
+
+        LinkedIn.middleware.each do |middle|
+          builder.use middle
+        end
+
+        builder.adapter(LinkedIn.adapter)
+      end
+    end
 
   end
 

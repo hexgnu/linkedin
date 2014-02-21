@@ -1,7 +1,8 @@
 require 'oauth'
+require 'linked_in/configuration'
 
 module LinkedIn
-
+  extend Configuration
   class << self
     attr_accessor :token, :secret, :default_profile_fields
 

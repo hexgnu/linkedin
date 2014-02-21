@@ -5,7 +5,7 @@ module LinkedIn
       private
 
       def group_path(options)
-        path = "/groups"
+        path = "groups"
         if id = options.delete(:id)
           path += "/#{id}"
         end
@@ -21,10 +21,10 @@ module LinkedIn
         end
 
         headers = options.delete(:headers) || {}
-        params  = to_query(options)
-        path   += "#{path.include?("?") ? "&" : "?"}#{params}" if !params.empty?
+        # params  = to_query(options)
+        # path   += "#{path.include?("?") ? "&" : "?"}#{params}" if !params.empty?
 
-        Mash.from_json(get(path, headers))
+        get(path, options, headers)
       end
 
       def build_fields_params(fields)
@@ -38,7 +38,7 @@ module LinkedIn
       end
 
       def person_path(options)
-        path = "/people"
+        path = "people"
         if id = options.delete(:id)
           path += "/id=#{id}"
         elsif url = options.delete(:url)
@@ -51,7 +51,7 @@ module LinkedIn
       end
 
       def company_path(options)
-        path = "/companies"
+        path = "companies"
 
         if domain = options.delete(:domain)
           path += "?email-domain=#{CGI.escape(domain)}"
@@ -74,7 +74,7 @@ module LinkedIn
       end
 
       def jobs_path(options)
-        path = "/jobs"
+        path = "jobs"
         if id = options.delete(:id)
           path += "/id=#{id}"
         else
