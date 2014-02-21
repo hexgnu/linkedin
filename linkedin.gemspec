@@ -3,7 +3,7 @@ require File.expand_path('../lib/linked_in/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.add_dependency 'hashie', '~> 3.0'
-  gem.add_dependency 'multi_json', '~> 1.0'
+  gem.add_dependency 'multi_json', '~> 1.8'
   gem.add_dependency 'oauth', '~> 0.4'
   gem.add_dependency 'faraday', '~> 0.8'
   gem.add_dependency 'faraday_middleware'
