@@ -7,8 +7,8 @@ describe LinkedIn::Client do
     client.authorize_from_access('atoken', 'asecret')
   end
 
-  let(:client){LinkedIn::Client.new('token', 'secret')}
-  let(:consumer){OAuth::Consumer.new('token', 'secret', {:site => 'https://api.linkedin.com'})}
+  let(:client) { LinkedIn::Client.new('token', 'secret') }
+  let(:consumer) { OAuth::Consumer.new('token', 'secret', :site => 'https://api.linkedin.com') }
 
   it 'raises an unauthorized error when 401' do
     stub_request(:get, "https://api.linkedin.com/v1/people/~").to_return(:body => "{}", :status => 401)
