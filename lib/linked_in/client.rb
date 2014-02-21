@@ -57,7 +57,6 @@ module LinkedIn
       @connection ||= Faraday.new(connection_options) do |builder|
         builder.use ::Faraday::Request::OAuth, authentication
         builder.use ::Faraday::Request::UrlEncoded
-
         builder.use ::FaradayMiddleware::Mashify, :mash_class => LinkedIn::Mash
         builder.use ::Faraday::Response::ParseJson
 
