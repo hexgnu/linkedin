@@ -122,8 +122,7 @@ describe LinkedIn::Api do
     request_token.should == "request_token"
   end
 
-  context "Company API" do
-    use_vcr_cassette
+  context "Company API", :vcr do
 
     it "should be able to view a company profile" do
       stub_request(:get, "https://api.linkedin.com/v1/companies/id=1586").to_return(:body => "{}")
@@ -200,8 +199,7 @@ describe LinkedIn::Api do
 
   end
 
-  context "Job API" do
-    use_vcr_cassette
+  context "Job API", :vcr do
 
     it "should be able to view a job listing" do
       stub_request(:get, "https://api.linkedin.com/v1/jobs/id=1586").to_return(:body => "{}")

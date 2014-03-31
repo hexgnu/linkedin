@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.linkedin.com/v1/companies/id=1586
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Li-Format:
+      - json
+      User-Agent:
+      - OAuth gem v0.4.5
+      Authorization:
+      - OAuth oauth_consumer_key="consumer_key", oauth_nonce="nonce", oauth_signature="signature",
+        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1319129843", oauth_token="token",
+        oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Vary:
+      - ! '*'
+      X-Li-Format:
+      - json
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Thu, 20 Oct 2011 16:57:24 GMT
+    body:
+      encoding: UTF-8
+      string: ! "{\n  \"id\": 1586,\n  \"name\": \"Amazon\"\n}"
+    http_version: '1.1'
+  recorded_at: Wed, 10 Apr 2013 22:06:51 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v1/companies/id=1586:(id,name,industry,locations:(address:(city,state,country-code),is-headquarters),employee-count-range)
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Li-Format:
+      - json
+      User-Agent:
+      - OAuth gem v0.4.5
+      Authorization:
+      - OAuth oauth_consumer_key="consumer_key", oauth_nonce="nonc", oauth_signature="signature",
+        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1319129844", oauth_token="token",
+        oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Vary:
+      - ! '*'
+      X-Li-Format:
+      - json
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Thu, 20 Oct 2011 16:57:24 GMT
+    body:
+      encoding: UTF-8
+      string: ! "{\n  \"employeeCountRange\": {\n    \"code\": \"I\",\n    \"name\":
+        \"10001+\"\n },\n  \"id\": 1586,\n  \"industry\": \"Internet\",\n  \"locations\":{\n
+        \"_total\": 1,\n    \"values\": [{\n      \"address\": {\n        \"city\":
+        \"Seattle\",\n \"countryCode\": \"us\",\n        \"state\": \"WA\"\n      },\n
+        \"isHeadquarters\": true\n    }]\n  },\n  \"name\": \"Amazon\"\n}"
+    http_version: '1.1'
+  recorded_at: Wed, 10 Apr 2013 22:06:51 GMT
+recorded_with: VCR 2.5.0
