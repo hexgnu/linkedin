@@ -100,8 +100,8 @@ describe "LinkedIn::Client" do
   end
 
   describe "#request_token" do
-    describe "with default options" do
-      use_vcr_cassette :record => :new_episodes
+    vcr_options = { :record => :new_episodes}
+    describe "with default options", vcr: vcr_options do
 
       it "should return a valid request token" do
         request_token = client.request_token
@@ -113,8 +113,7 @@ describe "LinkedIn::Client" do
       end
     end
 
-    describe "with a callback url" do
-      use_vcr_cassette :record => :new_episodes
+    describe "with a callback url", vcr: vcr_options do
 
       it "should return a valid access token" do
         request_token = client.request_token(:oauth_callback => 'http://www.josh.com')
@@ -141,9 +140,9 @@ describe "LinkedIn::Client" do
       client.authorize_from_request('dummy-token', 'dummy-secret', 'dummy-pin')
     end
 
-    use_vcr_cassette :record => :new_episodes, :match_requests_on => [:uri, :method]
+    vcr_options = { :record => :new_episodes, :match_requests_on => [ :uri, :method] }
 
-    it "should return a valid access token" do
+    it "should return a valid access token", vcr: vcr_options do
       access_token.should be_a_kind_of Array
       access_token[0].should be_a_kind_of String
       access_token[1].should be_a_kind_of String
