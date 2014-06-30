@@ -60,6 +60,7 @@ module LinkedIn
       #
       # @options [String] :id, the id of the person for whom you want the profile picture
       # @options [String] :picture_size, default: 'original'
+      # @options [String] :secure, default: 'false', options: ['false','true']
       #
       # example for use in code: client.picture_urls(:id => 'id_of_connection')
       def picture_urls(options={})

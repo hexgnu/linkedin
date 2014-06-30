@@ -98,6 +98,8 @@ client.connections
 ```
 # get the original picture-url for one of the connections
 client.picture_urls(:id => 'id_of_connection')
+# get the image over https instead of http
+client.picture_urls(:id => 'id_of_connection', :secure => "true")
 
 ## Update User's Status
 
