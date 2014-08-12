@@ -71,7 +71,7 @@ Here's an example of sending a message to two recipients
 
 # client is a LinkedIn::Client
 
-# send a message to a person in your network. you will need to authenticate the 
+# send a message to a person in your network. you will need to authenticate the
 # user and ask for the "w_messages" permission.
 response = client.send_message("subject", "body", ["person_1_id", "person_2_id"])
 ```
@@ -95,12 +95,13 @@ client.network_updates(:type => 'PICT')
 
 # view connections for the currently authenticated user
 client.connections
-```
+
 # get the original picture-url for one of the connections
 client.picture_urls(:id => 'id_of_connection')
+
 # get the image over https instead of http
 client.picture_urls(:id => 'id_of_connection', :secure => "true")
-
+```
 ## Update User's Status
 
 Here's an example of updating the current user's status
@@ -132,22 +133,22 @@ helpers do
   def login?
     !session[:atoken].nil?
   end
-  
+
   def profile
     linkedin_client.profile unless session[:atoken].nil?
   end
-  
+
   def connections
     linkedin_client.connections unless session[:atoken].nil?
   end
-  
+
   private
   def linkedin_client
     client = LinkedIn::Client.new(settings.api, settings.secret)
     client.authorize_from_access(session[:atoken], session[:asecret])
     client
-  end 
-  
+  end
+
 end
 
 configure do
@@ -180,7 +181,7 @@ get "/auth/callback" do
     pin = params[:oauth_verifier]
     atoken, asecret = client.authorize_from_request(session[:rtoken], session[:rsecret], pin)
     session[:atoken] = atoken
-    session[:asecret] = asecret    
+    session[:asecret] = asecret
   end
   redirect "/"
 end
