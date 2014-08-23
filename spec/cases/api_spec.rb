@@ -294,6 +294,14 @@ describe LinkedIn::Api do
     end
   end
 
+  context "Post API" do
+    it "should be able to list comments from a post" do
+      stub_request(:get, "https://api.linkedin.com/v1/posts/123/comments").to_return(:body => '{"id": "123"}')
+      response = client.comments('123')
+      response.id.should == '123'
+    end
+  end
+
   context "Errors" do
     it "should raise AccessDeniedError when LinkedIn returns 403 status code" do
       stub_request(:get, "https://api.linkedin.com/v1/people-search?first-name=Javan").to_return(:body => "{}", :status => 403)
