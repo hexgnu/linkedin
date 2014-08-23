@@ -300,6 +300,12 @@ describe LinkedIn::Api do
       response = client.comments('123')
       response.id.should == '123'
     end
+
+    it "should be able to list likes from a post" do
+      stub_request(:get, "https://api.linkedin.com/v1/posts/123/likes").to_return(:body => '{"id": "123"}')
+      response = client.likes("123")
+      response.id.should == '123'
+    end
   end
 
   context "Errors" do

@@ -16,6 +16,16 @@ module LinkedIn
         simple_query("/posts/#{post_id}/comments")
       end
 
+      # Get all posts likes
+      #
+      # Permissions: rw_groups
+      #
+      # @param [String] post_id ID of the post you want to interact with
+      # @return [LinkedIn::Mash]
+      def likes(post_id)
+        simple_query("/posts/#{post_id}/likes")
+      end
+
     end
 
   end
