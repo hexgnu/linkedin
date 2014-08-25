@@ -12,8 +12,8 @@ module LinkedIn
       #
       # @param [String] post_id ID of the post you want to interact with
       # @return [LinkedIn::Mash]
-      def comments(post_id)
-        simple_query("/posts/#{post_id}/comments")
+      def comments(post_id, options = {})
+        simple_query("/posts/#{post_id}/comments", options)
       end
 
       # Get all posts likes
@@ -22,8 +22,8 @@ module LinkedIn
       #
       # @param [String] post_id ID of the post you want to interact with
       # @return [LinkedIn::Mash]
-      def likes(post_id)
-        simple_query("/posts/#{post_id}/likes")
+      def likes(post_id, options = {})
+        simple_query("/posts/#{post_id}/likes", options)
       end
 
     end
