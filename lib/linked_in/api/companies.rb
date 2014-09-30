@@ -95,10 +95,10 @@ module LinkedIn
       # @param [String] company_id Company ID
       # @macro share_input_fields
       # @return [void]
-      def add_company_share(company_id, share)
+      def add_company_share(company_id, share, headers = {})
         path = "/companies/#{company_id}/shares"
         defaults = {:visibility => {:code => "anyone"}}
-        post(path, MultiJson.dump(defaults.merge(share)), "Content-Type" => "application/json")
+        post(path, MultiJson.dump(defaults.merge(share)), headers.merge("Content-Type" => "application/json"))
       end
 
       # (Create) authenticated user starts following a company
@@ -107,10 +107,10 @@ module LinkedIn
       #
       # @param [String] company_id Company ID
       # @return [void]
-      def follow_company(company_id)
+      def follow_company(company_id, headers = {})
         path = "/people/~/following/companies"
         body = {:id => company_id }
-        post(path, MultiJson.dump(body), "Content-Type" => "application/json")
+        post(path, MultiJson.dump(body), headers.merge("Content-Type" => "application/json"))
       end
 
       # (Destroy) authenticated user stops following a company

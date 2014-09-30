@@ -84,10 +84,10 @@ module LinkedIn
       #
       # @macro share_input_fields
       # @return [void]
-      def add_share(share)
+      def add_share(share, headers = {})
         path = "/people/~/shares"
         defaults = {:visibility => {:code => "anyone"}}
-        post(path, MultiJson.dump(defaults.merge(share)), "Content-Type" => "application/json")
+        post(path, MultiJson.dump(defaults.merge(share)), headers.merge("Content-Type" => "application/json"))
       end
 
       # Create a comment on an update from the authenticated user
@@ -98,10 +98,10 @@ module LinkedIn
       #   particular network update
       # @param [String] comment The text of the comment
       # @return [void]
-      def update_comment(update_key, comment)
+      def update_comment(update_key, comment, headers = {})
         path = "/people/~/network/updates/key=#{update_key}/update-comments"
         body = {'comment' => comment}
-        post(path, MultiJson.dump(body), "Content-Type" => "application/json")
+        post(path, MultiJson.dump(body), headers.merge("Content-Type" => "application/json"))
       end
 
       # (Update) like an update as the authenticated user
@@ -111,9 +111,9 @@ module LinkedIn
       # @param [String] update_key a update/update-key representing a
       #   particular network update
       # @return [void]
-      def like_share(update_key)
+      def like_share(update_key, hedaers = {})
         path = "/people/~/network/updates/key=#{update_key}/is-liked"
-        put(path, 'true', "Content-Type" => "application/json")
+        put(path, 'true', headers.merge("Content-Type" => "application/json"))
       end
 
       # (Destroy) unlike an update the authenticated user previously
@@ -124,9 +124,9 @@ module LinkedIn
       # @param [String] update_key a update/update-key representing a
       #   particular network update
       # @return [void]
-      def unlike_share(update_key)
+      def unlike_share(update_key, headers = {})
         path = "/people/~/network/updates/key=#{update_key}/is-liked"
-        put(path, 'false', "Content-Type" => "application/json")
+        put(path, 'false', headers.merge("Content-Type" => "application/json"))
       end
     end
   end
