@@ -13,7 +13,7 @@ client = LinkedIn::Client.new('your_consumer_key', 'your_consumer_secret')
 
 # If you want to use one of the scopes from linkedin you have to pass it in at this point
 # You can learn more about it here: http://developer.linkedin.com/documents/authentication
-request_token = client.request_token({}, :scope => "r_basicprofile+r_emailaddress")
+request_token = client.request_token({}, :scope => "r_basicprofile r_emailaddress")
 
 rtoken = request_token.token
 rsecret = request_token.secret
