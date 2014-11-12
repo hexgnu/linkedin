@@ -125,7 +125,7 @@ describe LinkedIn::Api do
   context "Company API", :vcr do
 
     it "should be able to view a company profile" do
-      stub_request(:get, "https://api.linkedin.com/v1/companies/id=1586").to_return(:body => "{}")
+      stub_request(:get, "https://api.linkedin.com/v1/companies/1586").to_return(:body => "{}")
       client.company(:id => 1586).should be_an_instance_of(LinkedIn::Mash)
     end
 
@@ -162,22 +162,22 @@ describe LinkedIn::Api do
     end
 
     it "should be able to view company_updates" do
-      stub_request(:get, "https://api.linkedin.com/v1/companies/id=1586/updates").to_return(:body => "{}")
+      stub_request(:get, "https://api.linkedin.com/v1/companies/1586/updates").to_return(:body => "{}")
       client.company_updates(:id => 1586).should be_an_instance_of(LinkedIn::Mash)
     end
 
     it "should be able to view company_statistic" do
-      stub_request(:get, "https://api.linkedin.com/v1/companies/id=1586/company-statistics").to_return(:body => "{}")
+      stub_request(:get, "https://api.linkedin.com/v1/companies/1586/company-statistics").to_return(:body => "{}")
       client.company_statistics(:id => 1586).should be_an_instance_of(LinkedIn::Mash)
     end
 
     it "should be able to view company updates comments" do
-      stub_request(:get, "https://api.linkedin.com/v1/companies/id=1586/updates/key=company_update_key/update-comments").to_return(:body => "{}")
+      stub_request(:get, "https://api.linkedin.com/v1/companies/1586/updates/key=company_update_key/update-comments").to_return(:body => "{}")
       client.company_updates_comments("company_update_key", :id => 1586).should be_an_instance_of(LinkedIn::Mash)
     end
 
     it "should be able to view company updates likes" do
-      stub_request(:get, "https://api.linkedin.com/v1/companies/id=1586/updates/key=company_update_key/likes").to_return(:body => "{}")
+      stub_request(:get, "https://api.linkedin.com/v1/companies/1586/updates/key=company_update_key/likes").to_return(:body => "{}")
       client.company_updates_likes("company_update_key", :id => 1586).should be_an_instance_of(LinkedIn::Mash)
     end
 
@@ -190,7 +190,7 @@ describe LinkedIn::Api do
     end
 
     it "should be able to unfollow a company" do
-      stub_request(:delete, "https://api.linkedin.com/v1/people/~/following/companies/id=1586").to_return(:body => "", :status => 201)
+      stub_request(:delete, "https://api.linkedin.com/v1/people/~/following/companies/1586").to_return(:body => "", :status => 201)
 
       response = client.unfollow_company(1586)
       response.body.should == nil
