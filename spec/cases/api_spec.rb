@@ -190,7 +190,7 @@ describe LinkedIn::Api do
     end
 
     it "should be able to unfollow a company" do
-      stub_request(:delete, "https://api.linkedin.com/v1/people/~/following/companies/1586").to_return(:body => "", :status => 201)
+      stub_request(:delete, "https://api.linkedin.com/v1/people/~/following/companies/id=1586").to_return(:body => "", :status => 201)
 
       response = client.unfollow_company(1586)
       response.body.should == nil

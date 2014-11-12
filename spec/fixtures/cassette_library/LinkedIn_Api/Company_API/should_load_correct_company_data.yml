@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.linkedin.com/v1/companies/id=1586
+    uri: https://api.linkedin.com/v1/companies/1586
     body:
       encoding: US-ASCII
       string: ''
@@ -39,7 +39,7 @@ http_interactions:
   recorded_at: Wed, 10 Apr 2013 22:06:51 GMT
 - request:
     method: get
-    uri: https://api.linkedin.com/v1/companies/id=1586:(id,name,industry,locations:(address:(city,state,country-code),is-headquarters),employee-count-range)
+    uri: https://api.linkedin.com/v1/companies/1586:(id,name,industry,locations:(address:(city,state,country-code),is-headquarters),employee-count-range)
     body:
       encoding: US-ASCII
       string: ''
