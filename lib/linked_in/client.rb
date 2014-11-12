@@ -30,7 +30,7 @@ module LinkedIn
         :consumer_key => consumer_token,
         :consumer_secret => consumer_secret,
         :token => @auth_token,
-        :token_secret => @auth_secret
+        :token_secret => @auth_secret,
       }
     end
 
@@ -55,7 +55,7 @@ module LinkedIn
       raise "Please authenticate first" unless authenticated?
 
       @connection ||= Faraday.new(connection_options) do |builder|
-        builder.use ::Faraday::Request::OAuth, authentication
+        builder.use ::Faraday::Request::OAuth, authentication.merge(:ignore_extra_keys => true)
         builder.use ::Faraday::Request::UrlEncoded
         builder.use ::FaradayMiddleware::Mashify, :mash_class => LinkedIn::Mash
         builder.use ::Faraday::Response::ParseJson
