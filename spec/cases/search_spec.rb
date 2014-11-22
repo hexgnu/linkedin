@@ -85,6 +85,7 @@ describe LinkedIn::Search do
       end
 
       it "doesn't change the original options" do
+        client.stub(:get) # next test performs the actual API call and uses a cassette
         original_options = options.dup
         client.search(options, 'company')
 

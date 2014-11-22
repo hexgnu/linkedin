@@ -2,29 +2,32 @@ module LinkedIn
   module Api
 
     module QueryHelpers
+      REJECT_KEYS = [:fields, :headers, :public, :id, :url, :email, :is_admin, :domain, :name]
+
       private
 
       def group_path(options)
         path = "groups"
-        if id = options.delete(:id)
+        if id = options[:id]
           path += "/#{id}"
         end
       end
 
       def simple_query(path, options={})
-        fields = options.delete(:fields) || LinkedIn.default_profile_fields
+        fields = options.fetch(:fields, LinkedIn.default_profile_fields)
 
-        if options.delete(:public)
+        if options[:public]
           path +=":public"
         elsif fields
           path +=":(#{build_fields_params(fields)})"
         end
 
-        headers = options.delete(:headers) || {}
+        headers = options.fetch(:headers, {})
         # params  = to_query(options)
         # path   += "#{path.include?("?") ? "&" : "?"}#{params}" if !params.empty?
 
-        get(path, options, headers)
+        query = options.reject { |k,v| REJECT_KEYS.include? k.to_sym }
+        get(path, query, headers)
       end
 
       def build_fields_params(fields)
@@ -39,11 +42,11 @@ module LinkedIn
 
       def person_path(options)
         path = "people"
-        if id = options.delete(:id)
+        if id = options[:id]
           path += "/id=#{id}"
-        elsif url = options.delete(:url)
+        elsif url = options[:url]
           path += "/url=#{CGI.escape(url)}"
-        elsif email = options.delete(:email)
+        elsif email = options[:email]
           path += "::(#{email})"
         else
           path += "/~"
@@ -53,15 +56,16 @@ module LinkedIn
       def company_path(options)
         path = "companies"
 
-        if domain = options.delete(:domain)
+        if domain = options[:domain]
           path += "?email-domain=#{CGI.escape(domain)}"
-        elsif id = options.delete(:id)
+
+        elsif id = options[:id]
           path += "/#{id}"
-        elsif url = options.delete(:url)
+        elsif url = options[:url]
           path += "/url=#{CGI.escape(url)}"
-        elsif name = options.delete(:name)
+        elsif name = options[:name]
           path += "/universal-name=#{CGI.escape(name)}"
-        elsif is_admin = options.delete(:is_admin)
+        elsif is_admin = options[:is_admin]
           path += "?is-company-admin=#{CGI.escape(is_admin)}"
         else
           path += "/~"
@@ -75,7 +79,7 @@ module LinkedIn
 
       def jobs_path(options)
         path = "jobs"
-        if id = options.delete(:id)
+        if id = options[:id]
           path += "/id=#{id}"
         else
           path += "/~"

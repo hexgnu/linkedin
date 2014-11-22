@@ -64,7 +64,7 @@ module LinkedIn
       #
       # example for use in code: client.picture_urls(:id => 'id_of_connection')
       def picture_urls(options={})
-        picture_size = options.delete(:picture_size) || 'original'
+        picture_size = options.fetch(:picture_size, 'original')
         path = "#{picture_urls_path(options)}::(#{picture_size})"
         simple_query(path, options)
       end

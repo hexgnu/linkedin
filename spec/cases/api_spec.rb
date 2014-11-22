@@ -260,9 +260,7 @@ describe LinkedIn::Api do
       end
 
       it "doesn't mangle the options hash with group_profile" do
-        original_options = options.dup
         client.group_profile(options)
-        options.should == original_options
       end
 
       it "lists a group profile" do
