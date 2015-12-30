@@ -87,6 +87,11 @@ describe LinkedIn::Api do
     client.shares(:after => 1234, :count => 35)
   end
 
+  it "should be able to fetch a single share" do
+    stub_request(:get, "https://api.linkedin.com/v1/people/~/network/updates/key=network_update_key").to_return(:body => "{}")
+    client.share("network_update_key").should be_an_instance_of(LinkedIn::Mash)
+  end
+
   it "should be able to comment on network update" do
     stub_request(:post, "https://api.linkedin.com/v1/people/~/network/updates/key=SOMEKEY/update-comments").to_return(
         :body => "", :status => 201)

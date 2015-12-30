@@ -42,6 +42,11 @@ module LinkedIn
         simple_query(path, {:type => "SHAR", :scope => "self"}.merge(options))
       end
 
+      def share(update_key, options={})
+        path = "#{person_path(options)}/network/updates/key=#{update_key}"
+        simple_query(path, options)
+      end
+
       # Retrieve all comments for a particular network update
       #
       # @note The first 5 comments are included in the response to #network_updates
