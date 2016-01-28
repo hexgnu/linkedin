@@ -71,14 +71,14 @@ describe LinkedIn::Api do
     stub_request(:post, "https://api.linkedin.com/v1/people/~/shares").to_return(:body => "", :status => 201)
     response = client.add_share(:comment => "Testing, 1, 2, 3")
     response.body.should == nil
-    response.code.should == "201"
+    response.status.should == 201
   end
 
   it "should be able to share a new company status" do
     stub_request(:post, "https://api.linkedin.com/v1/companies/123456/shares").to_return(:body => "", :status => 201)
     response = client.add_company_share("123456", { :comment => "Testing, 1, 2, 3" })
     response.body.should == nil
-    response.code.should == "201"
+    response.status.should == 201
   end
 
   it "returns the shares for a person" do
@@ -97,7 +97,7 @@ describe LinkedIn::Api do
         :body => "", :status => 201)
     response = client.update_comment('SOMEKEY', "Testing, 1, 2, 3")
     response.body.should == nil
-    response.code.should == "201"
+    response.status.should == 201
   end
 
   it "should be able to like a network update" do
@@ -105,7 +105,7 @@ describe LinkedIn::Api do
       with(:body => "true").to_return(:body => "", :status => 201)
     response = client.like_share('SOMEKEY')
     response.body.should == nil
-    response.code.should == "201"
+    response.status.should == 201
   end
 
   it "should be able to unlike a network update" do
@@ -113,7 +113,7 @@ describe LinkedIn::Api do
       with(:body => "false").to_return(:body => "", :status => 201)
     response = client.unlike_share('SOMEKEY')
     response.body.should == nil
-    response.code.should == "201"
+    response.status.should == 201
   end
 
   it "should be able to pass down the additional arguments to OAuth's get_request_token" do
@@ -130,7 +130,7 @@ describe LinkedIn::Api do
   context "Company API", :vcr do
 
     it "should be able to view a company profile" do
-      stub_request(:get, "https://api.linkedin.com/v1/companies/id=1586").to_return(:body => "{}")
+      stub_request(:get, "https://api.linkedin.com/v1/companies/1586").to_return(:body => "{}")
       client.company(:id => 1586).should be_an_instance_of(LinkedIn::Mash)
     end
 
@@ -167,22 +167,22 @@ describe LinkedIn::Api do
     end
 
     it "should be able to view company_updates" do
-      stub_request(:get, "https://api.linkedin.com/v1/companies/id=1586/updates").to_return(:body => "{}")
+      stub_request(:get, "https://api.linkedin.com/v1/companies/1586/updates").to_return(:body => "{}")
       client.company_updates(:id => 1586).should be_an_instance_of(LinkedIn::Mash)
     end
 
     it "should be able to view company_statistic" do
-      stub_request(:get, "https://api.linkedin.com/v1/companies/id=1586/company-statistics").to_return(:body => "{}")
+      stub_request(:get, "https://api.linkedin.com/v1/companies/1586/company-statistics").to_return(:body => "{}")
       client.company_statistics(:id => 1586).should be_an_instance_of(LinkedIn::Mash)
     end
 
     it "should be able to view company updates comments" do
-      stub_request(:get, "https://api.linkedin.com/v1/companies/id=1586/updates/key=company_update_key/update-comments").to_return(:body => "{}")
+      stub_request(:get, "https://api.linkedin.com/v1/companies/1586/updates/key=company_update_key/update-comments").to_return(:body => "{}")
       client.company_updates_comments("company_update_key", :id => 1586).should be_an_instance_of(LinkedIn::Mash)
     end
 
     it "should be able to view company updates likes" do
-      stub_request(:get, "https://api.linkedin.com/v1/companies/id=1586/updates/key=company_update_key/likes").to_return(:body => "{}")
+      stub_request(:get, "https://api.linkedin.com/v1/companies/1586/updates/key=company_update_key/likes").to_return(:body => "{}")
       client.company_updates_likes("company_update_key", :id => 1586).should be_an_instance_of(LinkedIn::Mash)
     end
 
@@ -191,7 +191,7 @@ describe LinkedIn::Api do
 
       response = client.follow_company(1586)
       response.body.should == nil
-      response.code.should == "201"
+      response.status.should == 201
     end
 
     it "should be able to unfollow a company" do
@@ -199,7 +199,7 @@ describe LinkedIn::Api do
 
       response = client.unfollow_company(1586)
       response.body.should == nil
-      response.code.should == "201"
+      response.status.should == 201
     end
 
   end
@@ -225,7 +225,7 @@ describe LinkedIn::Api do
       stub_request(:post, "https://api.linkedin.com/v1/people/~/job-bookmarks").to_return(:body => "", :status => 201)
       response = client.add_job_bookmark(:id => 1452577)
       response.body.should == nil
-      response.code.should == "201"
+      response.status.should == 201
     end
   end
 
@@ -252,7 +252,7 @@ describe LinkedIn::Api do
 
       response = client.join_group(123)
       response.body.should == nil
-      response.code.should == "201"
+      response.status.should == 201
     end
 
     it "should be able to list a group profile" do
@@ -279,14 +279,14 @@ describe LinkedIn::Api do
       stub_request(:post, "https://api.linkedin.com/v1/groups/123/posts").with(:body => expected).to_return(:body => "", :status => 201)
       response = client.post_group_discussion(123, expected)
       response.body.should == nil
-      response.code.should == '201'
+      response.status.should == 201
     end
 
     it "should be able to share a new group status" do
       stub_request(:post, "https://api.linkedin.com/v1/groups/1/posts").to_return(:body => "", :status => 201)
       response = client.add_group_share(1, :comment => "Testing, 1, 2, 3")
       response.body.should == nil
-      response.code.should == "201"
+      response.status.should == 201
     end
   end
 
@@ -295,7 +295,7 @@ describe LinkedIn::Api do
       stub_request(:post, "https://api.linkedin.com/v1/people/~/mailbox").to_return(:body => "", :status => 201)
       response = client.send_message("subject", "body", ["recip1", "recip2"])
       response.body.should == nil
-      response.code.should == "201"
+      response.status.should == 201
     end
   end
 

@@ -167,7 +167,7 @@ describe LinkedIn::Search do
     end
 
     describe "by multiple email address", vcr: vcr_options do
-      
+
       let(:results) do
         fields = ['id']
         client.profile(:email => 'email=yy@zz.com,email=xx@yy.com', :fields => fields)
