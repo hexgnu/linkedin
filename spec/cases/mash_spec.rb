@@ -2,16 +2,6 @@ require 'helper'
 
 describe LinkedIn::Mash do
 
-  describe ".from_json" do
-    it "should convert a json string to a Mash" do
-      json_string = "{\"name\":\"Josh Kalderimis\"}"
-      mash = LinkedIn::Mash.from_json(json_string)
-
-      mash.should have_key('name')
-      mash.name.should == 'Josh Kalderimis'
-    end
-  end
-
   describe "#convert_keys" do
     let(:mash) do
       LinkedIn::Mash.new({

@@ -96,7 +96,7 @@ module LinkedIn
       # @macro share_input_fields
       # @return [void]
       def add_company_share(company_id, share)
-        path = "/companies/#{company_id}/shares"
+        path = "companies/#{company_id}/shares"
         defaults = {:visibility => {:code => "anyone"}}
         post(path, MultiJson.dump(defaults.merge(share)), "Content-Type" => "application/json")
       end
@@ -108,7 +108,7 @@ module LinkedIn
       # @param [String] company_id Company ID
       # @return [void]
       def follow_company(company_id)
-        path = "/people/~/following/companies"
+        path = "people/~/following/companies"
         body = {:id => company_id }
         post(path, MultiJson.dump(body), "Content-Type" => "application/json")
       end
@@ -120,7 +120,7 @@ module LinkedIn
       # @param [String] company_id Company ID
       # @return [void]
       def unfollow_company(company_id)
-        path = "/people/~/following/companies/id=#{company_id}"
+        path = "people/~/following/companies/id=#{company_id}"
         delete(path)
       end
     end

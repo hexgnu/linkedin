@@ -77,9 +77,19 @@ describe LinkedIn::Search do
 
     describe "by keywords options with fields", vcr: vcr_options do
 
+      let(:fields) { [{:companies => [:id, :name, :industries, :description, :specialties]}, :num_results] }
+      let(:options) { {:keywords => 'apple', :fields => fields} }
+
       let(:results) do
-        fields = [{:companies => [:id, :name, :industries, :description, :specialties]}, :num_results]
-        client.search({:keywords => 'apple', :fields => fields}, 'company')
+        client.search(options, 'company')
+      end
+
+      it "doesn't change the original options" do
+        client.stub(:get) # next test performs the actual API call and uses a cassette
+        original_options = options.dup
+        client.search(options, 'company')
+
+        options.should == original_options
       end
 
       it "should perform a search" do
@@ -167,7 +177,7 @@ describe LinkedIn::Search do
     end
 
     describe "by multiple email address", vcr: vcr_options do
-      
+
       let(:results) do
         fields = ['id']
         client.profile(:email => 'email=yy@zz.com,email=xx@yy.com', :fields => fields)

@@ -6,16 +6,6 @@ module LinkedIn
   # The generalized pseudo-object that is returned for all query
   # requests.
   class Mash < ::Hashie::Mash
-
-    # Convert a json string to a Mash
-    #
-    # @param [String] json_string
-    # @return [LinkedIn::Mash]
-    def self.from_json(json_string)
-      result_hash = ::MultiJson.decode(json_string)
-      new(result_hash)
-    end
-
     # Returns a Date if we have year, month and day, and no conflicting key
     #
     # @return [Date]
