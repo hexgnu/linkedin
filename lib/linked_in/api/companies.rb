@@ -3,8 +3,8 @@ module LinkedIn
 
     # Companies API
     #
-    # @see http://developer.linkedin.com/documents/companies Companies API
-    # @see http://developer.linkedin.com/documents/company-lookup-api-and-fields Company Fields
+    # @see https://developer.linkedin.com/docs/company-pages Companies API
+    # @see https://developer.linkedin.com/docs/fields/companies Company Fields
     #
     # The following API actions do not have corresponding methods in
     # this module
@@ -18,7 +18,8 @@ module LinkedIn
 
       # Retrieve a Company Profile
       #
-      # @see http://developer.linkedin.com/documents/company-lookup-api-and-fields
+      # @see https://developer.linkedin.com/docs/fields/company-profile Company Profile field
+      # @see https://developer.linkedin.com/docs/company-pages#company_profile Company Profile
       #
       # @macro company_path_options
       # @option options [String] :scope
@@ -33,7 +34,7 @@ module LinkedIn
 
       # Retrieve a feed of event items for a Company
       #
-      # @see http://developer.linkedin.com/reading-company-shares
+      # @see https://developer.linkedin.com/docs/company-pages#get_update Get Specific Company Update
       #
       # @macro company_path_options
       # @option options [String] :event-type
@@ -49,7 +50,7 @@ module LinkedIn
       #
       # Permissions: rw_company_admin
       #
-      # @see http://developer.linkedin.com/documents/company-statistics
+      # @see https://developer.linkedin.com/docs/company-pages#statistics Get Company Statistics
       #
       # @macro company_path_options
       # @return [LinkedIn::Mash]
@@ -60,7 +61,7 @@ module LinkedIn
 
       # Retrieve comments on a particular company update:
       #
-      # @see http://developer.linkedin.com/reading-company-shares
+      # @see https://developer.linkedin.com/docs/company-pages#get_update_comments Get comments for a specific Company update
       #
       # @param [String] update_key a update/update-key representing a
       #   particular company update
@@ -73,7 +74,7 @@ module LinkedIn
 
       # Retrieve likes on a particular company update:
       #
-      # @see http://developer.linkedin.com/reading-company-shares
+      # @see https://developer.linkedin.com/docs/company-pages#get_update_likes Get likes for a specific Company update
       #
       # @param [String] update_key a update/update-key representing a
       #   particular company update
@@ -89,8 +90,8 @@ module LinkedIn
       #
       # Permissions: rw_company_admin
       #
-      # @see http://developer.linkedin.com/creating-company-shares
-      # @see http://developer.linkedin.com/documents/targeting-company-shares Targeting Company Shares
+      # @see https://developer.linkedin.com/docs/company-pages#company_share Create a company share
+      # @see https://developer.linkedin.com/docs/company-pages#targetting_shares Targeting company shares
       #
       # @param [String] company_id Company ID
       # @macro share_input_fields
