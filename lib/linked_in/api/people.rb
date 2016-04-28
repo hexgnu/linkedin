@@ -4,7 +4,7 @@ module LinkedIn
     # People APIs
     #
     #
-    # @see @see https://developer.linkedin.com/docs/fields/basic-profile Profile Fields
+    # @see https://developer.linkedin.com/docs/fields/basic-profile Profile Fields
     # @see http://developer.linkedin.com/documents/field-selectors Field Selectors
     # @see http://developer.linkedin.com/documents/accessing-out-network-profiles Accessing Out of Network Profiles
     module People
