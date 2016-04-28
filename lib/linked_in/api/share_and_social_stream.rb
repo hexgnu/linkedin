@@ -3,8 +3,7 @@ module LinkedIn
 
     # Share and Social Stream APIs
     #
-    # @see http://developer.linkedin.com/documents/share-and-social-stream
-    # @see http://developer.linkedin.com/documents/share-api Share API
+    # @see https://developer.linkedin.com/docs/share-on-linkedin Share API
     #
     # The following API actions do not have corresponding methods in
     # this module
@@ -85,7 +84,7 @@ module LinkedIn
       #
       # Permissions: rw_nus
       #
-      # @see http://developer.linkedin.com/documents/share-api
+      # @see https://developer.linkedin.com/docs/share-on-linkedin Share API
       #
       # @macro share_input_fields
       # @return [void]

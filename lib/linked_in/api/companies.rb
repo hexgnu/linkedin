@@ -28,7 +28,7 @@ module LinkedIn
       # @option options [String] :start
       # @return [LinkedIn::Mash]
       def company(options = {})
-        path   = company_path(options)
+        path = company_path(options)
         simple_query(path, options)
       end
 
@@ -98,7 +98,7 @@ module LinkedIn
       # @return [void]
       def add_company_share(company_id, share)
         path = "/companies/#{company_id}/shares"
-        defaults = {:visibility => {:code => "anyone"}}
+        defaults = { visibility: { code: 'anyone' } }
         post(path, MultiJson.dump(defaults.merge(share)), "Content-Type" => "application/json")
       end
 
@@ -110,7 +110,7 @@ module LinkedIn
       # @return [void]
       def follow_company(company_id)
         path = "/people/~/following/companies"
-        body = {:id => company_id }
+        body = { id: company_id }
         post(path, MultiJson.dump(body), "Content-Type" => "application/json")
       end
 

@@ -24,7 +24,7 @@ module LinkedIn
       #  message
       # @return [void]
       def send_message(subject, body, recipient_paths)
-        path = "/people/~/mailbox"
+        path = '/people/~/mailbox'
 
         message = {
             'subject' => subject,
