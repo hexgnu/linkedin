@@ -3,8 +3,8 @@ module LinkedIn
 
     # People APIs
     #
-    # @see http://developer.linkedin.com/documents/people People API
-    # @see http://developer.linkedin.com/documents/profile-fields Profile Fields
+    #
+    # @see https://developer.linkedin.com/docs/fields/basic-profile Profile Fields
     # @see http://developer.linkedin.com/documents/field-selectors Field Selectors
     # @see http://developer.linkedin.com/documents/accessing-out-network-profiles Accessing Out of Network Profiles
     module People
@@ -13,7 +13,7 @@ module LinkedIn
       #
       # Permissions: r_basicprofile, r_fullprofile
       #
-      # @see http://developer.linkedin.com/documents/profile-api
+      # @see https://developer.linkedin.com/docs/signin-with-linkedin#content-par_componenttabbedlist_resource_1_resourceparagraph_6
       # @macro person_path_options
       # @option options [string] :secure-urls if 'true' URLs in responses will be HTTPS
       # @return [LinkedIn::Mash]
