@@ -18,12 +18,12 @@ module LinkedIn
     class AccessDeniedError      < LinkedInError; end
 
     # Raised when a 404 response status code is received
-    class NotFoundError          < StandardError; end
+    class NotFoundError          < LinkedInError; end
 
     # Raised when a 500 response status code is received
-    class InformLinkedInError    < StandardError; end
+    class InformLinkedInError    < LinkedInError; end
 
     # Raised when a 502 or 503 response status code is received
-    class UnavailableError       < StandardError; end
+    class UnavailableError       < LinkedInError; end
   end
 end
