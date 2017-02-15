@@ -3,6 +3,7 @@
 Ruby wrapper for the [LinkedIn API](http://developer.linkedin.com). The LinkedIn gem provides an easy-to-use wrapper for LinkedIn's REST APIs.
 
 Travis CI : [![Build Status](https://secure.travis-ci.org/hexgnu/linkedin.png)](http://travis-ci.org/hexgnu/linkedin)
+RapidAPI : [![API Testing](https://img.shields.io/badge/test%20this%20API%20on-RapidAPI.com-blue.svg)](https://rapidapi.com/package/LinkedIn/functions?utm_source=LinkedinGithub&utm_medium=button)
 
 ## Installation
 
