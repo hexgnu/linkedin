@@ -16,7 +16,7 @@ describe "LinkedIn::Client" do
         consumer.site.should == 'https://api.linkedin.com'
         consumer.request_token_url.should == 'https://api.linkedin.com/uas/oauth/requestToken'
         consumer.access_token_url.should == 'https://api.linkedin.com/uas/oauth/accessToken'
-        consumer.authorize_url.should == 'https://www.linkedin.com/uas/oauth/authorize'
+        consumer.authorize_url.should == 'https://www.linkedin.com/uas/oauth/authenticate'
       end
     end
 
@@ -45,7 +45,7 @@ describe "LinkedIn::Client" do
         consumer.site.should == 'https://api.josh.com'
         consumer.request_token_url.should == 'https://api.josh.com/uas/oauth/requestToken'
         consumer.access_token_url.should == 'https://api.josh.com/uas/oauth/accessToken'
-        consumer.authorize_url.should == 'https://www.josh.com/uas/oauth/authorize'
+        consumer.authorize_url.should == 'https://www.josh.com/uas/oauth/authenticate'
       end
     end
 
@@ -54,7 +54,7 @@ describe "LinkedIn::Client" do
         LinkedIn::Client.new('1234', '1234', {
           :request_token_path => "/secure/oauth/requestToken",
           :access_token_path  => "/secure/oauth/accessToken",
-          :authorize_path     => "/secure/oauth/authorize",
+          :authorize_path     => "/secure/oauth/authenticate",
         }).consumer
       end
 
@@ -62,7 +62,7 @@ describe "LinkedIn::Client" do
         consumer.site.should == 'https://api.linkedin.com'
         consumer.request_token_url.should == 'https://api.linkedin.com/secure/oauth/requestToken'
         consumer.access_token_url.should == 'https://api.linkedin.com/secure/oauth/accessToken'
-        consumer.authorize_url.should == 'https://www.linkedin.com/secure/oauth/authorize'
+        consumer.authorize_url.should == 'https://www.linkedin.com/secure/oauth/authenticate'
       end
     end
 
@@ -71,7 +71,7 @@ describe "LinkedIn::Client" do
         LinkedIn::Client.new('1234', '1234', {
           :request_token_url => "https://api.josh.com/secure/oauth/requestToken",
           :access_token_url  => "https://api.josh.com/secure/oauth/accessToken",
-          :authorize_url     => "https://www.josh.com/secure/oauth/authorize",
+          :authorize_url     => "https://www.josh.com/secure/oauth/authenticate",
         }).consumer
       end
 
@@ -79,7 +79,7 @@ describe "LinkedIn::Client" do
         consumer.site.should == 'https://api.linkedin.com'
         consumer.request_token_url.should == 'https://api.josh.com/secure/oauth/requestToken'
         consumer.access_token_url.should == 'https://api.josh.com/secure/oauth/accessToken'
-        consumer.authorize_url.should == 'https://www.josh.com/secure/oauth/authorize'
+        consumer.authorize_url.should == 'https://www.josh.com/secure/oauth/authenticate'
       end
     end
 
@@ -94,7 +94,7 @@ describe "LinkedIn::Client" do
         consumer.site.should == 'https://api.josh.com'
         consumer.request_token_url.should == 'https://api.josh.com/uas/oauth/requestToken'
         consumer.access_token_url.should == 'https://api.josh.com/uas/oauth/accessToken'
-        consumer.authorize_url.should == 'https://api.josh.com/uas/oauth/authorize'
+        consumer.authorize_url.should == 'https://api.josh.com/uas/oauth/authenticate'
       end
     end
   end
@@ -107,7 +107,7 @@ describe "LinkedIn::Client" do
         request_token = client.request_token
 
         request_token.should be_a_kind_of OAuth::RequestToken
-        request_token.authorize_url.should include("https://www.linkedin.com/uas/oauth/authorize?oauth_token=")
+        request_token.authorize_url.should include("https://www.linkedin.com/uas/oauth/authenticate?oauth_token=")
 
         a_request(:post, "https://api.linkedin.com/uas/oauth/requestToken").should have_been_made.once
       end
@@ -119,7 +119,7 @@ describe "LinkedIn::Client" do
         request_token = client.request_token(:oauth_callback => 'http://www.josh.com')
 
         request_token.should be_a_kind_of OAuth::RequestToken
-        request_token.authorize_url.should include("https://www.linkedin.com/uas/oauth/authorize?oauth_token=")
+        request_token.authorize_url.should include("https://www.linkedin.com/uas/oauth/authenticate?oauth_token=")
         request_token.callback_confirmed?.should == true
 
         a_request(:post, "https://api.linkedin.com/uas/oauth/requestToken").should have_been_made.once
