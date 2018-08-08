@@ -4,7 +4,7 @@
 * Re-organize modules under Api to match organization in LinkedIn's REST
   API documentation
 
-## 1.1.0 - August 8, 2018
+## 1.1.1 - August 8, 2018
 
 * Switch to OAuth2
 
