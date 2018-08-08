@@ -11,8 +11,7 @@ describe LinkedIn::Search do
     client = LinkedIn::Client.new(consumer_token, consumer_secret)
 
     auth_token      = ENV['LINKED_IN_AUTH_KEY'] || 'key'
-    auth_secret     = ENV['LINKED_IN_AUTH_SECRET'] || 'secret'
-    client.authorize_from_access(auth_token, auth_secret)
+    client.authorize_from_access(auth_token)
     client
   end
 
