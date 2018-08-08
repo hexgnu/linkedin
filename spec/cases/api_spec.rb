@@ -4,11 +4,11 @@ describe LinkedIn::Api do
   before do
     LinkedIn.default_profile_fields = nil
     client.stub(:consumer).and_return(consumer)
-    client.authorize_from_access('atoken', 'asecret')
+    client.authorize_from_access('77j2rfbjbmkcdh')
   end
 
   let(:client){LinkedIn::Client.new('token', 'secret')}
-  let(:consumer){OAuth::Consumer.new('token', 'secret', {:site => 'https://api.linkedin.com'})}
+  let(:consumer){OAuth2::Client.new('token', 'secret', {:site => 'https://api.linkedin.com', :raise_errors => false})}
 
   it "should be able to view the account profile" do
     stub_request(:get, "https://api.linkedin.com/v1/people/~").to_return(:body => "{}")
@@ -70,15 +70,15 @@ describe LinkedIn::Api do
   it "should be able to share a new status" do
     stub_request(:post, "https://api.linkedin.com/v1/people/~/shares").to_return(:body => "", :status => 201)
     response = client.add_share(:comment => "Testing, 1, 2, 3")
-    response.body.should == nil
-    response.code.should == "201"
+    response.body.should == ""
+    response.status.should == 201
   end
 
   it "should be able to share a new company status" do
     stub_request(:post, "https://api.linkedin.com/v1/companies/123456/shares").to_return(:body => "", :status => 201)
     response = client.add_company_share("123456", { :comment => "Testing, 1, 2, 3" })
-    response.body.should == nil
-    response.code.should == "201"
+    response.body.should == ""
+    response.status.should == 201
   end
 
   it "returns the shares for a person" do
@@ -96,35 +96,24 @@ describe LinkedIn::Api do
     stub_request(:post, "https://api.linkedin.com/v1/people/~/network/updates/key=SOMEKEY/update-comments").to_return(
         :body => "", :status => 201)
     response = client.update_comment('SOMEKEY', "Testing, 1, 2, 3")
-    response.body.should == nil
-    response.code.should == "201"
+    response.body.should == ""
+    response.status.should == 201
   end
 
   it "should be able to like a network update" do
     stub_request(:put, "https://api.linkedin.com/v1/people/~/network/updates/key=SOMEKEY/is-liked").
       with(:body => "true").to_return(:body => "", :status => 201)
     response = client.like_share('SOMEKEY')
-    response.body.should == nil
-    response.code.should == "201"
+    response.body.should == ""
+    response.status.should == 201
   end
 
   it "should be able to unlike a network update" do
     stub_request(:put, "https://api.linkedin.com/v1/people/~/network/updates/key=SOMEKEY/is-liked").
       with(:body => "false").to_return(:body => "", :status => 201)
     response = client.unlike_share('SOMEKEY')
-    response.body.should == nil
-    response.code.should == "201"
-  end
-
-  it "should be able to pass down the additional arguments to OAuth's get_request_token" do
-    consumer.should_receive(:get_request_token).with(
-      {:oauth_callback => "http://localhost:3000/auth/callback"},  :scope => "rw_nus").and_return("request_token")
-
-    request_token = client.request_token(
-      {:oauth_callback => "http://localhost:3000/auth/callback"},  :scope => "rw_nus"
-    )
-
-    request_token.should == "request_token"
+    response.body.should == ""
+    response.status.should == 201
   end
 
   context "Company API", :vcr do
@@ -190,16 +179,16 @@ describe LinkedIn::Api do
       stub_request(:post, "https://api.linkedin.com/v1/people/~/following/companies").to_return(:body => "", :status => 201)
 
       response = client.follow_company(1586)
-      response.body.should == nil
-      response.code.should == "201"
+      response.body.should == ""
+      response.status.should == 201
     end
 
     it "should be able to unfollow a company" do
       stub_request(:delete, "https://api.linkedin.com/v1/people/~/following/companies/id=1586").to_return(:body => "", :status => 201)
 
       response = client.unfollow_company(1586)
-      response.body.should == nil
-      response.code.should == "201"
+      response.body.should == ""
+      response.status.should == 201
     end
 
   end
@@ -224,8 +213,8 @@ describe LinkedIn::Api do
     it "should be able to add a bookmark" do
       stub_request(:post, "https://api.linkedin.com/v1/people/~/job-bookmarks").to_return(:body => "", :status => 201)
       response = client.add_job_bookmark(:id => 1452577)
-      response.body.should == nil
-      response.code.should == "201"
+      response.body.should == ""
+      response.status.should == 201
     end
   end
 
@@ -251,8 +240,8 @@ describe LinkedIn::Api do
       stub_request(:put, "https://api.linkedin.com/v1/people/~/group-memberships/123").to_return(:body => "", :status => 201)
 
       response = client.join_group(123)
-      response.body.should == nil
-      response.code.should == "201"
+      response.body.should == ""
+      response.status.should == 201
     end
 
     it "should be able to list a group profile" do
@@ -278,15 +267,15 @@ describe LinkedIn::Api do
 
       stub_request(:post, "https://api.linkedin.com/v1/groups/123/posts").with(:body => expected).to_return(:body => "", :status => 201)
       response = client.post_group_discussion(123, expected)
-      response.body.should == nil
-      response.code.should == '201'
+      response.body.should == ""
+      response.status.should == 201
     end
 
     it "should be able to share a new group status" do
       stub_request(:post, "https://api.linkedin.com/v1/groups/1/posts").to_return(:body => "", :status => 201)
       response = client.add_group_share(1, :comment => "Testing, 1, 2, 3")
-      response.body.should == nil
-      response.code.should == "201"
+      response.body.should == ""
+      response.status.should == 201
     end
   end
 
@@ -294,8 +283,8 @@ describe LinkedIn::Api do
     it "should be able to send a message" do
       stub_request(:post, "https://api.linkedin.com/v1/people/~/mailbox").to_return(:body => "", :status => 201)
       response = client.send_message("subject", "body", ["recip1", "recip2"])
-      response.body.should == nil
-      response.code.should == "201"
+      response.body.should == ""
+      response.status.should == 201
     end
   end
 

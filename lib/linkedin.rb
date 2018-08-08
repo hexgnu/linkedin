@@ -1,4 +1,4 @@
-require 'oauth'
+require 'oauth2'
 
 module LinkedIn
 
