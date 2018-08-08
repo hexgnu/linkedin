@@ -4,38 +4,32 @@ module LinkedIn
     module Authorization
 
       DEFAULT_OAUTH_OPTIONS = {
-        :request_token_path => "/uas/oauth/requestToken",
-        :access_token_path  => "/uas/oauth/accessToken",
-        :authorize_path     => "/uas/oauth/authorize",
+        :token_path         => "/uas/oauth2/accessToken",
+        :authorize_path     => "/uas/oauth2/authorization",
         :api_host           => "https://api.linkedin.com",
         :auth_host          => "https://www.linkedin.com"
       }
 
       def consumer
-        @consumer ||= ::OAuth::Consumer.new(@consumer_token, @consumer_secret, parse_oauth_options)
-      end
-
-      # Note: If using oauth with a web app, be sure to provide :oauth_callback.
-      # Options:
-      #   :oauth_callback => String, url that LinkedIn should redirect to
-      def request_token(options={}, *arguments, &block)
-        @request_token ||= consumer.get_request_token(options, *arguments, &block)
+        @consumer ||= ::OAuth2::Client.new(@consumer_token, @consumer_secret, parse_oauth_options)
       end
 
       # For web apps use params[:oauth_verifier], for desktop apps,
       # use the verifier is the pin that LinkedIn gives users.
-      def authorize_from_request(request_token, request_secret, verifier_or_pin)
-        request_token = ::OAuth::RequestToken.new(consumer, request_token, request_secret)
-        access_token  = request_token.get_access_token(:oauth_verifier => verifier_or_pin)
-        @auth_token, @auth_secret = access_token.token, access_token.secret
+      def authorize_from_request(code, params = {})
+        @auth_token = consumer.auth_code.get_token(code, params).token
       end
 
       def access_token
-        @access_token ||= ::OAuth::AccessToken.new(consumer, @auth_token, @auth_secret)
+        @access_token ||= ::OAuth2::AccessToken.new(consumer, @auth_token)
       end
 
-      def authorize_from_access(atoken, asecret)
-        @auth_token, @auth_secret = atoken, asecret
+      def authorize_url(params = {})
+        consumer.auth_code.authorize_url(params)
+      end
+
+      def authorize_from_access(atoken)
+        @auth_token = atoken
       end
 
       private
@@ -45,11 +39,10 @@ module LinkedIn
         # of the url creation ourselves.
         def parse_oauth_options
           {
-            :request_token_url => full_oauth_url_for(:request_token, :api_host),
-            :access_token_url  => full_oauth_url_for(:access_token,  :api_host),
-            :authorize_url     => full_oauth_url_for(:authorize,     :auth_host),
+            :token_url         => full_oauth_url_for(:token,     :api_host),
+            :authorize_url     => full_oauth_url_for(:authorize, :auth_host),
             :site              => @consumer_options[:site] || @consumer_options[:api_host] || DEFAULT_OAUTH_OPTIONS[:api_host],
-            :proxy             => @consumer_options.fetch(:proxy, nil)
+            :raise_errors      => false
           }
         end
 
