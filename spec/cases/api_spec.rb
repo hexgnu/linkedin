@@ -119,7 +119,7 @@ describe LinkedIn::Api do
   context "Company API", :vcr do
 
     it "should be able to view a company profile" do
-      stub_request(:get, "https://api.linkedin.com/v1/companies/id=1586").to_return(:body => "{}")
+      stub_request(:get, "https://api.linkedin.com/v1/companies/1586").to_return(:body => "{}")
       client.company(:id => 1586).should be_an_instance_of(LinkedIn::Mash)
     end
 
@@ -144,8 +144,9 @@ describe LinkedIn::Api do
     end
 
     it "should load correct company data" do
+      stub_request(:get, "https://api.linkedin.com/v1/companies/1586:(id,name,industry,locations:(address:(city,state,country-code),is-headquarters),employee-count-range)").to_return(:body =>  "{\"id\":1586,\"name\":\"Amazon\",\"employee_count_range\":{\"name\":\"10001+\"},\"industry\":\"Internet\",\"locations\":{\"all\":[{\"address\":{\"city\":\"Seattle\"},\"is_headquarters\":true}]}}")
+      stub_request(:get, "https://api.linkedin.com/v1/companies/1586").to_return(:body => "{\"id\":1586,\"name\":\"Amazon\"}")
       client.company(:id => 1586).name.should == "Amazon"
-
       data = client.company(:id => 1586, :fields => %w{ id name industry locations:(address:(city state country-code) is-headquarters) employee-count-range })
       data.id.should == 1586
       data.name.should == "Amazon"
@@ -156,22 +157,22 @@ describe LinkedIn::Api do
     end
 
     it "should be able to view company_updates" do
-      stub_request(:get, "https://api.linkedin.com/v1/companies/id=1586/updates").to_return(:body => "{}")
+      stub_request(:get, "https://api.linkedin.com/v1/companies/1586/updates").to_return(:body => "{}")
       client.company_updates(:id => 1586).should be_an_instance_of(LinkedIn::Mash)
     end
 
     it "should be able to view company_statistic" do
-      stub_request(:get, "https://api.linkedin.com/v1/companies/id=1586/company-statistics").to_return(:body => "{}")
+      stub_request(:get, "https://api.linkedin.com/v1/companies/1586/company-statistics").to_return(:body => "{}")
       client.company_statistics(:id => 1586).should be_an_instance_of(LinkedIn::Mash)
     end
 
     it "should be able to view company updates comments" do
-      stub_request(:get, "https://api.linkedin.com/v1/companies/id=1586/updates/key=company_update_key/update-comments").to_return(:body => "{}")
+      stub_request(:get, "https://api.linkedin.com/v1/companies/1586/updates/key=company_update_key/update-comments").to_return(:body => "{}")
       client.company_updates_comments("company_update_key", :id => 1586).should be_an_instance_of(LinkedIn::Mash)
     end
 
     it "should be able to view company updates likes" do
-      stub_request(:get, "https://api.linkedin.com/v1/companies/id=1586/updates/key=company_update_key/likes").to_return(:body => "{}")
+      stub_request(:get, "https://api.linkedin.com/v1/companies/1586/updates/key=company_update_key/likes").to_return(:body => "{}")
       client.company_updates_likes("company_update_key", :id => 1586).should be_an_instance_of(LinkedIn::Mash)
     end
 
