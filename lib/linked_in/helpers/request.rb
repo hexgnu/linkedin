@@ -7,7 +7,7 @@ module LinkedIn
         'x-li-format' => 'json'
       }
 
-      API_PATH = '/v1'
+      API_PATH = '/v2'
 
       protected
 

@@ -82,16 +82,30 @@ module LinkedIn
 
       # Create a share for the authenticated user
       #
-      # Permissions: rw_nus
+      # Permissions: w_member_share
       #
       # @see https://developer.linkedin.com/docs/share-on-linkedin Share API
       #
       # @macro share_input_fields
       # @return [void]
       def add_share(share)
-        path = "/people/~/shares"
-        defaults = {:visibility => {:code => "anyone"}}
-        post(path, MultiJson.dump(defaults.merge(share)), "Content-Type" => "application/json")
+        path = '/ugcPosts'
+        payload = {
+          author: "urn:li:person:#{share[:urn]}",
+          lifecycleState: 'PUBLISHED',
+          specificContent: {
+            'com.linkedin.ugc.ShareContent' => {
+              shareCommentary: { text: share[:comment] },
+              shareMediaCategory: 'NONE'
+            }
+          },
+          visibility: {
+            'com.linkedin.ugc.MemberNetworkVisibility' => 'PUBLIC'
+          }
+        }
+        headers = { "Content-Type" => "application/json",
+                    "X-Restli-Protocol-Version" => "2.0.0" }
+        post(path, MultiJson.dump(payload), headers)
       end
 
       # Create a comment on an update from the authenticated user
