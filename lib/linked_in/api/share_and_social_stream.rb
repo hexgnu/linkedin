@@ -84,25 +84,28 @@ module LinkedIn
       #
       # Permissions: w_member_share
       #
-      # @see https://developer.linkedin.com/docs/share-on-linkedin Share API
+      # @see https://docs.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/share-on-linkedin
+      #
+      # @param [String] urn   User's URN (UID) returned from OAuth access token
+      #                       request
+      # @param [Hash]   share The body we want to submit to LinkedIn
       #
       # @macro share_input_fields
       # @return [void]
-      def add_share(share)
+      def add_share(urn, share = {})
         path = '/ugcPosts'
-        payload = {
-          author: "urn:li:person:#{share[:urn]}",
-          lifecycleState: 'PUBLISHED',
-          specificContent: {
+        payload = { author: "urn:li:person:#{urn}", lifecycleState: 'PUBLISHED',
+                    visibility: {
+                      'com.linkedin.ugc.MemberNetworkVisibility' => 'PUBLIC'
+                    } }
+        if share[:comment].present?
+          payload[:specificContent] = {
             'com.linkedin.ugc.ShareContent' => {
               shareCommentary: { text: share[:comment] },
               shareMediaCategory: 'NONE'
             }
-          },
-          visibility: {
-            'com.linkedin.ugc.MemberNetworkVisibility' => 'PUBLIC'
           }
-        }
+        end
         headers = { "Content-Type" => "application/json",
                     "X-Restli-Protocol-Version" => "2.0.0" }
         post(path, MultiJson.dump(payload), headers)
