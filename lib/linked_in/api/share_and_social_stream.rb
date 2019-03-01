@@ -94,17 +94,39 @@ module LinkedIn
       # @return [void]
       def add_share(urn, share = {})
         path = '/ugcPosts'
-        payload = { author: "urn:li:person:#{urn}", lifecycleState: 'PUBLISHED',
-                    visibility: {
-                      'com.linkedin.ugc.MemberNetworkVisibility' => 'PUBLIC'
-                    } }
-        if share[:comment].present?
+        payload = {
+          author: "urn:li:person:#{urn}",
+          lifecycleState: 'PUBLISHED',
+          visibility: { 'com.linkedin.ugc.MemberNetworkVisibility' => 'PUBLIC' }
+        }
+        if share[:url].present?
+          media = { status: 'READY', originalUrl: share[:url] }
+          if share[:description]
+            media[:description] = { text: share[:description] }
+          end
+          if share[:title]
+            media[:title] = { text: share[:title] }
+          end
+          payload[:specificContent] = {
+            'com.linkedin.ugc.ShareContent' => {
+              shareMediaCategory: 'ARTICLE',
+              media: [media]
+            }
+          }
+          if share[:comment].present?
+            payload[:specificContent]['com.linkedin.ugc.ShareContent'][:shareCommentary] =
+              { text: share[:comment] }
+          end
+        elsif share[:comment].present?
           payload[:specificContent] = {
             'com.linkedin.ugc.ShareContent' => {
               shareCommentary: { text: share[:comment] },
               shareMediaCategory: 'NONE'
             }
           }
+        else
+          raise LinkedIn::Errors::UnavailableError,
+                'At least a comment is required'
         end
         headers = { "Content-Type" => "application/json",
                     "X-Restli-Protocol-Version" => "2.0.0" }
