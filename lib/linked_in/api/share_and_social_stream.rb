@@ -82,55 +82,16 @@ module LinkedIn
 
       # Create a share for the authenticated user
       #
-      # Permissions: w_member_share
+      # Permissions: rw_nus
       #
-      # @see https://docs.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/share-on-linkedin
-      #
-      # @param [String] urn   User's URN (UID) returned from OAuth access token
-      #                       request
-      # @param [Hash]   share The body we want to submit to LinkedIn
+      # @see https://developer.linkedin.com/docs/share-on-linkedin Share API
       #
       # @macro share_input_fields
       # @return [void]
-      def add_share(urn, share = {})
-        path = '/ugcPosts'
-        payload = {
-          author: "urn:li:person:#{urn}",
-          lifecycleState: 'PUBLISHED',
-          visibility: { 'com.linkedin.ugc.MemberNetworkVisibility' => 'PUBLIC' }
-        }
-        if share[:url].present?
-          media = { status: 'READY', originalUrl: share[:url] }
-          if share[:description]
-            media[:description] = { text: share[:description] }
-          end
-          if share[:title]
-            media[:title] = { text: share[:title] }
-          end
-          payload[:specificContent] = {
-            'com.linkedin.ugc.ShareContent' => {
-              shareMediaCategory: 'ARTICLE',
-              media: [media]
-            }
-          }
-          if share[:comment].present?
-            payload[:specificContent]['com.linkedin.ugc.ShareContent'][:shareCommentary] =
-              { text: share[:comment] }
-          end
-        elsif share[:comment].present?
-          payload[:specificContent] = {
-            'com.linkedin.ugc.ShareContent' => {
-              shareCommentary: { text: share[:comment] },
-              shareMediaCategory: 'NONE'
-            }
-          }
-        else
-          raise LinkedIn::Errors::UnavailableError,
-                'At least a comment is required'
-        end
-        headers = { "Content-Type" => "application/json",
-                    "X-Restli-Protocol-Version" => "2.0.0" }
-        post(path, MultiJson.dump(payload), headers)
+      def add_share(share)
+        path = "/people/~/shares"
+        defaults = {:visibility => {:code => "anyone"}}
+        post(path, MultiJson.dump(defaults.merge(share)), "Content-Type" => "application/json")
       end
 
       # Create a comment on an update from the authenticated user

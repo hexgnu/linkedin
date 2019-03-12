@@ -1,36 +1,31 @@
 module LinkedIn
   module Helpers
 
-    module Request
+    module V2Request
 
       DEFAULT_HEADERS = {
-        'x-li-format' => 'json'
+        'x-li-format' => 'json',
+        'Content-Type' => 'application/json',
+        'X-Restli-Protocol-Version' => '2.0.0'
       }
 
-      API_PATH = '/v1'
+      API_PATH = '/v2'
 
       protected
 
-        def get(path, options={})
-          response = access_token.get("#{API_PATH}#{path}", {:headers => DEFAULT_HEADERS.merge(options)})
+        def v2_get(path, options = {})
+          response = access_token.get("#{API_PATH}#{path}",
+                                      headers: DEFAULT_HEADERS.merge(options))
           raise_errors(response)
           response.body
         end
 
-        def post(path, body='', options={})
-          response = access_token.post("#{API_PATH}#{path}", {:body => body, :headers => DEFAULT_HEADERS.merge(options)})
-          raise_errors(response)
-          response
-        end
-
-        def put(path, body, options={})
-          response = access_token.put("#{API_PATH}#{path}", {:body => body, :headers => DEFAULT_HEADERS.merge(options)})
-          raise_errors(response)
-          response
-        end
-
-        def delete(path, options={})
-          response = access_token.delete("#{API_PATH}#{path}", {:headers => DEFAULT_HEADERS.merge(options)})
+        def v2_post(path, body = '', options = {})
+          options = { body: body, headers: DEFAULT_HEADERS.merge(options) }
+          # response is OAuth2::Response
+          # response.response is Faraday::Response
+          # sending back response.response makes it easier to access the env
+          response = access_token.post("#{API_PATH}#{path}", options).response
           raise_errors(response)
           response
         end
