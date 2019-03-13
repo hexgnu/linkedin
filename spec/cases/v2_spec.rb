@@ -174,7 +174,7 @@ describe LinkedIn::Api::V2 do
 
       it "should raise error" do
         expect do
-        client.v2_add_share(urn, url: url, title: title)
+          client.v2_add_share(urn, url: url, title: title)
         end.to raise_error(LinkedIn::Errors::UnavailableError)
       end
     end
