@@ -27,7 +27,7 @@ describe LinkedIn::Api::V2 do
     client.authorize_from_access(token)
   end
 
-  describe '#profile' do
+  describe '#v2_profile' do
     let(:api_url) { 'https://api.linkedin.com/v2/me' }
 
     context "when LinkedIn returns 201 status code" do
@@ -52,7 +52,7 @@ describe LinkedIn::Api::V2 do
     end
   end
 
-  describe '#add_share' do
+  describe '#v2_add_share' do
     let(:urn) { '1234567890' }
     let(:comment) { 'Testing, 1, 2, 3' }
     let(:url) { 'http://example.com/share' }
