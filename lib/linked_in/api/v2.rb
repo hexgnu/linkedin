@@ -27,18 +27,39 @@ module LinkedIn
       #
       # @param [String] urn   User's URN (UID) returned from OAuth access token
       #                       request
-      # @param [Hash]   share The body we want to submit to LinkedIn
+      # @param [Hash]   share The body we want to submit to LinkedIn. At least a
+      #                       comment is required
       #
       # @macro share_input_fields
       # @return [void]
       def v2_add_share(urn, share = {})
+        if !urn.instance_of?(String) || urn.empty?
+          raise LinkedIn::Errors::UnavailableError, 'LinkedIn API: URN required'
+        elsif share[:comment].nil? && share[:url].nil?
+          raise LinkedIn::Errors::UnavailableError,
+                'LinkedIn API: At least a comment is required'
+        end
+
         path = '/ugcPosts'
-        payload = {
-          author: "urn:li:person:#{urn}",
-          lifecycleState: 'PUBLISHED',
-          visibility: { 'com.linkedin.ugc.MemberNetworkVisibility' => 'PUBLIC' }
-        }
-        if share[:url]
+        v2_post(path, MultiJson.dump(share_payload(urn, share)))
+      end
+
+      private
+
+        def share_payload(urn, share)
+          payload = { author: "urn:li:person:#{urn}",
+            lifecycleState: 'PUBLISHED',
+            visibility: {
+              'com.linkedin.ugc.MemberNetworkVisibility' => 'PUBLIC'
+            }
+          }
+
+          return add_url_to_payload(payload, share) if share[:url]
+
+          add_comment_to_payload(payload, share)
+        end
+
+        def add_url_to_payload(payload, share)
           media = { status: 'READY', originalUrl: share[:url] }
           if share[:description]
             media[:description] = { text: share[:description] }
@@ -56,19 +77,18 @@ module LinkedIn
             payload[:specificContent]['com.linkedin.ugc.ShareContent'][:shareCommentary] =
               { text: share[:comment] }
           end
-        elsif share[:comment]
+          payload
+        end
+
+        def add_comment_to_payload(payload, share)
           payload[:specificContent] = {
             'com.linkedin.ugc.ShareContent' => {
               shareCommentary: { text: share[:comment] },
               shareMediaCategory: 'NONE'
             }
           }
-        else
-          raise LinkedIn::Errors::UnavailableError,
-                'LinkedIn API: At least a comment is required'
+          payload
         end
-        v2_post(path, MultiJson.dump(payload))
-      end
     end
   end
 end

@@ -222,5 +222,25 @@ describe LinkedIn::Api::V2 do
         end.to raise_error(LinkedIn::Errors::UnavailableError)
       end
     end
+
+    context "when no urn" do
+      before { stub_request(:post, 'https://api.linkedin.com/v2/ugcPosts') }
+
+      it "should raise error" do
+        expect do
+          client.v2_add_share(comment: comment)
+        end.to raise_error(LinkedIn::Errors::UnavailableError)
+      end
+    end
+
+    context "when urn is blank" do
+      before { stub_request(:post, 'https://api.linkedin.com/v2/ugcPosts') }
+
+      it "should raise error" do
+        expect do
+          client.v2_add_share('', comment: comment)
+        end.to raise_error(LinkedIn::Errors::UnavailableError)
+      end
+    end
   end
 end
