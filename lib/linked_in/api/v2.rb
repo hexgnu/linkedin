@@ -35,9 +35,9 @@ module LinkedIn
       def v2_add_share(urn, share = {})
         if !urn.instance_of?(String) || urn.empty?
           raise LinkedIn::Errors::UnavailableError, 'LinkedIn API: URN required'
-        elsif share[:comment].nil? && share[:url].nil?
+        elsif share[:comment].nil?
           raise LinkedIn::Errors::UnavailableError,
-                'LinkedIn API: At least a comment is required'
+                'LinkedIn API: Comment required'
         end
 
         path = '/ugcPosts'
@@ -69,14 +69,11 @@ module LinkedIn
           end
           payload[:specificContent] = {
             'com.linkedin.ugc.ShareContent' => {
+              shareCommentary: { text: share[:comment] },
               shareMediaCategory: 'ARTICLE',
               media: [media]
             }
           }
-          if share[:comment]
-            payload[:specificContent]['com.linkedin.ugc.ShareContent'][:shareCommentary] =
-              { text: share[:comment] }
-          end
           payload
         end
 

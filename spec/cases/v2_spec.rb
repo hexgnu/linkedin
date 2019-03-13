@@ -101,27 +101,6 @@ describe LinkedIn::Api::V2 do
       end
     end
 
-    context "when url only" do
-      before do
-        body[:specificContent] = {
-          'com.linkedin.ugc.ShareContent' => {
-            media: [{ status: 'READY', originalUrl: url }],
-            shareMediaCategory: 'ARTICLE'
-          }
-        }
-        stub_request(:post, 'https://api.linkedin.com/v2/ugcPosts')
-          .to_return(body: '{}', status: 201)
-      end
-
-      it "should send a request" do
-        client.v2_add_share(urn, url: url)
-
-        expect(a_request(:post, 'https://api.linkedin.com/v2/ugcPosts')
-          .with(body: body, headers: headers)
-        ).to have_been_made.once
-      end
-    end
-
     context "when comment, url, and title" do
       before do
         body[:specificContent] = {
@@ -139,29 +118,6 @@ describe LinkedIn::Api::V2 do
 
       it "should send a request" do
         client.v2_add_share(urn, comment: comment, url: url, title: title)
-
-        expect(a_request(:post, 'https://api.linkedin.com/v2/ugcPosts')
-          .with(body: body, headers: headers)
-        ).to have_been_made.once
-      end
-    end
-
-    context "when url and title" do
-      before do
-        body[:specificContent] = {
-          'com.linkedin.ugc.ShareContent' => {
-            media: [
-              { status: 'READY', originalUrl: url, title: { text: title } }
-            ],
-            shareMediaCategory: 'ARTICLE'
-          }
-        }
-        stub_request(:post, 'https://api.linkedin.com/v2/ugcPosts')
-          .to_return(body: '{}', status: 201)
-      end
-
-      it "should send a request" do
-        client.v2_add_share(urn, url: url, title: title)
 
         expect(a_request(:post, 'https://api.linkedin.com/v2/ugcPosts')
           .with(body: body, headers: headers)
@@ -210,6 +166,26 @@ describe LinkedIn::Api::V2 do
         expect(a_request(:post, 'https://api.linkedin.com/v2/ugcPosts')
           .with(body: body, headers: headers)
         ).to have_been_made.once
+      end
+    end
+
+    context "when url and title only" do
+      before { stub_request(:post, 'https://api.linkedin.com/v2/ugcPosts') }
+
+      it "should raise error" do
+        expect do
+        client.v2_add_share(urn, url: url, title: title)
+        end.to raise_error(LinkedIn::Errors::UnavailableError)
+      end
+    end
+
+    context "when url only" do
+      before { stub_request(:post, 'https://api.linkedin.com/v2/ugcPosts') }
+
+      it "should raise error" do
+        expect do
+          client.v2_add_share(urn, url: url)
+        end.to raise_error(LinkedIn::Errors::UnavailableError)
       end
     end
 
