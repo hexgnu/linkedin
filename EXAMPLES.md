@@ -20,8 +20,10 @@ client.authorize_url(:redirect_uri => 'https:://www.yourdomain.com/callback', :s
 => "https://api.linkedin.com/uas/oauth2/authorization?"
 
 # then fetch your access keys
-client.authorize_from_request(code, :redirect_uri => 'https:://www.yourdomain.com/callback')
+client.authorize_from_request(params[:code], :redirect_uri => 'https:://www.yourdomain.com/callback')
 => "OU812" # <= save this for future requests
+
+NOTE: params[:code] is returned in the callback
 
 # or authorize from previously fetched access keys
 client.authorize_from_access("OU812")
