@@ -34,5 +34,6 @@ module LinkedIn
     autoload :Jobs,  "linked_in/api/jobs"
     autoload :ShareAndSocialStream,  "linked_in/api/share_and_social_stream"
     autoload :Communications, "linked_in/api/communications"
+    autoload :V2, "linked_in/api/v2"
   end
 end

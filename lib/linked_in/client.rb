@@ -5,6 +5,7 @@ module LinkedIn
   class Client
     include Helpers::Request
     include Helpers::Authorization
+    include Helpers::V2Request
     include Api::QueryHelpers
     include Api::People
     include Api::Groups
@@ -12,6 +13,7 @@ module LinkedIn
     include Api::Jobs
     include Api::ShareAndSocialStream
     include Api::Communications
+    include Api::V2
     include Search
 
     attr_reader :consumer_token, :consumer_secret, :consumer_options
