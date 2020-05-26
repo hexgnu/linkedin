@@ -1,6 +1,7 @@
 module LinkedIn
 
   module Search
+    REJECT_KEYS = [:fields]
 
     # Retrieve search results of the given object type
     #
@@ -21,11 +22,18 @@ module LinkedIn
       path = "/#{type.to_s}-search"
 
       if options.is_a?(Hash)
-        fields = options.delete(:fields)
-        path += field_selector(fields) if fields
+        fields = options.fetch(:fields, [])
+        if !fields.empty?
+          path += field_selector(fields)
+        else
+
+        end
+      elsif options.is_a?(String)
+        options = {:keywords => options}
+      else
+
       end
 
-      options = { :keywords => options } if options.is_a?(String)
       options = format_options_for_query(options)
 
       result_json = get(to_uri(path, options))
@@ -36,11 +44,18 @@ module LinkedIn
     private
 
       def format_options_for_query(opts)
-        opts.inject({}) do |list, kv|
-          key, value = kv.first.to_s.gsub("_","-"), kv.last
-          list[key]  = sanitize_value(value)
-          list
+        query_hash = {}
+
+        opts.each do |k, value|
+          if REJECT_KEYS.include?(k)
+            next
+          else
+            key = k.to_s.gsub("_", "-")
+            query_hash[key] = sanitize_value(value)
+          end
         end
+
+        query_hash
       end
 
       def sanitize_value(value)
