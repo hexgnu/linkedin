@@ -12,6 +12,7 @@ module LinkedIn
     include Api::Jobs
     include Api::ShareAndSocialStream
     include Api::Communications
+    include Api::Posts
     include Search
 
     attr_reader :consumer_token, :consumer_secret, :consumer_options
