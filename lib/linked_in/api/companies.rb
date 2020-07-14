@@ -26,6 +26,7 @@ module LinkedIn
       # @option options [String] :type
       # @option options [String] :count
       # @option options [String] :start
+      # @option options [Boolean] :is_admin
       # @return [LinkedIn::Mash]
       def company(options = {})
         path = company_path(options)
